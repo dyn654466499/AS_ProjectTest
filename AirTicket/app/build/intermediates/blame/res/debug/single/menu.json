@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\menu\\city_list.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\menu\\city_list.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\menu\\city_list.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\menu\\city_list.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\menu\\main.xml"
+    }
+]

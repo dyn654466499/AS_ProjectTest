@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="C:\Users\Administrator\StudioProjects\AirTicket\app\build\intermediates\pre-dexed\debug\gson-2.5_d1775ad48bbb63d88951f4da76a944051360b30e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\StudioProjects\AirTicket\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Administrator\StudioProjects\AirTicket\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-21.0.3_e2075e9a5273463680023f0f7891138274da5d6d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\StudioProjects\AirTicket\app\libs\fastjson-1.1.40.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="cf8b196dea0f5efa96adc81c047adf7b3d4633ed">
+        <dex dex="C:\Users\Administrator\StudioProjects\AirTicket\app\build\intermediates\pre-dexed\debug\fastjson-1.1.40_45b5938596a882de218e39eb4073aa72d163cb81.jar" />
+    </item>
+    <item
+        jar="E:\AndroidStudio\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Administrator\StudioProjects\AirTicket\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3_ac26c1de921f74005802f417b8f8d7f6ed5b37d3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\StudioProjects\AirTicket\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Administrator\StudioProjects\AirTicket\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3_e14678f2de33e91afa808afe53a689b2c9aabe17.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\StudioProjects\AirTicket\app\libs\volley.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9abd876a983d460e49ff15e738c9a02532777fa6">
+        <dex dex="C:\Users\Administrator\StudioProjects\AirTicket\app\build\intermediates\pre-dexed\debug\volley_027036d637528e1b0f4ec33bf0fa796e17c47cd5.jar" />
+    </item>
+
+</items>

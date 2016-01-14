@@ -1,0 +1,2922 @@
+[
+    {
+        "outputFile": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 171,
+                    "endColumn": 19,
+                    "endOffset": 4185
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 4,
+                        "startOffset": 4067,
+                        "endLine": 294,
+                        "endColumn": 19,
+                        "endOffset": 8366
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 172,
+                    "startColumn": 4,
+                    "startOffset": 4190,
+                    "endLine": 200,
+                    "endColumn": 19,
+                    "endOffset": 4862
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 87,
+                        "startColumn": 4,
+                        "startOffset": 3192,
+                        "endLine": 115,
+                        "endColumn": 19,
+                        "endOffset": 3892
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 201,
+                    "startColumn": 4,
+                    "startOffset": 4867,
+                    "endLine": 209,
+                    "endColumn": 19,
+                    "endOffset": 5092
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1365,
+                        "endLine": 46,
+                        "endColumn": 19,
+                        "endOffset": 1598
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 210,
+                    "startColumn": 4,
+                    "startOffset": 5097,
+                    "endLine": 214,
+                    "endColumn": 19,
+                    "endOffset": 5302
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 1776,
+                        "endLine": 59,
+                        "endColumn": 19,
+                        "endOffset": 1985
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 215,
+                    "startColumn": 4,
+                    "startOffset": 5307,
+                    "endLine": 219,
+                    "endColumn": 19,
+                    "endOffset": 5433
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1208,
+                        "endLine": 35,
+                        "endColumn": 19,
+                        "endOffset": 1338
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 220,
+                    "startColumn": 4,
+                    "startOffset": 5438,
+                    "endLine": 223,
+                    "endColumn": 19,
+                    "endOffset": 5553
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 1627,
+                        "endLine": 52,
+                        "endColumn": 19,
+                        "endOffset": 1745
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 224,
+                    "startColumn": 4,
+                    "startOffset": 5558,
+                    "endLine": 228,
+                    "endColumn": 19,
+                    "endOffset": 5680
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 119,
+                        "startColumn": 4,
+                        "startOffset": 3929,
+                        "endLine": 123,
+                        "endColumn": 19,
+                        "endOffset": 4055
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 229,
+                    "startColumn": 4,
+                    "startOffset": 5685,
+                    "endColumn": 51,
+                    "endOffset": 5732
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 366,
+                        "endColumn": 51,
+                        "endOffset": 413
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 230,
+                    "startColumn": 4,
+                    "startOffset": 5737,
+                    "endColumn": 54,
+                    "endOffset": 5787
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 593,
+                        "endColumn": 54,
+                        "endOffset": 643
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 231,
+                    "startColumn": 4,
+                    "startOffset": 5792,
+                    "endColumn": 53,
+                    "endOffset": 5841
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 649,
+                        "endColumn": 53,
+                        "endOffset": 698
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 232,
+                    "startColumn": 4,
+                    "startOffset": 5846,
+                    "endColumn": 54,
+                    "endOffset": 5896
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 480,
+                        "endColumn": 54,
+                        "endOffset": 530
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 233,
+                    "startColumn": 4,
+                    "startOffset": 5901,
+                    "endColumn": 60,
+                    "endOffset": 5957
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 704,
+                        "endColumn": 60,
+                        "endOffset": 760
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 234,
+                    "startColumn": 4,
+                    "startOffset": 5962,
+                    "endColumn": 55,
+                    "endOffset": 6013
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 536,
+                        "endColumn": 55,
+                        "endOffset": 587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 235,
+                    "startColumn": 4,
+                    "startOffset": 6018,
+                    "endColumn": 54,
+                    "endOffset": 6068
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 766,
+                        "endColumn": 54,
+                        "endOffset": 816
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 236,
+                    "startColumn": 4,
+                    "startOffset": 6073,
+                    "endColumn": 48,
+                    "endOffset": 6117
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 111,
+                        "endColumn": 48,
+                        "endOffset": 155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 237,
+                    "startColumn": 4,
+                    "startOffset": 6122,
+                    "endColumn": 46,
+                    "endOffset": 6164
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 318,
+                        "endColumn": 46,
+                        "endOffset": 360
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 238,
+                    "startColumn": 4,
+                    "startOffset": 6169,
+                    "endColumn": 53,
+                    "endOffset": 6218
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 419,
+                        "endColumn": 53,
+                        "endOffset": 468
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 239,
+                    "startColumn": 4,
+                    "startOffset": 6223,
+                    "endColumn": 55,
+                    "endOffset": 6274
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 213,
+                        "endColumn": 55,
+                        "endOffset": 264
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 240,
+                    "startColumn": 4,
+                    "startOffset": 6279,
+                    "endColumn": 50,
+                    "endOffset": 6325
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 161,
+                        "endColumn": 50,
+                        "endOffset": 207
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 241,
+                    "startColumn": 4,
+                    "startOffset": 6330,
+                    "endColumn": 52,
+                    "endOffset": 6378
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 52,
+                        "endOffset": 105
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 242,
+                    "startColumn": 4,
+                    "startOffset": 6383,
+                    "endColumn": 46,
+                    "endOffset": 6425
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 270,
+                        "endColumn": 46,
+                        "endOffset": 312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 243,
+                    "startColumn": 4,
+                    "startOffset": 6430,
+                    "endColumn": 57,
+                    "endOffset": 6483
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 92,
+                        "endColumn": 57,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 244,
+                    "startColumn": 4,
+                    "startOffset": 6488,
+                    "endColumn": 55,
+                    "endOffset": 6539
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 55,
+                        "endOffset": 202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 245,
+                    "startColumn": 4,
+                    "startOffset": 6544,
+                    "endColumn": 46,
+                    "endOffset": 6586
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 313,
+                        "endColumn": 46,
+                        "endOffset": 355
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 246,
+                    "startColumn": 4,
+                    "startOffset": 6591,
+                    "endColumn": 45,
+                    "endOffset": 6632
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 210,
+                        "endColumn": 45,
+                        "endOffset": 251
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 247,
+                    "startColumn": 4,
+                    "startOffset": 6637,
+                    "endColumn": 43,
+                    "endOffset": 6676
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 361,
+                        "endColumn": 43,
+                        "endOffset": 400
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 248,
+                    "startColumn": 4,
+                    "startOffset": 6681,
+                    "endColumn": 42,
+                    "endOffset": 6719
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 257,
+                        "endColumn": 42,
+                        "endOffset": 295
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 6724,
+                    "endColumn": 52,
+                    "endOffset": 6772
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 107,
+                        "endColumn": 52,
+                        "endOffset": 155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 250,
+                    "startColumn": 4,
+                    "startOffset": 6777,
+                    "endColumn": 46,
+                    "endOffset": 6819
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 46,
+                        "endOffset": 101
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 251,
+                    "startColumn": 4,
+                    "startOffset": 6824,
+                    "endColumn": 42,
+                    "endOffset": 6862
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 180,
+                        "endColumn": 42,
+                        "endOffset": 218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 252,
+                    "startColumn": 4,
+                    "startOffset": 6867,
+                    "endColumn": 46,
+                    "endOffset": 6909
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 224,
+                        "endColumn": 46,
+                        "endOffset": 266
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 253,
+                    "startColumn": 4,
+                    "startOffset": 6914,
+                    "endColumn": 37,
+                    "endOffset": 6947
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 309,
+                        "endColumn": 37,
+                        "endOffset": 342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 254,
+                    "startColumn": 4,
+                    "startOffset": 6952,
+                    "endColumn": 130,
+                    "endOffset": 7078
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 81,
+                        "startColumn": 4,
+                        "startOffset": 2883,
+                        "endColumn": 130,
+                        "endOffset": 3009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 255,
+                    "startColumn": 4,
+                    "startOffset": 7083,
+                    "endColumn": 45,
+                    "endOffset": 7124
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 83,
+                        "startColumn": 4,
+                        "startOffset": 3063,
+                        "endColumn": 45,
+                        "endOffset": 3104
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 256,
+                    "startColumn": 4,
+                    "startOffset": 7129,
+                    "endColumn": 115,
+                    "endOffset": 7240
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 4,
+                        "startOffset": 2711,
+                        "endColumn": 115,
+                        "endOffset": 2822
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 257,
+                    "startColumn": 4,
+                    "startOffset": 7245,
+                    "endColumn": 56,
+                    "endOffset": 7297
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 75,
+                        "startColumn": 4,
+                        "startOffset": 2576,
+                        "endColumn": 56,
+                        "endOffset": 2628
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 258,
+                    "startColumn": 4,
+                    "startOffset": 7302,
+                    "endColumn": 56,
+                    "endOffset": 7354
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 2316,
+                        "endColumn": 56,
+                        "endOffset": 2368
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 259,
+                    "startColumn": 4,
+                    "startOffset": 7359,
+                    "endColumn": 42,
+                    "endOffset": 7397
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 65,
+                        "startColumn": 4,
+                        "startOffset": 2176,
+                        "endColumn": 42,
+                        "endOffset": 2214
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 260,
+                    "startColumn": 4,
+                    "startOffset": 7402,
+                    "endColumn": 47,
+                    "endOffset": 7445
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 2220,
+                        "endColumn": 47,
+                        "endOffset": 2263
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 7450,
+                    "endColumn": 45,
+                    "endOffset": 7491
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 2269,
+                        "endColumn": 45,
+                        "endOffset": 2310
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 262,
+                    "startColumn": 4,
+                    "startOffset": 7496,
+                    "endColumn": 55,
+                    "endOffset": 7547
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 2374,
+                        "endColumn": 55,
+                        "endOffset": 2425
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 263,
+                    "startColumn": 4,
+                    "startOffset": 7552,
+                    "endColumn": 58,
+                    "endOffset": 7606
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 2485,
+                        "endColumn": 58,
+                        "endOffset": 2539
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 264,
+                    "startColumn": 4,
+                    "startOffset": 7611,
+                    "endColumn": 52,
+                    "endOffset": 7659
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 4,
+                        "startOffset": 2431,
+                        "endColumn": 52,
+                        "endOffset": 2479
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 265,
+                    "startColumn": 4,
+                    "startOffset": 7664,
+                    "endColumn": 41,
+                    "endOffset": 7701
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 2081,
+                        "endColumn": 41,
+                        "endOffset": 2118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 266,
+                    "startColumn": 4,
+                    "startOffset": 7706,
+                    "endColumn": 50,
+                    "endOffset": 7752
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 2124,
+                        "endColumn": 50,
+                        "endOffset": 2170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 267,
+                    "startColumn": 4,
+                    "startOffset": 7757,
+                    "endColumn": 63,
+                    "endOffset": 7816
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 2016,
+                        "endColumn": 63,
+                        "endOffset": 2075
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 7821,
+                    "endColumn": 42,
+                    "endOffset": 7859
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 7,
+                        "startOffset": 357,
+                        "endColumn": 45,
+                        "endOffset": 395
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 269,
+                    "startColumn": 4,
+                    "startOffset": 7864,
+                    "endColumn": 48,
+                    "endOffset": 7908
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 458,
+                        "endColumn": 48,
+                        "endOffset": 502
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 270,
+                    "startColumn": 4,
+                    "startOffset": 7913,
+                    "endColumn": 55,
+                    "endOffset": 7964
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 401,
+                        "endColumn": 55,
+                        "endOffset": 452
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 271,
+                    "startColumn": 4,
+                    "startOffset": 7969,
+                    "endColumn": 35,
+                    "endOffset": 8000
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 272,
+                        "endColumn": 35,
+                        "endOffset": 303
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 272,
+                    "startColumn": 4,
+                    "startOffset": 8005,
+                    "endColumn": 57,
+                    "endOffset": 8058
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 86,
+                        "startColumn": 4,
+                        "startOffset": 3133,
+                        "endColumn": 57,
+                        "endOffset": 3186
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 273,
+                    "startColumn": 4,
+                    "startOffset": 8063,
+                    "endColumn": 69,
+                    "endOffset": 8128
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 296,
+                        "startColumn": 4,
+                        "startOffset": 8374,
+                        "endColumn": 69,
+                        "endOffset": 8439
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 274,
+                    "startColumn": 4,
+                    "startOffset": 8133,
+                    "endColumn": 46,
+                    "endOffset": 8175
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 527,
+                        "endColumn": 46,
+                        "endOffset": 569
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 275,
+                    "startColumn": 4,
+                    "startOffset": 8180,
+                    "endColumn": 50,
+                    "endOffset": 8226
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1011,
+                        "endColumn": 50,
+                        "endOffset": 1057
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 276,
+                    "startColumn": 4,
+                    "startOffset": 8231,
+                    "endColumn": 51,
+                    "endOffset": 8278
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 958,
+                        "endColumn": 51,
+                        "endOffset": 1005
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 277,
+                    "startColumn": 4,
+                    "startOffset": 8283,
+                    "endColumn": 46,
+                    "endOffset": 8325
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 82,
+                        "startColumn": 4,
+                        "startOffset": 3015,
+                        "endColumn": 46,
+                        "endOffset": 3057
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 278,
+                    "startColumn": 4,
+                    "startOffset": 8330,
+                    "endColumn": 57,
+                    "endOffset": 8383
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 672,
+                        "endColumn": 57,
+                        "endOffset": 725
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 279,
+                    "startColumn": 4,
+                    "startOffset": 8388,
+                    "endColumn": 53,
+                    "endOffset": 8437
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 2828,
+                        "endColumn": 53,
+                        "endOffset": 2877
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 280,
+                    "startColumn": 4,
+                    "startOffset": 8442,
+                    "endColumn": 53,
+                    "endOffset": 8491
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 78,
+                        "startColumn": 4,
+                        "startOffset": 2656,
+                        "endColumn": 53,
+                        "endOffset": 2705
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 281,
+                    "startColumn": 4,
+                    "startOffset": 8496,
+                    "endColumn": 46,
+                    "endOffset": 8538
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 731,
+                        "endColumn": 46,
+                        "endOffset": 773
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 282,
+                    "startColumn": 4,
+                    "startOffset": 8543,
+                    "endColumn": 43,
+                    "endOffset": 8582
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 627,
+                        "endColumn": 43,
+                        "endOffset": 666
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 283,
+                    "startColumn": 4,
+                    "startOffset": 8587,
+                    "endColumn": 49,
+                    "endOffset": 8632
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1063,
+                        "endColumn": 49,
+                        "endOffset": 1108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 284,
+                    "startColumn": 4,
+                    "startOffset": 8637,
+                    "endColumn": 57,
+                    "endOffset": 8690
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 832,
+                        "endColumn": 57,
+                        "endOffset": 885
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 285,
+                    "startColumn": 4,
+                    "startOffset": 8695,
+                    "endColumn": 51,
+                    "endOffset": 8742
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 779,
+                        "endColumn": 51,
+                        "endOffset": 826
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 286,
+                    "startColumn": 4,
+                    "startOffset": 8747,
+                    "endColumn": 65,
+                    "endOffset": 8808
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 891,
+                        "endColumn": 65,
+                        "endOffset": 952
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 287,
+                    "startColumn": 4,
+                    "startOffset": 8813,
+                    "endColumn": 50,
+                    "endOffset": 8859
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 575,
+                        "endColumn": 50,
+                        "endOffset": 621
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 288,
+                    "startColumn": 4,
+                    "startOffset": 8864,
+                    "endColumn": 67,
+                    "endOffset": 8927
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1114,
+                        "endColumn": 67,
+                        "endOffset": 1177
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 289,
+                    "startColumn": 4,
+                    "startOffset": 8932,
+                    "endLine": 292,
+                    "endColumn": 12,
+                    "endOffset": 9120
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1092,
+                        "endLine": 30,
+                        "endColumn": 12,
+                        "endOffset": 1283
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 293,
+                    "startColumn": 4,
+                    "startOffset": 9125,
+                    "endLine": 299,
+                    "endColumn": 12,
+                    "endOffset": 9411
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 191,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 300,
+                    "startColumn": 4,
+                    "startOffset": 9416,
+                    "endLine": 302,
+                    "endColumn": 12,
+                    "endOffset": 9571
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 522,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 679
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 303,
+                    "startColumn": 4,
+                    "startOffset": 9576,
+                    "endLine": 312,
+                    "endColumn": 12,
+                    "endOffset": 10052
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 384,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 869
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 313,
+                    "startColumn": 4,
+                    "startOffset": 10057,
+                    "endLine": 318,
+                    "endColumn": 12,
+                    "endOffset": 10310
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 118,
+                        "endLine": 8,
+                        "endColumn": 12,
+                        "endOffset": 376
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 319,
+                    "startColumn": 4,
+                    "startOffset": 10315,
+                    "endLine": 323,
+                    "endColumn": 12,
+                    "endOffset": 10518
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 877,
+                        "endLine": 25,
+                        "endColumn": 12,
+                        "endOffset": 1084
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 324,
+                    "startColumn": 4,
+                    "startOffset": 10523,
+                    "endLine": 337,
+                    "endColumn": 12,
+                    "endOffset": 11366
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1500,
+                        "endLine": 50,
+                        "endColumn": 12,
+                        "endOffset": 2356
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 338,
+                    "startColumn": 4,
+                    "startOffset": 11371,
+                    "endLine": 341,
+                    "endColumn": 12,
+                    "endOffset": 11569
+                },
+                "from": {
+                    "file": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 1291,
+                        "endLine": 35,
+                        "endColumn": 12,
+                        "endOffset": 1492
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 171,
+                    "endColumn": 19,
+                    "endOffset": 4185
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 4,
+                        "startOffset": 4067,
+                        "endLine": 294,
+                        "endColumn": 19,
+                        "endOffset": 8366
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 172,
+                    "startColumn": 4,
+                    "startOffset": 4190,
+                    "endLine": 200,
+                    "endColumn": 19,
+                    "endOffset": 4862
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 87,
+                        "startColumn": 4,
+                        "startOffset": 3192,
+                        "endLine": 115,
+                        "endColumn": 19,
+                        "endOffset": 3892
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 201,
+                    "startColumn": 4,
+                    "startOffset": 4867,
+                    "endLine": 209,
+                    "endColumn": 19,
+                    "endOffset": 5092
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1365,
+                        "endLine": 46,
+                        "endColumn": 19,
+                        "endOffset": 1598
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 210,
+                    "startColumn": 4,
+                    "startOffset": 5097,
+                    "endLine": 214,
+                    "endColumn": 19,
+                    "endOffset": 5302
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 1776,
+                        "endLine": 59,
+                        "endColumn": 19,
+                        "endOffset": 1985
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 215,
+                    "startColumn": 4,
+                    "startOffset": 5307,
+                    "endLine": 219,
+                    "endColumn": 19,
+                    "endOffset": 5433
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1208,
+                        "endLine": 35,
+                        "endColumn": 19,
+                        "endOffset": 1338
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 220,
+                    "startColumn": 4,
+                    "startOffset": 5438,
+                    "endLine": 223,
+                    "endColumn": 19,
+                    "endOffset": 5553
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 1627,
+                        "endLine": 52,
+                        "endColumn": 19,
+                        "endOffset": 1745
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 224,
+                    "startColumn": 4,
+                    "startOffset": 5558,
+                    "endLine": 228,
+                    "endColumn": 19,
+                    "endOffset": 5680
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 119,
+                        "startColumn": 4,
+                        "startOffset": 3929,
+                        "endLine": 123,
+                        "endColumn": 19,
+                        "endOffset": 4055
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 229,
+                    "startColumn": 4,
+                    "startOffset": 5685,
+                    "endColumn": 51,
+                    "endOffset": 5732
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 366,
+                        "endColumn": 51,
+                        "endOffset": 413
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 230,
+                    "startColumn": 4,
+                    "startOffset": 5737,
+                    "endColumn": 54,
+                    "endOffset": 5787
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 593,
+                        "endColumn": 54,
+                        "endOffset": 643
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 231,
+                    "startColumn": 4,
+                    "startOffset": 5792,
+                    "endColumn": 53,
+                    "endOffset": 5841
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 649,
+                        "endColumn": 53,
+                        "endOffset": 698
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 232,
+                    "startColumn": 4,
+                    "startOffset": 5846,
+                    "endColumn": 54,
+                    "endOffset": 5896
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 480,
+                        "endColumn": 54,
+                        "endOffset": 530
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 233,
+                    "startColumn": 4,
+                    "startOffset": 5901,
+                    "endColumn": 60,
+                    "endOffset": 5957
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 704,
+                        "endColumn": 60,
+                        "endOffset": 760
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 234,
+                    "startColumn": 4,
+                    "startOffset": 5962,
+                    "endColumn": 55,
+                    "endOffset": 6013
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 536,
+                        "endColumn": 55,
+                        "endOffset": 587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 235,
+                    "startColumn": 4,
+                    "startOffset": 6018,
+                    "endColumn": 54,
+                    "endOffset": 6068
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 766,
+                        "endColumn": 54,
+                        "endOffset": 816
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 236,
+                    "startColumn": 4,
+                    "startOffset": 6073,
+                    "endColumn": 48,
+                    "endOffset": 6117
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 111,
+                        "endColumn": 48,
+                        "endOffset": 155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 237,
+                    "startColumn": 4,
+                    "startOffset": 6122,
+                    "endColumn": 46,
+                    "endOffset": 6164
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 318,
+                        "endColumn": 46,
+                        "endOffset": 360
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 238,
+                    "startColumn": 4,
+                    "startOffset": 6169,
+                    "endColumn": 53,
+                    "endOffset": 6218
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 419,
+                        "endColumn": 53,
+                        "endOffset": 468
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 239,
+                    "startColumn": 4,
+                    "startOffset": 6223,
+                    "endColumn": 55,
+                    "endOffset": 6274
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 213,
+                        "endColumn": 55,
+                        "endOffset": 264
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 240,
+                    "startColumn": 4,
+                    "startOffset": 6279,
+                    "endColumn": 50,
+                    "endOffset": 6325
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 161,
+                        "endColumn": 50,
+                        "endOffset": 207
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 241,
+                    "startColumn": 4,
+                    "startOffset": 6330,
+                    "endColumn": 52,
+                    "endOffset": 6378
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 52,
+                        "endOffset": 105
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 242,
+                    "startColumn": 4,
+                    "startOffset": 6383,
+                    "endColumn": 46,
+                    "endOffset": 6425
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 270,
+                        "endColumn": 46,
+                        "endOffset": 312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 243,
+                    "startColumn": 4,
+                    "startOffset": 6430,
+                    "endColumn": 57,
+                    "endOffset": 6483
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 92,
+                        "endColumn": 57,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 244,
+                    "startColumn": 4,
+                    "startOffset": 6488,
+                    "endColumn": 55,
+                    "endOffset": 6539
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 55,
+                        "endOffset": 202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 245,
+                    "startColumn": 4,
+                    "startOffset": 6544,
+                    "endColumn": 46,
+                    "endOffset": 6586
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 313,
+                        "endColumn": 46,
+                        "endOffset": 355
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 246,
+                    "startColumn": 4,
+                    "startOffset": 6591,
+                    "endColumn": 45,
+                    "endOffset": 6632
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 210,
+                        "endColumn": 45,
+                        "endOffset": 251
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 247,
+                    "startColumn": 4,
+                    "startOffset": 6637,
+                    "endColumn": 43,
+                    "endOffset": 6676
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 361,
+                        "endColumn": 43,
+                        "endOffset": 400
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 248,
+                    "startColumn": 4,
+                    "startOffset": 6681,
+                    "endColumn": 42,
+                    "endOffset": 6719
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 257,
+                        "endColumn": 42,
+                        "endOffset": 295
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 6724,
+                    "endColumn": 52,
+                    "endOffset": 6772
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 107,
+                        "endColumn": 52,
+                        "endOffset": 155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 250,
+                    "startColumn": 4,
+                    "startOffset": 6777,
+                    "endColumn": 46,
+                    "endOffset": 6819
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 46,
+                        "endOffset": 101
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 251,
+                    "startColumn": 4,
+                    "startOffset": 6824,
+                    "endColumn": 42,
+                    "endOffset": 6862
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 180,
+                        "endColumn": 42,
+                        "endOffset": 218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 252,
+                    "startColumn": 4,
+                    "startOffset": 6867,
+                    "endColumn": 46,
+                    "endOffset": 6909
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 224,
+                        "endColumn": 46,
+                        "endOffset": 266
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 253,
+                    "startColumn": 4,
+                    "startOffset": 6914,
+                    "endColumn": 37,
+                    "endOffset": 6947
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 309,
+                        "endColumn": 37,
+                        "endOffset": 342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 254,
+                    "startColumn": 4,
+                    "startOffset": 6952,
+                    "endColumn": 130,
+                    "endOffset": 7078
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 81,
+                        "startColumn": 4,
+                        "startOffset": 2883,
+                        "endColumn": 130,
+                        "endOffset": 3009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 255,
+                    "startColumn": 4,
+                    "startOffset": 7083,
+                    "endColumn": 45,
+                    "endOffset": 7124
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 83,
+                        "startColumn": 4,
+                        "startOffset": 3063,
+                        "endColumn": 45,
+                        "endOffset": 3104
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 256,
+                    "startColumn": 4,
+                    "startOffset": 7129,
+                    "endColumn": 115,
+                    "endOffset": 7240
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 4,
+                        "startOffset": 2711,
+                        "endColumn": 115,
+                        "endOffset": 2822
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 257,
+                    "startColumn": 4,
+                    "startOffset": 7245,
+                    "endColumn": 56,
+                    "endOffset": 7297
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 75,
+                        "startColumn": 4,
+                        "startOffset": 2576,
+                        "endColumn": 56,
+                        "endOffset": 2628
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 258,
+                    "startColumn": 4,
+                    "startOffset": 7302,
+                    "endColumn": 56,
+                    "endOffset": 7354
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 2316,
+                        "endColumn": 56,
+                        "endOffset": 2368
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 259,
+                    "startColumn": 4,
+                    "startOffset": 7359,
+                    "endColumn": 42,
+                    "endOffset": 7397
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 65,
+                        "startColumn": 4,
+                        "startOffset": 2176,
+                        "endColumn": 42,
+                        "endOffset": 2214
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 260,
+                    "startColumn": 4,
+                    "startOffset": 7402,
+                    "endColumn": 47,
+                    "endOffset": 7445
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 2220,
+                        "endColumn": 47,
+                        "endOffset": 2263
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 7450,
+                    "endColumn": 45,
+                    "endOffset": 7491
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 2269,
+                        "endColumn": 45,
+                        "endOffset": 2310
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 262,
+                    "startColumn": 4,
+                    "startOffset": 7496,
+                    "endColumn": 55,
+                    "endOffset": 7547
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 2374,
+                        "endColumn": 55,
+                        "endOffset": 2425
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 263,
+                    "startColumn": 4,
+                    "startOffset": 7552,
+                    "endColumn": 58,
+                    "endOffset": 7606
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 2485,
+                        "endColumn": 58,
+                        "endOffset": 2539
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 264,
+                    "startColumn": 4,
+                    "startOffset": 7611,
+                    "endColumn": 52,
+                    "endOffset": 7659
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 4,
+                        "startOffset": 2431,
+                        "endColumn": 52,
+                        "endOffset": 2479
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 265,
+                    "startColumn": 4,
+                    "startOffset": 7664,
+                    "endColumn": 41,
+                    "endOffset": 7701
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 2081,
+                        "endColumn": 41,
+                        "endOffset": 2118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 266,
+                    "startColumn": 4,
+                    "startOffset": 7706,
+                    "endColumn": 50,
+                    "endOffset": 7752
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 2124,
+                        "endColumn": 50,
+                        "endOffset": 2170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 267,
+                    "startColumn": 4,
+                    "startOffset": 7757,
+                    "endColumn": 63,
+                    "endOffset": 7816
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 2016,
+                        "endColumn": 63,
+                        "endOffset": 2075
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 7821,
+                    "endColumn": 42,
+                    "endOffset": 7859
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 7,
+                        "startOffset": 357,
+                        "endColumn": 45,
+                        "endOffset": 395
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 269,
+                    "startColumn": 4,
+                    "startOffset": 7864,
+                    "endColumn": 48,
+                    "endOffset": 7908
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 458,
+                        "endColumn": 48,
+                        "endOffset": 502
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 270,
+                    "startColumn": 4,
+                    "startOffset": 7913,
+                    "endColumn": 55,
+                    "endOffset": 7964
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 401,
+                        "endColumn": 55,
+                        "endOffset": 452
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 271,
+                    "startColumn": 4,
+                    "startOffset": 7969,
+                    "endColumn": 35,
+                    "endOffset": 8000
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 272,
+                        "endColumn": 35,
+                        "endOffset": 303
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 272,
+                    "startColumn": 4,
+                    "startOffset": 8005,
+                    "endColumn": 57,
+                    "endOffset": 8058
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 86,
+                        "startColumn": 4,
+                        "startOffset": 3133,
+                        "endColumn": 57,
+                        "endOffset": 3186
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 273,
+                    "startColumn": 4,
+                    "startOffset": 8063,
+                    "endColumn": 69,
+                    "endOffset": 8128
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 296,
+                        "startColumn": 4,
+                        "startOffset": 8374,
+                        "endColumn": 69,
+                        "endOffset": 8439
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 274,
+                    "startColumn": 4,
+                    "startOffset": 8133,
+                    "endColumn": 46,
+                    "endOffset": 8175
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 527,
+                        "endColumn": 46,
+                        "endOffset": 569
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 275,
+                    "startColumn": 4,
+                    "startOffset": 8180,
+                    "endColumn": 50,
+                    "endOffset": 8226
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1011,
+                        "endColumn": 50,
+                        "endOffset": 1057
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 276,
+                    "startColumn": 4,
+                    "startOffset": 8231,
+                    "endColumn": 51,
+                    "endOffset": 8278
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 958,
+                        "endColumn": 51,
+                        "endOffset": 1005
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 277,
+                    "startColumn": 4,
+                    "startOffset": 8283,
+                    "endColumn": 46,
+                    "endOffset": 8325
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 82,
+                        "startColumn": 4,
+                        "startOffset": 3015,
+                        "endColumn": 46,
+                        "endOffset": 3057
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 278,
+                    "startColumn": 4,
+                    "startOffset": 8330,
+                    "endColumn": 57,
+                    "endOffset": 8383
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 672,
+                        "endColumn": 57,
+                        "endOffset": 725
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 279,
+                    "startColumn": 4,
+                    "startOffset": 8388,
+                    "endColumn": 53,
+                    "endOffset": 8437
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 2828,
+                        "endColumn": 53,
+                        "endOffset": 2877
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 280,
+                    "startColumn": 4,
+                    "startOffset": 8442,
+                    "endColumn": 53,
+                    "endOffset": 8491
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 78,
+                        "startColumn": 4,
+                        "startOffset": 2656,
+                        "endColumn": 53,
+                        "endOffset": 2705
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 281,
+                    "startColumn": 4,
+                    "startOffset": 8496,
+                    "endColumn": 46,
+                    "endOffset": 8538
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 731,
+                        "endColumn": 46,
+                        "endOffset": 773
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 282,
+                    "startColumn": 4,
+                    "startOffset": 8543,
+                    "endColumn": 43,
+                    "endOffset": 8582
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 627,
+                        "endColumn": 43,
+                        "endOffset": 666
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 283,
+                    "startColumn": 4,
+                    "startOffset": 8587,
+                    "endColumn": 49,
+                    "endOffset": 8632
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1063,
+                        "endColumn": 49,
+                        "endOffset": 1108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 284,
+                    "startColumn": 4,
+                    "startOffset": 8637,
+                    "endColumn": 57,
+                    "endOffset": 8690
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 832,
+                        "endColumn": 57,
+                        "endOffset": 885
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 285,
+                    "startColumn": 4,
+                    "startOffset": 8695,
+                    "endColumn": 51,
+                    "endOffset": 8742
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 779,
+                        "endColumn": 51,
+                        "endOffset": 826
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 286,
+                    "startColumn": 4,
+                    "startOffset": 8747,
+                    "endColumn": 65,
+                    "endOffset": 8808
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 891,
+                        "endColumn": 65,
+                        "endOffset": 952
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 287,
+                    "startColumn": 4,
+                    "startOffset": 8813,
+                    "endColumn": 50,
+                    "endOffset": 8859
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 575,
+                        "endColumn": 50,
+                        "endOffset": 621
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 288,
+                    "startColumn": 4,
+                    "startOffset": 8864,
+                    "endColumn": 67,
+                    "endOffset": 8927
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1114,
+                        "endColumn": 67,
+                        "endOffset": 1177
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 289,
+                    "startColumn": 4,
+                    "startOffset": 8932,
+                    "endLine": 292,
+                    "endColumn": 12,
+                    "endOffset": 9120
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1092,
+                        "endLine": 30,
+                        "endColumn": 12,
+                        "endOffset": 1283
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 293,
+                    "startColumn": 4,
+                    "startOffset": 9125,
+                    "endLine": 299,
+                    "endColumn": 12,
+                    "endOffset": 9411
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 191,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 300,
+                    "startColumn": 4,
+                    "startOffset": 9416,
+                    "endLine": 302,
+                    "endColumn": 12,
+                    "endOffset": 9571
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 522,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 679
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 303,
+                    "startColumn": 4,
+                    "startOffset": 9576,
+                    "endLine": 312,
+                    "endColumn": 12,
+                    "endOffset": 10052
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 384,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 869
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 313,
+                    "startColumn": 4,
+                    "startOffset": 10057,
+                    "endLine": 318,
+                    "endColumn": 12,
+                    "endOffset": 10310
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 118,
+                        "endLine": 8,
+                        "endColumn": 12,
+                        "endOffset": 376
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 319,
+                    "startColumn": 4,
+                    "startOffset": 10315,
+                    "endLine": 323,
+                    "endColumn": 12,
+                    "endOffset": 10518
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 877,
+                        "endLine": 25,
+                        "endColumn": 12,
+                        "endOffset": 1084
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 324,
+                    "startColumn": 4,
+                    "startOffset": 10523,
+                    "endLine": 337,
+                    "endColumn": 12,
+                    "endOffset": 11366
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1500,
+                        "endLine": 50,
+                        "endColumn": 12,
+                        "endOffset": 2356
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 338,
+                    "startColumn": 4,
+                    "startOffset": 11371,
+                    "endLine": 341,
+                    "endColumn": 12,
+                    "endOffset": 11569
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 1291,
+                        "endLine": 35,
+                        "endColumn": 12,
+                        "endOffset": 1492
+                    }
+                }
+            }
+        ]
+    }
+]

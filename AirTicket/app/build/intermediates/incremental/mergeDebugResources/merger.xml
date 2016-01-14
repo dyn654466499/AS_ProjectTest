@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res"/><source path="D:\Git_ForAS\ProjectTest\AirTicket\app\build\generated\res\rs\debug"/><source path="D:\Git_ForAS\ProjectTest\AirTicket\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\debug\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res"><file name="activity_down" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\anim\activity_down.xml" qualifiers="" type="anim"/><file name="activity_up" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\anim\activity_up.xml" qualifiers="" type="anim"/><file name="autoloading" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\anim\autoloading.xml" qualifiers="" type="anim"/><file name="down" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\anim\down.xml" qualifiers="" type="anim"/><file name="rotate" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\anim\rotate.xml" qualifiers="" type="anim"/><file name="text_animation" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\anim\text_animation.xml" qualifiers="" type="anim"/><file name="upward" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\anim\upward.xml" qualifiers="" type="anim"/><file name="bg_selector" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\bg_selector.xml" qualifiers="" type="drawable"/><file name="bg_selector_frame" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\bg_selector_frame.xml" qualifiers="" type="drawable"/><file name="btn_goandback_press" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\btn_goandback_press.xml" qualifiers="" type="drawable"/><file name="btn_goandback_selector" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\btn_goandback_selector.xml" qualifiers="" type="drawable"/><file name="btn_goandback_unpress" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\btn_goandback_unpress.xml" qualifiers="" type="drawable"/><file name="btn_oneway_press" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\btn_oneway_press.xml" qualifiers="" type="drawable"/><file name="btn_oneway_selector" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\btn_oneway_selector.xml" qualifiers="" type="drawable"/><file name="btn_oneway_unpress" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\btn_oneway_unpress.xml" qualifiers="" type="drawable"/><file name="btn_press_frame" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\btn_press_frame.xml" qualifiers="" type="drawable"/><file name="btn_unpress_frame" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\btn_unpress_frame.xml" qualifiers="" type="drawable"/><file name="editext_corner" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\editext_corner.xml" qualifiers="" type="drawable"/><file name="layout_frame_nomal" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\layout_frame_nomal.xml" qualifiers="" type="drawable"/><file name="select_city_bg" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\select_city_bg.xml" qualifiers="" type="drawable"/><file name="ticket_btn_corner_click" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\ticket_btn_corner_click.xml" qualifiers="" type="drawable"/><file name="ticket_btn_corner_selector" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\ticket_btn_corner_selector.xml" qualifiers="" type="drawable"/><file name="ticket_btn_selector" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\ticket_btn_selector.xml" qualifiers="" type="drawable"/><file name="ticket_title_corner" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable\ticket_title_corner.xml" qualifiers="" type="drawable"/><file name="bg_calendar_seleced" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\bg_calendar_seleced.png" qualifiers="hdpi-v4" type="drawable"/><file name="dancheng" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\dancheng.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_duigou_lan" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\ic_duigou_lan.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_fanxiang" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\ic_fanxiang.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_xiangxia" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\ic_xiangxia.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_xiangyou" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\ic_xiangyou.png" qualifiers="hdpi-v4" type="drawable"/><file name="kongxian" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\kongxian.png" qualifiers="hdpi-v4" type="drawable"/><file name="line" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\line.png" qualifiers="hdpi-v4" type="drawable"/><file name="submit_edit_clear_normal" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\submit_edit_clear_normal.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading1" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading1.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading2" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading2.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading3" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading3.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading4" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading4.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading5" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading5.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading6" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading6.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading7" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading7.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading8" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading8.png" qualifiers="hdpi-v4" type="drawable"/><file name="tip_loading9" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-hdpi\tip_loading9.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="dancheng_da" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xhdpi\dancheng_da.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_duigou_lan" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xhdpi\ic_duigou_lan.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_fanxiang" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xhdpi\ic_fanxiang.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_xiangxia" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xhdpi\ic_xiangxia.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_xiangyou" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xhdpi\ic_xiangyou.png" qualifiers="xhdpi-v4" type="drawable"/><file name="kongxian" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xhdpi\kongxian.png" qualifiers="xhdpi-v4" type="drawable"/><file name="line" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xhdpi\line.png" qualifiers="xhdpi-v4" type="drawable"/><file name="submit_edit_clear_normal" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xhdpi\submit_edit_clear_normal.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\drawable-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="activity_city_search" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\activity_city_search.xml" qualifiers="" type="layout"/><file name="activity_date_pick" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\activity_date_pick.xml" qualifiers="" type="layout"/><file name="activity_select" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\activity_select.xml" qualifiers="" type="layout"/><file name="activity_ticket" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\activity_ticket.xml" qualifiers="" type="layout"/><file name="activity_ticket_order" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\activity_ticket_order.xml" qualifiers="" type="layout"/><file name="activity_ticket_result" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\activity_ticket_result.xml" qualifiers="" type="layout"/><file name="autoloading" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\autoloading.xml" qualifiers="" type="layout"/><file name="item_city_search" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_city_search.xml" qualifiers="" type="layout"/><file name="item_city_search_tag" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_city_search_tag.xml" qualifiers="" type="layout"/><file name="item_date_pick" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_date_pick.xml" qualifiers="" type="layout"/><file name="item_order_insure" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_order_insure.xml" qualifiers="" type="layout"/><file name="item_order_passenger_info" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_order_passenger_info.xml" qualifiers="" type="layout"/><file name="item_order_ticket_info" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_order_ticket_info.xml" qualifiers="" type="layout"/><file name="item_select" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_select.xml" qualifiers="" type="layout"/><file name="item_ticket_result" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_ticket_result.xml" qualifiers="" type="layout"/><file name="item_ticket_result_detail" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\item_ticket_result_detail.xml" qualifiers="" type="layout"/><file name="layout_btn_back" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\layout_btn_back.xml" qualifiers="" type="layout"/><file name="layout_endorse" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\layout_endorse.xml" qualifiers="" type="layout"/><file name="layout_insure_desc" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\layout_insure_desc.xml" qualifiers="" type="layout"/><file name="layout_title" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\layout\layout_title.xml" qualifiers="" type="layout"/><file name="city_list" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\menu\city_list.xml" qualifiers="" type="menu"/><file name="main" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\menu\main.xml" qualifiers="" type="menu"/><file name="china_city" path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\raw\china_city" qualifiers="" type="raw"/><file path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\values\color.xml" qualifiers=""><color name="calendar_color_white">#ffffff</color><color name="ticket_white">#ffffff</color><color name="ticket_black">#333333</color><color name="ticket_title_color">#0080ff</color><color name="ticket_font_gray">#848484</color><color name="calendar_color_green">#60c677</color><color name="calendar_color_gray">#cccccc</color><color name="calendar_color_month_title">#526276</color><color name="ticket_button_click">#00a8ff</color><color name="calendar_color_orange">#fc6c00</color><color name="activitytransparent">#a000</color><color name="calendar_color_black">#666666</color><color name="ticket_font_deep_gray">#545454</color><color name="ticket_bg_gray">#f0f0f0</color></file><file path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="title_corner">5dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="edittext_corner">5dp</dimen><dimen name="button_textSize">16sp</dimen><dimen name="layout_title">20sp</dimen></file><file path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\values\strings.xml" qualifiers=""><string name="order_insure_casualty">航空意外险</string><string name="title_endorse_refund">退票条件</string><string name="title_select_certificate">选择证件</string><string name="endorse_desc">不得签转</string><string name="title_date_back">选择返回日期</string><string name="sure">确定</string><string formatted="false" name="endorse_change_desc">起飞前2小时之前的改期手续费按产品价收取30%，起飞前2小时（含）以内及起飞后的收取50%；改期费与升舱费同时发生，需同时收取。</string><string-array name="hot_city">
+        <item>北京</item>
+        <item>广州</item>
+        <item>上海</item>
+    </string-array><string name="button_search">开始搜索</string><string name="string_hot_city">热门城市</string><string-array name="TypeTicketDestribute">
+        <item>不需要报销凭证</item>
+        <item>快递</item>
+    </string-array><string-array name="TypeSapce">
+        <item>经济舱</item>
+        <item>商务舱</item>
+        <item>头等舱</item>
+    </string-array><string name="order_cert_num">证件号码</string><string name="string_back">返回</string><string-array name="TypeInsure">
+        <item>@string/order_insure_casualty</item>
+        <item>@string/order_insure_delay</item>
+        <item>@string/order_insure_combination</item>
+    </string-array><string name="order_insure_delay">延误取消险</string><string name="order_cert">身份证</string><string name="string_search_hit">搜索中文/城市简拼</string><string name="title_endorse_change">更改条件</string><string name="order_passengers">乘机人姓名</string><string name="title_select_space">选择舱位</string><string name="title_ticket_result">%1$s - %2$s (%3$s) </string><string name="order_peopleAndPrice">共%1$s人，总计￥%2$s</string><string name="title_oneWay">单程</string><string name="order_insure_combination">航空组合险</string><string name="tips_exitOrder">您正在填写订单，是否要退出？</string><string name="title_airTicket">机票</string><string name="action_settings">Settings</string><string name="order_add_passengers">添加更多乘机人</string><string name="app_name">AirTicket</string><string name="title_startDate">选择出发日期</string><string name="cancel">取消</string><string name="title_select_ticket_distribute">选择配送方式</string><string-array name="CityNames">
+        <item>北京首都</item>
+        <item>上海虹桥</item>
+        <item>上海浦东</item>
+        <item>广州</item>
+        <item>深圳</item>
+        <item>香港</item>
+        <item>澳门</item>
+        <item>天津</item>
+        <item>成都</item>
+        <item>重庆</item>
+        <item>南京</item>
+        <item>青岛</item>
+        <item>珠海</item>
+        <item>福州</item>
+        <item>哈尔滨</item>
+        <item>大连</item>
+        <item>海口</item>
+        <item>沈阳</item>
+        <item>厦门</item>
+        <item>安庆</item>
+        <item>鞍山</item>
+        <item>阿克苏</item>
+        <item>阿勒泰</item>
+        <item>安康</item>
+        <item>北京首都</item>
+        <item>北京南苑</item>
+        <item>保山</item>
+        <item>包头</item>
+        <item>北海</item>
+        <item>蚌埠</item>
+        <item>重庆</item>
+        <item>成都</item>
+        <item>长沙</item>
+        <item>长春</item>
+        <item>常德</item>
+        <item>长治</item>
+        <item>常州</item>
+        <item>朝阳</item>
+        <item>赤峰</item>
+        <item>大连</item>
+        <item>敦煌</item>
+        <item>大理</item>
+        <item>达县</item>
+        <item>东营</item>
+        <item>丹东</item>
+        <item>大同</item>
+        <item>恩施</item>
+        <item>福州</item>
+        <item>阜阳</item>
+        <item>富蕴</item>
+        <item>广州</item>
+        <item>桂林</item>
+        <item>贵阳</item>
+        <item>格尔木</item>
+        <item>广汉</item>
+        <item>赣州</item>
+        <item>海口</item>
+        <item>哈尔滨</item>
+        <item>杭州</item>
+        <item>合肥</item>
+        <item>黄山</item>
+        <item>呼和浩特</item>
+        <item>海拉尔</item>
+        <item>哈密</item>
+        <item>汉中</item>
+        <item>黑河</item>
+        <item>衡阳</item>
+        <item>和田</item>
+        <item>黄岩</item>
+        <item>吉林</item>
+        <item>济南</item>
+        <item>九江</item>
+        <item>九寨黄龙</item>
+        <item>吉安</item>
+        <item>佳木斯</item>
+        <item>嘉峪关</item>
+        <item>济宁</item>
+        <item>景德镇</item>
+        <item>景洪</item>
+        <item>晋江</item>
+        <item>锦州</item>
+        <item>酒泉</item>
+        <item>昆明</item>
+        <item>克拉玛依</item>
+        <item>喀什</item>
+        <item>库尔勒</item>
+        <item>库车</item>
+        <item>洛阳</item>
+        <item>兰州</item>
+        <item>拉萨</item>
+        <item>连云港</item>
+        <item>丽江</item>
+        <item>临沂</item>
+        <item>柳州</item>
+        <item>泸州</item>
+        <item>芒市</item>
+        <item>梅县</item>
+        <item>绵阳</item>
+        <item>牡丹江</item>
+        <item>满洲里</item>
+        <item>南京</item>
+        <item>宁波</item>
+        <item>南昌</item>
+        <item>南宁</item>
+        <item>南通</item>
+        <item>南充</item>
+        <item>南阳</item>
+        <item>青岛</item>
+        <item>秦皇岛</item>
+        <item>齐齐哈尔</item>
+        <item>泉州</item>
+        <item>衢州</item>
+        <item>且末</item>
+        <item>庆阳</item>
+        <item>沈阳</item>
+        <item>深圳</item>
+        <item>上海虹桥</item>
+        <item>上海浦东</item>
+        <item>汕头</item>
+        <item>石家庄</item>
+        <item>苏州</item>
+        <item>三亚</item>
+        <item>沙市</item>
+        <item>思茅</item>
+        <item>天津</item>
+        <item>塔城</item>
+        <item>太原</item>
+        <item>通化</item>
+        <item>通辽</item>
+        <item>铜仁</item>
+        <item>温州</item>
+        <item>武汉</item>
+        <item>武汉王家</item>
+        <item>无锡</item>
+        <item>乌鲁木齐</item>
+        <item>威海</item>
+        <item>梧州</item>
+        <item>万县</item>
+        <item>潍坊</item>
+        <item>乌兰浩特</item>
+        <item>武夷山</item>
+        <item>厦门</item>
+        <item>徐州</item>
+        <item>西安</item>
+        <item>西宁</item>
+        <item>西昌</item>
+        <item>襄樊</item>
+        <item>锡林浩特</item>
+        <item>银川</item>
+        <item>延安</item>
+        <item>延吉</item>
+        <item>烟台</item>
+        <item>盐城</item>
+        <item>宜宾</item>
+        <item>宜昌</item>
+        <item>伊宁</item>
+        <item>义乌</item>
+        <item>永州</item>
+        <item>榆林</item>
+        <item>珠海</item>
+        <item>昭通</item>
+        <item>张家界</item>
+        <item>湛江</item>
+        <item>芷江</item>
+        <item>中甸</item>
+        <item>舟山</item>
+        <item>遵义</item>
+        <item>郑州</item>
+    </string-array><string name="title_date_leave">选择出发日期</string><string name="title_endorseOrBackDesc">退改签说明</string><string name="order_name">姓名</string><string name="order_commit">提交订单</string><string name="title_endorse">签转条件</string><string-array name="CityTags">
+        <item>热门</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array><string name="title_order_edit">订单填写</string><string name="title_activity_city_list">CityListActivity</string><string name="button_back">返回</string><string name="title_goAndBack">往返</string><string-array name="TypeCert">
+        <item>身份证</item>
+        <item>护照</item>
+        <item>台胞证</item>
+        <item>回乡证</item>
+        <item>军人证</item>
+        <item>港澳通行证</item>
+        <item>其他</item>
+    </string-array><string name="hint_citylist_search">搜索中文/全拼</string><string formatted="false" name="endorse_refund_desc">起飞前2小时之前的产品退订手续费按产品价收取50%，起飞前2小时（含）以内和起飞后不支持产品退订；</string></file><file path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\values\style.xml" qualifiers=""><style name="noAnimationTheme" parent="android:Theme">
+        <item name="android:windowAnimationStyle">@style/noAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+    </style><style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:textColor">#8f8f8f</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@null</item>
+    </style><style name="noAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style><style name="ActivityTransparent">
+        <item name="android:windowBackground">@color/activitytransparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style><style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style><style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style></file><file path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style></file><file path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file><file path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file></source><source path="D:\Git_ForAS\ProjectTest\AirTicket\app\build\generated\res\rs\debug"/><source path="D:\Git_ForAS\ProjectTest\AirTicket\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="D:\Git_ForAS\ProjectTest\AirTicket\app\src\debug\res"/></dataSet><mergedItems/></merger>

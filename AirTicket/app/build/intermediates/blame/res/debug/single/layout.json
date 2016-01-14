@@ -1,0 +1,162 @@
+[
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ticket.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_ticket.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ticket_result.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_ticket_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_select.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_select.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ticket_result.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\activity_ticket_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_ticket_result.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_ticket_result.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_select.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_select.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_date_pick.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_date_pick.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_city_search_tag.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_city_search_tag.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_date_pick.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_date_pick.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ticket_order.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\activity_ticket_order.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_city_search.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_city_search.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\autoloading.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\autoloading.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_title.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\layout_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_insure_desc.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\layout_insure_desc.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_select.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\activity_select.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_passenger_info.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_order_passenger_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_ticket_info.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_order_ticket_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_passenger_info.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_order_passenger_info.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_city_search.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_city_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_date_pick.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\activity_date_pick.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_ticket_info.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_order_ticket_info.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_select.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_select.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_ticket_result_detail.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_ticket_result_detail.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ticket_order.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_ticket_order.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_endorse.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\layout_endorse.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_ticket_result_detail.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_ticket_result_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\autoloading.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\autoloading.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_city_search.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_city_search.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_city_search_tag.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_city_search_tag.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_insure.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\item_order_insure.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_ticket_result.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_ticket_result.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_insure.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_order_insure.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_endorse.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\layout_endorse.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_title.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\layout_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_btn_back.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\layout_btn_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_city_search.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\activity_city_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ticket.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\layout\\activity_ticket.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_date_pick.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_date_pick.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_btn_back.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\layout_btn_back.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_insure_desc.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\layout_insure_desc.xml"
+    }
+]
