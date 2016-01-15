@@ -1,13 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#ffffff"
     android:orientation="vertical"
-    android:paddingLeft="15dp" 
-    android:paddingTop="10dp" 
-    android:paddingRight="15dp" 
-    android:paddingBottom="10dp" >
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -73,7 +72,7 @@
             android:layout_below="@id/linearLayout_ticket_result"
             android:layout_marginTop="10dp"
             android:text="宁波烁社机场"
-            android:textColor="#999999"
+            android:textColor="@color/ticket_font_gray"
             android:textSize="12sp" />
         <!-- 降落机场 -->
 
@@ -85,7 +84,7 @@
             android:layout_below="@id/tv_flight_result_landingTime"
             android:layout_marginTop="10dp"
             android:text="北京首都机场T1"
-            android:textColor="#999999"
+            android:textColor="@color/ticket_font_gray"
             android:textSize="12sp" />
         <!-- 折扣 -->
 
@@ -95,9 +94,10 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/tv_flight_result_cabinPrice"
             android:layout_below="@id/tv_flight_result_cabinPrice"
+            android:layout_toRightOf="@id/tv_flight_result_landingPort"
             android:layout_marginTop="10dp"
             android:text="3折"
-            android:textColor="#999999"
+            android:textColor="@color/ticket_font_gray"
             android:textSize="12sp" />
         <!-- 结果展开 -->
 
@@ -139,9 +139,51 @@
             android:layout_toRightOf="@id/imageView_flight_result_airLines"
             android:layout_marginLeft="5dp"
             android:layout_centerVertical="true"
-            android:text="东方航空 MU5214"
-            android:textColor="#999999"
+            android:text="东方航空"
+            android:textColor="@color/ticket_font_gray"
             android:textSize="12sp" />
+          <TextView
+              android:id="@+id/tv_flight_result_flightNum"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/tv_flight_result_airLines"
+              android:layout_marginLeft="5dp"
+              android:layout_centerVertical="true"
+              android:text="MU5214"
+              android:textColor="@color/ticket_font_gray"
+              android:textSize="12sp" />
+
+          <View
+              android:layout_width="1dp"
+              android:layout_height="10dp"
+              android:background="@color/ticket_font_gray"
+              android:layout_toRightOf="@id/tv_flight_result_flightNum"
+              android:layout_marginLeft="5dp"
+              android:layout_centerVertical="true"
+              />
+
+          <TextView
+              android:id="@+id/tv_flight_result_planeModel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/tv_flight_result_flightNum"
+              android:layout_marginLeft="10dp"
+              android:layout_centerVertical="true"
+              android:text="320"
+              android:textColor="@color/ticket_font_gray"
+              android:textSize="12sp" />
+
+          <TextView
+              android:id="@+id/tv_flight_result_planeSize"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/tv_flight_result_planeModel"
+              android:layout_marginLeft="5dp"
+              android:layout_centerVertical="true"
+              android:text="(大)"
+              android:textColor="@color/ticket_font_gray"
+              android:textSize="12sp" />
+
 </RelativeLayout>
         <!-- 票数 -->
 

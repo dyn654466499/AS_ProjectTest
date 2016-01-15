@@ -99,7 +99,13 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 					.findViewById(R.id.tv_flight_result_airLines);
 			group.tv_flight_result_amount = (TextView) convertView
 					.findViewById(R.id.tv_flight_result_amount);
-			
+			group.tv_flight_result_flightNum = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_flightNum);
+			group.tv_flight_result_planeModel = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_planeModel);
+			group.tv_flight_result_planeSize = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_planeSize);
+
 			group.imageView_flight_result_airLines = (ImageView) convertView
 					.findViewById(R.id.imageView_flight_result_airLines);
 			VolleyUtil.loadImage(mContext,
@@ -137,6 +143,11 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 		 group.tv_flight_result_discount.setText(flightInfos_group.get(groupPosition).discount);
 		 group.tv_flight_result_airLines.setText(flightInfos_group.get(groupPosition).airLines);
 		 group.tv_flight_result_amount.setText(flightInfos_group.get(groupPosition).amount);
+		 group.tv_flight_result_flightNum.setText(flightInfos_group.get(groupPosition).flightNum);
+		 group.tv_flight_result_planeModel.setText(flightInfos_group.get(groupPosition).planeModel);
+		 group.tv_flight_result_planeSize.setText(flightInfos_group.get(groupPosition).planeSize);
+
+
 		 group.btn_flight_result_unfold.setOnClickListener(new OnClickListener() {
 
 			 @Override
@@ -228,7 +239,9 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 		TextView tv_flight_result_takeOffTime, tv_flight_result_landingTime,
 				tv_flight_result_cabinPrice, tv_flight_result_takeOffPort,
 				tv_flight_result_landingPort, tv_flight_result_discount,
-				tv_flight_result_airLines, tv_flight_result_amount;
+				tv_flight_result_airLines, tv_flight_result_amount,
+				tv_flight_result_flightNum,tv_flight_result_planeModel,
+				tv_flight_result_planeSize;
 		ImageView imageView_flight_result_airLines;
 		int position = -1;
 		public void setPosition(int position){

@@ -35,6 +35,10 @@ public class FlightInfo implements Parcelable {
 	 */
 	public String airLines;
 	/**
+	 * 航班号
+	 */
+	public String flightNum;
+	/**
 	 * 价格
 	 */
 	public String cabinPrice;
@@ -46,6 +50,14 @@ public class FlightInfo implements Parcelable {
 	 * 票数
 	 */
 	public String amount;
+	/**
+	 * 飞机尺寸（大、中、小）
+	 */
+	public String planeSize;
+	/**
+	 * 飞机型号
+	 */
+	public String planeModel;
 	/**
 	 * 航空公司logo
 	 */
@@ -74,7 +86,9 @@ public class FlightInfo implements Parcelable {
         dest.writeString(discount);
         dest.writeString(amount);
         dest.writeString(airLines);
-        
+		dest.writeString(flightNum);
+		dest.writeString(planeSize);
+		dest.writeString(planeModel);
 	}
 	
 	public static final Parcelable.Creator<FlightInfo> CREATOR = new Creator<FlightInfo>() {
@@ -105,5 +119,8 @@ public class FlightInfo implements Parcelable {
 		this.discount = in.readString();
 		this.amount = in.readString();
 		this.airLines = in.readString();
+		this.flightNum = in.readString();
+		this.planeSize = in.readString();
+		this.planeModel = in.readString();
 	}
 }

@@ -59,6 +59,9 @@ public class FlightResultActivity extends BaseActivity{
 			info.cabinPrice = "￥"+"1350";
 			info.takeOffPort = "吴圩机场";
 			info.takeOffTime = "12:00";
+			info.flightNum = "MU5214";
+			info.planeModel = "333";
+			info.planeSize = "(中)";
 			flightInfos_group.add(info);
 		}
 

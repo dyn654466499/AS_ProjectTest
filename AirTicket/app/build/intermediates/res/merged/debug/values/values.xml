@@ -239,7 +239,7 @@
     <color name="ticket_black">#333333</color>
     <color name="ticket_button_click">#00a8ff</color>
     <color name="ticket_font_deep_gray">#545454</color>
-    <color name="ticket_font_gray">#848484</color>
+    <color name="ticket_font_gray">#999999</color>
     <color name="ticket_title_color">#0080ff</color>
     <color name="ticket_white">#ffffff</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>

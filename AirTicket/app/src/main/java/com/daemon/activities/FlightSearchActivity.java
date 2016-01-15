@@ -53,7 +53,7 @@ public class FlightSearchActivity extends BaseActivity {
 	/**
 	 * 搜索按钮
 	 */
-	private Button btn_flight_search_search;
+	private Button btn_flight_search_startSeach;
 	/**
 	 * 出发城市按钮
 	 */
@@ -141,8 +141,8 @@ public class FlightSearchActivity extends BaseActivity {
 		//默认选第一个舱位类型
 		btn_flight_search_cabinType.setText(getResources().getStringArray(R.array.TypeCabin)[0]);
 
-		btn_flight_search_search = (Button) findViewById(R.id.btn_flight_search_search);
-		btn_flight_search_search.setOnClickListener(this);
+		btn_flight_search_startSeach = (Button) findViewById(R.id.btn_flight_search_startSeach);
+		btn_flight_search_startSeach.setOnClickListener(this);
 
 		imageBtn_flight_search_fanxiang = (ImageButton) findViewById(R.id.imageBtn_flight_search_fanxiang);
 		imageBtn_flight_search_fanxiang.setOnClickListener(this);
@@ -235,7 +235,7 @@ public class FlightSearchActivity extends BaseActivity {
             /**
              * 开始搜索
              */
-			case R.id.btn_flight_search_search:
+			case R.id.btn_flight_search_startSeach:
 				String city_leave = btn_flight_search_leaveCity.getText().toString();
 				String city_arrive = btn_flight_search_arriveCity.getText().toString();
 				String date_leave = CommonUtil.getFormatDate(leave_date);

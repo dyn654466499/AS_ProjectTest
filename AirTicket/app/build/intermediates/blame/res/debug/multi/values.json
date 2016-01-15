@@ -2628,7 +2628,14 @@
                     "endOffset": 6351
                 },
                 "from": {
-                    "file": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 161,
+                        "endColumn": 50,
+                        "endOffset": 207
+                    }
                 }
             },
             {
@@ -3108,14 +3115,7 @@
                     "endOffset": 8521
                 },
                 "from": {
-                    "file": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 527,
-                        "endColumn": 52,
-                        "endOffset": 575
-                    }
+                    "file": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
