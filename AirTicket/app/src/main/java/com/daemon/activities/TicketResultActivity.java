@@ -16,6 +16,10 @@ import com.daemon.models.TicketResultModel;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ *
+ */
 public class TicketResultActivity extends BaseActivity{
     private ExpandableListView elv_ticket_result;
     private List<TicketInfo> ticketInfos;
