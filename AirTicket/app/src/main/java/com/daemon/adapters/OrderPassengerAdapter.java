@@ -1,10 +1,10 @@
 package com.daemon.adapters;
 
 import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
-import static com.daemon.consts.Constants.TYPE_CERT_KEY;
-import static com.daemon.consts.Constants.TYPE_KEY;
-import static com.daemon.consts.Constants.TYPE_POSITION_KEY;
-import static com.daemon.consts.Constants.TYPE_VIEW_POSITION_KEY;
+import static com.daemon.consts.Constants.KEY_TYPE_CERT;
+import static com.daemon.consts.Constants.KEY_TYPE;
+import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
+import static com.daemon.consts.Constants.KEY_TYPE_PASSENGER_CERT_POSITION;
 
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.daemon.activities.SelectActivity;
+import com.daemon.activities.TypeSelectActivity;
 import com.daemon.airticket.R;
 import com.daemon.beans.PassengerInfo;
 
@@ -150,16 +150,16 @@ public class OrderPassengerAdapter extends BaseAdapter{
 				/**
 				 * 记录点击哪位乘机人“更多证件”的位置
 				 */
-				Intent intent = new Intent(activity, SelectActivity.class);
-				intent.putExtra(TYPE_KEY, TYPE_CERT_KEY);
+				Intent intent = new Intent(activity, TypeSelectActivity.class);
+				intent.putExtra(KEY_TYPE, KEY_TYPE_CERT);
 				/**
 				 * 传递点击哪位乘机人“更多证件”的位置对于的证件类型位置。
 				 */
-				intent.putExtra(TYPE_POSITION_KEY, infos.get(position).cert_position);
+				intent.putExtra(KEY_TYPE_CABIN_POSITION, infos.get(position).cert_position);
 				/**
 				 * 传递点击哪位乘机人“更多证件”的位置。
 				 */
-				intent.putExtra(TYPE_VIEW_POSITION_KEY, position);
+				intent.putExtra(KEY_TYPE_PASSENGER_CERT_POSITION, position);
 				activity.startActivityForResult(intent,REQUEST_CODE_CERTIFICATE);
 				activity.overridePendingTransition(0, 0);
 			}

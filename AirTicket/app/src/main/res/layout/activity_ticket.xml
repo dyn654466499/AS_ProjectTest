@@ -84,7 +84,7 @@
                         android:textSize="@dimen/button_textSize" />
 
                     <Button
-                        android:id="@+id/btn_airticket_leave"
+                        android:id="@+id/btn_airticket_leaveCity"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -116,7 +116,7 @@
                         android:textSize="@dimen/button_textSize" />
 
                     <Button
-                        android:id="@+id/btn_airticket_arrive"
+                        android:id="@+id/btn_airticket_arriveCity"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -164,7 +164,7 @@
                 android:textSize="@dimen/button_textSize" />
 
             <Button
-                android:id="@+id/btn_airticket_date"
+                android:id="@+id/btn_airticket_leaveDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -199,7 +199,7 @@
                 android:textSize="@dimen/button_textSize" />
 
             <Button
-                android:id="@+id/btn_airticket_backDate"
+                android:id="@+id/btn_airticket_arriveDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -231,7 +231,7 @@
                 android:textSize="@dimen/button_textSize" />
 
             <Button
-                android:id="@+id/btn_airticket_spaceType"
+                android:id="@+id/btn_airticket_cabin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

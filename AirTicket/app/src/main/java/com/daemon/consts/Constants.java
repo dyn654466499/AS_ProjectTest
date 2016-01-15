@@ -4,21 +4,24 @@ import java.util.HashMap;
 
 public class Constants {
 	
-	public static final String TYPE_KEY = "类型";
-	public static final String TYPE_SPACE_KEY = "舱位类型";
-	public static final String TYPE_CERT_KEY = "证件类型";
-	public static final String TYPE_TICKET_DISTRIBUTE_KEY = "机票配送方式";
+	public static final String KEY_TYPE = "类型";
+	public static final String KEY_TYPE_CABIN = "舱位类型";
+	public static final String KEY_TYPE_CERT = "证件类型";
+	public static final String KEY_TYPE_TICKET_DISTRIBUTE = "机票配送方式";
 	
-	public static final String TYPE_POSITION_KEY = "舱位记录位置";
-	public static final String TYPE_VIEW_POSITION_KEY = "第几个乘机人证件";
+	public static final String KEY_TYPE_CABIN_POSITION = "舱位记录位置";
+	public static final String KEY_TYPE_PASSENGER_CERT_POSITION = "第几个乘机人证件";
 	
-	public static final String TYPE_DATE_KEY = "日期";
+	public static final String KEY_TYPE_DATE = "日期";
+    public static final String KEY_LEAVE_DATE = "Date";
+    public static final String KEY_ARRIVE_DATE = "到达日期";
 	
-	public static final String TITLE_DATE_KEY = "标题";
+	public static final String KEY_TITLE_DATE = "标题";
 	
 	public static final String KEY_CITY = "城市";
-	//public static final String KEY_CITY_ARRIVE = "到达城市";
-	
+    public static final String KEY_LEAVE_CITY = "Scity";
+    public static final String KEY_ARRIVE_CITY = "Ecity";
+
 	public static final String KEY_INSURE_PRICE = "保险价格";
 	public static final String KEY_INSURE_NAME = "保险名称";
 	
@@ -26,14 +29,36 @@ public class Constants {
 	/**
 	 * activity的result code
 	 */
-	public static final int REQUEST_CODE_SPACE = 100;
+	public static final int REQUEST_CODE_CABIN = 100;
 	public static final int REQUEST_CODE_CERTIFICATE = 101;
-	public static final int REQUEST_CODE_DATE = 102;
-	public static final int REQUEST_CODE_BACK_DATE = 103;
+	public static final int REQUEST_CODE_DATE_LEAVE = 102;
+	public static final int REQUEST_CODE_DATE_ARRIVE = 103;
 	public static final int REQUEST_CODE_DISTRIBUTE = 104;
 	public static final int REQUEST_CODE_CITY_LEAVE = 105;
 	public static final int REQUEST_CODE_CITY_ARRIVE = 106;
 	public static final int REQUEST_CODE_CITY = 107;
+
+    /**
+     * model请求参数
+     */
+    public static final int MODEL_TICKET_SEARCH = 200;
+    public static final int MODEL_TICKET_BOOK = 201;
+    public static final int MODEL_TICKET_ORDER_COMMIT = 202;
+
+    /**
+     *  view状态改变参数
+     */
+    public static final int VIEW_TICKET_SEARCH = 300;
+    public static final int VIEW_TICKET_BOOK = 301;
+    public static final int VIEW_TICKET_ORDER_COMMIT = 302;
+
+
+    /**
+     * 请求URL
+     */
+    public static final String URL_FLIGHT_LIST_V1 = "http://121.40.116.51:9000/FlightAPI/getFlightList_V1";
+    public static final String URL_FLIGHT_LIST = "http://121.40.116.51:9000/FlightAPI/getFlightList";
+
 	public static HashMap<String, String>  HOLIDAYS = new HashMap<String, String>();
 	static {
 		HOLIDAYS.put("2014-1-1", "元旦");

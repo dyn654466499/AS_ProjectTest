@@ -1,28 +1,33 @@
 package com.daemon.activities;
 
-import com.daemon.adapters.SelectAdapter;
-import com.daemon.airticket.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
 
-import static com.daemon.consts.Constants.*;
+import com.daemon.adapters.SelectAdapter;
+import com.daemon.airticket.R;
 
-public class SelectActivity extends BaseActivity {
+import static com.daemon.consts.Constants.KEY_TYPE;
+import static com.daemon.consts.Constants.KEY_TYPE_CABIN;
+import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
+import static com.daemon.consts.Constants.KEY_TYPE_CERT;
+import static com.daemon.consts.Constants.KEY_TYPE_PASSENGER_CERT_POSITION;
+import static com.daemon.consts.Constants.KEY_TYPE_TICKET_DISTRIBUTE;
+
+public class TypeSelectActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_select);
-		String type = getIntent().getStringExtra(TYPE_KEY);
+		setContentView(R.layout.activity_type_select);
+		String type = getIntent().getStringExtra(KEY_TYPE);
 		LinearLayout linearLayout_select_blank = (LinearLayout)findViewById(R.id.linearLayout_select_blank);
 		linearLayout_select_blank.setOnClickListener(this);
 		/**
@@ -32,14 +37,14 @@ public class SelectActivity extends BaseActivity {
 		/**
 		 * 如果是舱位选择
 		 */
-		if (TYPE_SPACE_KEY.equals(type)) {
+		if (KEY_TYPE_CABIN.equals(type)) {
 			TextView textView_select_title = (TextView)findViewById(R.id.tv_select_title);
-			textView_select_title.setText(getString(R.string.title_select_space));
+			textView_select_title.setText(getString(R.string.title_select_cabin));
 			
 			int position_spaceType = getIntent().getExtras().getInt(
-					TYPE_POSITION_KEY, 0);
+					KEY_TYPE_CABIN_POSITION, 0);
 			final SelectAdapter adapter = new SelectAdapter(this,
-					R.layout.item_select, getResources().getStringArray(R.array.TypeSapce));
+					R.layout.item_select, getResources().getStringArray(R.array.TypeCabin));
 			ListView listView = (ListView) findViewById(R.id.listView_select);
 			adapter.setSelectedPosition(position_spaceType);
 			listView.setAdapter(adapter);
@@ -51,8 +56,8 @@ public class SelectActivity extends BaseActivity {
 					adapter.setSelectedPosition(position);
 					adapter.notifyDataSetChanged();
 					Intent intent = new Intent();
-					intent.putExtra(TYPE_SPACE_KEY, adapter.getItem(position));
-					intent.putExtra(TYPE_POSITION_KEY, position);
+					intent.putExtra(KEY_TYPE_CABIN, adapter.getItem(position));
+					intent.putExtra(KEY_TYPE_CABIN_POSITION, position);
 					setResult(RESULT_OK, intent);
 					finish();
 				}
@@ -61,13 +66,13 @@ public class SelectActivity extends BaseActivity {
         /**
          * 如果是证件选择
          */
-		if (TYPE_CERT_KEY.equals(type)) {
+		if (KEY_TYPE_CERT.equals(type)) {
 			TextView textView_select_title = (TextView)findViewById(R.id.tv_select_title);
-			textView_select_title.setText(getString(R.string.title_select_certificate));
+			textView_select_title.setText(getString(R.string.title_select_cert));
 			
 			int position_spaceType = getIntent().getExtras().getInt(
-					TYPE_POSITION_KEY, 0);
-			final int view_position = getIntent().getIntExtra(TYPE_VIEW_POSITION_KEY, 0);
+					KEY_TYPE_CABIN_POSITION, 0);
+			final int view_position = getIntent().getIntExtra(KEY_TYPE_PASSENGER_CERT_POSITION, 0);
 			final SelectAdapter adapter = new SelectAdapter(this,
 					R.layout.item_select, getResources().getStringArray(R.array.TypeCert));
 			ListView listView = (ListView) findViewById(R.id.listView_select);
@@ -84,15 +89,15 @@ public class SelectActivity extends BaseActivity {
 					/**
 					 * 证件号名字
 					 */
-					intent.putExtra(TYPE_CERT_KEY, adapter.getItem(position));
+					intent.putExtra(KEY_TYPE_CERT, adapter.getItem(position));
 					/**
 					 * 记录证件类型位置
 					 */
-					intent.putExtra(TYPE_POSITION_KEY, position);
+					intent.putExtra(KEY_TYPE_CABIN_POSITION, position);
 					/**
 					 * 记录点击哪位乘机人的位置
 					 */
-					intent.putExtra(TYPE_VIEW_POSITION_KEY, view_position);
+					intent.putExtra(KEY_TYPE_PASSENGER_CERT_POSITION, view_position);
 					setResult(RESULT_OK, intent);
 					finish();
 				}
@@ -101,15 +106,15 @@ public class SelectActivity extends BaseActivity {
 		/**
 		 * 如果是机票配送方式
 		 */
-		if (TYPE_TICKET_DISTRIBUTE_KEY.equals(type)) {
+		if (KEY_TYPE_TICKET_DISTRIBUTE.equals(type)) {
 			TextView textView_select_title = (TextView)findViewById(R.id.tv_select_title);
 			textView_select_title.setText(getString(R.string.title_select_ticket_distribute));
 			
-			int position_spaceType = getIntent().getExtras().getInt(TYPE_POSITION_KEY, 0);
+			int position_cabin = getIntent().getExtras().getInt(KEY_TYPE_CABIN_POSITION, 0);
 			final SelectAdapter adapter = new SelectAdapter(this,
 					R.layout.item_select, getResources().getStringArray(R.array.TypeTicketDestribute));
 			ListView listView = (ListView) findViewById(R.id.listView_select);
-			adapter.setSelectedPosition(position_spaceType);
+			adapter.setSelectedPosition(position_cabin);
 			listView.setAdapter(adapter);
 			listView.setOnItemClickListener(new OnItemClickListener() {
 				@Override
@@ -119,8 +124,8 @@ public class SelectActivity extends BaseActivity {
 					adapter.setSelectedPosition(position);
 					adapter.notifyDataSetChanged();
 					Intent intent = new Intent();
-					intent.putExtra(TYPE_TICKET_DISTRIBUTE_KEY, adapter.getItem(position));
-					intent.putExtra(TYPE_POSITION_KEY, position);
+					intent.putExtra(KEY_TYPE_TICKET_DISTRIBUTE, adapter.getItem(position));
+					intent.putExtra(KEY_TYPE_CABIN_POSITION, position);
 					setResult(RESULT_OK, intent);
 					finish();
 				}

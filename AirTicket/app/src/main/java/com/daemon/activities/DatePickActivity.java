@@ -1,7 +1,7 @@
 package com.daemon.activities;
 
-import static com.daemon.consts.Constants.TITLE_DATE_KEY;
-import static com.daemon.consts.Constants.TYPE_DATE_KEY;
+import static com.daemon.consts.Constants.KEY_TITLE_DATE;
+import static com.daemon.consts.Constants.KEY_TYPE_DATE;
 
 import java.util.Calendar;
 
@@ -72,7 +72,7 @@ public class DatePickActivity extends BaseActivity {
 		 * 设置标题
 		 */
 		TextView textView_title = (TextView) findViewById(R.id.tv_title);
-		textView_title.setText(getIntent().getStringExtra(TITLE_DATE_KEY));
+		textView_title.setText(getIntent().getStringExtra(KEY_TITLE_DATE));
 
 		mScrollView = (ScrollView) findViewById(R.id.scrollView_date_pick);
 		mScrollView.setVisibility(View.INVISIBLE);
@@ -84,7 +84,7 @@ public class DatePickActivity extends BaseActivity {
 		AutoLoadingUtil.setAutoLoadingView(linearLayout_date_pick);
 		AutoLoadingUtil.setBackground(getResources().getColor(R.color.ticket_bg_gray));
 		
-		Button btn_back = (Button) findViewById(R.id.btn_back);
+		Button btn_back = (Button) findViewById(R.id.btn_title_back);
 		btn_back.setOnClickListener(this);
 
 		datePickInfo = new DatePickInfo();
@@ -168,7 +168,7 @@ public class DatePickActivity extends BaseActivity {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.btn_back:
+		case R.id.btn_title_back:
 			finish();
 
 			break;
@@ -181,7 +181,7 @@ public class DatePickActivity extends BaseActivity {
 			Calendar localCalendar = Calendar.getInstance();
 			long time = ((Long) v.getTag()).longValue();
 			localCalendar.setTimeInMillis(time);
-			setResult(RESULT_OK, getIntent().putExtra(TYPE_DATE_KEY, time));
+			setResult(RESULT_OK, getIntent().putExtra(KEY_TYPE_DATE, time));
 //			Toast.makeText(mContext, localCalendar.get(Calendar.YEAR) + "年" + (localCalendar.get(Calendar.MONTH) + 1)
 //					+ "月" + localCalendar.get(Calendar.DAY_OF_MONTH) + "日", Toast.LENGTH_SHORT).show();
 			finish();

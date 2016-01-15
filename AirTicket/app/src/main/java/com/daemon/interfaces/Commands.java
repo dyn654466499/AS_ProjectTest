@@ -1,10 +1,16 @@
 package com.daemon.interfaces;
 
+import android.os.Message;
+
 /**
  * 命令模式接口
  * @author 邓耀宁
  *
  */
 public interface Commands {
-    public void executeCommand();
+    /**
+     * 封装参数
+     * @param msg_params
+     */
+    public void executeCommand(Message msg_params);
 }

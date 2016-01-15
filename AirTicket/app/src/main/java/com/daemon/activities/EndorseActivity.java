@@ -19,7 +19,7 @@ public class EndorseActivity extends BaseActivity{
 		TextView tv_title = (TextView)findViewById(R.id.tv_title);
 		tv_title.setText(getString(R.string.title_endorseOrBackDesc));
 		
-		Button btn_back = (Button)findViewById(R.id.btn_back);
+		Button btn_back = (Button)findViewById(R.id.btn_title_back);
 		btn_back.setOnClickListener(this);
 	}
 
@@ -27,7 +27,7 @@ public class EndorseActivity extends BaseActivity{
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
-		case R.id.btn_back:
+		case R.id.btn_title_back:
 			finish();
 			break;
 

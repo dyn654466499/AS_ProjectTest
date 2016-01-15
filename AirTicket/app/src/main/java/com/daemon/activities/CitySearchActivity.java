@@ -51,7 +51,7 @@ public class CitySearchActivity extends BaseActivity {
 
 		mCityLit = (ListView) findViewById(R.id.lv_city);
 		edtSearch = (EditText) findViewById(R.id.edt_search);
-		btn_back = (Button) findViewById(R.id.btn_back);
+		btn_back = (Button) findViewById(R.id.btn_title_back);
 		mDBManager = new DBUtil(this);
 
 		/**
@@ -275,7 +275,7 @@ public class CitySearchActivity extends BaseActivity {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
-		case R.id.btn_back:
+		case R.id.btn_title_back:
 			finish();
 			break;
 

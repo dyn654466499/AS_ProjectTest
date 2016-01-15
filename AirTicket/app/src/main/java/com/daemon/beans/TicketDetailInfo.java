@@ -14,6 +14,6 @@ public class TicketDetailInfo extends TicketInfo{
 	/**
 	 * 舱位类型
 	 */  
-   public String spaceType;
+   public String cabin;
 	   
 }

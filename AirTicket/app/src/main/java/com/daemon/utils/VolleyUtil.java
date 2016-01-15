@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.util.LruCache;
 import android.widget.ImageView;
 
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -20,8 +21,14 @@ import com.android.volley.toolbox.Volley;
 import com.android.volley.toolbox.ImageLoader.ImageCache;
 import com.android.volley.toolbox.ImageLoader.ImageListener;
 import com.daemon.airticket.R;
+import com.daemon.consts.Constants;
 import com.daemon.volley.GsonRequest;
 import com.google.gson.Gson;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.Iterator;
+import java.util.Map;
 
 public class VolleyUtil {
 	/**
@@ -116,6 +123,30 @@ public class VolleyUtil {
                 null, 
                 listener, 
                 errorListener); 
-        requestQueue.add(jsonObjectRequest); 
-    } 
+        requestQueue.add(jsonObjectRequest);
+
+    }
+
+	public static String formatGetParams(Map<String,String> params_map){
+		if (params_map != null && params_map.size() > 0) {
+			String params = "?";
+			Iterator<Map.Entry<String, String>> iterator = params_map
+					.entrySet().iterator();
+			while (iterator.hasNext()) {
+				Map.Entry<String, String> entry = iterator.next();
+				params += entry.getKey() + "=";
+				try {
+					params += URLEncoder.encode(entry.getValue(), "utf-8");
+				} catch (UnsupportedEncodingException e) {
+					e.printStackTrace();
+				}
+				params += "&";
+			}
+			params = params.substring(0, params.length() - 1);
+			return params;
+		} else {
+			return null;
+		}
+	}
+
 }

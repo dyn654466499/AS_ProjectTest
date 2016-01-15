@@ -1,7 +1,5 @@
 package com.daemon.adapters;
 
-import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -23,8 +21,11 @@ import com.daemon.activities.TicketOrderActivity;
 import com.daemon.airticket.R;
 import com.daemon.beans.TicketDetailInfo;
 import com.daemon.beans.TicketInfo;
+import com.daemon.interfaces.Commands;
 import com.daemon.utils.ImageUtil;
 import com.daemon.utils.VolleyUtil;
+
+import java.util.List;
 
 public class TicketResultAdapter extends BaseExpandableListAdapter {
 	private Context mContext;
@@ -32,7 +33,11 @@ public class TicketResultAdapter extends BaseExpandableListAdapter {
 	private Drawable ic_xiangshang;
 	private List<TicketInfo> ticketInfos;
 	private List<TicketDetailInfo> ticketDetailInfos;
-	
+	/**
+	 * 命令接口
+	 */
+	private Commands commands;
+
 	public TicketResultAdapter(Context mContext, List<TicketInfo> ticketInfos,
 			List<TicketDetailInfo> ticketDetailInfos) {
 		super();
@@ -43,6 +48,10 @@ public class TicketResultAdapter extends BaseExpandableListAdapter {
 				R.drawable.ic_xiangxia);
 		bitmap = ImageUtil.rotateBitmap(bitmap, 180);
 		ic_xiangshang = new BitmapDrawable(mContext.getResources(), bitmap);
+	}
+
+	public void setTicketBookCommands(Commands commands) {
+		this.commands = commands;
 	}
 
 	public void setExpandableListView(ExpandableListView params_elv) {
@@ -173,8 +182,8 @@ public class TicketResultAdapter extends BaseExpandableListAdapter {
 					R.layout.item_ticket_result_detail, parent, false);
 			child.btn_ticket_result_details_book = (Button) convertView
 					.findViewById(R.id.btn_ticket_result_details_book);
-			child.tv_ticket_result_details_space = (TextView) convertView
-					.findViewById(R.id.tv_ticket_result_details_space);
+			child.tv_ticket_result_details_cabin = (TextView) convertView
+					.findViewById(R.id.tv_ticket_result_details_cabin);
 			child.tv_ticket_result_details_discount = (TextView) convertView
 					.findViewById(R.id.tv_ticket_result_details_discount);
 			child.tv_ticket_result_details_price = (TextView) convertView
@@ -193,11 +202,13 @@ public class TicketResultAdapter extends BaseExpandableListAdapter {
 						// TODO Auto-generated method stub
 						mContext.startActivity(new Intent(mContext,
 								TicketOrderActivity.class));
-						Log.e("btn_ticket_result_details_book", "groupPosition="+groupPosition+",childPosition="+childPosition);
+						Log.e("btn_ticket_result_book", "groupPosition="+groupPosition+",childPosition="+childPosition);
+					    if(commands!=null)commands.executeCommand(null);
+
 					}
 				});
 
-		 child.tv_ticket_result_details_space.setText(ticketDetailInfos.get(childPosition).spaceType);
+		 child.tv_ticket_result_details_cabin.setText(ticketDetailInfos.get(childPosition).cabin);
 		 child.tv_ticket_result_details_discount.setText(ticketDetailInfos.get(childPosition).discount);
 		 child.tv_ticket_result_details_price.setText(ticketDetailInfos.get(childPosition).price);
 		return convertView;
@@ -228,7 +239,7 @@ public class TicketResultAdapter extends BaseExpandableListAdapter {
 
 	static class ViewHolderChild {
 		Button btn_ticket_result_details_book;
-		TextView tv_ticket_result_details_space,
+		TextView tv_ticket_result_details_cabin,
 				tv_ticket_result_details_discount,
 				tv_ticket_result_details_price;
 	}

@@ -94,7 +94,7 @@ public class CustomEditText extends EditText {
 			int i = (int) paramMotionEvent.getRawX();// 距离屏幕的距离
 			if (i > getRight() - 3 * this.rBounds.width()) {
 				if (command != null) {
-					command.executeCommand();
+					command.executeCommand(null);
 				} else
 					setText("");
 				paramMotionEvent.setAction(MotionEvent.ACTION_CANCEL);

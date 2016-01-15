@@ -12,7 +12,7 @@
 
         <include 
             layout="@layout/layout_btn_back"
-            android:id="@+id/btn_back"
+            android:id="@+id/btn_title_back"
             />
 
         <com.daemon.customview.CustomEditText

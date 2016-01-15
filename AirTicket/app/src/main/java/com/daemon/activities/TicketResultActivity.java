@@ -1,13 +1,5 @@
 package com.daemon.activities;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.daemon.adapters.TicketResultAdapter;
-import com.daemon.airticket.R;
-import com.daemon.beans.TicketDetailInfo;
-import com.daemon.beans.TicketInfo;
-
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
@@ -15,7 +7,15 @@ import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import static com.daemon.consts.Constants.*;
+import com.daemon.adapters.TicketResultAdapter;
+import com.daemon.airticket.R;
+import com.daemon.beans.TicketDetailInfo;
+import com.daemon.beans.TicketInfo;
+import com.daemon.interfaces.Commands;
+import com.daemon.models.TicketResultModel;
+
+import java.util.ArrayList;
+import java.util.List;
 public class TicketResultActivity extends BaseActivity{
     private ExpandableListView elv_ticket_result;
     private List<TicketInfo> ticketInfos;
@@ -26,14 +26,17 @@ public class TicketResultActivity extends BaseActivity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ticket_result);
+		/**
+		 * 自定义的框架
+		 */
+		setModelDelegate(new TicketResultModel(handler, this));
+		setViewChangeListener(this);
 		
 		TextView tv_title = (TextView)findViewById(R.id.tv_title);
-		TicketInfo intent_info = getIntent().getParcelableExtra(KEY_PARCELABLE);
-		tv_title.setText(intent_info.takeOffDate);
-				
-		
-		Button btn_back = (Button)findViewById(R.id.btn_back);
-		btn_back.setOnClickListener(this);
+		tv_title.setText("空");
+
+		Button btn_title_back = (Button)findViewById(R.id.btn_title_back);
+		btn_title_back.setOnClickListener(this);
 		
 		ticketInfos = new ArrayList<TicketInfo>();
 		for (int i = 0; i < 6; i++) {
@@ -55,7 +58,7 @@ public class TicketResultActivity extends BaseActivity{
 			TicketDetailInfo info = new TicketDetailInfo();
 			info.discount = "5折";
 			info.price = "￥"+"1350";
-			info.spaceType = "头等舱";
+			info.cabin = "头等舱";
 			ticketDetailInfos.add(info);
 		}
 		
@@ -63,6 +66,13 @@ public class TicketResultActivity extends BaseActivity{
 		final TicketResultAdapter adapter = new TicketResultAdapter(this,ticketInfos,ticketDetailInfos);
 		adapter.setExpandableListView(elv_ticket_result);
 		elv_ticket_result.setAdapter(adapter);
+
+        adapter.setTicketBookCommands(new Commands() {
+            @Override
+            public void executeCommand(Message msg_params) {
+
+            }
+        });
 		/**
 		 * 此处让title获取焦点，这样scrollview就滚到顶部了
 		 */
@@ -84,7 +94,7 @@ public class TicketResultActivity extends BaseActivity{
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
-		case R.id.btn_back:
+		case R.id.btn_title_back:
 			finish();
 			break;
 

@@ -1,22 +1,5 @@
 package com.daemon.activities;
 
-import static com.daemon.consts.Constants.*;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.daemon.adapters.OrderInsureAdapter;
-import com.daemon.adapters.OrderPassengerAdapter;
-import com.daemon.adapters.OrderTicketAdapter;
-import com.daemon.airticket.R;
-import com.daemon.beans.PassengerInfo;
-import com.daemon.beans.TicketInfo;
-import com.daemon.interfaces.Commands;
-import com.daemon.models.AirTicketModel;
-import com.daemon.utils.DialogUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
@@ -32,6 +15,33 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.daemon.adapters.OrderInsureAdapter;
+import com.daemon.adapters.OrderPassengerAdapter;
+import com.daemon.adapters.OrderTicketAdapter;
+import com.daemon.airticket.R;
+import com.daemon.beans.PassengerInfo;
+import com.daemon.beans.TicketInfo;
+import com.daemon.interfaces.Commands;
+import com.daemon.models.TicketOrderModel;
+import com.daemon.utils.DialogUtil;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import static com.daemon.consts.Constants.KEY_CITY;
+import static com.daemon.consts.Constants.KEY_INSURE_NAME;
+import static com.daemon.consts.Constants.KEY_INSURE_PRICE;
+import static com.daemon.consts.Constants.KEY_TYPE;
+import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
+import static com.daemon.consts.Constants.KEY_TYPE_CERT;
+import static com.daemon.consts.Constants.KEY_TYPE_PASSENGER_CERT_POSITION;
+import static com.daemon.consts.Constants.KEY_TYPE_TICKET_DISTRIBUTE;
+import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
+import static com.daemon.consts.Constants.REQUEST_CODE_CITY;
+import static com.daemon.consts.Constants.REQUEST_CODE_DISTRIBUTE;
 
 /**
  * 机票订单界面
@@ -87,8 +97,10 @@ public class TicketOrderActivity extends BaseActivity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ticket_order);
-		
-		setModelDelegate(new AirTicketModel(handler));
+		/**
+		 * 自定义的框架
+		 */
+		setModelDelegate(new TicketOrderModel(handler,this));
 		setViewChangeListener(this);
 		
 		/**
@@ -177,7 +189,7 @@ public class TicketOrderActivity extends BaseActivity{
 		TextView tv_title = (TextView)findViewById(R.id.tv_title);
 		tv_title.setText(getString(R.string.title_order_edit));
 		
-		Button btn_back = (Button)findViewById(R.id.btn_back);
+		Button btn_back = (Button)findViewById(R.id.btn_title_back);
 		btn_back.setOnClickListener(this);
 		
 		tv_order_total = (TextView)findViewById(R.id.tv_order_total);
@@ -207,11 +219,11 @@ public class TicketOrderActivity extends BaseActivity{
 		/**	
 		  * 返回
 		  */
-		case R.id.btn_back:
+		case R.id.btn_title_back:
 			DialogUtil.showDialog(TicketOrderActivity.this, getString(R.string.title_order_edit), "您正在填写订单，是否要退出？", new Commands() {
 				
 				@Override
-				public void executeCommand() {
+				public void executeCommand(Message msg_params) {
 					// TODO Auto-generated method stub
 					finish();
 				}
@@ -221,9 +233,9 @@ public class TicketOrderActivity extends BaseActivity{
 		 * 选择配送方式
 		 */
 		case R.id.btn_order_destribute:
-			intent = new Intent(TicketOrderActivity.this, SelectActivity.class);
-			intent.putExtra(TYPE_KEY, TYPE_TICKET_DISTRIBUTE_KEY);
-			intent.putExtra(TYPE_POSITION_KEY, position_destribute);
+			intent = new Intent(TicketOrderActivity.this, TypeSelectActivity.class);
+			intent.putExtra(KEY_TYPE, KEY_TYPE_TICKET_DISTRIBUTE);
+			intent.putExtra(KEY_TYPE_CABIN_POSITION, position_destribute);
 			startActivityForResult(intent,REQUEST_CODE_DISTRIBUTE);
 			overridePendingTransition(0, 0);
 			break;
@@ -266,7 +278,7 @@ public class TicketOrderActivity extends BaseActivity{
             DialogUtil.showDialog(TicketOrderActivity.this, getString(R.string.title_order_edit), getString(R.string.tips_exitOrder), new Commands() {
 				
 				@Override
-				public void executeCommand() {
+				public void executeCommand(Message msg_params) {
 					// TODO Auto-generated method stub
 					finish();
 				}
@@ -289,9 +301,9 @@ public class TicketOrderActivity extends BaseActivity{
 			 * 如果是证书请求码
 			 */
 			case REQUEST_CODE_CERTIFICATE:
-				int type_position = data.getIntExtra(TYPE_POSITION_KEY, 0);
-				int view_position = data.getIntExtra(TYPE_VIEW_POSITION_KEY, 0);
-				String certType = data.getStringExtra(TYPE_CERT_KEY);
+				int type_position = data.getIntExtra(KEY_TYPE_CABIN_POSITION, 0);
+				int view_position = data.getIntExtra(KEY_TYPE_PASSENGER_CERT_POSITION, 0);
+				String certType = data.getStringExtra(KEY_TYPE_CERT);
 				passenger_infos.get(view_position).certType = certType;
 				passenger_infos.get(view_position).cert_position = type_position;
 				/**
@@ -304,7 +316,7 @@ public class TicketOrderActivity extends BaseActivity{
 			  * 如果是配送请求码
 			  */	
 			case REQUEST_CODE_DISTRIBUTE:
-				position_destribute = data.getIntExtra(TYPE_POSITION_KEY, 0);
+				position_destribute = data.getIntExtra(KEY_TYPE_CABIN_POSITION, 0);
 				if(position_destribute == 0){
 					linearLayout_order_destribute.setVisibility(View.GONE);
 				}else{
@@ -322,7 +334,7 @@ public class TicketOrderActivity extends BaseActivity{
 						}
 					});
 				}
-				btn_order_destribute.setText(data.getStringExtra(TYPE_TICKET_DISTRIBUTE_KEY));
+				btn_order_destribute.setText(data.getStringExtra(KEY_TYPE_TICKET_DISTRIBUTE));
 				
 				btn_order_city = (Button) findViewById(R.id.btn_order_city);
 				btn_order_city.setOnClickListener(this);

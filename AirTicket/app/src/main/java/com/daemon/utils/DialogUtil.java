@@ -35,7 +35,7 @@ public class DialogUtil {
 							public void onClick(DialogInterface dialog,
 									int which) {
 								// TODO Auto-generated method stub
-								if(sureCommand != null)sureCommand.executeCommand();
+								if(sureCommand != null)sureCommand.executeCommand(null);
 							}
 						})
 				.setNegativeButton(context.getString(R.string.cancel),
@@ -52,7 +52,7 @@ public class DialogUtil {
 
 	/**
 	 * 通过Dialog显示自定义View的内容
-	 * @param mActivity
+	 * @param context
 	 * @param title
 	 * @param message
 	 * @param view

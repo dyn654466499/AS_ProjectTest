@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ErrorList>
+  <Error ErrorCode="000003" ErrorType="1" ErrorInfo="中航信返回订位失败"/>
+
+  <Error ErrorCode="100000" ErrorType="1" ErrorInfo="请求xml字符串存在SQL注入"/>
+  <Error ErrorCode="100001" ErrorType="1" ErrorInfo="请求的XML格式有误"/>
+  <Error ErrorCode="100002" ErrorType="1" ErrorInfo="请求的XML字符串中经销商账户存在非法字符"/>
+  <Error ErrorCode="100003" ErrorType="1" ErrorInfo="请求的XML字符串中经销商账户未填写"/>
+  <Error ErrorCode="100004" ErrorType="1" ErrorInfo="请求的XML字符串的出发城市三字码不合法"/>
+  <Error ErrorCode="100006" ErrorType="1" ErrorInfo="请求的XML字符串的到达城市三字码不合法"/>
+  <Error ErrorCode="100007" ErrorType="1" ErrorInfo="航班号为空或不合法"/>
+  <Error ErrorCode="100008" ErrorType="1" ErrorInfo="请求的XML字符串的出发日期格式不合法（2012-05-30）"/>
+  <Error ErrorCode="100009" ErrorType="1" ErrorInfo="请求的XML字符串的出发日期格式未填写"/>
+  <Error ErrorCode="100010" ErrorType="1" ErrorInfo="请求的XML字符串的舱位不合法"/>
+  <Error ErrorCode="100011" ErrorType="1" ErrorInfo="请求的XML字符串的舱位未填写"/>
+  <Error ErrorCode="100012" ErrorType="1" ErrorInfo="经销商账户不存在"/>
+  <Error ErrorCode="100013" ErrorType="1" ErrorInfo="经销商航班查询流量不足"/>
+  <Error ErrorCode="100014" ErrorType="1" ErrorInfo="经销商账户IP未绑定"/>
+  <Error ErrorCode="100015" ErrorType="1" ErrorInfo="更新经销商流量失败"/>
+  <Error ErrorCode="100016" ErrorType="1" ErrorInfo="加载黑屏数据失败"/>
+  <Error ErrorCode="100017" ErrorType="1" ErrorInfo="政策匹配异常"/>
+  <Error ErrorCode="100018" ErrorType="1" ErrorInfo="请求的XML字符串的舱位为空"/>
+  <Error ErrorCode="100019" ErrorType="1" ErrorInfo="请求的XML字符串中经销商账户未空"/>
+  <Error ErrorCode="100020" ErrorType="1" ErrorInfo="请求的XML字符串的出发城市三字码为空"/>
+  <Error ErrorCode="100021" ErrorType="1" ErrorInfo="请求的XML字符串的到达城市三字码为空"/>
+  <Error ErrorCode="100022" ErrorType="1" ErrorInfo="请求的XML字符串中SystemId在系统中不存在"/>
+  <Error ErrorCode="100023" ErrorType="1" ErrorInfo="请求的XML字符串中isshowspecial字段必须为T或F"/>
+  <Error ErrorCode="100024" ErrorType="1" ErrorInfo="没有可用的航班数据"/>
+  <Error ErrorCode="100025" ErrorType="1" ErrorInfo="构建特价舱位价格结果异常"/>
+  <Error ErrorCode="100026" ErrorType="1" ErrorInfo="请求的XML字符串中每页显示行数不合法"/>
+  <Error ErrorCode="100027" ErrorType="1" ErrorInfo="请求的XML字符串中总页数不合法"/>
+  <Error ErrorCode="100028" ErrorType="1" ErrorInfo="请求的XML字符串中每页显示行数为空或null"/>
+  <Error ErrorCode="100029" ErrorType="1" ErrorInfo="请求的XML字符串中总页数为空或null"/>
+  <Error ErrorCode="100030" ErrorType="1" ErrorInfo="请求的XML字符串中的航空公司二字码为空或null"/>
+  <Error ErrorCode="100031" ErrorType="1" ErrorInfo="解析XML异常"/>
+
+  <Error ErrorCode="100032" ErrorType="1" ErrorInfo="构建航班查询XML结果集异常"/>
+  <Error ErrorCode="100033" ErrorType="1" ErrorInfo="航班查询无可用舱位或无可用政策"/>
+  <Error ErrorCode="100034" ErrorType="1" ErrorInfo="签名错误"/>
+  <Error ErrorCode="100035" ErrorType="1" ErrorInfo="接口停用"/>
+
+
+  <Error ErrorCode="210001" ErrorType="2" ErrorInfo="获取政策异常"/>
+  <Error ErrorCode="210002" ErrorType="2" ErrorInfo="获取保底政策异常"/>
+  <Error ErrorCode="210003" ErrorType="2" ErrorInfo="获取政策可访问次数出错"/>
+  <Error ErrorCode="210004" ErrorType="2" ErrorInfo="更新查询政策兑换剩余次数出错"/>
+  <Error ErrorCode="210005" ErrorType="2" ErrorInfo="更新政策访问次数出错"/>
+  <Error ErrorCode="210006" ErrorType="2" ErrorInfo="缺少rate_count配置"/>
+  <Error ErrorCode="210007" ErrorType="2" ErrorInfo="获取政策数据格式化xml字符串异常"/>
+  <Error ErrorCode="210008" ErrorType="2" ErrorInfo="根据供票商，获取采购应支付的手续费转换异常"/>
+  <Error ErrorCode="210009" ErrorType="2" ErrorInfo="获取政策数据DataTable转换成xmlDoc格式化异常"/>
+  <Error ErrorCode="210010" ErrorType="2" ErrorInfo="获取政策异常"/>
+  <Error ErrorCode="210011" ErrorType="2" ErrorInfo="获取政策信息异常"/>
+  <Error ErrorCode="210012" ErrorType="2" ErrorInfo="获取政策下载包信息异常"/>
+  <Error ErrorCode="210013" ErrorType="2" ErrorInfo="获取下载包政策异常"/>
+  <Error ErrorCode="210014" ErrorType="2" ErrorInfo="航空公司获取政策下载包数据库异常"/>
+  <Error ErrorCode="210015" ErrorType="2" ErrorInfo="获取被删除的政策ID集合信息异常"/>
+  <Error ErrorCode="210016" ErrorType="2" ErrorInfo="获取其他特殊政策列表[全国对全国政策]信息异常"/>
+  <Error ErrorCode="210017" ErrorType="2" ErrorInfo="获取被删除的政策ID异常"/>
+  <Error ErrorCode="210018" ErrorType="2" ErrorInfo="获取其他特殊政策异常"/>
+  <Error ErrorCode="210019" ErrorType="2" ErrorInfo="获取其他特殊政策数据异常"/>
+  <Error ErrorCode="210020" ErrorType="2" ErrorInfo="根据政策id获取供票商的officeNum异常"/>
+  <Error ErrorCode="210021" ErrorType="2" ErrorInfo="根据Pnr获取政策信息异常"/>
+  <Error ErrorCode="210022" ErrorType="2" ErrorInfo="解析pnr异常"/>
+  <Error ErrorCode="210023" ErrorType="2" ErrorInfo="无法解析PNR信息"/>
+  <Error ErrorCode="210024" ErrorType="2" ErrorInfo="获取基础包政策异常"/>
+  <Error ErrorCode="210025" ErrorType="2" ErrorInfo="获取更新包政策异常"/>
+  <Error ErrorCode="210026" ErrorType="2" ErrorInfo="获取航班可访问次数出错"/>
+  <Error ErrorCode="210027" ErrorType="2" ErrorInfo="更新查询航班兑换剩余次数出错"/>
+  <Error ErrorCode="210028" ErrorType="2" ErrorInfo="缺少post_count配置"/>
+  <Error ErrorCode="210029" ErrorType="2" ErrorInfo="获取航班可访问次数出错"/>
+  <Error ErrorCode="210108" ErrorType="2" ErrorInfo="此记录编号位置被“NO”掉了，请检查您的PNR记录编号"/>
+  <Error ErrorCode="220001" ErrorType="2" ErrorInfo="请求参数非法"/>
+  <Error ErrorCode="220002" ErrorType="2" ErrorInfo="请求参数节点异常"/>
+  <Error ErrorCode="220003" ErrorType="2" ErrorInfo="用户名存在非法字符"/>
+  <Error ErrorCode="220004" ErrorType="2" ErrorInfo="用户名不能为空或NULL"/>
+  <Error ErrorCode="220005" ErrorType="2" ErrorInfo="出发城市存在非法字符"/>
+  <Error ErrorCode="220006" ErrorType="2" ErrorInfo="出发城市三字码不存在"/>
+  <Error ErrorCode="220007" ErrorType="2" ErrorInfo="出发城市不能为空或NULL"/>
+  <Error ErrorCode="220008" ErrorType="2" ErrorInfo="到达城市存在非法字符"/>
+  <Error ErrorCode="220009" ErrorType="2" ErrorInfo="到达城市三字码不存在"/>
+  <Error ErrorCode="220010" ErrorType="2" ErrorInfo="到达城市不能为空或NULL"/>
+  <Error ErrorCode="220011" ErrorType="2" ErrorInfo="航班日期存在非法字符"/>
+  <Error ErrorCode="220012" ErrorType="2" ErrorInfo="航班日期格式不正确"/>
+  <Error ErrorCode="220013" ErrorType="2" ErrorInfo="航班日期不能为空或NULL"/>
+  <Error ErrorCode="220014" ErrorType="2" ErrorInfo="航空公司存在非法字符"/>
+  <Error ErrorCode="220015" ErrorType="2" ErrorInfo="航程类型必须为数字"/>
+  <Error ErrorCode="220016" ErrorType="2" ErrorInfo="航程类型存在非法字符或者航程类型参数值不在0,1,2"/>
+  <Error ErrorCode="220017" ErrorType="2" ErrorInfo="记录条数必须为数字"/>
+  <Error ErrorCode="220018" ErrorType="2" ErrorInfo="记录条数存在非法字符或者记录条数小于1"/>
+  <Error ErrorCode="220019" ErrorType="2" ErrorInfo="记录条数不能为空或NULL"/>
+  <Error ErrorCode="220020" ErrorType="2" ErrorInfo="舱位存在非法字符"/>
+  <Error ErrorCode="220021" ErrorType="2" ErrorInfo="舱位不存在"/>
+  <Error ErrorCode="220022" ErrorType="2" ErrorInfo="政策类型必须为数字或者政策类型参数值不在0,1,2"/>
+  <Error ErrorCode="220023" ErrorType="2" ErrorInfo="乘客类型必须为数字或者乘客类型参数值不在0,1,2"/>
+  <Error ErrorCode="220024" ErrorType="2" ErrorInfo="请求参数异常"/>
+  <Error ErrorCode="220025" ErrorType="2" ErrorInfo="未开通权限"/>
+  <Error ErrorCode="220026" ErrorType="2" ErrorInfo="IP未绑定，请联系今日"/>
+  <Error ErrorCode="220027" ErrorType="2" ErrorInfo="获取用户信息异常"/>
+  <Error ErrorCode="220028" ErrorType="2" ErrorInfo="访问超量了，请联系今日充值"/>
+  <Error ErrorCode="220029" ErrorType="2" ErrorInfo="没有任何请求数据"/>
+  <Error ErrorCode="220030" ErrorType="2" ErrorInfo="不存在该用户"/>
+  <Error ErrorCode="220031" ErrorType="2" ErrorInfo="下载包类型必须为数字"/>
+  <Error ErrorCode="220032" ErrorType="2" ErrorInfo="请求的下载包类型参数值不在0,1"/>
+  <Error ErrorCode="220033" ErrorType="2" ErrorInfo="下载包类型存在非法字符"/>
+  <Error ErrorCode="220034" ErrorType="2" ErrorInfo="uptime日期存在非法字符"/>
+  <Error ErrorCode="220035" ErrorType="2" ErrorInfo="uptime日期格式不正确"/>
+  <Error ErrorCode="220036" ErrorType="2" ErrorInfo="uptime日期不能为空或NULL"/>
+  <Error ErrorCode="220037" ErrorType="2" ErrorInfo="tm存在非法字符"/>
+  <Error ErrorCode="220038" ErrorType="2" ErrorInfo="tm格式不正确"/>
+  <Error ErrorCode="220039" ErrorType="2" ErrorInfo="TM至必须在0-479范围内"/>
+  <Error ErrorCode="220040" ErrorType="2" ErrorInfo="tm不能为空或NULL"/>
+  <Error ErrorCode="220041" ErrorType="2" ErrorInfo="tm值计算出的时间是否大于当前时间"/>
+  <Error ErrorCode="220042" ErrorType="2" ErrorInfo="时间点参数格式不正确"/>
+  <Error ErrorCode="220043" ErrorType="2" ErrorInfo="政策类型参数格式不正确"/>
+  <Error ErrorCode="220044" ErrorType="2" ErrorInfo="PNR存在非法字符"/>
+  <Error ErrorCode="220045" ErrorType="2" ErrorInfo="PNR格式不正确"/>
+  <Error ErrorCode="220046" ErrorType="2" ErrorInfo="PNR不能为空或NULL"/>
+  <Error ErrorCode="220047" ErrorType="2" ErrorInfo="PNRInfo存在非法字符"/>
+  <Error ErrorCode="220048" ErrorType="2" ErrorInfo="乘客类型存在非法字符"/>
+  <Error ErrorCode="220049" ErrorType="2" ErrorInfo="乘客类型存在非法字符"/>
+  <Error ErrorCode="220050" ErrorType="2" ErrorInfo="PNRInfo格式错误或者为空"/>
+  <Error ErrorCode="220051" ErrorType="2" ErrorInfo="zip压缩文件异常"/>
+  <Error ErrorCode="220052" ErrorType="2" ErrorInfo="生成xml文件异常"/>
+  <Error ErrorCode="220053" ErrorType="2" ErrorInfo="政策更新包传入时间异常"/>
+  <Error ErrorCode="220054" ErrorType="2" ErrorInfo="未找到request请求节点"/>
+  <Error ErrorCode="220055" ErrorType="2" ErrorInfo="该用户不存在"/>
+  <Error ErrorCode="220056" ErrorType="2" ErrorInfo="航班号存在非法字符"/>
+  <Error ErrorCode="220057" ErrorType="2" ErrorInfo="政策id不能为空或NULL或0"/>
+  <Error ErrorCode="220058" ErrorType="2" ErrorInfo="政策id不合法"/>
+  <Error ErrorCode="220059" ErrorType="2" ErrorInfo="没有查询到符合条件的数据"/>
+  <Error ErrorCode="220060" ErrorType="2" ErrorInfo="系统服务商必须为数字"/>
+  <Error ErrorCode="220061" ErrorType="2" ErrorInfo="系统服务商存在非法字符"/>
+  <Error ErrorCode="220062" ErrorType="2" ErrorInfo="系统商未获得授权"/>
+  <Error ErrorCode="220063" ErrorType="2" ErrorInfo="系统商授权记录未通过审核"/>
+  <Error ErrorCode="220064" ErrorType="2" ErrorInfo="基础政策包只能在凌晨1点至8点获取"/>
+  <Error ErrorCode="220065" ErrorType="2" ErrorInfo="当日起飞的航班客票当日一经出票不得当日作废"/>
+  <Error ErrorCode="220066" ErrorType="2" ErrorInfo="获取退改签说明异常"/>
+  <Error ErrorCode="220067" ErrorType="2" ErrorInfo="获取退废规定时，舱位列表解析异常"/>
+  <Error ErrorCode="220068" ErrorType="2" ErrorInfo="获取改签规定时，舱位列表解析异常"/>
+  <Error ErrorCode="220069" ErrorType="2" ErrorInfo="获取退改签规定时，序列化异常"/>
+  <Error ErrorCode="220070" ErrorType="2" ErrorInfo="获取验证废票信息失败"/>
+  <Error ErrorCode="220071" ErrorType="2" ErrorInfo="记录条数不能大于10"/>
+  <Error ErrorCode="220072" ErrorType="2" ErrorInfo="政策类型必须为数字或者政策类型参数值不在1,2"/>
+  <Error ErrorCode="220073" ErrorType="2" ErrorInfo="政策更新包时间只能为当天时间"/>
+  <Error ErrorCode="220074" ErrorType="2" ErrorInfo="政策更新包时间不能大于当前时间"/>
+  <Error ErrorCode="220075" ErrorType="2" ErrorInfo="政策更新包时间格式是日期+时间"/>
+  <Error ErrorCode="220076" ErrorType="2" ErrorInfo="无可用政策"/>
+  <Error ErrorCode="220077" ErrorType="2" ErrorInfo="获取剩余库存异常"/>
+  <Error ErrorCode="220078" ErrorType="2" ErrorInfo="政策类型不能为空"/>
+  <Error ErrorCode="220079" ErrorType="2" ErrorInfo="舱位不能为空"/>
+  <Error ErrorCode="220080" ErrorType="2" ErrorInfo="航班号不能为空"/>
+  <Error ErrorCode="220081" ErrorType="2" ErrorInfo="密码不能为空或NULL"/>
+  <Error ErrorCode="220082" ErrorType="2" ErrorInfo="请求ID为空或NULL"/>
+  <Error ErrorCode="220083" ErrorType="2" ErrorInfo="密码验证错误"/>
+  <Error ErrorCode="220084" ErrorType="2" ErrorInfo="用户密码有误或用户IP未绑定"/>
+  <Error ErrorCode="220085" ErrorType="2" ErrorInfo="淘宝订单号不能为空或NULL"/>
+  <Error ErrorCode="220086" ErrorType="2" ErrorInfo="退票航段与订单中的航段不一致"/>
+  <Error ErrorCode="220087" ErrorType="2" ErrorInfo="退票信息不能为空或为NULL"/>
+  <Error ErrorCode="220088" ErrorType="2" ErrorInfo="淘宝退票订单号不能为空或NULL"/>
+  <Error ErrorCode="220089" ErrorType="2" ErrorInfo="退票航段未填写"/>
+  <Error ErrorCode="220090" ErrorType="2" ErrorInfo="退款类型未填写"/>
+  <Error ErrorCode="220091" ErrorType="2" ErrorInfo="未获取到此用户IP信息"/>
+  <Error ErrorCode="220092" ErrorType="2" ErrorInfo="基建费不能为空或为NULL"/>
+  <Error ErrorCode="220093" ErrorType="2" ErrorInfo="燃油费不能为空或为NULL"/>
+  <Error ErrorCode="220094" ErrorType="2" ErrorInfo="票面价不能为空或为NULL"/>
+  <Error ErrorCode="220095" ErrorType="2" ErrorInfo="结算价不能为空或为NULL"/>
+  <Error ErrorCode="220096" ErrorType="2" ErrorInfo="行程类型不能为空或为NULL"/>
+  <Error ErrorCode="220097" ErrorType="2" ErrorInfo="航段信息不能为空或为NULL"/>
+  <Error ErrorCode="220098" ErrorType="2" ErrorInfo="乘机人信息不能为空或为NULL"/>
+  <Error ErrorCode="220099" ErrorType="2" ErrorInfo="行程类型不合法,只能为1或2"/>
+  <Error ErrorCode="220100" ErrorType="2" ErrorInfo="证件类型不能为空或为NULL"/>
+  <Error ErrorCode="220101" ErrorType="2" ErrorInfo="出生日期不能为空或为NULL"/>
+  <Error ErrorCode="220102" ErrorType="2" ErrorInfo="到达日期不能为空或为NULL"/>
+  <Error ErrorCode="220103" ErrorType="2" ErrorInfo="航段号不能为空或为NULL"/>
+  <Error ErrorCode="220104" ErrorType="2" ErrorInfo="记录平台订单信息与淘宝订单信息失败"/>
+
+  <Error ErrorCode="300001" ErrorType="3" ErrorInfo="无效的采购账户"/>
+  <Error ErrorCode="300002" ErrorType="3" ErrorInfo="IP地址未绑定"/>
+  <Error ErrorCode="300003" ErrorType="3" ErrorInfo="经销商账户不具备查询访问流量"/>
+  <Error ErrorCode="300004" ErrorType="3" ErrorInfo="创建PNR失败"/>
+  <Error ErrorCode="300005" ErrorType="3" ErrorInfo="政策ID和供应商ID必须有一项有值"/>
+  <Error ErrorCode="300006" ErrorType="3" ErrorInfo="没有匹配到政策"/>
+  <Error ErrorCode="300007" ErrorType="3" ErrorInfo="获取officeNum有误"/>
+  <Error ErrorCode="300008" ErrorType="3" ErrorInfo="初始化Pnr信息有误"/>
+  <Error ErrorCode="300009" ErrorType="3" ErrorInfo="获取出发城市和到达城市之间的公里数失败"/>
+  <Error ErrorCode="300010" ErrorType="3" ErrorInfo="统计异常"/>
+  <Error ErrorCode="300011" ErrorType="3" ErrorInfo="采购返点大于政策返点"/>
+  <Error ErrorCode="300012" ErrorType="3" ErrorInfo="创建PNR编码有误"/>
+  <Error ErrorCode="300013" ErrorType="3" ErrorInfo="存入订单记录失败"/>
+  <Error ErrorCode="300014" ErrorType="3" ErrorInfo="存入订单日志失败"/>
+  <Error ErrorCode="300015" ErrorType="3" ErrorInfo="存入订单扩展失败"/>
+  <Error ErrorCode="300016" ErrorType="3" ErrorInfo="存入后返金额失败"/>
+  <Error ErrorCode="300017" ErrorType="3" ErrorInfo="存入块钱支付失败"/>
+  <Error ErrorCode="300018" ErrorType="3" ErrorInfo="采购商用户不存在"/>
+  <Error ErrorCode="300019" ErrorType="3" ErrorInfo="PnrInfo数据有误"/>
+  <Error ErrorCode="300020" ErrorType="3" ErrorInfo="采购商账户未填写"/>
+  <Error ErrorCode="300021" ErrorType="3" ErrorInfo="采购商账户为空"/>
+  <Error ErrorCode="300022" ErrorType="3" ErrorInfo="政策Id和供应商ID为空或不存在"/>
+  <Error ErrorCode="300023" ErrorType="3" ErrorInfo="乘客姓名为空"/>
+  <Error ErrorCode="300024" ErrorType="3" ErrorInfo="乘客姓名不存在"/>
+  <Error ErrorCode="300025" ErrorType="3" ErrorInfo="乘客证件不存在"/>
+  <Error ErrorCode="300026" ErrorType="3" ErrorInfo="乘客证件号为空"/>
+  <Error ErrorCode="300027" ErrorType="3" ErrorInfo="舱位为空"/>
+  <Error ErrorCode="300028" ErrorType="3" ErrorInfo="舱位为空"/>
+  <Error ErrorCode="300029" ErrorType="3" ErrorInfo="航班号不存在"/>
+  <Error ErrorCode="300030" ErrorType="3" ErrorInfo="航班号为空"/>
+  <Error ErrorCode="300031" ErrorType="3" ErrorInfo="出发日期为不存在"/>
+  <Error ErrorCode="300032" ErrorType="3" ErrorInfo="出发日期为空"/>
+  <Error ErrorCode="300033" ErrorType="3" ErrorInfo="出发日期格式不合法"/>
+  <Error ErrorCode="300034" ErrorType="3" ErrorInfo="出发城市不存在"/>
+  <Error ErrorCode="300035" ErrorType="3" ErrorInfo="出发城市为空"/>
+  <Error ErrorCode="300036" ErrorType="3" ErrorInfo="出发城市三字码不合法"/>
+  <Error ErrorCode="300037" ErrorType="3" ErrorInfo="到达城市不存在"/>
+  <Error ErrorCode="300038" ErrorType="3" ErrorInfo="到达城市为空"/>
+  <Error ErrorCode="300039" ErrorType="3" ErrorInfo="到达城市三字码不合法"/>
+  <Error ErrorCode="300040" ErrorType="3" ErrorInfo="返点不存在"/>
+  <Error ErrorCode="300041" ErrorType="3" ErrorInfo="采购商的返点为空"/>
+  <Error ErrorCode="300042" ErrorType="3" ErrorInfo="允许换编码创单值不合法，必须为0或1"/>
+  <Error ErrorCode="300043" ErrorType="3" ErrorInfo="政策类型值不合法，必须为0或1或2"/>
+  <Error ErrorCode="300044" ErrorType="3" ErrorInfo="自动支付值不合法，必须为F或T"/>
+  <Error ErrorCode="300045" ErrorType="3" ErrorInfo="乘客类型的值不合法，必须为A或C"/>
+  <Error ErrorCode="300046" ErrorType="3" ErrorInfo="解析xml异常"/>
+  <Error ErrorCode="300047" ErrorType="3" ErrorInfo="构建xml响应数据异常"/>
+  <Error ErrorCode="300048" ErrorType="3" ErrorInfo="乘客人数与乘客姓名，乘客证件不匹配"/>
+  <Error ErrorCode="300049" ErrorType="3" ErrorInfo="pnr编码为填写"/>
+  <Error ErrorCode="300050" ErrorType="3" ErrorInfo="pnr编码为空"/>
+  <Error ErrorCode="300051" ErrorType="3" ErrorInfo="Pnrinfo未填写"/>
+  <Error ErrorCode="300052" ErrorType="3" ErrorInfo="Pnrinfo内容为空"/>
+  <Error ErrorCode="300053" ErrorType="3" ErrorInfo="pnrInfo数据不合法"/>
+  <Error ErrorCode="300054" ErrorType="3" ErrorInfo="航线类型不合法，其值必须为O,F,T"/>
+  <Error ErrorCode="300055" ErrorType="3" ErrorInfo="舱位类型不合法，其中必须为T，P，C"/>
+  <Error ErrorCode="300056" ErrorType="3" ErrorInfo="初始化Pnr信息有误"/>
+  <Error ErrorCode="300057" ErrorType="3" ErrorInfo="系统查询机票价格出现异常"/>
+  <Error ErrorCode="300058" ErrorType="3" ErrorInfo="未获取到特价舱位价格"/>
+  <Error ErrorCode="300059" ErrorType="3" ErrorInfo="获取出发城市和到达城市之间的公里数失败"/>
+  <Error ErrorCode="300060" ErrorType="3" ErrorInfo="机建燃油费不符"/>
+  <Error ErrorCode="300061" ErrorType="3" ErrorInfo="该经销商用户不允许重创建订单"/>
+  <Error ErrorCode="300062" ErrorType="3" ErrorInfo="订单未支付"/>
+  <Error ErrorCode="300063" ErrorType="3" ErrorInfo="订单不存在"/>
+  <Error ErrorCode="300064" ErrorType="3" ErrorInfo="供应商正在处理订单"/>
+  <Error ErrorCode="300065" ErrorType="3" ErrorInfo="供应商ID不存在分润模式"/>
+  <Error ErrorCode="300066" ErrorType="3" ErrorInfo="当前订单已经出票完成，不允许取消订单"/>
+  <Error ErrorCode="300067" ErrorType="3" ErrorInfo="当前订单状态,不允许取消订单"/>
+  <Error ErrorCode="300068" ErrorType="3" ErrorInfo="抱歉！不能完成此操作，该编码供票商已出票！"/>
+  <Error ErrorCode="300069" ErrorType="3" ErrorInfo="订单取消成功，存入订单日志失败"/>
+  <Error ErrorCode="300070" ErrorType="3" ErrorInfo="订单状态不能取消订单"/>
+  <Error ErrorCode="300071" ErrorType="3" ErrorInfo="订单编号未填写"/>
+  <Error ErrorCode="300072" ErrorType="3" ErrorInfo="订单编号为空"/>
+  <Error ErrorCode="300073" ErrorType="3" ErrorInfo="pnr编码未填写"/>
+  <Error ErrorCode="300074" ErrorType="3" ErrorInfo="pnr编码为空"/>
+  <Error ErrorCode="300075" ErrorType="3" ErrorInfo="支付类型未填写"/>
+  <Error ErrorCode="300076" ErrorType="3" ErrorInfo="支付类型为空"/>
+  <Error ErrorCode="300077" ErrorType="3" ErrorInfo="支付类型必须为ZFB，KQ，CFT中的一种"/>
+  <Error ErrorCode="300078" ErrorType="3" ErrorInfo="退/费票标识不存在"/>
+  <Error ErrorCode="300079" ErrorType="3" ErrorInfo="退/费票标识为空"/>
+  <Error ErrorCode="300080" ErrorType="3" ErrorInfo="乘客姓名未填写"/>
+  <Error ErrorCode="300081" ErrorType="3" ErrorInfo="乘客姓名为空"/>
+  <Error ErrorCode="300082" ErrorType="3" ErrorInfo="退/费票人数未填写"/>
+  <Error ErrorCode="300083" ErrorType="3" ErrorInfo="退/费票人数为空"/>
+  <Error ErrorCode="300084" ErrorType="3" ErrorInfo="退/费票人数必须为数字"/>
+  <Error ErrorCode="300085" ErrorType="3" ErrorInfo="退/费票的票号未填写"/>
+  <Error ErrorCode="300086" ErrorType="3" ErrorInfo="退/费票的票号为空"/>
+  <Error ErrorCode="300087" ErrorType="3" ErrorInfo="票号与退费票标识不相等"/>
+  <Error ErrorCode="300088" ErrorType="3" ErrorInfo="票号与乘客名称不相等"/>
+  <Error ErrorCode="300089" ErrorType="3" ErrorInfo="退/费票标识有误"/>
+  <Error ErrorCode="300090" ErrorType="3" ErrorInfo="退/费票人数与退/费票姓名不相等"/>
+  <Error ErrorCode="300091" ErrorType="3" ErrorInfo="退/废票标识未填写"/>
+  <Error ErrorCode="300092" ErrorType="3" ErrorInfo="退/费票为空"/>
+  <Error ErrorCode="300093" ErrorType="3" ErrorInfo="乘客姓名，票号不匹配"/>
+  <Error ErrorCode="300094" ErrorType="3" ErrorInfo="退/废票标识与退/废票类型不匹配"/>
+  <Error ErrorCode="300095" ErrorType="3" ErrorInfo="该用户已经退/费票处理"/>
+  <Error ErrorCode="300096" ErrorType="3" ErrorInfo="乘客姓名未填写"/>
+  <Error ErrorCode="300097" ErrorType="3" ErrorInfo="乘客姓名为空"/>
+  <Error ErrorCode="300098" ErrorType="3" ErrorInfo="出发日期未填写"/>
+  <Error ErrorCode="300099" ErrorType="3" ErrorInfo="出发日期为空"/>
+  <Error ErrorCode="300100" ErrorType="3" ErrorInfo="出发日期格式不正确"/>
+  <Error ErrorCode="300101" ErrorType="3" ErrorInfo="出发时间未填写"/>
+  <Error ErrorCode="300102" ErrorType="3" ErrorInfo="出发时间为空"/>
+  <Error ErrorCode="300103" ErrorType="3" ErrorInfo="出发时间格式不正确"/>
+  <Error ErrorCode="300104" ErrorType="3" ErrorInfo="航班号未填写"/>
+  <Error ErrorCode="300105" ErrorType="3" ErrorInfo="航班号为空"/>
+  <Error ErrorCode="300106" ErrorType="3" ErrorInfo="舱位未填写"/>
+  <Error ErrorCode="300107" ErrorType="3" ErrorInfo="舱位为空"/>
+  <Error ErrorCode="300108" ErrorType="3" ErrorInfo="采购商账户无效"/>
+  <Error ErrorCode="300109" ErrorType="3" ErrorInfo="存入支付跳转失败"/>
+  <Error ErrorCode="300110" ErrorType="3" ErrorInfo="存入升舱信息失败"/>
+  <Error ErrorCode="300111" ErrorType="3" ErrorInfo="用户名未填写"/>
+  <Error ErrorCode="300112" ErrorType="3" ErrorInfo="用户名为空"/>
+  <Error ErrorCode="300113" ErrorType="3" ErrorInfo="成人Pnr编码未填写"/>
+  <Error ErrorCode="300114" ErrorType="3" ErrorInfo="成人Pnr编码为空"/>
+  <Error ErrorCode="300115" ErrorType="3" ErrorInfo="成人Pnr编码格式不正确"/>
+  <Error ErrorCode="300116" ErrorType="3" ErrorInfo="舱位编码未填写"/>
+  <Error ErrorCode="300117" ErrorType="3" ErrorInfo="舱位编码为空"/>
+  <Error ErrorCode="300118" ErrorType="3" ErrorInfo="乘客人数未填写"/>
+  <Error ErrorCode="300119" ErrorType="3" ErrorInfo="乘客人数为空"/>
+  <Error ErrorCode="300120" ErrorType="3" ErrorInfo="乘客人数必须为数字"/>
+  <Error ErrorCode="300121" ErrorType="3" ErrorInfo="乘客姓名未填写"/>
+  <Error ErrorCode="300122" ErrorType="3" ErrorInfo="乘客姓名为空"/>
+  <Error ErrorCode="300123" ErrorType="3" ErrorInfo="乘客证件号未填写"/>
+  <Error ErrorCode="300124" ErrorType="3" ErrorInfo="乘客证件号为空"/>
+  <Error ErrorCode="300125" ErrorType="3" ErrorInfo="乘客证件号与乘客人数不相等"/>
+  <Error ErrorCode="300126" ErrorType="3" ErrorInfo="乘客姓名与乘客人数不相等"/>
+  <Error ErrorCode="300127" ErrorType="3" ErrorInfo="不存在该用户"/>
+  <Error ErrorCode="300128" ErrorType="3" ErrorInfo="获取行程单标识不存在"/>
+  <Error ErrorCode="300129" ErrorType="3" ErrorInfo="行程单标识为空"/>
+  <Error ErrorCode="300130" ErrorType="3" ErrorInfo="行程单标识有误"/>
+  <Error ErrorCode="300131" ErrorType="3" ErrorInfo="获取行程单方式未填写"/>
+  <Error ErrorCode="300132" ErrorType="3" ErrorInfo="获取行程单方式为空"/>
+  <Error ErrorCode="300133" ErrorType="3" ErrorInfo="获取行程单方式有误"/>
+  <Error ErrorCode="300134" ErrorType="3" ErrorInfo="联系人为填写"/>
+  <Error ErrorCode="300135" ErrorType="3" ErrorInfo="联系人为空"/>
+  <Error ErrorCode="300136" ErrorType="3" ErrorInfo="电话号码未填写"/>
+  <Error ErrorCode="300137" ErrorType="3" ErrorInfo="电话号码为空"/>
+  <Error ErrorCode="300138" ErrorType="3" ErrorInfo="地址未填写"/>
+  <Error ErrorCode="300139" ErrorType="3" ErrorInfo="地址为空"/>
+  <Error ErrorCode="300140" ErrorType="3" ErrorInfo="省份为填写"/>
+  <Error ErrorCode="300141" ErrorType="3" ErrorInfo="省份为空"/>
+  <Error ErrorCode="300142" ErrorType="3" ErrorInfo="城市未填写"/>
+  <Error ErrorCode="300143" ErrorType="3" ErrorInfo="城市为空"/>
+  <Error ErrorCode="300144" ErrorType="3" ErrorInfo="订单编号不存在"/>
+  <Error ErrorCode="300145" ErrorType="3" ErrorInfo="订单状态不能申请程单"/>
+  <Error ErrorCode="300146" ErrorType="3" ErrorInfo="乘客姓名不存在"/>
+  <Error ErrorCode="300147" ErrorType="3" ErrorInfo="乘客已经申请行程单"/>
+  <Error ErrorCode="300148" ErrorType="3" ErrorInfo="采购商账户不存在"/>
+  <Error ErrorCode="300149" ErrorType="3" ErrorInfo="邮政编码为6位"/>
+  <Error ErrorCode="300150" ErrorType="3" ErrorInfo="行程单编号未填写"/>
+  <Error ErrorCode="300151" ErrorType="3" ErrorInfo="行程单编号为空"/>
+  <Error ErrorCode="300152" ErrorType="3" ErrorInfo="票号为空"/>
+  <Error ErrorCode="300153" ErrorType="3" ErrorInfo="票号未填写"/>
+  <Error ErrorCode="300154" ErrorType="3" ErrorInfo="订单时间未填写"/>
+  <Error ErrorCode="300155" ErrorType="3" ErrorInfo="订单时间为空"/>
+  <Error ErrorCode="300156" ErrorType="3" ErrorInfo="订单时间格式有误"/>
+  <Error ErrorCode="300157" ErrorType="3" ErrorInfo="票号不存在"/>
+  <Error ErrorCode="300158" ErrorType="3" ErrorInfo="请求参数code未填写"/>
+  <Error ErrorCode="300159" ErrorType="3" ErrorInfo="请求参数code为空"/>
+  <Error ErrorCode="300160" ErrorType="3" ErrorInfo="请求类型(type)未填写"/>
+  <Error ErrorCode="300161" ErrorType="3" ErrorInfo="请求类型(type)为空"/>
+  <Error ErrorCode="300162" ErrorType="3" ErrorInfo="请求类型的值有误，必须在(1,2,3,4)"/>
+  <Error ErrorCode="300163" ErrorType="3" ErrorInfo="更新访问次数失败"/>
+  <Error ErrorCode="300164" ErrorType="3" ErrorInfo="供应商ID为空"/>
+  <Error ErrorCode="300165" ErrorType="3" ErrorInfo="供应商名称不存在"/>
+  <Error ErrorCode="300166" ErrorType="3" ErrorInfo="政策ID不存在"/>
+  <Error ErrorCode="300167" ErrorType="3" ErrorInfo="订单号不存在"/>
+  <Error ErrorCode="300168" ErrorType="3" ErrorInfo="该订单编号不存在officeNum"/>
+  <Error ErrorCode="300169" ErrorType="3" ErrorInfo="该订单没有升舱记录"/>
+  <Error ErrorCode="300170" ErrorType="3" ErrorInfo="系统出现故障，暂时无法进行导入创建订单，出现此情况，请及时联系我们"/>
+  <Error ErrorCode="300171" ErrorType="3" ErrorInfo="此记录编号不存在，请确认再导入PNR记录编号"/>
+  <Error ErrorCode="300172" ErrorType="3" ErrorInfo="此记录编号无效，状态为已取消"/>
+  <Error ErrorCode="300173" ErrorType="3" ErrorInfo="此记录编号含有儿童，请使用下面儿童PNR导入创建订单"/>
+  <Error ErrorCode="300174" ErrorType="3" ErrorInfo="此记录编号暂时无法导入创建订单，请联系我们"/>
+  <Error ErrorCode="300175" ErrorType="3" ErrorInfo="此记录编号无运价信息，请检查PNR记录编码"/>
+  <Error ErrorCode="300176" ErrorType="3" ErrorInfo="此记录编号未添加证件号码，加入后请重新导入PNR记录编号"/>
+  <Error ErrorCode="300177" ErrorType="3" ErrorInfo="此记录编号为共享航班，如果订购共享航班请联系客服"/>
+  <Error ErrorCode="300178" ErrorType="3" ErrorInfo="此记录编号位置被“NO”掉了，请检查您的PNR记录编号"/>
+  <Error ErrorCode="300179" ErrorType="3" ErrorInfo="此记录编号为“HL”状态不是有效记录编号，请检查您的PNR记录编号"/>
+  <Error ErrorCode="300180" ErrorType="3" ErrorInfo="此记录编号含有成人，请将成人与儿童拆开导入，请将成人编码输入到儿童编码里"/>
+  <Error ErrorCode="300181" ErrorType="3" ErrorInfo="未将成人编码输入到儿童编码里"/>
+  <Error ErrorCode="300182" ErrorType="3" ErrorInfo="儿童订购的舱位只能是Y舱、C舱、F舱，请检查您的PNR记录编号"/>
+  <Error ErrorCode="300183" ErrorType="3" ErrorInfo="此记录编号为“TN”状态不是有效记录编号，请检查您的PNR记录编号"/>
+  <Error ErrorCode="300184" ErrorType="3" ErrorInfo="很抱歉，此记录编号为联程票，平台暂不支持联程票"/>
+  <Error ErrorCode="300185" ErrorType="3" ErrorInfo="鹰联(EU)航空儿童票，只能是O舱，其它舱位无效"/>
+  <Error ErrorCode="300186" ErrorType="3" ErrorInfo="当前暂不支持往返儿童票，请将往返儿童票拆成两个单程编码导入"/>
+  <Error ErrorCode="300187" ErrorType="3" ErrorInfo="东航X舱价格有变动，如要出票，请致电我们"/>
+  <Error ErrorCode="300188" ErrorType="3" ErrorInfo="此记录编号为“HN”状态不是有效记录编号，请检查您的PNR记录编号"/>
+  <Error ErrorCode="300189" ErrorType="3" ErrorInfo="此记录编号为“HX”状态不是有效记录编号，请检查您的PNR记录编号"/>
+  <Error ErrorCode="300190" ErrorType="3" ErrorInfo="南航(CZ)儿童需要加SSR项"/>
+  <Error ErrorCode="300191" ErrorType="3" ErrorInfo="南航(CZ)儿童票姓名后面不用输入儿童标识 CHD"/>
+  <Error ErrorCode="300192" ErrorType="3" ErrorInfo="南航(CZ)儿童票姓名后面请输入儿童标识 CHD"/>
+  <Error ErrorCode="300193" ErrorType="3" ErrorInfo="东航X舱不适用于外籍乘客，如有疑问请联系我们客服"/>
+  <Error ErrorCode="300194" ErrorType="3" ErrorInfo="您复制的黑屏数据有问题，请勿修改且保持原有的黑屏数据，如有问题请及时联系我们"/>
+  <Error ErrorCode="300195" ErrorType="3" ErrorInfo="请备注OSI项"/>
+  <Error ErrorCode="300197" ErrorType="3" ErrorInfo="您订的往返程编码不属于同一家航空公司，请检查后重新导入"/>
+  <Error ErrorCode="300198" ErrorType="3" ErrorInfo="REMARK OFFICE（需要授权）"/>
+  <Error ErrorCode="300199" ErrorType="3" ErrorInfo="未知信息，请联系技术人员"/>
+  <Error ErrorCode="300200" ErrorType="3" ErrorInfo="票面价格不相符"/>
+  <Error ErrorCode="300201" ErrorType="3" ErrorInfo="证件编号相同"/>
+  <Error ErrorCode="300202" ErrorType="3" ErrorInfo="邮政编码为空"/>
+  <Error ErrorCode="300203" ErrorType="3" ErrorInfo="采购商对应的订单不不在"/>
+  <Error ErrorCode="300204" ErrorType="3" ErrorInfo="供应商ID与订单对应的供应商ID不匹配"/>
+  <Error ErrorCode="300205" ErrorType="3" ErrorInfo="采购商账户与订单对应的采购商账户不匹配"/>
+  <Error ErrorCode="300206" ErrorType="3" ErrorInfo="订单状态不允许升舱"/>
+  <Error ErrorCode="300207" ErrorType="3" ErrorInfo="订单状态不能取消订单"/>
+  <Error ErrorCode="300208" ErrorType="3" ErrorInfo="订单不存在"/>
+  <Error ErrorCode="300209" ErrorType="3" ErrorInfo="订单状态不允许退废票"/>
+  <Error ErrorCode="300210" ErrorType="3" ErrorInfo="订单状态不允许改签"/>
+  <Error ErrorCode="300211" ErrorType="3" ErrorInfo="升舱的乘客姓名在订单乘客中不存在"/>
+  <Error ErrorCode="300212" ErrorType="3" ErrorInfo="升舱舱位有误"/>
+  <Error ErrorCode="300213" ErrorType="3" ErrorInfo="身份证件号格式有误！(开头必须是NI)"/>
+  <Error ErrorCode="300214" ErrorType="3" ErrorInfo="获取行程单信息失败，请检查行程单编号或采购商用户名是否正确"/>
+  <Error ErrorCode="300215" ErrorType="3" ErrorInfo="升舱时间小于当前时间"/>
+  <Error ErrorCode="300216" ErrorType="3" ErrorInfo="出发时间小于当前时间"/>
+  <Error ErrorCode="300217" ErrorType="3" ErrorInfo="暂不能类型为空"/>
+  <Error ErrorCode="300218" ErrorType="3" ErrorInfo="暂不能类型必须为(A,B,C)"/>
+  <Error ErrorCode="300219" ErrorType="3" ErrorInfo="退，废票标识不合法，必须为(A,B)"/>
+  <Error ErrorCode="300220" ErrorType="3" ErrorInfo="退，废票标识与乘客人数不相等"/>
+  <Error ErrorCode="300221" ErrorType="3" ErrorInfo="退废票标识与票号不相等"/>
+  <Error ErrorCode="300222" ErrorType="3" ErrorInfo="该订单状态不属于暂不能出票"/>
+  <Error ErrorCode="300223" ErrorType="3" ErrorInfo="该订单状态不属于暂不能废票"/>
+  <Error ErrorCode="300224" ErrorType="3" ErrorInfo="该订单状态不属于暂不能退票"/>
+  <Error ErrorCode="300225" ErrorType="3" ErrorInfo="更新暂不能订单失败"/>
+  <Error ErrorCode="300226" ErrorType="3" ErrorInfo="该订单没有退/废票信息"/>
+  <Error ErrorCode="300227" ErrorType="3" ErrorInfo="没有订单改签信息"/>
+  <Error ErrorCode="300228" ErrorType="3" ErrorInfo="升舱的PNR编码与订单的PNR编码不相同"/>
+  <Error ErrorCode="300229" ErrorType="3" ErrorInfo="该供应商没有对应的officeNum"/>
+  <Error ErrorCode="300230" ErrorType="3" ErrorInfo="政策没有对应的OfficeNum"/>
+  <Error ErrorCode="300231" ErrorType="3" ErrorInfo="退/废票姓名不存在订单的姓名中"/>
+  <Error ErrorCode="300232" ErrorType="3" ErrorInfo="请填写退/废票原因"/>
+  <Error ErrorCode="300233" ErrorType="3" ErrorInfo="邮政编码必须为数字"/>
+  <Error ErrorCode="300234" ErrorType="3" ErrorInfo="电话号码格式必须为数字"/>
+  <Error ErrorCode="300235" ErrorType="3" ErrorInfo="PNR编码必须为6位"/>
+  <Error ErrorCode="300236" ErrorType="3" ErrorInfo="PNR编码与PNRInfo中的Pnr编码不相等或是大编码不为6位"/>
+  <Error ErrorCode="300237" ErrorType="3" ErrorInfo="PnrInfo中PNR编码格与大编码格式有误"/>
+  <Error ErrorCode="300238" ErrorType="3" ErrorInfo="退废票备注必须为A，B，C，D"/>
+  <Error ErrorCode="300239" ErrorType="3" ErrorInfo="出发日期小于当前日期"/>
+  <Error ErrorCode="300240" ErrorType="3" ErrorInfo="该供应商不能出VIP账户"/>
+  <Error ErrorCode="300241" ErrorType="3" ErrorInfo="该供应商必须传证件号"/>
+  <Error ErrorCode="300242" ErrorType="3" ErrorInfo="系统商授权记录未审核"/>
+  <Error ErrorCode="300243" ErrorType="3" ErrorInfo="系统商授权记录未通过审核"/>
+  <Error ErrorCode="300244" ErrorType="3" ErrorInfo="系统商未获得授权"/>
+  <Error ErrorCode="300245" ErrorType="3" ErrorInfo="未检测到此系统商账号"/>
+  <Error ErrorCode="300246" ErrorType="3" ErrorInfo="采购商不能创建南航S舱的订单"/>
+  <Error ErrorCode="300247" ErrorType="3" ErrorInfo="乘客姓名长度有误(中文不能超过11个字符，英文不能超过24个字符)"/>
+  <Error ErrorCode="300248" ErrorType="3" ErrorInfo="退/废票备注不能超过500个字符"/>
+  <Error ErrorCode="300249" ErrorType="3" ErrorInfo="乘客姓名中包含航信系统无法识别的生僻字，请使用拼音代替"/>
+  <Error ErrorCode="300250" ErrorType="3" ErrorInfo="没有获取到特价舱位价格"/>
+  <Error ErrorCode="300251" ErrorType="3" ErrorInfo="初始化经销商信息失败"/>
+  <Error ErrorCode="300252" ErrorType="3" ErrorInfo="政策ID为空"/>
+  <Error ErrorCode="300253" ErrorType="3" ErrorInfo="政策ID未填写"/>
+  <Error ErrorCode="300254" ErrorType="3" ErrorInfo="采购商不具有查询航班权限"/>
+  <Error ErrorCode="300255" ErrorType="3" ErrorInfo="当前时间不在供应商上班时间内，无法创单"/>
+  <Error ErrorCode="300256" ErrorType="3" ErrorInfo="PNR不能为空"/>
+  <Error ErrorCode="300257" ErrorType="3" ErrorInfo="深圳出发无法下单"/>
+  <Error ErrorCode="300258" ErrorType="3" ErrorInfo="请转到升舱接口"/>
+  <Error ErrorCode="300259" ErrorType="3" ErrorInfo="请转到获取升舱信息接口"/>
+  <Error ErrorCode="300260" ErrorType="3" ErrorInfo="获取儿童PNR内容异常"/>
+  <Error ErrorCode="300261" ErrorType="3" ErrorInfo="获取儿童价格异常"/>
+  <Error ErrorCode="300262" ErrorType="3" ErrorInfo="是否取消平台PNR只能取值'Y'或'N'"/>
+  <Error ErrorCode="300263" ErrorType="3" ErrorInfo="退/废票票号不存在订单的票号中"/>
+  <Error ErrorCode="300264" ErrorType="3" ErrorInfo="未获取到供应商上下班时间"/>
+  <Error ErrorCode="300265" ErrorType="3" ErrorInfo="校验支付金额不一致"/>
+  <Error ErrorCode="300266" ErrorType="3" ErrorInfo="乘客证件号错误"/>
+  <Error ErrorCode="300267" ErrorType="3" ErrorInfo="航班起飞前2小时内不允许申请废票"/>
+  <Error ErrorCode="300268" ErrorType="3" ErrorInfo="供应商下班后不允许提交申请作废"/>
+  <Error ErrorCode="300270" ErrorType="3" ErrorInfo="该订单状态不能支付"/>
+  <Error ErrorCode="300272" ErrorType="3" ErrorInfo="该订单乘客已存在多比订单，无法继续预订，请核实!如有疑问，请联系021-60721888"/>
+  <Error ErrorCode="300273" ErrorType="3" ErrorInfo="此航班为共享航班，无法预定 请选择其它航班预定"/>
+  <Error ErrorCode="300274" ErrorType="3" ErrorInfo="JD航司，一个PNR只允许对应一个乘机人"/>
+  <Error ErrorCode="300275" ErrorType="3" ErrorInfo="CZ航司，一个PNR最多允许对应三个乘机人"/>
+  <Error ErrorCode="300276" ErrorType="3" ErrorInfo="CA航司，OSI不可为空"/>
+  <Error ErrorCode="300277" ErrorType="3" ErrorInfo="国航手机号码输入格式为：OSI CA CTCT10000000000，OSI后面要输入CA，不得输入YY"/>
+  <Error ErrorCode="300278" ErrorType="3" ErrorInfo="SC航司，OSI不可为空"/>
+  <Error ErrorCode="300279" ErrorType="3" ErrorInfo="SC航司手机号码输入格式为：OSI SC CTCT10000000000，OSI后面要输入SC，不得输入YY"/>
+  <Error ErrorCode="300281" ErrorType="3" ErrorInfo="HO航司，OSI不可为空"/>
+  <Error ErrorCode="300282" ErrorType="3" ErrorInfo="HO航司手机号码输入格式为：OSI HO CTCT10000000000，OSI后面要输入HO，不得输入YY"/>
+
+  <Error ErrorCode="300283" ErrorType="3" ErrorInfo="手机号码格式不正确"/>
+  <Error ErrorCode="300284" ErrorType="3" ErrorInfo="票号长度太长，不可超过14位"/>
+  <Error ErrorCode="300285" ErrorType="3" ErrorInfo="票号状态是:USED/FLOWN LIFT/BOARDED CHECKED IN,不能退废"/>
+  <!-- 创建PNR失败后的舱位信息，从300280开始 -->
+  <Error ErrorCode="300280" ErrorType="3" ErrorInfo="实时创单订位失败,黑屏返回NN/NH时,如果查询该航班Y舱无位,但B舱有位,返回该错误码"/>
+  <Error ErrorCode="300300" ErrorType="3" ErrorInfo="该舱位无运价，请重新选择舱位"/>
+  <Error ErrorCode="300301" ErrorType="3" ErrorInfo="RT指令错误"/>
+  <Error ErrorCode="300302" ErrorType="3" ErrorInfo="RT指令不能为空"/>
+  -
+  <!-- 获取儿童pnr错误信息，从300310开始 -->
+  <Error ErrorCode="300310" ErrorType="3" ErrorInfo="出生日期列表与乘客人数不相等"/>
+  <Error ErrorCode="300311" ErrorType="3" ErrorInfo="出生日期不是有效的日期类型"/>
+  <Error ErrorCode="300312" ErrorType="3" ErrorInfo="出生日期不能大于当前日期"/>
+  <Error ErrorCode="300313" ErrorType="3" ErrorInfo="证件号中不包含有效的出生日期，请添加出生日期"/>
+  <Error ErrorCode="300314" ErrorType="3" ErrorInfo="创建儿童pnr年龄应该在2-14岁之间"/>
+  <Error ErrorCode="300315" ErrorType="3" ErrorInfo="航变联系方式不能为空"/>
+
+  <Error ErrorCode="500001" ErrorType="5" ErrorInfo="该采购商ID与订单编号对应的订单不存在"/>
+  <Error ErrorCode="500002" ErrorType="5" ErrorInfo="订单不属于采购商的订单"/>
+  <Error ErrorCode="500003" ErrorType="5" ErrorInfo="初始化分润金额有误"/>
+  <Error ErrorCode="500004" ErrorType="5" ErrorInfo="该订单对应的采购商和经销商账户没有代扣账户"/>
+  <Error ErrorCode="500005" ErrorType="5" ErrorInfo="存入支付宝状态失败"/>
+  <Error ErrorCode="500006" ErrorType="5" ErrorInfo="更新订单支付宝状态失败"/>
+  <Error ErrorCode="500007" ErrorType="5" ErrorInfo="该订单已经支付"/>
+  <Error ErrorCode="500008" ErrorType="5" ErrorInfo="支付宝自动支付失败"/>
+  <Error ErrorCode="500009" ErrorType="5" ErrorInfo="更新订单支付方式失败"/>
+  <Error ErrorCode="500010" ErrorType="5" ErrorInfo="更新行程单状态失败"/>
+  <Error ErrorCode="500011" ErrorType="5" ErrorInfo="支付类型未填写"/>
+  <Error ErrorCode="500012" ErrorType="5" ErrorInfo="支付类型为空"/>
+  <Error ErrorCode="500013" ErrorType="5" ErrorInfo="支付类型必须为ZFB"/>
+  <Error ErrorCode="500014" ErrorType="5" ErrorInfo="该升舱编号已经支付"/>
+  <Error ErrorCode="500015" ErrorType="5" ErrorInfo="升舱编号为空"/>
+  <Error ErrorCode="500016" ErrorType="5" ErrorInfo="升舱编号未填写"/>
+  <Error ErrorCode="500017" ErrorType="5" ErrorInfo="该升舱编号不属于该采购商"/>
+  <Error ErrorCode="500018" ErrorType="5" ErrorInfo="该行程单编号已经支付成功"/>
+  <Error ErrorCode="500019" ErrorType="5" ErrorInfo="行程单编号为空"/>
+  <Error ErrorCode="500020" ErrorType="5" ErrorInfo="行程单编号未填写"/>
+  <Error ErrorCode="500021" ErrorType="5" ErrorInfo="采购商对应的行程单编号不存在"/>
+  <Error ErrorCode="500022" ErrorType="5" ErrorInfo="该行程单编号不存在"/>
+  <Error ErrorCode="500023" ErrorType="5" ErrorInfo="自动代扣异常"/>
+  <Error ErrorCode="500024" ErrorType="5" ErrorInfo="支付成功，更新订单失败"/>
+  <Error ErrorCode="500025" ErrorType="5" ErrorInfo="支付成功，但该订单编号不存在"/>
+  <Error ErrorCode="500026" ErrorType="5" ErrorInfo="自动支付失败"/>
+  <Error ErrorCode="510027" ErrorType="5" ErrorInfo="支付类型必须为directPay或BankPay"/>
+  <Error ErrorCode="510028" ErrorType="5" ErrorInfo="请填写银行缩写"/>
+  <Error ErrorCode="500029" ErrorType="5" ErrorInfo="该订单的状态不为等待支付"/>
+  <Error ErrorCode="500030" ErrorType="5" ErrorInfo="订单超过支付时限"/>
+  <Error ErrorCode="500031" ErrorType="5" ErrorInfo="分润错误，无法支付！"/>
+  <Error ErrorCode="500032" ErrorType="5" ErrorInfo="该订单对应的账户没有代扣账户"/>
+
+  <Error ErrorCode="600001" ErrorType="6" ErrorInfo="供应商账户未填写"/>
+  <Error ErrorCode="600002" ErrorType="6" ErrorInfo="供应商账户为空"/>
+  <Error ErrorCode="600003" ErrorType="6" ErrorInfo="订单编号未填写"/>
+  <Error ErrorCode="600004" ErrorType="6" ErrorInfo="订单编号为空"/>
+  <Error ErrorCode="600005" ErrorType="6" ErrorInfo="解析xml异常"/>
+  <Error ErrorCode="600006" ErrorType="6" ErrorInfo="生成响应xml异常"/>
+  <Error ErrorCode="600007" ErrorType="6" ErrorInfo="未查询到此订单详细数据"/>
+  <Error ErrorCode="600008" ErrorType="6" ErrorInfo="供应商账户不存在"/>
+  <Error ErrorCode="660000" ErrorType="6" ErrorInfo="未知异常"/>
+  <Error ErrorCode="660009" ErrorType="6" ErrorInfo="订单解锁失败"/>
+  <Error ErrorCode="660010" ErrorType="6" ErrorInfo="此订单已经被解锁"/>
+  <Error ErrorCode="660011" ErrorType="6" ErrorInfo="订单锁定反序列化异常"/>
+  <Error ErrorCode="660012" ErrorType="6" ErrorInfo="锁单的平台账号未填写"/>
+  <Error ErrorCode="660013" ErrorType="6" ErrorInfo="锁单的平台账号为空"/>
+  <Error ErrorCode="660014" ErrorType="6" ErrorInfo="此订单已经被锁单"/>
+  <Error ErrorCode="660015" ErrorType="6" ErrorInfo="订单锁定失败"/>
+  <Error ErrorCode="660016" ErrorType="6" ErrorInfo="订单锁定序列化异常"/>
+  <Error ErrorCode="660017" ErrorType="6" ErrorInfo="锁单的平台账号必须是数字"/>
+
+
+  <!--***************************支付宝错误编码**********************************-->
+  <Error ErrorCode="700001" ErrorType="7" ErrorInfo="支付宝系统错误"/>
+  <Error ErrorCode="700002" ErrorType="7" ErrorInfo="平台商未签署协议"/>
+  <Error ErrorCode="700003" ErrorType="7" ErrorInfo="卖家未签协议"/>
+  <Error ErrorCode="700004" ErrorType="7" ErrorInfo="您没有签约支付宝在线退款协议，请速签约"/>
+  <Error ErrorCode="700005" ErrorType="7" ErrorInfo="外部批次号格式错误"/>
+  <Error ErrorCode="700006" ErrorType="7" ErrorInfo="重复的外部批次号"/>
+  <Error ErrorCode="700007" ErrorType="7" ErrorInfo="错误的外部退款时间"/>
+  <Error ErrorCode="700008" ErrorType="7" ErrorInfo="外部传入总笔数错误"/>
+  <Error ErrorCode="700009" ErrorType="7" ErrorInfo="总笔数超过限额（大于1000）"/>
+  <Error ErrorCode="700010" ErrorType="7" ErrorInfo="单笔明细数据长度超过限制（单笔不超过1000字）"/>
+  <Error ErrorCode="700011" ErrorType="7" ErrorInfo="数据集参数格式错误"/>
+  <Error ErrorCode="700012" ErrorType="7" ErrorInfo="传入的退款条数不等于数据集解析出的退款条数"/>
+  <Error ErrorCode="700013" ErrorType="7" ErrorInfo="该交易不属于这个合作伙伴"/>
+  <Error ErrorCode="700014" ErrorType="7" ErrorInfo="交易不存在"/>
+  <Error ErrorCode="700015" ErrorType="7" ErrorInfo="交易状态错误"/>
+  <Error ErrorCode="700016" ErrorType="7" ErrorInfo="账户不存在"/>
+  <Error ErrorCode="700017" ErrorType="7" ErrorInfo="账户余额不足"/>
+  <Error ErrorCode="700018" ErrorType="7" ErrorInfo="账户状态不允许"/>
+  <Error ErrorCode="700019" ErrorType="7" ErrorInfo="总价不对"/>
+  <Error ErrorCode="700020" ErrorType="7" ErrorInfo="账户不可用"/>
+  <Error ErrorCode="700021" ErrorType="7" ErrorInfo="交易已退过"/>
+  <Error ErrorCode="700022" ErrorType="7" ErrorInfo="交易已关闭"/>
+  <Error ErrorCode="700023" ErrorType="7" ErrorInfo="交易已结束"/>
+  <Error ErrorCode="700024" ErrorType="7" ErrorInfo="退交易金额有误"/>
+  <Error ErrorCode="700025" ErrorType="7" ErrorInfo="退分润金额有误"/>
+  <Error ErrorCode="700026" ErrorType="7" ErrorInfo="退收费金额有误"/>
+  <Error ErrorCode="700027" ErrorType="7" ErrorInfo="未知异常"/>
+  <Error ErrorCode="700028" ErrorType="7" ErrorInfo="该笔退款已退过"/>
+  <Error ErrorCode="700029" ErrorType="7" ErrorInfo="交易核心数据验证异常"/>
+  <Error ErrorCode="700030" ErrorType="7" ErrorInfo="不传customerCode情况下，合作伙伴业务代码typeCode不允许为空"/>
+  <Error ErrorCode="700031" ErrorType="7" ErrorInfo="发起方的认证等级受限，无法完成当前操作"/>
+  <Error ErrorCode="700032" ErrorType="7" ErrorInfo="扣款金额不在协议范围内"/>
+  <Error ErrorCode="700033" ErrorType="7" ErrorInfo="订单参数不匹配"/>
+  <Error ErrorCode="700034" ErrorType="7" ErrorInfo="用户签约状态不正常"/>
+  <Error ErrorCode="700035" ErrorType="7" ErrorInfo="签约用户未获取到"/>
+  <Error ErrorCode="700036" ErrorType="7" ErrorInfo="淘宝保险退款操作 out_order_no 对应的支付宝即时到账不存在"/>
+  <Error ErrorCode="700037" ErrorType="7" ErrorInfo="商户请求的业务代码不存在"/>
+  <Error ErrorCode="700038" ErrorType="7" ErrorInfo="转入账户被冻结"/>
+  <Error ErrorCode="700039" ErrorType="7" ErrorInfo="转出账户被冻结"/>
+  <Error ErrorCode="700040" ErrorType="7" ErrorInfo="不是机票一年产品"/>
+  <Error ErrorCode="700041" ErrorType="7" ErrorInfo="卡通扣款失败"/>
+  <Error ErrorCode="700042" ErrorType="7" ErrorInfo="协议过期"/>
+  <Error ErrorCode="700043" ErrorType="7" ErrorInfo="customerCode不为空时，转入账户trans_account_in 不是后台合作伙伴的签约时录入的账户"/>
+  <Error ErrorCode="700044" ErrorType="7" ErrorInfo="转入账户不存在，原因只有customer_code，而没有转入账户，或者商户有多个签约的转入账户"/>
+  <Error ErrorCode="700045" ErrorType="7" ErrorInfo="淘宝保险退款操作，该笔即时到账交易已退款，不能重复退款"/>
+  <Error ErrorCode="700046" ErrorType="7" ErrorInfo="代扣协议中未开通传入转入账户参数的权限"/>
+  <Error ErrorCode="700047" ErrorType="7" ErrorInfo="淘宝保险退款金额大于即时到账交易额"/>
+  <Error ErrorCode="700048" ErrorType="7" ErrorInfo="该卡通不支持"/>
+  <Error ErrorCode="700049" ErrorType="7" ErrorInfo="代扣模式不正确"/>
+  <Error ErrorCode="700050" ErrorType="7" ErrorInfo="资金来源渠道非只用余额支付（代发）"/>
+  <Error ErrorCode="700051" ErrorType="7" ErrorInfo="转入、转出账户不能相同"/>
+  <Error ErrorCode="700052" ErrorType="7" ErrorInfo="签约业务状态非正常"/>
+  <Error ErrorCode="700053" ErrorType="7" ErrorInfo="不传customer_code情况下，不允许后台签约合作伙伴扣款"/>
+  <Error ErrorCode="700054" ErrorType="7" ErrorInfo="淘宝保险退款操作out_order_no对应的支付宝即时到账交易买家账号与退款转入账号不一致"/>
+  <Error ErrorCode="700055" ErrorType="7" ErrorInfo="淘宝保险退款操作out_order_no对应的支付宝即时到账交易尚未结束，不能退款"/>
+  <Error ErrorCode="700056" ErrorType="7" ErrorInfo="资金来源不匹配"/>
+  <Error ErrorCode="700057" ErrorType="7" ErrorInfo="系统错误"/>
+  <Error ErrorCode="700058" ErrorType="7" ErrorInfo="余额支付关闭，且后台不允许余额支付关闭时扣款"/>
+  <Error ErrorCode="700059" ErrorType="7" ErrorInfo="淘宝保险退款操作只传入转出Email而没传转入账户时，找不到Email对应的信息"/>
+  <Error ErrorCode="700060" ErrorType="7" ErrorInfo="转出账户可用余额不足"/>
+  <Error ErrorCode="700061" ErrorType="7" ErrorInfo="参数非法。非淘宝保险退款业务使用此接口，需传入 trans_account_in，trans_account_out，customer_code或type_code和trans_account_out；淘宝保险退款可传入 trans_account_in，trans_account_out，type_code，而customer_code需为空"/>
+  <Error ErrorCode="700062" ErrorType="7" ErrorInfo="买家不为T用户"/>
+  <Error ErrorCode="700063" ErrorType="7" ErrorInfo="转出账户不存在"/>
+  <Error ErrorCode="700064" ErrorType="7" ErrorInfo="扣款过程出现异常"/>
+  <Error ErrorCode="700065" ErrorType="7" ErrorInfo="不传customer_code情况下，出入账户只允许一个是商户账户"/>
+  <Error ErrorCode="700066" ErrorType="7" ErrorInfo="用户未签约多操作员"/>
+  <Error ErrorCode="700067" ErrorType="7" ErrorInfo="操作员ID错误"/>
+  <Error ErrorCode="700068" ErrorType="7" ErrorInfo="操作员登录名错误"/>
+  <Error ErrorCode="700069" ErrorType="7" ErrorInfo="操作员状态异常"/>
+  <Error ErrorCode="700070" ErrorType="7" ErrorInfo="操作员ID与操作员登录名不匹配"/>
+  <Error ErrorCode="700071" ErrorType="7" ErrorInfo="账户余额不足/信用支付可用额度不足或者找不到可用的支付方式"/>
+  <Error ErrorCode="700072" ErrorType="7" ErrorInfo="签名不正确"/>
+  <Error ErrorCode="700073" ErrorType="7" ErrorInfo="动态密钥信息错误"/>
+  <Error ErrorCode="700074" ErrorType="7" ErrorInfo="加密不正确"/>
+  <Error ErrorCode="700075" ErrorType="7" ErrorInfo="Service参数不正确"/>
+  <Error ErrorCode="700076" ErrorType="7" ErrorInfo="客户ID不正确"/>
+  <Error ErrorCode="700077" ErrorType="7" ErrorInfo="商户ID不正确"/>
+  <Error ErrorCode="700078" ErrorType="7" ErrorInfo="接口配置不正确"/>
+  <Error ErrorCode="700079" ErrorType="7" ErrorInfo="商户接口信息不正确"/>
+  <Error ErrorCode="700080" ErrorType="7" ErrorInfo="未找到匹配的密钥配置"/>
+  <Error ErrorCode="700081" ErrorType="7" ErrorInfo="代理ID不正确"/>
+  <Error ErrorCode="700082" ErrorType="7" ErrorInfo="签名类型不正确"/>
+  <Error ErrorCode="700083" ErrorType="7" ErrorInfo="字符集不合法"/>
+  <Error ErrorCode="700084" ErrorType="7" ErrorInfo="客户端IP地址无权访问服务"/>
+  <Error ErrorCode="700085" ErrorType="7" ErrorInfo="无权访问"/>
+  <Error ErrorCode="700086" ErrorType="7" ErrorInfo="摘要类型不正确"/>
+  <Error ErrorCode="700087" ErrorType="7" ErrorInfo="文件摘要不正确"/>
+  <Error ErrorCode="700088" ErrorType="7" ErrorInfo="文件格式不正确"/>
+  <Error ErrorCode="700089" ErrorType="7" ErrorInfo="不支持该编码类型"/>
+  <Error ErrorCode="700090" ErrorType="7" ErrorInfo="防钓鱼检查不支持该请求来源"/>
+  <Error ErrorCode="700091" ErrorType="7" ErrorInfo="防钓鱼检查非法时间戳参数"/>
+  <Error ErrorCode="700092" ErrorType="7" ErrorInfo="防钓鱼检查时间戳超时"/>
+  <Error ErrorCode="700093" ErrorType="7" ErrorInfo="防钓鱼检查非法调用IP"/>
+  <Error ErrorCode="700094" ErrorType="7" ErrorInfo="session超时"/>
+  <Error ErrorCode="700095" ErrorType="7" ErrorInfo="错误的 target_service"/>
+  <Error ErrorCode="700096" ErrorType="7" ErrorInfo="partner不允许访问该类型的系统"/>
+  <Error ErrorCode="700097" ErrorType="7" ErrorInfo="切换系统异常"/>
+  <Error ErrorCode="700098" ErrorType="7" ErrorInfo="接口已关闭"/>
+  <Error ErrorCode="700099" ErrorType="7" ErrorInfo="分润的金额大于交易可用金额"/>
+  <Error ErrorCode="700100" ErrorType="7" ErrorInfo="抱歉，该收款账户不是指定的收款账户，请确认参数是否正确或咨询你的客户经理"/>
+  <Error ErrorCode="700101" ErrorType="7" ErrorInfo="抱歉，该笔交易的卖家已不存在，请联系正确的卖家重新创建交易进行付款"/>
+  <Error ErrorCode="700102" ErrorType="7" ErrorInfo="抱歉，你本次使用的账户与原先账户不一致，请使用原来的账户，或重新创建交易进行付款"/>
+  <Error ErrorCode="700103" ErrorType="7" ErrorInfo="抱歉，金额传递错误，请确认参数是否正确，或咨询你的客户经理"/>
+  <Error ErrorCode="700104" ErrorType="7" ErrorInfo="商品名称不能为空"/>
+  <Error ErrorCode="700105" ErrorType="7" ErrorInfo="抱歉，该商品的交易单价与原先不一致，请重新创建交易付款"/>
+  <Error ErrorCode="700106" ErrorType="7" ErrorInfo="抱歉，该商品的购买数量与原先不一致，请重新创建交易付款"/>
+  <Error ErrorCode="700107" ErrorType="7" ErrorInfo="抱歉，该商品的交易金额与原先不一致，请重新创建交易付款"/>
+  <Error ErrorCode="700108" ErrorType="7" ErrorInfo="抱歉，您不能进行本次支付，请查看交易是否已超时或已被关闭等"/>
+  <Error ErrorCode="700109" ErrorType="7" ErrorInfo="未开通非证书余额支付，无法完成支付"/>
+  <Error ErrorCode="700110" ErrorType="7" ErrorInfo="抱歉，系统异常，无法创建本次收银台支付订单，请稍后再试"/>
+  <Error ErrorCode="700111" ErrorType="7" ErrorInfo="抱歉，接口通用回传参数格式不正确，请联系您的商户"/>
+  <Error ErrorCode="700112" ErrorType="7" ErrorInfo="抱歉，接口传递的Payment_type参数错误，请联系您的商户"/>
+  <Error ErrorCode="700113" ErrorType="7" ErrorInfo="抱歉，商户网关配置出错，请联系您的商户"/>
+  <Error ErrorCode="700114" ErrorType="7" ErrorInfo="抱歉，买家和卖家不能是同一账户"/>
+  <Error ErrorCode="700115" ErrorType="7" ErrorInfo="抱歉，卖家账户验证不存在，请联系您的商户"/>
+  <Error ErrorCode="700116" ErrorType="7" ErrorInfo="根据交易号无法找到交易"/>
+  <Error ErrorCode="700117" ErrorType="7" ErrorInfo="根据交易号无法找到交易详情"/>
+  <Error ErrorCode="700118" ErrorType="7" ErrorInfo="抱歉，该笔交易的买家账户必须为空，请联系您的商户"/>
+  <Error ErrorCode="700119" ErrorType="7" ErrorInfo="您未开通此产品，暂时无法使用本服务"/>
+  <Error ErrorCode="700120" ErrorType="7" ErrorInfo="抱歉，分润账户不是指定的分润账户，请确保该分润账户已签署分润协议"/>
+  <Error ErrorCode="700121" ErrorType="7" ErrorInfo="抱歉，分润信息过长，不能超过1000个字符，请检查后重新集成"/>
+  <Error ErrorCode="700122" ErrorType="7" ErrorInfo="您传递的默认网银参数不在规定的范围内"/>
+  <Error ErrorCode="700123" ErrorType="7" ErrorInfo="抱歉，您的分销商没有与支付宝签约，请联系您的商户"/>
+  <Error ErrorCode="700124" ErrorType="7" ErrorInfo="抱歉，商户没有开通自定义超时权限，请联系您的商户"/>
+  <Error ErrorCode="700125" ErrorType="7" ErrorInfo="抱歉，自定义超时时间设置错误，请联系您的商户"/>
+  <Error ErrorCode="700126" ErrorType="7" ErrorInfo="信用卡未签约（签约到期）或者接口参数未指定开通信用卡支付"/>
+  <Error ErrorCode="700127" ErrorType="7" ErrorInfo="付款受限，请确保收款方有权进行收款"/>
+  <Error ErrorCode="700128" ErrorType="7" ErrorInfo="卖家状态不正常"/>
+  <Error ErrorCode="700129" ErrorType="7" ErrorInfo="抱歉，卖家暂时无法进行收款操作，请联系您是商户"/>
+  <Error ErrorCode="700130" ErrorType="7" ErrorInfo="抱歉，商户未通过认证，不能进行收款，请联系您的商户"/>
+  <Error ErrorCode="700131" ErrorType="7" ErrorInfo="抱歉，接口传递的分润参数格式错误，请检查后重新集成"/>
+  <Error ErrorCode="700132" ErrorType="7" ErrorInfo="抱歉，接口传递的分润类型错误，请检查后重新集成"/>
+  <Error ErrorCode="700133" ErrorType="7" ErrorInfo="抱歉，分润账户经验证不存在，请联系您的商户"/>
+  <Error ErrorCode="700134" ErrorType="7" ErrorInfo="抱歉，分润账户经验证未通过人行验证，请联系您的商户"/>
+  <Error ErrorCode="700135" ErrorType="7" ErrorInfo="抱歉，分润付款账户经验证不存在，请联系您的商户"/>
+  <Error ErrorCode="700136" ErrorType="7" ErrorInfo="抱歉，无法付款！请联系商户修改商品名称，再重新购买"/>
+  <Error ErrorCode="700137" ErrorType="7" ErrorInfo="抱歉，付款失败！该笔交易可能存在风险"/>
+  <Error ErrorCode="700138" ErrorType="7" ErrorInfo="抱歉，无法付款！请联系商户修改商品描述，再重新购买"/>
+  <Error ErrorCode="700139" ErrorType="7" ErrorInfo="抱歉，您传递的商户可信任参数权限参数错误"/>
+  <Error ErrorCode="700140" ErrorType="7" ErrorInfo="抱歉，商户没有可信任参数校验的权限"/>
+  <Error ErrorCode="700141" ErrorType="7" ErrorInfo="抱歉，买家账户经验证不存在"/>
+  <Error ErrorCode="700142" ErrorType="7" ErrorInfo="您的当前访问记录丢失，请返回商户网站重新付款"/>
+  <Error ErrorCode="700143" ErrorType="7" ErrorInfo="数字格式不合法"/>
+  <Error ErrorCode="700144" ErrorType="7" ErrorInfo="Int类型格式不合法"/>
+  <Error ErrorCode="700145" ErrorType="7" ErrorInfo="金额格式不合法"/>
+  <Error ErrorCode="700146" ErrorType="7" ErrorInfo="日期格式不合法"/>
+  <Error ErrorCode="700147" ErrorType="7" ErrorInfo="正则表达式匹配失败"/>
+  <Error ErrorCode="700148" ErrorType="7" ErrorInfo="参数值长度不合法"/>
+  <Error ErrorCode="700149" ErrorType="7" ErrorInfo="参数值为空"/>
+  <Error ErrorCode="700150" ErrorType="7" ErrorInfo="抱歉，商户传递的消费券交易公共业务扩展参数中凭证号不存在，请联系您的商家"/>
+  <Error ErrorCode="700151" ErrorType="5" ErrorInfo="用户没有和支付宝签订代扣协议"/>
+  <Error ErrorCode="790000" ErrorType="7" ErrorInfo="未知错误"/>
+  <!--*************************支付宝错误编码结束********************************-->
+
+  <!--*************************财付通错误编码开始********************************-->
+
+  <Error ErrorCode="710002" ErrorType="7" ErrorInfo="财付通返回数据签名验证失败"/>
+  <Error ErrorCode="710003" ErrorType="7" ErrorInfo="供应商财付通账号不存在"/>
+  <Error ErrorCode="710004" ErrorType="7" ErrorInfo="经销商财付通账号不存在"/>
+  <Error ErrorCode="710005" ErrorType="7" ErrorInfo="请求错误,请检查秘钥或证书是否正确"/>
+  <Error ErrorCode="710006" ErrorType="7" ErrorInfo="订单号与财付通交易号不匹配"/>
+  <Error ErrorCode="710007" ErrorType="7" ErrorInfo="财付通代扣账户余额不足"/>
+
+
+  <Error ErrorCode="711000" ErrorType="7" ErrorInfo="平台系统错误"/>
+  <Error ErrorCode="711001" ErrorType="7" ErrorInfo="系统繁忙"/>
+  <Error ErrorCode="711002" ErrorType="7" ErrorInfo="访问频次过高"/>
+  <Error ErrorCode="711003" ErrorType="7" ErrorInfo="无效用户证书"/>
+  <Error ErrorCode="711004" ErrorType="7" ErrorInfo="请求参数不完整"/>
+  <Error ErrorCode="711005" ErrorType="7" ErrorInfo="签名信息不正确"/>
+  <Error ErrorCode="711006" ErrorType="7" ErrorInfo="系统繁忙,通信协议错误"/>
+  <Error ErrorCode="711007" ErrorType="7" ErrorInfo="无效用户证书"/>
+  <Error ErrorCode="711008" ErrorType="7" ErrorInfo="无效命令字,命令字错误cmdno"/>
+  <Error ErrorCode="711009" ErrorType="7" ErrorInfo="分账参数有误,分账金额的总和必须等于该订单的支付金额"/>
+  <Error ErrorCode="711010" ErrorType="7" ErrorInfo="订单号格式错误，请与平台商联系！"/>
+  <Error ErrorCode="711011" ErrorType="7" ErrorInfo="平台商没有和财付通签约, 请与平台商联系！"/>
+  <Error ErrorCode="711012" ErrorType="7" ErrorInfo="该订单号无法使用，请与平台商联系！"/>
+  <Error ErrorCode="711013" ErrorType="7" ErrorInfo="bus_args格式错误"/>
+  <Error ErrorCode="711014" ErrorType="7" ErrorInfo="bus_desc格式错误"/>
+  <Error ErrorCode="711015" ErrorType="7" ErrorInfo="交易单格式错误"/>
+  <Error ErrorCode="711016" ErrorType="7" ErrorInfo="交易单不存在"/>
+  <Error ErrorCode="711017" ErrorType="7" ErrorInfo="商户对该交易单无操作权限"/>
+  <Error ErrorCode="711018" ErrorType="7" ErrorInfo="不支持的bus_type"/>
+  <Error ErrorCode="711019" ErrorType="7" ErrorInfo="bus_args格式错误"/>
+  <Error ErrorCode="711020" ErrorType="7" ErrorInfo="交易单未支付或未转入退款"/>
+  <Error ErrorCode="711021" ErrorType="7" ErrorInfo="系统繁忙,网络问题,请通知管理员"/>
+  <Error ErrorCode="711022" ErrorType="7" ErrorInfo="系统繁忙,处理中,请一分钟后再查询"/>
+  <Error ErrorCode="711023" ErrorType="7" ErrorInfo="CGI调用后台服务,socket操作超时"/>
+
+  <!--*************************财付通错误编码结束********************************-->
+
+  <!--*************************   淘宝错误编码   ********************************-->
+  <Error ErrorCode="10810001" TaoBaoErrorCode="-1" ErrorType="8" ErrorInfo="用户名错误"/>
+  <Error ErrorCode="10810002" TaoBaoErrorCode="-2" ErrorType="8" ErrorInfo="用户密码错误"/>
+  <Error ErrorCode="10810003" TaoBaoErrorCode="-3" ErrorType="8" ErrorInfo="签名错误"/>
+  <Error ErrorCode="10810004" TaoBaoErrorCode="-4" ErrorType="8" ErrorInfo="请求XML格式无效"/>
+  <Error ErrorCode="10810005" TaoBaoErrorCode="-5" ErrorType="8" ErrorInfo="请求参数有误"/>
+  <Error ErrorCode="10810006" TaoBaoErrorCode="-100" ErrorType="8" ErrorInfo="无此卖家"/>
+  <Error ErrorCode="10810007" TaoBaoErrorCode="-101" ErrorType="8" ErrorInfo="无此政策"/>
+  <Error ErrorCode="10810008" TaoBaoErrorCode="-102" ErrorType="8" ErrorInfo="无此订单"/>
+  <Error ErrorCode="10810009" TaoBaoErrorCode="-103" ErrorType="8" ErrorInfo="无效pnr"/>
+  <Error ErrorCode="10810010" TaoBaoErrorCode="-105" ErrorType="8" ErrorInfo="解析XML出错"/>
+  <Error ErrorCode="10810011" TaoBaoErrorCode="-105" ErrorType="8" ErrorInfo="转换XML出错"/>
+  <Error ErrorCode="10810012" TaoBaoErrorCode="-105" ErrorType="8" ErrorInfo="系统异常"/>
+  <Error ErrorCode="10810013" TaoBaoErrorCode="-104" ErrorType="8" ErrorInfo="无效票号"/>
+
+
+
+  <!--*************************   淘宝计算退票费错误编码   ********************************-->
+  <Error ErrorCode="10820001" TaoBaoErrorCode="-1100" ErrorType="8" ErrorInfo="计算退票费失败"/>
+
+
+  <!--*************************   申请退票错误编码   ********************************-->
+  <!--<Error ErrorCode="10830001" ErrorType="8" ErrorInfo="平台订单编号为空"/>-->
+  <Error ErrorCode="10830002" ErrorType="8" ErrorInfo="退票信息为空"/>
+  <Error ErrorCode="10830006" ErrorType="8" ErrorInfo="申请退票类型为空"/>
+  <Error ErrorCode="10830008" ErrorType="8" ErrorInfo="淘宝退票订单采购商为空"/>
+  <Error ErrorCode="10830009" ErrorType="8" ErrorInfo="淘宝退票申请退票失败"/>
+  <!--<Error ErrorCode="10830003" ErrorType="8" ErrorInfo="淘宝退票乘客信息为空"/>-->
+  <!--<Error ErrorCode="10830004" ErrorType="8" ErrorInfo="淘宝退票航段为空"/>-->
+  <!--<Error ErrorCode="10830005" ErrorType="8" ErrorInfo="淘宝退票票号为空"/>-->
+  <!--<Error ErrorCode="10830007" ErrorType="8" ErrorInfo="淘宝退票订单号系统不存在"/>-->
+
+
+  <!--*************************   淘宝创建订单错误编码   ********************************-->
+  <Error ErrorCode="10840001"  ErrorType="8" ErrorInfo="获取平台卖家信息错误"/>
+  <Error ErrorCode="10840002"  ErrorType="8" ErrorInfo="验证订单信息错误"/>
+  <Error ErrorCode="10840003"  ErrorType="8" ErrorInfo="平台卖家ID为空"/>
+  <Error ErrorCode="10840004"  ErrorType="8" ErrorInfo="政策ID为空"/>
+  <Error ErrorCode="10840005"  ErrorType="8" ErrorInfo="pnr为空"/>
+  <Error ErrorCode="10840006"  ErrorType="8" ErrorInfo="机建费为空"/>
+  <Error ErrorCode="10840007"  ErrorType="8" ErrorInfo="燃油费为空"/>
+  <Error ErrorCode="10840008"  ErrorType="8" ErrorInfo="票面价为零"/>
+  <Error ErrorCode="10840009"  ErrorType="8" ErrorInfo="结算价为零"/>
+  <Error ErrorCode="10840010"  ErrorType="8" ErrorInfo="行程类型只可为单程"/>
+  <Error ErrorCode="10840011"  ErrorType="8" ErrorInfo="出发机场为空"/>
+  <Error ErrorCode="10840012"  ErrorType="8" ErrorInfo="到达机场为空"/>
+  <Error ErrorCode="10840013"  ErrorType="8" ErrorInfo="出发时间为空"/>
+  <Error ErrorCode="10840014"  ErrorType="8" ErrorInfo="到达时间为空"/>
+  <Error ErrorCode="10840015"  ErrorType="8" ErrorInfo="航班号为空"/>
+  <Error ErrorCode="10840016"  ErrorType="8" ErrorInfo="舱位为空"/>
+  <Error ErrorCode="10840017"  ErrorType="8" ErrorInfo="乘机人名字为空"/>
+  <Error ErrorCode="10840018"  ErrorType="8" ErrorInfo="乘机人类型只可为成人"/>
+  <Error ErrorCode="10840019"  ErrorType="8" ErrorInfo="乘机人证件类型为空"/>
+  <Error ErrorCode="10840020"  ErrorType="8" ErrorInfo="乘机人证件编号为空"/>
+
+  <!--*************************   淘宝支付并出票错误编码   ********************************-->
+  <Error ErrorCode="10850001"  ErrorType="8" ErrorInfo="平台订单号为空"/>
+
+  <!--*************************   淘宝全量退改签错误编码   ********************************-->
+  <Error ErrorCode="10860001"  ErrorType="8" ErrorInfo="获取退改签信息出错"/>
+
+  <!--*************************   淘宝全量政策查询错误编码   ********************************-->
+  <Error ErrorCode="10910001" TaoBaoErrorCode="-200" ErrorType="8" ErrorInfo="政策压缩文件不存在"/>
+
+  <!--*************************   淘宝增量政策查询错误编码   ********************************-->
+  <Error ErrorCode="10920001" TaoBaoErrorCode="-300" ErrorType="8" ErrorInfo="无增量政策"/>
+
+  <!--*************************   淘宝导入政策结果通知错误编码   ********************************-->
+  <Error ErrorCode="10930001" TaoBaoErrorCode="-400" ErrorType="8" ErrorInfo="未能根据RequestID获取到政策数据"/>
+
+  <!--*************************   淘宝全量批发商工作时间错误编码   ********************************-->
+
+  <!--*************************   淘宝查询平台卖家信息错误编码   ********************************-->
+  <Error ErrorCode="10950001" TaoBaoErrorCode="-600" ErrorType="8" ErrorInfo="卖家密码错误"/>
+
+  <!--*************************   淘宝查询政策错误编码   ********************************-->
+  <Error ErrorCode="10960001" TaoBaoErrorCode="-700" ErrorType="8" ErrorInfo="政策与航段信息不符"/>
+
+
+  <!--************************* 淘宝错误编码结束 ********************************-->
+  <!--*************************   汇付错误编码   ********************************-->
+  <Error ErrorCode="910001" ErrorType="9" ErrorInfo="非法请求(请求数据为空)"/>
+  <Error ErrorCode="910002" ErrorType="9" ErrorInfo="请求失败,数据不完整:订单号不能为空"/>
+  <Error ErrorCode="910003" ErrorType="9" ErrorInfo="请求失败,请求数据不完整:支付类型不能为空"/>
+  <Error ErrorCode="910004" ErrorType="9" ErrorInfo="请求失败,非法支付"/>
+  <Error ErrorCode="910005" ErrorType="9" ErrorInfo="经销商汇付通未签约"/>
+  <Error ErrorCode="910006" ErrorType="9" ErrorInfo="生成汇付通请求失败"/>
+  <Error ErrorCode="910007" ErrorType="9" ErrorInfo="请求失败,订单号错误"/>
+  <Error ErrorCode="910008" ErrorType="9" ErrorInfo="请求失败,订单状态不为等待支付状态"/>
+  <Error ErrorCode="910009" ErrorType="9" ErrorInfo="请求失败,订单已支付"/>
+  <Error ErrorCode="910010" ErrorType="9" ErrorInfo="代扣失败,原因:+"/>
+  <Error ErrorCode="910011" ErrorType="9" ErrorInfo="系统维护中,暂不提供汇付通支付"/>
+  <Error ErrorCode="910012" ErrorType="9" ErrorInfo="非法请求IP"/>
+  <Error ErrorCode="910013" ErrorType="9" ErrorInfo="代扣失败,经销商非代扣用户"/>
+  <Error ErrorCode="910014" ErrorType="9" ErrorInfo="此订单不能支付"/>
+  <Error ErrorCode="910015" ErrorType="9" ErrorInfo="无数据"/>
+  <Error ErrorCode="910016" ErrorType="9" ErrorInfo="代扣失败,供票商非汇付通用户"/>
+  <Error ErrorCode="910017" ErrorType="9" ErrorInfo="已关闭汇付支付"/>
+
+  <!--*************************   计算退票费错误编码   ********************************-->
+
+
+  <!--*************************   改签接口错误编码   ********************************-->
+  <Error ErrorCode="10040001" ErrorType="10" ErrorInfo="改签信息为空"/>
+
+
+  <!--*************************   新增退改签接口错误编码   ********************************-->
+  <Error ErrorCode="1101001" ErrorType="10" ErrorInfo="请求信息为空"/>
+  <Error ErrorCode="1101002" ErrorType="10" ErrorInfo="用户名为空"/>
+  <Error ErrorCode="1101003" ErrorType="10" ErrorInfo="订单编号为空"/>
+  <Error ErrorCode="1101004" ErrorType="10" ErrorInfo="订单编号不存在"/>
+  <Error ErrorCode="1101005" ErrorType="10" ErrorInfo="票号为空"/>
+  <Error ErrorCode="1101006" ErrorType="10" ErrorInfo="票号不存在"/>
+  <Error ErrorCode="1101007" ErrorType="10" ErrorInfo="乘客姓名为空"/>
+  <Error ErrorCode="1101008" ErrorType="10" ErrorInfo="乘客姓名不存在"/>
+  <Error ErrorCode="1101009" ErrorType="10" ErrorInfo="订单状态不能申请改签"/>
+  <Error ErrorCode="1101010" ErrorType="10" ErrorInfo="出发城市或者到达城市为空"/>
+  <Error ErrorCode="1101011" ErrorType="10" ErrorInfo="退款类型为空"/>
+  <Error ErrorCode="1101012" ErrorType="10" ErrorInfo="订单状态不能计算退票费"/>
+  <Error ErrorCode="1101013" ErrorType="10" ErrorInfo="票面价为0"/>
+  <Error ErrorCode="1101014" ErrorType="10" ErrorInfo="乘机人数为0"/>
+  <Error ErrorCode="1101015" ErrorType="10" ErrorInfo="航司为空"/>
+  <Error ErrorCode="1101016" ErrorType="10" ErrorInfo="仓位为空"/>
+  <Error ErrorCode="1101017" ErrorType="10" ErrorInfo="乘客姓名不匹配"/>
+  <Error ErrorCode="1101018" ErrorType="10" ErrorInfo="出发和达城市三字码不匹配"/>
+  <Error ErrorCode="1101019" ErrorType="10" ErrorInfo="票号不匹配"/>
+  <Error ErrorCode="1101020" ErrorType="10" ErrorInfo="退改签退票规则为空"/>
+  <Error ErrorCode="1101021" ErrorType="10" ErrorInfo="RTPAT的乘客姓名和PNRInfo的乘客姓名要保持一致"/>
+
+
+
+  <!--*************************   改签错误编码   ********************************-->
+  <Error ErrorCode="1102001" ErrorType="10" ErrorInfo="申请改签失败"/>
+
+
+  <!--************************* 汇付错误编码结束 ********************************-->
+</ErrorList>

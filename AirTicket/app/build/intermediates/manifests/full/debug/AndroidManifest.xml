@@ -92,7 +92,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.daemon.activities.SelectActivity"
+            android:name="com.daemon.activities.TypeSelectActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTransparent" >
         </activity>
