@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ticket_btn_selector.xml",
-        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_btn_selector.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_selector_frame.xml",
         "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\drawable\\bg_selector_frame.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ticket_btn_selector.xml",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_btn_selector.xml"
     },
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_goandback_unpress.xml",
@@ -72,6 +72,10 @@
         "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\drawable\\select_city_bg.xml"
     },
     {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\autoloading.xml",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\autoloading.xml"
+    },
+    {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ticket_title_corner.xml",
         "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_title_corner.xml"
     },
@@ -80,12 +84,12 @@
         "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_btn_corner_selector.xml"
     },
     {
-        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_oneway_selector.xml",
-        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\btn_oneway_selector.xml"
-    },
-    {
         "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_oneway_unpress.xml",
         "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\btn_oneway_unpress.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_oneway_selector.xml",
+        "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\btn_oneway_selector.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\editext_corner.xml",

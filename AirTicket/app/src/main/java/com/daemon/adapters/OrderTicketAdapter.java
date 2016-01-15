@@ -1,7 +1,5 @@
 package com.daemon.adapters;
 
-import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -14,28 +12,31 @@ import android.widget.TextView;
 
 import com.daemon.activities.EndorseActivity;
 import com.daemon.airticket.R;
-import com.daemon.beans.TicketInfo;
+import com.daemon.beans.FlightDetailInfo;
+import com.daemon.beans.FlightInfo;
+
+import java.util.List;
 
 public class OrderTicketAdapter extends BaseAdapter {
 	private Context mContext;
-	private List<TicketInfo> ticketInfos;
+	private List<FlightDetailInfo> detailInfos;
 	
-	public OrderTicketAdapter(Context mContext, List<TicketInfo> ticketInfos) {
+	public OrderTicketAdapter(Context mContext, List<FlightDetailInfo> detailInfos) {
 		super();
 		this.mContext = mContext;
-		this.ticketInfos = ticketInfos;
+		this.detailInfos = detailInfos;
 	}
 
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return ticketInfos.size();
+		return detailInfos.size();
 	}
 
 	@Override
-	public TicketInfo getItem(int position) {
+	public FlightInfo getItem(int position) {
 		// TODO Auto-generated method stub
-		return ticketInfos.get(position);
+		return detailInfos.get(position);
 	}
 
 	@Override
@@ -95,15 +96,15 @@ public class OrderTicketAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		 holder.tv_order_ticket_takeOffDate.setText(ticketInfos.get(position).takeOffDate);
-		 holder.tv_order_ticket_takeOffTime.setText(ticketInfos.get(position).takeOffTime);
-		 holder.tv_order_ticket_landingTime.setText(ticketInfos.get(position).landingTime);
-		 holder.tv_order_ticket_spacePrice.setText(ticketInfos.get(position).price);
-		 holder.tv_order_ticket_takeOffPort.setText(ticketInfos.get(position).takeOffPort);
-		 holder.tv_order_ticket_landingPort.setText(ticketInfos.get(position).landingPort);
-		 holder.tv_order_ticket_airPortBuildPrice.setText(ticketInfos.get(position).airPortBuildPrice);
-		 holder.tv_order_ticket_airLine.setText(ticketInfos.get(position).airLine);
-		 holder.tv_order_ticket_oilPrice.setText(ticketInfos.get(position).oilPrice);
+		 holder.tv_order_ticket_takeOffDate.setText(detailInfos.get(position).takeOffDate);
+		 holder.tv_order_ticket_takeOffTime.setText(detailInfos.get(position).takeOffTime);
+		 holder.tv_order_ticket_landingTime.setText(detailInfos.get(position).landingTime);
+		 holder.tv_order_ticket_spacePrice.setText(detailInfos.get(position).cabinPrice);
+		 holder.tv_order_ticket_takeOffPort.setText(detailInfos.get(position).takeOffPort);
+		 holder.tv_order_ticket_landingPort.setText(detailInfos.get(position).landingPort);
+		 holder.tv_order_ticket_airPortBuildPrice.setText(detailInfos.get(position).airPortBuildPrice);
+		 holder.tv_order_ticket_airLine.setText(detailInfos.get(position).airLines);
+		 holder.tv_order_ticket_oilPrice.setText(detailInfos.get(position).oilPrice);
 		 
 		return convertView;
 	}

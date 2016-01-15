@@ -41,14 +41,14 @@ public class Constants {
     /**
      * model请求参数
      */
-    public static final int MODEL_TICKET_SEARCH = 200;
+    public static final int MODEL_FLIGHT_SEARCH = 200;
     public static final int MODEL_TICKET_BOOK = 201;
     public static final int MODEL_TICKET_ORDER_COMMIT = 202;
 
     /**
      *  view状态改变参数
      */
-    public static final int VIEW_TICKET_SEARCH = 300;
+    public static final int VIEW_FLIGHT_SEARCH = 300;
     public static final int VIEW_TICKET_BOOK = 301;
     public static final int VIEW_TICKET_ORDER_COMMIT = 302;
 

@@ -20,8 +20,8 @@ import com.daemon.adapters.OrderInsureAdapter;
 import com.daemon.adapters.OrderPassengerAdapter;
 import com.daemon.adapters.OrderTicketAdapter;
 import com.daemon.airticket.R;
+import com.daemon.beans.FlightDetailInfo;
 import com.daemon.beans.PassengerInfo;
-import com.daemon.beans.TicketInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.TicketOrderModel;
 import com.daemon.utils.DialogUtil;
@@ -42,6 +42,7 @@ import static com.daemon.consts.Constants.KEY_TYPE_TICKET_DISTRIBUTE;
 import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
 import static com.daemon.consts.Constants.REQUEST_CODE_CITY;
 import static com.daemon.consts.Constants.REQUEST_CODE_DISTRIBUTE;
+import static com.daemon.consts.Constants.VIEW_TICKET_ORDER_COMMIT;
 
 /**
  * 机票订单界面
@@ -154,20 +155,20 @@ public class TicketOrderActivity extends BaseActivity{
 		 * --------------------------------机票信息列表start---------------------------------
 		 */
 		ListView lv_order_ticketInfo = (ListView)findViewById(R.id.lv_order_ticketInfo);
-		ArrayList<TicketInfo> ticketInfos = new ArrayList<TicketInfo>();
-		TicketInfo info = new TicketInfo();
-		info.airLine = "南方航空";
+		ArrayList<FlightDetailInfo> flightInfos = new ArrayList<FlightDetailInfo>();
+		FlightDetailInfo info = new FlightDetailInfo();
+		info.airLines = "南方航空";
 		info.oilPrice = "燃油￥"+"0";
 		info.airPortBuildPrice="民航基金￥"+"50";
-		info.price = "经济舱￥"+"1350";
+		info.cabinPrice = "经济舱￥"+"1350";
 		info.takeOffDate = "2月8日";
 		info.takeOffPort = "吴圩机场";
 		info.takeOffTime = "12:00";
 		info.landingPort = "宝安机场";
 		info.landingTime = "16:30";
-		ticketInfos.add(info);
+		flightInfos.add(info);
 
-		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, ticketInfos);
+		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, flightInfos);
 		lv_order_ticketInfo.setAdapter(orderTicketAdapter);
 		/**
 		 * --------------------------------机票信息列表end---------------------------------
@@ -209,18 +210,13 @@ public class TicketOrderActivity extends BaseActivity{
 		 */
 		case R.id.btn_order_morePassenger:
 			passenger_infos.add(new PassengerInfo());
-			/**
-			 * 在乘机人adapter刷新前，让空险列表（或其他列表）获取焦点，这样就导致乘机人的editText失去焦点，从而数据不改变。
-			 */
-			//lv_order_insure.requestFocus();
-
 			passengerAdapter.notifyDataSetChanged();
 			break;
 		/**	
 		  * 返回
 		  */
 		case R.id.btn_title_back:
-			DialogUtil.showDialog(TicketOrderActivity.this, getString(R.string.title_order_edit), "您正在填写订单，是否要退出？", new Commands() {
+			DialogUtil.showDialog(TicketOrderActivity.this, getString(R.string.title_order_edit), getString(R.string.tips_exitOrder), new Commands() {
 				
 				@Override
 				public void executeCommand(Message msg_params) {
@@ -339,7 +335,9 @@ public class TicketOrderActivity extends BaseActivity{
 				btn_order_city = (Button) findViewById(R.id.btn_order_city);
 				btn_order_city.setOnClickListener(this);
 				break;
-			
+				/**
+				 * 如果是城市请求码
+				 */
 			case REQUEST_CODE_CITY:
 				btn_order_city.setTextColor(getResources().getColor(R.color.ticket_black));
 				btn_order_city.setText(data.getStringExtra(KEY_CITY));
@@ -355,7 +353,11 @@ public class TicketOrderActivity extends BaseActivity{
 	@Override
 	public void onViewChange(Message msg) {
 		// TODO Auto-generated method stub
-		
+		switch (msg.what){
+			case  VIEW_TICKET_ORDER_COMMIT:
+
+				break;
+		}
 	}
 	
 

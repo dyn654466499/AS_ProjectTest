@@ -1,9 +1,8 @@
 package com.daemon.utils;
 
-import java.util.ArrayList;
-
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import android.view.ViewGroup.OnHierarchyChangeListener;
 import android.widget.ImageView;
 
 import com.daemon.airticket.R;
+
+import java.util.ArrayList;
 
 /**
  * 该类为原创的类，如果是在复杂的布局上设置加载动画，不知是否有卡顿现象，有待测试！
@@ -32,9 +33,13 @@ public class AutoLoadingUtil {
 		view = LayoutInflater.from(rootView.getContext()).inflate(R.layout.autoloading, rootView, false);
 		saveView = new ArrayList<View>();
 		
-		ImageView image = (ImageView) view.findViewById(R.id.imageView_autoLoading);  
-		image.setBackgroundResource(R.anim.autoloading);  
-        AnimationDrawable anim = (AnimationDrawable) image.getBackground();  
+		ImageView image = (ImageView) view.findViewById(R.id.imageView_autoLoading);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+				image.setBackground(rootView.getContext().getResources().getDrawable(R.drawable.autoloading));
+			}else{
+				image.setBackgroundDrawable(rootView.getContext().getResources().getDrawable(R.drawable.autoloading));
+			}
+			AnimationDrawable anim = (AnimationDrawable) image.getBackground();
         anim.start();  
         rootView.setOnHierarchyChangeListener(new OnHierarchyChangeListener() {
 			

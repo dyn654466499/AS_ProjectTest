@@ -272,14 +272,14 @@
     <string name="string_search_hit">搜索中文/城市简拼</string>
     <string name="sure">确定</string>
     <string name="tips_exitOrder">您正在填写订单，是否要退出？</string>
-    <string name="title_activity_city_list">CityListActivity</string>
-    <string name="title_airTicket">机票</string>
     <string name="title_date_back">选择返回日期</string>
     <string name="title_date_leave">选择出发日期</string>
     <string name="title_endorse">签转条件</string>
     <string name="title_endorseOrBackDesc">退改签说明</string>
     <string name="title_endorse_change">更改条件</string>
     <string name="title_endorse_refund">退票条件</string>
+    <string name="title_flight_result">%1$s - %2$s (%3$s) </string>
+    <string name="title_flight_search">航班查询</string>
     <string name="title_goAndBack">往返</string>
     <string name="title_leaveDate">选择出发日期</string>
     <string name="title_oneWay">单程</string>
@@ -287,7 +287,6 @@
     <string name="title_select_cabin">选择舱位</string>
     <string name="title_select_cert">选择证件</string>
     <string name="title_select_ticket_distribute">选择配送方式</string>
-    <string name="title_ticket_result">%1$s - %2$s (%3$s) </string>
     <style name="ActivityTransparent">
         <item name="android:windowBackground">@color/activitytransparent</item>
         <item name="android:windowIsTranslucent">true</item>

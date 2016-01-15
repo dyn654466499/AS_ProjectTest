@@ -1,0 +1,247 @@
+package com.daemon.adapters;
+
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
+import android.widget.ExpandableListView;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.daemon.activities.TicketOrderActivity;
+import com.daemon.airticket.R;
+import com.daemon.beans.FlightInfo;
+import com.daemon.interfaces.Commands;
+import com.daemon.utils.ImageUtil;
+import com.daemon.utils.VolleyUtil;
+
+import java.util.List;
+
+public class FlightResultAdapter extends BaseExpandableListAdapter {
+	private Context mContext;
+	private ExpandableListView elv;
+	private Drawable ic_xiangshang;
+	private List<FlightInfo> flightInfos_group;
+	private List<FlightInfo> flightInfos_child;
+	/**
+	 * 命令接口
+	 */
+	private Commands commands;
+
+	public FlightResultAdapter(Context mContext, List<FlightInfo> flightInfos_group,
+							   List<FlightInfo> flightInfos_child) {
+		super();
+		this.mContext = mContext;
+		this.flightInfos_group = flightInfos_group;
+		this.flightInfos_child = flightInfos_child;
+		Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(),
+				R.drawable.ic_xiangxia);
+		bitmap = ImageUtil.rotateBitmap(bitmap, 180);
+		ic_xiangshang = new BitmapDrawable(mContext.getResources(), bitmap);
+	}
+
+	public void setTicketBookCommands(Commands commands) {
+		this.commands = commands;
+	}
+
+	public void setExpandableListView(ExpandableListView params_elv) {
+		this.elv = params_elv;
+	}
+
+	@Override
+	public FlightInfo getGroup(int groupPosition) {
+		return flightInfos_group.get(groupPosition);
+	}
+
+	@Override
+	public int getGroupCount() {
+		return flightInfos_group.size();
+	}
+
+	@Override
+	public long getGroupId(int groupPosition) {
+		return groupPosition;
+	}
+
+
+	@Override
+	public View getGroupView(final int groupPosition,final boolean isExpanded,
+			View convertView, ViewGroup parent) {
+		ViewHolderGroup group = null;
+		if (convertView == null) {
+			group = new ViewHolderGroup();
+			convertView = LayoutInflater.from(mContext).inflate(R.layout.item_flight_result, parent, false);
+			group.btn_flight_result_unfold = (Button) convertView
+					.findViewById(R.id.btn_flight_result_unfold);
+			
+			group.tv_flight_result_takeOffTime = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_takeOffTime);
+			group.tv_flight_result_landingTime = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_landingTime);
+			group.tv_flight_result_cabinPrice = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_cabinPrice);
+			group.tv_flight_result_takeOffPort = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_takeOffPort);
+			group.tv_flight_result_landingPort = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_landingPort);
+			group.tv_flight_result_discount = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_discount);
+			group.tv_flight_result_airLines = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_airLines);
+			group.tv_flight_result_amount = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_amount);
+			
+			group.imageView_flight_result_airLines = (ImageView) convertView
+					.findViewById(R.id.imageView_flight_result_airLines);
+			VolleyUtil.loadImage(mContext,
+					group.imageView_flight_result_airLines,
+					"http://avatar.csdn.net/6/6/D/1_lfdfhl.jpg"
+					);
+			convertView.setTag(group);
+		} else {
+			group = (ViewHolderGroup) convertView.getTag();
+		}
+		
+		
+		if(!flightInfos_group.get(groupPosition).isExpanded){
+			group.btn_flight_result_unfold
+			.setCompoundDrawablesWithIntrinsicBounds(
+					null,
+					null,
+					mContext.getResources().getDrawable(R.drawable.ic_xiangxia),
+					null);
+			
+		}else{
+			group.btn_flight_result_unfold
+			.setCompoundDrawablesWithIntrinsicBounds(
+					null,
+					null,
+					ic_xiangshang,
+					null);
+			
+		}
+		 group.tv_flight_result_takeOffTime.setText(flightInfos_group.get(groupPosition).takeOffTime);
+		 group.tv_flight_result_landingTime.setText(flightInfos_group.get(groupPosition).landingTime);
+		 group.tv_flight_result_cabinPrice.setText(flightInfos_group.get(groupPosition).cabinPrice);
+		 group.tv_flight_result_takeOffPort.setText(flightInfos_group.get(groupPosition).takeOffPort);
+		 group.tv_flight_result_landingPort.setText(flightInfos_group.get(groupPosition).landingPort);
+		 group.tv_flight_result_discount.setText(flightInfos_group.get(groupPosition).discount);
+		 group.tv_flight_result_airLines.setText(flightInfos_group.get(groupPosition).airLines);
+		 group.tv_flight_result_amount.setText(flightInfos_group.get(groupPosition).amount);
+		 group.btn_flight_result_unfold.setOnClickListener(new OnClickListener() {
+
+			 @Override
+			 public void onClick(View v) {
+				 // TODO Auto-generated method stub
+				 //Log.e("groupPosition", "groupPosition="+groupPosition);
+				 if (flightInfos_group.get(groupPosition).isExpanded) {
+					 elv.collapseGroup(groupPosition);
+					 flightInfos_group.get(groupPosition).isExpanded = false;
+				 } else {
+					 elv.expandGroup(groupPosition);
+					 flightInfos_group.get(groupPosition).isExpanded = true;
+				 }
+				 notifyDataSetChanged();
+			 }
+		 });
+		return convertView;
+	}
+
+	@Override
+	public FlightInfo getChild(int groupPosition, int childPosition) {
+		return flightInfos_child.get(childPosition);
+	}
+
+	@Override
+	public long getChildId(int groupPosition, int childPosition) {
+		return childPosition;
+	}
+
+	@Override
+	public int getChildrenCount(int groupPosition) {
+		return flightInfos_child.size();
+	}
+
+	@Override
+	public View getChildView(final int groupPosition, final int childPosition,
+			boolean isLastChild, View convertView, ViewGroup parent) {
+		ViewHolderChild child = null;
+		if (convertView == null) {
+			child = new ViewHolderChild();
+			convertView = LayoutInflater.from(mContext).inflate(
+					R.layout.item_flight_result_detail, parent, false);
+			child.btn_ticket_result_details_book = (Button) convertView
+					.findViewById(R.id.btn_ticket_result_details_book);
+			child.tv_flight_result_details_cabinType = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_details_cabinType);
+			child.tv_flight_result_details_discount = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_details_discount);
+			child.tv_flight_result_details_cabinPrice = (TextView) convertView
+					.findViewById(R.id.tv_flight_result_details_cabinPrice);
+
+			convertView.setTag(child);
+		} else {
+			child = (ViewHolderChild) convertView.getTag();
+		}
+		
+		child.btn_ticket_result_details_book
+				.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						mContext.startActivity(new Intent(mContext,
+								TicketOrderActivity.class));
+						Log.e("btn_ticket_result_book", "groupPosition="+groupPosition+",childPosition="+childPosition);
+					    if(commands!=null)commands.executeCommand(null);
+
+					}
+				});
+
+		 child.tv_flight_result_details_cabinType.setText(flightInfos_child.get(childPosition).cabinType);
+		 child.tv_flight_result_details_discount.setText(flightInfos_child.get(childPosition).discount);
+		 child.tv_flight_result_details_cabinPrice.setText(flightInfos_child.get(childPosition).cabinPrice);
+		return convertView;
+	}
+
+	@Override
+	public boolean isChildSelectable(int groupPosition, int childPosition) {
+		return true;
+	}
+
+	@Override
+	public boolean hasStableIds() {
+		return true;
+	}
+
+	static class ViewHolderGroup {
+		Button btn_flight_result_unfold;
+		TextView tv_flight_result_takeOffTime, tv_flight_result_landingTime,
+				tv_flight_result_cabinPrice, tv_flight_result_takeOffPort,
+				tv_flight_result_landingPort, tv_flight_result_discount,
+				tv_flight_result_airLines, tv_flight_result_amount;
+		ImageView imageView_flight_result_airLines;
+		int position = -1;
+		public void setPosition(int position){
+			this.position = position;
+		}
+	}
+
+	static class ViewHolderChild {
+		Button btn_ticket_result_details_book;
+		TextView tv_flight_result_details_cabinType,
+				tv_flight_result_details_discount,
+				tv_flight_result_details_cabinPrice;
+	}
+	
+
+}

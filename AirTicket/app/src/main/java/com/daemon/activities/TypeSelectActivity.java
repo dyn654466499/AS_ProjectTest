@@ -44,7 +44,7 @@ public class TypeSelectActivity extends BaseActivity {
 			int position_spaceType = getIntent().getExtras().getInt(
 					KEY_TYPE_CABIN_POSITION, 0);
 			final SelectAdapter adapter = new SelectAdapter(this,
-					R.layout.item_select, getResources().getStringArray(R.array.TypeCabin));
+					R.layout.item_type_select, getResources().getStringArray(R.array.TypeCabin));
 			ListView listView = (ListView) findViewById(R.id.listView_select);
 			adapter.setSelectedPosition(position_spaceType);
 			listView.setAdapter(adapter);
@@ -74,7 +74,7 @@ public class TypeSelectActivity extends BaseActivity {
 					KEY_TYPE_CABIN_POSITION, 0);
 			final int view_position = getIntent().getIntExtra(KEY_TYPE_PASSENGER_CERT_POSITION, 0);
 			final SelectAdapter adapter = new SelectAdapter(this,
-					R.layout.item_select, getResources().getStringArray(R.array.TypeCert));
+					R.layout.item_type_select, getResources().getStringArray(R.array.TypeCert));
 			ListView listView = (ListView) findViewById(R.id.listView_select);
 			adapter.setSelectedPosition(position_spaceType);
 			listView.setAdapter(adapter);
@@ -112,7 +112,7 @@ public class TypeSelectActivity extends BaseActivity {
 			
 			int position_cabin = getIntent().getExtras().getInt(KEY_TYPE_CABIN_POSITION, 0);
 			final SelectAdapter adapter = new SelectAdapter(this,
-					R.layout.item_select, getResources().getStringArray(R.array.TypeTicketDestribute));
+					R.layout.item_type_select, getResources().getStringArray(R.array.TypeTicketDestribute));
 			ListView listView = (ListView) findViewById(R.id.listView_select);
 			adapter.setSelectedPosition(position_cabin);
 			listView.setAdapter(adapter);

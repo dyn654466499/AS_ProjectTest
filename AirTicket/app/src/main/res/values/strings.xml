@@ -15,7 +15,7 @@
     <string name="string_hot_city">热门城市</string>
 
     <!-- 标题 -->
-    <string name="title_airTicket">机票</string>
+    <string name="title_flight_search">航班查询</string>
     <string name="title_leaveDate">选择出发日期</string>
     <string name="title_oneWay">单程</string>
     <string name="title_endorseOrBackDesc">退改签说明</string>
@@ -26,7 +26,7 @@
     <string name="title_date_leave">选择出发日期</string>
     <string name="title_date_back">选择返回日期</string>
     <string name="title_order_edit">订单填写</string>
-    <string name="title_ticket_result">%1$s - %2$s (%3$s) </string>
+    <string name="title_flight_result">%1$s - %2$s (%3$s) </string>
     
     <!-- 舱位类型 -->
     <string-array name="TypeCabin">
@@ -296,7 +296,4 @@
         <item>遵义</item>
         <item>郑州</item>
     </string-array>
-
-    <string name="title_activity_city_list">CityListActivity</string>
-
 </resources>
