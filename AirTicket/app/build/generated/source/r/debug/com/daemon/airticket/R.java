@@ -212,7 +212,9 @@ public final class R {
         public static final int main=0x7f0c0000;
     }
     public static final class raw {
-        public static final int china_city=0x7f060000;
+        public static final int air_line=0x7f060000;
+        public static final int china_city=0x7f060001;
+        public static final int three_word=0x7f060002;
     }
     public static final class string {
         public static final int action_settings=0x7f0b0000;

@@ -46,10 +46,10 @@
   <component name="SvnBranchConfigurationManager">
     <option name="myConfigurationMap">
       <map>
-        <entry key="D:/git/OurFM/FlowMonitor">
+        <entry key="$PROJECT_DIR$">
           <value>
             <SvnBranchConfiguration>
-              <option name="trunkUrl" value="http://code.taobao.org/svn/OurFM/FlowMonitor" />
+              <option name="trunkUrl" value="https://121.40.116.51/svn/yunchengk/android/AirTicket" />
             </SvnBranchConfiguration>
           </value>
         </entry>
@@ -62,17 +62,6 @@
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

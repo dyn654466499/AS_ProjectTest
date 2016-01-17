@@ -3,9 +3,16 @@ package com.daemon.consts;
 import java.util.HashMap;
 
 public class Constants {
-	
+	/**
+	 * 城市三字码的SharePreference key
+	 */
+	public static final String KEY_SP_THREE_WORD = "three_word";
+	public static final String KEY_SP_AIR_PORT = "airPort";
+	public static final String KEY_SP_AIR_LINE = "airLine";
+	public static final String KEY_SP_CABIN = "cabin";
+
 	public static final String KEY_TYPE = "类型";
-	public static final String KEY_TYPE_CABIN = "舱位类型";
+	public static final String KEY_TYPE_CABIN = "Cabin";
 	public static final String KEY_TYPE_CERT = "证件类型";
 	public static final String KEY_TYPE_TICKET_DISTRIBUTE = "机票配送方式";
 	
@@ -21,6 +28,7 @@ public class Constants {
 	public static final String KEY_CITY = "城市";
     public static final String KEY_LEAVE_CITY = "Scity";
     public static final String KEY_ARRIVE_CITY = "Ecity";
+	public static final String KEY_USERNAME = "Username";
 
 	public static final String KEY_INSURE_PRICE = "保险价格";
 	public static final String KEY_INSURE_NAME = "保险名称";

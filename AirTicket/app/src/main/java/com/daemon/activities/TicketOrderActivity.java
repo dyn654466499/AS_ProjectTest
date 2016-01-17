@@ -157,15 +157,15 @@ public class TicketOrderActivity extends BaseActivity{
 		ListView lv_order_ticketInfo = (ListView)findViewById(R.id.lv_order_ticketInfo);
 		ArrayList<FlightDetailInfo> flightInfos = new ArrayList<FlightDetailInfo>();
 		FlightDetailInfo info = new FlightDetailInfo();
-		info.airLines = "南方航空";
+		info.AirLine = "南方航空";
 		info.oilPrice = "燃油￥"+"0";
 		info.airPortBuildPrice="民航基金￥"+"50";
-		info.cabinPrice = "经济舱￥"+"1350";
-		info.takeOffDate = "2月8日";
-		info.takeOffPort = "吴圩机场";
-		info.takeOffTime = "12:00";
-		info.landingPort = "宝安机场";
-		info.landingTime = "16:30";
+		info.P = "经济舱￥"+"1350";
+		info.Sdate = "2月8日";
+		info.Scity = "吴圩机场";
+		info.Stime = "12:00";
+		info.Ecity = "宝安机场";
+		info.Etime = "16:30";
 		flightInfos.add(info);
 
 		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, flightInfos);

@@ -50,17 +50,17 @@ public class FlightResultActivity extends BaseActivity{
 		flightInfos_group = new ArrayList<FlightInfo>();
 		for (int i = 0; i < 6; i++) {
 			FlightInfo info = new FlightInfo();
-			info.airLines = "南方航空";
-			info.amount = "3";
+			info.AirLine = "南方航空";
+			info.N = "3";
 			info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
-			info.discount ="5折";
-			info.landingPort = "宝安机场";
-			info.landingTime = "16:30";
-			info.cabinPrice = "￥"+"1350";
-			info.takeOffPort = "吴圩机场";
-			info.takeOffTime = "12:00";
-			info.flightNum = "MU5214";
-			info.planeModel = "333";
+			info.D ="5折";
+			info.Ecity = "宝安机场";
+			info.Etime = "16:30";
+			info.P = "￥"+"1350";
+			info.Scity = "吴圩机场";
+			info.Stime = "12:00";
+			info.FlightNo = "MU5214";
+			info.FlightType = "333";
 			info.planeSize = "(中)";
 			flightInfos_group.add(info);
 		}
@@ -68,8 +68,8 @@ public class FlightResultActivity extends BaseActivity{
 		flightInfos_child = new ArrayList<FlightInfo>();
 		for (int i = 0; i < 3; i++) {
 			FlightDetailInfo info = new FlightDetailInfo();
-			info.discount = "5折";
-			info.cabinPrice = "￥"+"1350";
+			info.D = "5折";
+			info.P = "￥"+"1350";
 			info.cabinType = "头等舱";
 			flightInfos_child.add(info);
 		}

@@ -9,23 +9,23 @@ public class FlightInfo implements Parcelable {
 	/**
 	 * 起飞日期
 	 */
-	public String takeOffDate;
+	public String Sdate;
 	/**
 	 * 起飞时间
 	 */
-	public String takeOffTime;
+	public String Stime;
 	/**
 	 * 降落时间
 	 */
-	public String landingTime;
+	public String Etime;
 	/**
-	 * 起飞机场
+	 * 起飞机场三字码
 	 */
-	public String takeOffPort;
+	public String Scity;
 	/**
-	 * 降落机场
+	 * 降落机场三字码
 	 */
-	public String landingPort;
+	public String Ecity;
 	/**
 	 * 舱位类型
 	 */
@@ -33,23 +33,23 @@ public class FlightInfo implements Parcelable {
 	/**
 	 * 航空公司
 	 */
-	public String airLines;
+	public String AirLine;
 	/**
 	 * 航班号
 	 */
-	public String flightNum;
+	public String FlightNo;
 	/**
 	 * 价格
 	 */
-	public String cabinPrice;
+	public String P;
 	/**
 	 * 折扣
 	 */
-	public String discount;
+	public String D;
 	/**
 	 * 票数
 	 */
-	public String amount;
+	public String N;
 	/**
 	 * 飞机尺寸（大、中、小）
 	 */
@@ -57,7 +57,7 @@ public class FlightInfo implements Parcelable {
 	/**
 	 * 飞机型号
 	 */
-	public String planeModel;
+	public String FlightType;
 	/**
 	 * 航空公司logo
 	 */
@@ -76,19 +76,19 @@ public class FlightInfo implements Parcelable {
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		// TODO Auto-generated method stub
-        dest.writeString(takeOffDate);
-        dest.writeString(takeOffTime);
-        dest.writeString(takeOffPort);
-        dest.writeString(landingTime);
-        dest.writeString(landingPort);
+        dest.writeString(Sdate);
+        dest.writeString(Stime);
+        dest.writeString(Scity);
+        dest.writeString(Etime);
+        dest.writeString(Ecity);
         dest.writeString(cabinType);
-        dest.writeString(cabinPrice);
-        dest.writeString(discount);
-        dest.writeString(amount);
-        dest.writeString(airLines);
-		dest.writeString(flightNum);
+        dest.writeString(P);
+        dest.writeString(D);
+        dest.writeString(N);
+        dest.writeString(AirLine);
+		dest.writeString(FlightNo);
 		dest.writeString(planeSize);
-		dest.writeString(planeModel);
+		dest.writeString(FlightType);
 	}
 	
 	public static final Parcelable.Creator<FlightInfo> CREATOR = new Creator<FlightInfo>() {
@@ -109,18 +109,18 @@ public class FlightInfo implements Parcelable {
 	}; 
 	
 	private void setParcel(Parcel in){
-		this.takeOffDate = in.readString();
-		this.takeOffTime = in.readString();
-		this.takeOffPort = in.readString();
-		this.landingTime = in.readString();
-		this.landingPort = in.readString();
+		this.Sdate = in.readString();
+		this.Stime = in.readString();
+		this.Scity = in.readString();
+		this.Etime = in.readString();
+		this.Ecity = in.readString();
 		this.cabinType = in.readString();
-		this.cabinPrice = in.readString();
-		this.discount = in.readString();
-		this.amount = in.readString();
-		this.airLines = in.readString();
-		this.flightNum = in.readString();
+		this.P = in.readString();
+		this.D = in.readString();
+		this.N = in.readString();
+		this.AirLine = in.readString();
+		this.FlightNo = in.readString();
 		this.planeSize = in.readString();
-		this.planeModel = in.readString();
+		this.FlightType = in.readString();
 	}
 }

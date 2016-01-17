@@ -135,16 +135,16 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 					null);
 			
 		}
-		 group.tv_flight_result_takeOffTime.setText(flightInfos_group.get(groupPosition).takeOffTime);
-		 group.tv_flight_result_landingTime.setText(flightInfos_group.get(groupPosition).landingTime);
-		 group.tv_flight_result_cabinPrice.setText(flightInfos_group.get(groupPosition).cabinPrice);
-		 group.tv_flight_result_takeOffPort.setText(flightInfos_group.get(groupPosition).takeOffPort);
-		 group.tv_flight_result_landingPort.setText(flightInfos_group.get(groupPosition).landingPort);
-		 group.tv_flight_result_discount.setText(flightInfos_group.get(groupPosition).discount);
-		 group.tv_flight_result_airLines.setText(flightInfos_group.get(groupPosition).airLines);
-		 group.tv_flight_result_amount.setText(flightInfos_group.get(groupPosition).amount);
-		 group.tv_flight_result_flightNum.setText(flightInfos_group.get(groupPosition).flightNum);
-		 group.tv_flight_result_planeModel.setText(flightInfos_group.get(groupPosition).planeModel);
+		 group.tv_flight_result_takeOffTime.setText(flightInfos_group.get(groupPosition).Stime);
+		 group.tv_flight_result_landingTime.setText(flightInfos_group.get(groupPosition).Etime);
+		 group.tv_flight_result_cabinPrice.setText(flightInfos_group.get(groupPosition).P);
+		 group.tv_flight_result_takeOffPort.setText(flightInfos_group.get(groupPosition).Scity);
+		 group.tv_flight_result_landingPort.setText(flightInfos_group.get(groupPosition).Ecity);
+		 group.tv_flight_result_discount.setText(flightInfos_group.get(groupPosition).D);
+		 group.tv_flight_result_airLines.setText(flightInfos_group.get(groupPosition).AirLine);
+		 group.tv_flight_result_amount.setText(flightInfos_group.get(groupPosition).N);
+		 group.tv_flight_result_flightNum.setText(flightInfos_group.get(groupPosition).FlightNo);
+		 group.tv_flight_result_planeModel.setText(flightInfos_group.get(groupPosition).FlightType);
 		 group.tv_flight_result_planeSize.setText(flightInfos_group.get(groupPosition).planeSize);
 
 
@@ -219,8 +219,8 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 				});
 
 		 child.tv_flight_result_details_cabinType.setText(flightInfos_child.get(childPosition).cabinType);
-		 child.tv_flight_result_details_discount.setText(flightInfos_child.get(childPosition).discount);
-		 child.tv_flight_result_details_cabinPrice.setText(flightInfos_child.get(childPosition).cabinPrice);
+		 child.tv_flight_result_details_discount.setText(flightInfos_child.get(childPosition).D);
+		 child.tv_flight_result_details_cabinPrice.setText(flightInfos_child.get(childPosition).P);
 		return convertView;
 	}
 

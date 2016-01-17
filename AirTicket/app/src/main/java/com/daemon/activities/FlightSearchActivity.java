@@ -2,10 +2,13 @@ package com.daemon.activities;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -13,21 +16,30 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.daemon.airticket.R;
+import com.daemon.consts.Constants;
 import com.daemon.models.FlightSearchModel;
 import com.daemon.utils.CommonUtil;
 
+import java.io.InputStream;
 import java.util.HashMap;
+
+import jxl.Cell;
+import jxl.Sheet;
+import jxl.Workbook;
 
 import static com.daemon.consts.Constants.KEY_ARRIVE_CITY;
 import static com.daemon.consts.Constants.KEY_ARRIVE_DATE;
 import static com.daemon.consts.Constants.KEY_CITY;
 import static com.daemon.consts.Constants.KEY_LEAVE_CITY;
 import static com.daemon.consts.Constants.KEY_LEAVE_DATE;
+import static com.daemon.consts.Constants.KEY_SP_CABIN;
+import static com.daemon.consts.Constants.KEY_SP_THREE_WORD;
 import static com.daemon.consts.Constants.KEY_TITLE_DATE;
 import static com.daemon.consts.Constants.KEY_TYPE;
 import static com.daemon.consts.Constants.KEY_TYPE_CABIN;
 import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
 import static com.daemon.consts.Constants.KEY_TYPE_DATE;
+import static com.daemon.consts.Constants.KEY_USERNAME;
 import static com.daemon.consts.Constants.MODEL_FLIGHT_SEARCH;
 import static com.daemon.consts.Constants.REQUEST_CODE_CABIN;
 import static com.daemon.consts.Constants.REQUEST_CODE_CITY_ARRIVE;
@@ -106,6 +118,90 @@ public class FlightSearchActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flight_search);
 		/**
+		 * 城市名和三字码键值对，城市名为key，用于航班搜索请求
+		 */
+		SharedPreferences sp_three_word = getSharedPreferences(Constants.KEY_SP_THREE_WORD ,Context.MODE_PRIVATE);
+		/**
+		 * 机场名和三字码键值对，三字码为key，用于显示三字码相应的机场名
+		 */
+		SharedPreferences sp_air_port = getSharedPreferences(Constants.KEY_SP_AIR_PORT ,Context.MODE_PRIVATE);
+		if(!sp_three_word.getBoolean("hasEdited",false)){
+			SharedPreferences.Editor editor_three_word = sp_three_word.edit();
+			SharedPreferences.Editor editor_air_port = sp_air_port.edit();
+			InputStream is=null;
+			try {
+				is=getResources().openRawResource(R.raw.three_word);
+				Workbook wb=Workbook.getWorkbook(is);
+				Sheet sheet=wb.getSheet(0);
+				int row=sheet.getRows();
+				for(int i=0;i<row;++i) {
+					Cell cellCity = sheet.getCell(0, i);
+					Cell cellWord = sheet.getCell(1, i);
+					Cell cellAirPort = sheet.getCell(2, i);
+					editor_three_word.putString(cellCity.getContents().trim(), cellWord.getContents().trim());
+					editor_air_port.putString(cellWord.getContents().trim(), cellAirPort.getContents().trim());
+					//Log.e("sssssdfsdsdss", cellCity.getContents().trim() + "," + cellWord.getContents().trim() + "," + cellAirPort.getContents().trim() + ",");
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return;
+			}
+			editor_three_word.putBoolean("hasEdited",true);
+			editor_three_word.commit();
+			editor_air_port.commit();
+		}
+		/**
+		 * 航空公司和其缩写键值对存储
+		 */
+		SharedPreferences sp_air_line = getSharedPreferences(Constants.KEY_SP_AIR_LINE,Context.MODE_PRIVATE);
+		if(!sp_air_line.getBoolean("hasEdited",false)){
+			SharedPreferences.Editor editor_air_line = sp_air_line.edit();
+			InputStream is=null;
+			try {
+				is=getResources().openRawResource(R.raw.air_line);
+				Workbook wb=Workbook.getWorkbook(is);
+				Sheet sheet=wb.getSheet(0);
+				int row=sheet.getRows();
+				for(int i=0;i<row;++i)
+				{
+					Cell cellWord=sheet.getCell(0, i);
+					Cell cellName=sheet.getCell(1, i);
+					editor_air_line.putString(cellWord.getContents().trim(),cellName.getContents().trim());
+					//Log.e("sssssdfsdsdss", cellName.getContents().trim() + "," + cellWord.getContents().trim() + ",");
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return;
+			}
+			editor_air_line.putBoolean("hasEdited", true);
+			editor_air_line.commit();
+		}
+
+		/**
+		 * 舱位类型和其缩写键值对存储
+		 */
+		SharedPreferences sp_cabin = getSharedPreferences(KEY_SP_CABIN,Context.MODE_PRIVATE);
+		if(!sp_cabin.getBoolean("hasEdited",false)){
+			SharedPreferences.Editor editor_cabin = sp_cabin.edit();
+			String[] cabins = getResources().getStringArray(R.array.TypeCabin);
+			editor_cabin.putString("A",cabins[0]);
+			editor_cabin.putString(cabins[0],"A");
+
+			editor_cabin.putString("Y",cabins[1]);
+			editor_cabin.putString(cabins[1],"Y");
+
+			editor_cabin.putString("C",cabins[2]);
+			editor_cabin.putString(cabins[2],"C");
+
+			editor_cabin.putString("F",cabins[3]);
+			editor_cabin.putString(cabins[3], "F");
+
+			editor_cabin.putBoolean("hasEdited", true);
+			editor_cabin.commit();
+		}
+		/**
 		 * 设置默认日期
 		 */
 		leave_date = arrive_date = System.currentTimeMillis();
@@ -156,6 +252,14 @@ public class FlightSearchActivity extends BaseActivity {
 		tv_title.setText(getString(R.string.title_flight_search));
 
 		btn_flight_search_oneWay.callOnClick();
+
+//		new Thread(){
+//			@Override
+//			public void run() {
+//				super.run();
+//				payurl.payTest();
+//			}
+//		}.start();
 
 	}
 
@@ -236,8 +340,13 @@ public class FlightSearchActivity extends BaseActivity {
              * 开始搜索
              */
 			case R.id.btn_flight_search_startSeach:
-				String city_leave = btn_flight_search_leaveCity.getText().toString();
-				String city_arrive = btn_flight_search_arriveCity.getText().toString();
+				SharedPreferences sp_three_word = getSharedPreferences(KEY_SP_THREE_WORD, Context.MODE_PRIVATE);
+				SharedPreferences sp_cabin = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE);
+
+				String Scity = sp_three_word.getString(btn_flight_search_leaveCity.getText().toString(), "");
+				String Ecity = sp_three_word.getString(btn_flight_search_arriveCity.getText().toString(),"");
+				String cabin = sp_cabin.getString(btn_flight_search_cabinType.getText().toString(), "");
+                Log.e("sdfsdf","cangwei="+cabin);
 				String date_leave = CommonUtil.getFormatDate(leave_date);
 				String date_arrive = CommonUtil.getFormatDate(arrive_date);
 
@@ -245,9 +354,12 @@ public class FlightSearchActivity extends BaseActivity {
 				 * 封装请求参数传给model
 				 */
 				HashMap<String, String> map = new HashMap<>();
-				map.put(KEY_LEAVE_CITY, city_leave);
-				map.put(KEY_ARRIVE_CITY, city_arrive);
+				map.put(KEY_LEAVE_CITY, Scity);
+				map.put(KEY_ARRIVE_CITY, Ecity);
+				map.put(KEY_USERNAME, "wangjunyi");
 				map.put(KEY_LEAVE_DATE, date_leave);
+				map.put(KEY_TYPE_CABIN, cabin);
+
 				if (linearLayout_flight_search_arriveDate.getVisibility() == View.VISIBLE)
 					map.put(KEY_ARRIVE_DATE, date_arrive);
 

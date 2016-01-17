@@ -96,14 +96,14 @@ public class OrderTicketAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		 holder.tv_order_ticket_takeOffDate.setText(detailInfos.get(position).takeOffDate);
-		 holder.tv_order_ticket_takeOffTime.setText(detailInfos.get(position).takeOffTime);
-		 holder.tv_order_ticket_landingTime.setText(detailInfos.get(position).landingTime);
-		 holder.tv_order_ticket_spacePrice.setText(detailInfos.get(position).cabinPrice);
-		 holder.tv_order_ticket_takeOffPort.setText(detailInfos.get(position).takeOffPort);
-		 holder.tv_order_ticket_landingPort.setText(detailInfos.get(position).landingPort);
+		 holder.tv_order_ticket_takeOffDate.setText(detailInfos.get(position).Sdate);
+		 holder.tv_order_ticket_takeOffTime.setText(detailInfos.get(position).Stime);
+		 holder.tv_order_ticket_landingTime.setText(detailInfos.get(position).Etime);
+		 holder.tv_order_ticket_spacePrice.setText(detailInfos.get(position).P);
+		 holder.tv_order_ticket_takeOffPort.setText(detailInfos.get(position).Scity);
+		 holder.tv_order_ticket_landingPort.setText(detailInfos.get(position).Ecity);
 		 holder.tv_order_ticket_airPortBuildPrice.setText(detailInfos.get(position).airPortBuildPrice);
-		 holder.tv_order_ticket_airLine.setText(detailInfos.get(position).airLines);
+		 holder.tv_order_ticket_airLine.setText(detailInfos.get(position).AirLine);
 		 holder.tv_order_ticket_oilPrice.setText(detailInfos.get(position).oilPrice);
 		 
 		return convertView;
