@@ -31,14 +31,14 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 	private ExpandableListView elv;
 	private Drawable ic_xiangshang;
 	private List<FlightInfo> flightInfos_group;
-	private List<FlightInfo> flightInfos_child;
+	private List<List<FlightInfo>> flightInfos_child;
 	/**
 	 * 命令接口
 	 */
 	private Commands commands;
 
 	public FlightResultAdapter(Context mContext, List<FlightInfo> flightInfos_group,
-							   List<FlightInfo> flightInfos_child) {
+							   List<List<FlightInfo>> flightInfos_child) {
 		super();
 		this.mContext = mContext;
 		this.flightInfos_group = flightInfos_group;
@@ -169,7 +169,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 
 	@Override
 	public FlightInfo getChild(int groupPosition, int childPosition) {
-		return flightInfos_child.get(childPosition);
+		return flightInfos_child.get(groupPosition).get(childPosition);
 	}
 
 	@Override
@@ -179,7 +179,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 
 	@Override
 	public int getChildrenCount(int groupPosition) {
-		return flightInfos_child.size();
+		return flightInfos_child.get(groupPosition).size();
 	}
 
 	@Override
@@ -218,9 +218,9 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 					}
 				});
 
-		 child.tv_flight_result_details_cabinType.setText(flightInfos_child.get(childPosition).cabinType);
-		 child.tv_flight_result_details_discount.setText(flightInfos_child.get(childPosition).D);
-		 child.tv_flight_result_details_cabinPrice.setText(flightInfos_child.get(childPosition).P);
+		 child.tv_flight_result_details_cabinType.setText(flightInfos_child.get(groupPosition).get(childPosition).cabinType);
+		 child.tv_flight_result_details_discount.setText(flightInfos_child.get(groupPosition).get(childPosition).D);
+		 child.tv_flight_result_details_cabinPrice.setText(flightInfos_child.get(groupPosition).get(childPosition).P);
 		return convertView;
 	}
 

@@ -81,13 +81,12 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="gson-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="gson-2.5" level="project" />
     <orderEntry type="library" exported="" name="android-support-v4" level="project" />
     <orderEntry type="library" exported="" name="volley" level="project" />
-    <orderEntry type="library" exported="" name="gson-xml-java-0.1.7" level="project" />
     <orderEntry type="library" exported="" name="sun.misc.BASE64Decoder" level="project" />
     <orderEntry type="library" exported="" name="fastjson-1.1.40" level="project" />
+    <orderEntry type="library" exported="" name="gson-xml-master-0.1.8-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="jxl" level="project" />
   </component>
 </module>

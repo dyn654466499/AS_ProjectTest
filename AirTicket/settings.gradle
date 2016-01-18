@@ -1,1 +1,1 @@
-include ':app', ':gson-xml-master'
+include ':app'

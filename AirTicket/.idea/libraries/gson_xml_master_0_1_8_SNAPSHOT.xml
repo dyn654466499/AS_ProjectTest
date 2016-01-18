@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gson-xml-master-0.1.8-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/gson-xml-master-0.1.8-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

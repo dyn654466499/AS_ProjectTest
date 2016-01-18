@@ -20,14 +20,15 @@ public class Constants {
 	public static final String KEY_TYPE_PASSENGER_CERT_POSITION = "第几个乘机人证件";
 	
 	public static final String KEY_TYPE_DATE = "日期";
-    public static final String KEY_LEAVE_DATE = "Date";
-    public static final String KEY_ARRIVE_DATE = "到达日期";
+    public static final String KEY_DATE_LEAVE = "Date";
+    public static final String KEY_DATE_ARRIVE = "到达日期";
 	
-	public static final String KEY_TITLE_DATE = "标题";
+	public static final String KEY_TITLE_DATE = "标题日期";
+	public static final String KEY_TITLE = "标题";
 	
 	public static final String KEY_CITY = "城市";
-    public static final String KEY_LEAVE_CITY = "Scity";
-    public static final String KEY_ARRIVE_CITY = "Ecity";
+    public static final String KEY_CITY_LEAVE = "Scity";
+    public static final String KEY_CITY_ARRIVE = "Ecity";
 	public static final String KEY_USERNAME = "Username";
 
 	public static final String KEY_INSURE_PRICE = "保险价格";

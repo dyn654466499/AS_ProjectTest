@@ -20,6 +20,17 @@ public class CommonUtil {
     }
 
     /**
+     * 格式化时间 yyyy年MM月dd日
+     * @param time
+     * @return yyyy年MM月dd日
+     */
+    public static String getFormatDateOnlyYear(long time){
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日", Locale.getDefault());
+        Date date=new Date(time);
+        return format.format(date);
+    }
+
+    /**
      * 格式化时间
      * @param time
      * @return X月XX日

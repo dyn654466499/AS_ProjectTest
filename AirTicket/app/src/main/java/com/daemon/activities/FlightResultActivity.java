@@ -1,5 +1,8 @@
 package com.daemon.activities;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
@@ -9,14 +12,33 @@ import android.widget.TextView;
 
 import com.daemon.adapters.FlightResultAdapter;
 import com.daemon.airticket.R;
+import com.daemon.beans.CabinInfo;
 import com.daemon.beans.FlightDetailInfo;
 import com.daemon.beans.FlightInfo;
+import com.daemon.beans.FlightInfoContainer;
+import com.daemon.beans.FlightResponseInfo;
 import com.daemon.consts.Constants;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.FlightResultModel;
+import com.daemon.utils.CommonUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+
+import static com.daemon.consts.Constants.KEY_CITY_ARRIVE;
+import static com.daemon.consts.Constants.KEY_CITY_LEAVE;
+import static com.daemon.consts.Constants.KEY_DATE_ARRIVE;
+import static com.daemon.consts.Constants.KEY_DATE_LEAVE;
+import static com.daemon.consts.Constants.KEY_SP_AIR_LINE;
+import static com.daemon.consts.Constants.KEY_SP_AIR_PORT;
+import static com.daemon.consts.Constants.KEY_SP_CABIN;
+import static com.daemon.consts.Constants.KEY_SP_THREE_WORD;
+import static com.daemon.consts.Constants.KEY_TITLE;
+import static com.daemon.consts.Constants.KEY_TYPE_CABIN;
+import static com.daemon.consts.Constants.KEY_USERNAME;
+import static com.daemon.consts.Constants.MODEL_FLIGHT_SEARCH;
+import static com.daemon.consts.Constants.VIEW_FLIGHT_SEARCH;
 
 /**
  * 机票航班查询结果
@@ -28,7 +50,7 @@ public class FlightResultActivity extends BaseActivity{
 	 */
     private ExpandableListView elv_flight_result;
     private List<FlightInfo> flightInfos_group;
-    private List<FlightInfo> flightInfos_child;
+    private List<List<FlightInfo>> flightInfos_child;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,51 +62,41 @@ public class FlightResultActivity extends BaseActivity{
 		 */
 		setModelDelegate(new FlightResultModel(handler, this));
 		setViewChangeListener(this);
-		
+
+		SharedPreferences sp_three_word = getSharedPreferences(KEY_SP_THREE_WORD, Context.MODE_PRIVATE);
+		SharedPreferences sp_cabin = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE);
+
+		String Scity = sp_three_word.getString(getIntent().getStringExtra(KEY_CITY_LEAVE), "");
+		String Ecity = sp_three_word.getString(getIntent().getStringExtra(KEY_CITY_ARRIVE), "");
+		String cabin = sp_cabin.getString(getIntent().getStringExtra(KEY_TYPE_CABIN), "");
+		String date_leave = CommonUtil.getFormatDate(getIntent().getLongExtra(KEY_DATE_LEAVE, System.currentTimeMillis()));
+		String date_arrive = CommonUtil.getFormatDate(getIntent().getLongExtra(KEY_DATE_ARRIVE, System.currentTimeMillis()));
+
 		TextView tv_title = (TextView)findViewById(R.id.tv_title);
-		tv_title.setText("空");
+		tv_title.setText(String.format(getString(R.string.title_flight_result),
+				getIntent().getStringExtra(KEY_CITY_LEAVE),
+				getIntent().getStringExtra(KEY_CITY_ARRIVE),
+				getIntent().getStringExtra(KEY_TITLE)
+		));
 
 		Button btn_title_back = (Button)findViewById(R.id.btn_title_back);
 		btn_title_back.setOnClickListener(this);
 
-		flightInfos_group = new ArrayList<FlightInfo>();
-		for (int i = 0; i < 6; i++) {
-			FlightInfo info = new FlightInfo();
-			info.AirLine = "南方航空";
-			info.N = "3";
-			info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
-			info.D ="5折";
-			info.Ecity = "宝安机场";
-			info.Etime = "16:30";
-			info.P = "￥"+"1350";
-			info.Scity = "吴圩机场";
-			info.Stime = "12:00";
-			info.FlightNo = "MU5214";
-			info.FlightType = "333";
-			info.planeSize = "(中)";
-			flightInfos_group.add(info);
-		}
+		TextView tv_ticket_result_leaveDate = (TextView)findViewById(R.id.tv_ticket_result_leaveDate);
+		tv_ticket_result_leaveDate.setText(CommonUtil.getFormatDateOnlyYear(getIntent().getLongExtra(KEY_DATE_LEAVE, System.currentTimeMillis())));
 
-		flightInfos_child = new ArrayList<FlightInfo>();
-		for (int i = 0; i < 3; i++) {
-			FlightDetailInfo info = new FlightDetailInfo();
-			info.D = "5折";
-			info.P = "￥"+"1350";
-			info.cabinType = "头等舱";
-			flightInfos_child.add(info);
-		}
-		
-		elv_flight_result = (ExpandableListView)findViewById(R.id.elv_flight_result);
-		final FlightResultAdapter adapter = new FlightResultAdapter(this, flightInfos_group, flightInfos_child);
-		adapter.setExpandableListView(elv_flight_result);
-		elv_flight_result.setAdapter(adapter);
+		/**
+		 * 封装请求参数传给model
+		 */
+		HashMap<String, String> map = new HashMap<>();
+		map.put(KEY_CITY_LEAVE, Scity);
+		map.put(KEY_CITY_ARRIVE, Ecity);
+		map.put(KEY_USERNAME, "wangjunyi");
+		map.put(KEY_DATE_LEAVE, date_leave);
+		map.put(KEY_TYPE_CABIN, cabin);
 
-        adapter.setTicketBookCommands(new Commands() {
-			@Override
-			public void executeCommand(Message msg_params) {
-                 //notifyModelChange(msg_params);
-			}
-		});
+		notifyModelChange(Message.obtain(handler, MODEL_FLIGHT_SEARCH, map));
+
 	}
 
 	
@@ -113,6 +125,67 @@ public class FlightResultActivity extends BaseActivity{
 	public void onViewChange(Message msg) {
 		// TODO Auto-generated method stub
 		switch (msg.what){
+			case VIEW_FLIGHT_SEARCH:
+				if(msg.obj instanceof  String){
+                   new AlertDialog.Builder(FlightResultActivity.this)
+						   .setTitle(getString(R.string.title_flight_result))
+						   .setMessage((String)msg.obj)
+						   .create()
+						   .show();
+				}else {
+					FlightInfoContainer container = (FlightInfoContainer)msg.obj;
+					SharedPreferences sp_airLine = getSharedPreferences(KEY_SP_AIR_LINE,Context.MODE_PRIVATE);
+					SharedPreferences sp_airPort = getSharedPreferences(KEY_SP_AIR_PORT,Context.MODE_PRIVATE);
+
+					flightInfos_group = new ArrayList<FlightInfo>();
+					flightInfos_child = new ArrayList<List<FlightInfo>>();
+					for (FlightResponseInfo reInfo : container.infos) {
+						ArrayList<FlightInfo> flightInfos_child_ = new ArrayList<FlightInfo>();
+						String[] airTerminal = reInfo.AirTerminal.split(",");
+
+						FlightInfo info = new FlightInfo();
+						info.N = reInfo.cabinInfo.get(0).N;
+						info.D = reInfo.cabinInfo.get(0).D;
+						info.P = "￥" + reInfo.cabinInfo.get(0).P;
+
+
+						for (CabinInfo cabinInfo : reInfo.cabinInfo) {
+								FlightDetailInfo detailInfo = new FlightDetailInfo();
+							detailInfo.D = cabinInfo.D;
+							detailInfo.P = "￥" + cabinInfo.P;
+							detailInfo.cabinType = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE).getString(cabinInfo.L, "");
+							flightInfos_child_.add(detailInfo);
+							}
+
+						info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
+						info.AirLine = sp_airLine.getString(reInfo.AirLine, "");
+						info.Ecity = sp_airPort.getString(reInfo.Ecity,"")+airTerminal[1];
+						info.Etime = reInfo.Etime;
+						info.Scity = sp_airPort.getString(reInfo.Scity,"")+airTerminal[0];
+						info.Stime = reInfo.Stime;
+						info.FlightNo = reInfo.FlightNo;
+						info.FlightType = reInfo.FlightType;
+						info.planeSize = "(中)";
+
+						flightInfos_group.add(info);
+						flightInfos_child.add(flightInfos_child_);
+					}
+
+
+					elv_flight_result = (ExpandableListView) findViewById(R.id.elv_flight_result);
+					final FlightResultAdapter adapter = new FlightResultAdapter(this, flightInfos_group, flightInfos_child);
+					adapter.setExpandableListView(elv_flight_result);
+					elv_flight_result.setAdapter(adapter);
+
+					adapter.setTicketBookCommands(new Commands() {
+						@Override
+						public void executeCommand(Message msg_params) {
+							//notifyModelChange(msg_params);
+						}
+					});
+				}
+				break;
+
 			case Constants.VIEW_TICKET_BOOK:
 
 				break;

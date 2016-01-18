@@ -36,12 +36,12 @@
         "source": "D:\\Git_ForAS\\ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-hdpi\\tip_loading2.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_xiangxia.png",
-        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\drawable-hdpi\\ic_xiangxia.png"
-    },
-    {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\kongxian.png",
         "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-hdpi\\kongxian.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_xiangxia.png",
+        "source": "C:\\Users\\Administrator\\StudioProjects\\AirTicket\\app\\src\\main\\res\\drawable-hdpi\\ic_xiangxia.png"
     },
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tip_loading9.png",

@@ -13,11 +13,20 @@
         android:padding="15dp" >
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="出发日期:"
+            android:textColor="@color/ticket_black"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/tv_ticket_result_leaveDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="出发日期"
+            android:layout_marginLeft="5dp"
+            android:text="1月1日"
             android:textColor="@color/ticket_black"
             android:textSize="16sp" />
     </LinearLayout>

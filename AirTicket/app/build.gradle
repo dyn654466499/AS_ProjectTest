@@ -19,13 +19,13 @@ android {
 }
 
 dependencies {
+
     compile files('libs/volley.jar')
     compile files('libs/fastjson-1.1.40.jar')
     compile files('libs/android-support-v4.jar')
     compile files('libs/gson-2.5.jar')
     compile files('libs/jxl.jar')
     compile files('libs/sun.misc.BASE64Decoder.jar')
-    compile('com.stanfy:gson-xml-java:0.1.+') {
-        exclude group: 'xmlpull', module: 'xmlpull'
-    }
+    compile files('libs/gson-xml-master-0.1.8-SNAPSHOT.jar')
+
 }

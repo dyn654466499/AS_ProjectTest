@@ -8,7 +8,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -21,33 +20,28 @@ import com.daemon.models.FlightSearchModel;
 import com.daemon.utils.CommonUtil;
 
 import java.io.InputStream;
-import java.util.HashMap;
 
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 
-import static com.daemon.consts.Constants.KEY_ARRIVE_CITY;
-import static com.daemon.consts.Constants.KEY_ARRIVE_DATE;
 import static com.daemon.consts.Constants.KEY_CITY;
-import static com.daemon.consts.Constants.KEY_LEAVE_CITY;
-import static com.daemon.consts.Constants.KEY_LEAVE_DATE;
+import static com.daemon.consts.Constants.KEY_CITY_ARRIVE;
+import static com.daemon.consts.Constants.KEY_CITY_LEAVE;
+import static com.daemon.consts.Constants.KEY_DATE_ARRIVE;
+import static com.daemon.consts.Constants.KEY_DATE_LEAVE;
 import static com.daemon.consts.Constants.KEY_SP_CABIN;
-import static com.daemon.consts.Constants.KEY_SP_THREE_WORD;
+import static com.daemon.consts.Constants.KEY_TITLE;
 import static com.daemon.consts.Constants.KEY_TITLE_DATE;
 import static com.daemon.consts.Constants.KEY_TYPE;
 import static com.daemon.consts.Constants.KEY_TYPE_CABIN;
 import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
 import static com.daemon.consts.Constants.KEY_TYPE_DATE;
-import static com.daemon.consts.Constants.KEY_USERNAME;
-import static com.daemon.consts.Constants.MODEL_FLIGHT_SEARCH;
 import static com.daemon.consts.Constants.REQUEST_CODE_CABIN;
 import static com.daemon.consts.Constants.REQUEST_CODE_CITY_ARRIVE;
 import static com.daemon.consts.Constants.REQUEST_CODE_CITY_LEAVE;
 import static com.daemon.consts.Constants.REQUEST_CODE_DATE_ARRIVE;
 import static com.daemon.consts.Constants.REQUEST_CODE_DATE_LEAVE;
-import static com.daemon.consts.Constants.VIEW_FLIGHT_SEARCH;
-
 /**
  * 航班搜索界面
  * @author 邓耀宁
@@ -151,6 +145,7 @@ public class FlightSearchActivity extends BaseActivity {
 			editor_three_word.commit();
 			editor_air_port.commit();
 		}
+
 		/**
 		 * 航空公司和其缩写键值对存储
 		 */
@@ -165,8 +160,8 @@ public class FlightSearchActivity extends BaseActivity {
 				int row=sheet.getRows();
 				for(int i=0;i<row;++i)
 				{
-					Cell cellWord=sheet.getCell(0, i);
-					Cell cellName=sheet.getCell(1, i);
+					Cell cellName=sheet.getCell(0, i);
+					Cell cellWord=sheet.getCell(1, i);
 					editor_air_line.putString(cellWord.getContents().trim(),cellName.getContents().trim());
 					//Log.e("sssssdfsdsdss", cellName.getContents().trim() + "," + cellWord.getContents().trim() + ",");
 				}
@@ -340,40 +335,18 @@ public class FlightSearchActivity extends BaseActivity {
              * 开始搜索
              */
 			case R.id.btn_flight_search_startSeach:
-				SharedPreferences sp_three_word = getSharedPreferences(KEY_SP_THREE_WORD, Context.MODE_PRIVATE);
-				SharedPreferences sp_cabin = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE);
-
-				String Scity = sp_three_word.getString(btn_flight_search_leaveCity.getText().toString(), "");
-				String Ecity = sp_three_word.getString(btn_flight_search_arriveCity.getText().toString(),"");
-				String cabin = sp_cabin.getString(btn_flight_search_cabinType.getText().toString(), "");
-                Log.e("sdfsdf","cangwei="+cabin);
-				String date_leave = CommonUtil.getFormatDate(leave_date);
-				String date_arrive = CommonUtil.getFormatDate(arrive_date);
-
-				/**
-				 * 封装请求参数传给model
-				 */
-				HashMap<String, String> map = new HashMap<>();
-				map.put(KEY_LEAVE_CITY, Scity);
-				map.put(KEY_ARRIVE_CITY, Ecity);
-				map.put(KEY_USERNAME, "wangjunyi");
-				map.put(KEY_LEAVE_DATE, date_leave);
-				map.put(KEY_TYPE_CABIN, cabin);
-
-				if (linearLayout_flight_search_arriveDate.getVisibility() == View.VISIBLE)
-					map.put(KEY_ARRIVE_DATE, date_arrive);
-
-//            LinearLayout layout = new LinearLayout(FlightSearchActivity.this);
-//            dialog = new AlertDialog.Builder(FlightSearchActivity.this).setView(layout).create();
-//				AutoLoadingUtil.setAutoLoadingView(layout);
-//				dialog.show();
-			/**
-			 * 通知model发送请求
-			 */
-			Message msg = Message.obtain(handler, MODEL_FLIGHT_SEARCH, map);
-				notifyModelChange(msg);
-
-
+				intent = new Intent(FlightSearchActivity.this,FlightResultActivity.class);
+				intent.putExtra(KEY_CITY_LEAVE, btn_flight_search_leaveCity.getText().toString());
+				intent.putExtra(KEY_CITY_ARRIVE,btn_flight_search_arriveCity.getText().toString());
+				intent.putExtra(KEY_DATE_LEAVE, leave_date);
+				if (linearLayout_flight_search_arriveDate.getVisibility() == View.VISIBLE){
+					intent.putExtra(KEY_TITLE, btn_flight_search_goAndBack.getText().toString());
+					intent.putExtra(KEY_DATE_ARRIVE, arrive_date);
+				}
+				else
+					intent.putExtra(KEY_TITLE, btn_flight_search_oneWay.getText().toString());
+				intent.putExtra(KEY_TYPE_CABIN, btn_flight_search_cabinType.getText().toString());
+				startActivity(intent);
 			break;
             /**
              * 返回
@@ -453,13 +426,5 @@ public class FlightSearchActivity extends BaseActivity {
 	@Override
 	public void onViewChange(Message msg) {
 		// TODO Auto-generated method stub
-       switch (msg.what){
-		   case VIEW_FLIGHT_SEARCH:
-              //dialog.setMessage((String)msg.obj);
-
-            Intent intent = new Intent(FlightSearchActivity.this,FlightResultActivity.class);
-            startActivity(intent);
-			   break;
-	   }
 	}
 }

@@ -56,9 +56,9 @@
             android:id="@+id/tv_flight_result_cabinPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="60dp"
-            android:gravity="center"
+            android:layout_toRightOf="@id/tv_flight_result_landingTime"
+            android:layout_marginLeft="60dp"
+            android:gravity="center_vertical"
             android:text="￥1310"
             android:textColor="@color/ticket_title_color"
             android:textSize="16sp" />
