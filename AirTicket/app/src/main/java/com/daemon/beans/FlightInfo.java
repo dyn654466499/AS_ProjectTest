@@ -59,6 +59,14 @@ public class FlightInfo implements Parcelable {
 	 */
 	public String FlightType;
 	/**
+	 * 燃油费
+	 */
+	public String oilPrice;
+	/**
+	 * 机场建设费
+	 */
+	public String airPortBuildPrice;
+	/**
 	 * 航空公司logo
 	 */
 	public Drawable ariLinesIcon;
@@ -67,60 +75,63 @@ public class FlightInfo implements Parcelable {
 	 */
 	public boolean isExpanded;
 
+	public FlightInfo(Parcel in) {
+		Sdate = in.readString();
+		Stime = in.readString();
+		Etime = in.readString();
+		Scity = in.readString();
+		Ecity = in.readString();
+		cabinType = in.readString();
+		AirLine = in.readString();
+		FlightNo = in.readString();
+		P = in.readString();
+		D = in.readString();
+		N = in.readString();
+		planeSize = in.readString();
+		FlightType = in.readString();
+		oilPrice = in.readString();
+		airPortBuildPrice = in.readString();
+		isExpanded = in.readByte() != 0;
+	}
+
+	public static final Creator<FlightInfo> CREATOR = new Creator<FlightInfo>() {
+		@Override
+		public FlightInfo createFromParcel(Parcel in) {
+			return new FlightInfo(in);
+		}
+
+		@Override
+		public FlightInfo[] newArray(int size) {
+			return new FlightInfo[size];
+		}
+	};
+
+	public FlightInfo() {
+
+	}
+
 	@Override
 	public int describeContents() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
-		// TODO Auto-generated method stub
-        dest.writeString(Sdate);
-        dest.writeString(Stime);
-        dest.writeString(Scity);
-        dest.writeString(Etime);
-        dest.writeString(Ecity);
-        dest.writeString(cabinType);
-        dest.writeString(P);
-        dest.writeString(D);
-        dest.writeString(N);
-        dest.writeString(AirLine);
+		dest.writeString(Sdate);
+		dest.writeString(Stime);
+		dest.writeString(Etime);
+		dest.writeString(Scity);
+		dest.writeString(Ecity);
+		dest.writeString(cabinType);
+		dest.writeString(AirLine);
 		dest.writeString(FlightNo);
+		dest.writeString(P);
+		dest.writeString(D);
+		dest.writeString(N);
 		dest.writeString(planeSize);
 		dest.writeString(FlightType);
-	}
-	
-	public static final Parcelable.Creator<FlightInfo> CREATOR = new Creator<FlightInfo>() {
-		
-		@Override
-		public FlightInfo[] newArray(int size) {
-			// TODO Auto-generated method stub
-			return new FlightInfo[size];
-		}
-		
-		@Override
-		public FlightInfo createFromParcel(Parcel source) {
-			// TODO Auto-generated method stub
-			FlightInfo info = new FlightInfo();
-			info.setParcel(source);
-			return info;
-		}
-	}; 
-	
-	private void setParcel(Parcel in){
-		this.Sdate = in.readString();
-		this.Stime = in.readString();
-		this.Scity = in.readString();
-		this.Etime = in.readString();
-		this.Ecity = in.readString();
-		this.cabinType = in.readString();
-		this.P = in.readString();
-		this.D = in.readString();
-		this.N = in.readString();
-		this.AirLine = in.readString();
-		this.FlightNo = in.readString();
-		this.planeSize = in.readString();
-		this.FlightType = in.readString();
+		dest.writeString(oilPrice);
+		dest.writeString(airPortBuildPrice);
+		dest.writeByte((byte) (isExpanded ? 1 : 0));
 	}
 }

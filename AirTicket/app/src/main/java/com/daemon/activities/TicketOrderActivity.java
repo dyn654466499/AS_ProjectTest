@@ -20,7 +20,7 @@ import com.daemon.adapters.OrderInsureAdapter;
 import com.daemon.adapters.OrderPassengerAdapter;
 import com.daemon.adapters.OrderTicketAdapter;
 import com.daemon.airticket.R;
-import com.daemon.beans.FlightDetailInfo;
+import com.daemon.beans.FlightInfo;
 import com.daemon.beans.PassengerInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.TicketOrderModel;
@@ -34,6 +34,7 @@ import java.util.Map;
 import static com.daemon.consts.Constants.KEY_CITY;
 import static com.daemon.consts.Constants.KEY_INSURE_NAME;
 import static com.daemon.consts.Constants.KEY_INSURE_PRICE;
+import static com.daemon.consts.Constants.KEY_PARCELABLE;
 import static com.daemon.consts.Constants.KEY_TYPE;
 import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
 import static com.daemon.consts.Constants.KEY_TYPE_CERT;
@@ -155,18 +156,8 @@ public class TicketOrderActivity extends BaseActivity{
 		 * --------------------------------机票信息列表start---------------------------------
 		 */
 		ListView lv_order_ticketInfo = (ListView)findViewById(R.id.lv_order_ticketInfo);
-		ArrayList<FlightDetailInfo> flightInfos = new ArrayList<FlightDetailInfo>();
-		FlightDetailInfo info = new FlightDetailInfo();
-		info.AirLine = "南方航空";
-		info.oilPrice = "燃油￥"+"0";
-		info.airPortBuildPrice="民航基金￥"+"50";
-		info.P = "经济舱￥"+"1350";
-		info.Sdate = "2月8日";
-		info.Scity = "吴圩机场";
-		info.Stime = "12:00";
-		info.Ecity = "宝安机场";
-		info.Etime = "16:30";
-		flightInfos.add(info);
+		ArrayList<FlightInfo> flightInfos = getIntent().getParcelableArrayListExtra(KEY_PARCELABLE);
+		if(flightInfos == null)flightInfos = new ArrayList<>();
 
 		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, flightInfos);
 		lv_order_ticketInfo.setAdapter(orderTicketAdapter);

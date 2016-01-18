@@ -1,11 +1,11 @@
 package com.daemon.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,13 +17,13 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.daemon.activities.TicketOrderActivity;
 import com.daemon.airticket.R;
 import com.daemon.beans.FlightInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.utils.ImageUtil;
 import com.daemon.utils.VolleyUtil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FlightResultAdapter extends BaseExpandableListAdapter {
@@ -210,10 +210,14 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 					@Override
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
-						mContext.startActivity(new Intent(mContext,
-								TicketOrderActivity.class));
 						Log.e("btn_ticket_result_book", "groupPosition="+groupPosition+",childPosition="+childPosition);
-					    if(commands!=null)commands.executeCommand(null);
+					    if(commands!=null){
+							Message msg = new Message();
+							ArrayList<FlightInfo> flightInfos = new ArrayList<FlightInfo>();
+							flightInfos.add(flightInfos_child.get(groupPosition).get(childPosition));
+							msg.obj = flightInfos;
+							commands.executeCommand(msg);
+						}
 
 					}
 				});

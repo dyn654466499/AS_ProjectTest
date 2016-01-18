@@ -40,4 +40,18 @@ public class CommonUtil {
         Date date=new Date(time);
         return format.format(date);
     }
+
+    /**
+     * 换算折扣
+     */
+    public static String getFormatDiscount(String discount){
+        float d = Float.valueOf(discount);
+        if(d>=100){
+            discount = "不打折";
+        }else{
+            d = d/10;
+            discount = String.valueOf(d)+"折";
+        }
+        return discount;
+    }
 }

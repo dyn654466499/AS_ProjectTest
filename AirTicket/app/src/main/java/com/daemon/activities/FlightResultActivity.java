@@ -2,6 +2,7 @@ package com.daemon.activities;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Message;
@@ -13,7 +14,6 @@ import android.widget.TextView;
 import com.daemon.adapters.FlightResultAdapter;
 import com.daemon.airticket.R;
 import com.daemon.beans.CabinInfo;
-import com.daemon.beans.FlightDetailInfo;
 import com.daemon.beans.FlightInfo;
 import com.daemon.beans.FlightInfoContainer;
 import com.daemon.beans.FlightResponseInfo;
@@ -30,6 +30,7 @@ import static com.daemon.consts.Constants.KEY_CITY_ARRIVE;
 import static com.daemon.consts.Constants.KEY_CITY_LEAVE;
 import static com.daemon.consts.Constants.KEY_DATE_ARRIVE;
 import static com.daemon.consts.Constants.KEY_DATE_LEAVE;
+import static com.daemon.consts.Constants.KEY_PARCELABLE;
 import static com.daemon.consts.Constants.KEY_SP_AIR_LINE;
 import static com.daemon.consts.Constants.KEY_SP_AIR_PORT;
 import static com.daemon.consts.Constants.KEY_SP_CABIN;
@@ -145,17 +146,8 @@ public class FlightResultActivity extends BaseActivity{
 
 						FlightInfo info = new FlightInfo();
 						info.N = reInfo.cabinInfo.get(0).N;
-						info.D = reInfo.cabinInfo.get(0).D;
+						info.D = CommonUtil.getFormatDiscount(reInfo.cabinInfo.get(0).D);
 						info.P = "￥" + reInfo.cabinInfo.get(0).P;
-
-
-						for (CabinInfo cabinInfo : reInfo.cabinInfo) {
-								FlightDetailInfo detailInfo = new FlightDetailInfo();
-							detailInfo.D = cabinInfo.D;
-							detailInfo.P = "￥" + cabinInfo.P;
-							detailInfo.cabinType = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE).getString(cabinInfo.L, "");
-							flightInfos_child_.add(detailInfo);
-							}
 
 						info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
 						info.AirLine = sp_airLine.getString(reInfo.AirLine, "");
@@ -166,6 +158,24 @@ public class FlightResultActivity extends BaseActivity{
 						info.FlightNo = reInfo.FlightNo;
 						info.FlightType = reInfo.FlightType;
 						info.planeSize = "(中)";
+
+						for (CabinInfo cabinInfo : reInfo.cabinInfo) {
+							FlightInfo childInfo = new FlightInfo();
+							childInfo.Sdate = reInfo.Sdate;
+							childInfo.D = CommonUtil.getFormatDiscount(cabinInfo.D);
+							childInfo.P = "￥" + cabinInfo.P;
+							childInfo.cabinType = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE).getString(cabinInfo.L, "");
+							info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
+							childInfo.oilPrice = "燃油￥" +reInfo.Fees;
+							childInfo.airPortBuildPrice = "民航基金￥" +reInfo.AirTax;
+							childInfo.AirLine = sp_airLine.getString(reInfo.AirLine, "");
+							childInfo.Ecity = sp_airPort.getString(reInfo.Ecity,"")+airTerminal[1];
+							childInfo.Etime = reInfo.Etime;
+							childInfo.Scity = sp_airPort.getString(reInfo.Scity,"")+airTerminal[0];
+							childInfo.Stime = reInfo.Stime;
+							childInfo.FlightNo = reInfo.FlightNo;
+							flightInfos_child_.add(childInfo);
+						}
 
 						flightInfos_group.add(info);
 						flightInfos_child.add(flightInfos_child_);
@@ -180,7 +190,10 @@ public class FlightResultActivity extends BaseActivity{
 					adapter.setTicketBookCommands(new Commands() {
 						@Override
 						public void executeCommand(Message msg_params) {
-							//notifyModelChange(msg_params);
+							Intent intent = new Intent(FlightResultActivity.this,TicketOrderActivity.class);
+							ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>)msg_params.obj;
+							intent.putExtra(KEY_PARCELABLE,flightInfos);
+							startActivity(intent);
 						}
 					});
 				}
