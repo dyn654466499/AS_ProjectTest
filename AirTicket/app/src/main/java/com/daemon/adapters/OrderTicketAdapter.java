@@ -101,12 +101,12 @@ public class OrderTicketAdapter extends BaseAdapter {
 		 holder.tv_order_ticket_takeOffDate.setText(infos.get(position).Sdate);
 		 holder.tv_order_ticket_takeOffTime.setText(infos.get(position).Stime);
 		 holder.tv_order_ticket_landingTime.setText(infos.get(position).Etime);
-		 holder.tv_order_ticket_spacePrice.setText(infos.get(position).cabinType+infos.get(position).P);
+		 holder.tv_order_ticket_spacePrice.setText(infos.get(position).cabinType+ "￥" +infos.get(position).P);
 		 holder.tv_order_ticket_takeOffPort.setText(infos.get(position).Scity);
 		 holder.tv_order_ticket_landingPort.setText(infos.get(position).Ecity);
-		 holder.tv_order_ticket_airPortBuildPrice.setText(infos.get(position).airPortBuildPrice);
+		 holder.tv_order_ticket_airPortBuildPrice.setText("民航基金￥" +infos.get(position).airPortBuildPrice);
 		 holder.tv_order_ticket_airLine.setText(infos.get(position).AirLine+infos.get(position).FlightNo);
-		 holder.tv_order_ticket_oilPrice.setText(infos.get(position).oilPrice);
+		 holder.tv_order_ticket_oilPrice.setText("燃油￥" +infos.get(position).oilPrice);
 		 
 		return convertView;
 	}

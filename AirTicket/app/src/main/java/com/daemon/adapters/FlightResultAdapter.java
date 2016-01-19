@@ -137,7 +137,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 		}
 		 group.tv_flight_result_takeOffTime.setText(flightInfos_group.get(groupPosition).Stime);
 		 group.tv_flight_result_landingTime.setText(flightInfos_group.get(groupPosition).Etime);
-		 group.tv_flight_result_cabinPrice.setText(flightInfos_group.get(groupPosition).P);
+		 group.tv_flight_result_cabinPrice.setText("￥" + flightInfos_group.get(groupPosition).P);
 		 group.tv_flight_result_takeOffPort.setText(flightInfos_group.get(groupPosition).Scity);
 		 group.tv_flight_result_landingPort.setText(flightInfos_group.get(groupPosition).Ecity);
 		 group.tv_flight_result_discount.setText(flightInfos_group.get(groupPosition).D);
@@ -224,7 +224,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 
 		 child.tv_flight_result_details_cabinType.setText(flightInfos_child.get(groupPosition).get(childPosition).cabinType);
 		 child.tv_flight_result_details_discount.setText(flightInfos_child.get(groupPosition).get(childPosition).D);
-		 child.tv_flight_result_details_cabinPrice.setText(flightInfos_child.get(groupPosition).get(childPosition).P);
+		 child.tv_flight_result_details_cabinPrice.setText("￥" +flightInfos_child.get(groupPosition).get(childPosition).P);
 		return convertView;
 	}
 

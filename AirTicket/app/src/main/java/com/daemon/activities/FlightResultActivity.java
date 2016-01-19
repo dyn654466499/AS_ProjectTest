@@ -162,7 +162,7 @@ public class FlightResultActivity extends BaseActivity{
 						FlightInfo info = new FlightInfo();
 						info.N = reInfo.cabinInfo.get(0).N;
 						info.D = CommonUtil.getFormatDiscount(reInfo.cabinInfo.get(0).D);
-						info.P = "￥" + reInfo.cabinInfo.get(0).P;
+						info.P = reInfo.cabinInfo.get(0).P;
 
 						info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
 						info.AirLine = sp_airLine.getString(reInfo.AirLine, "");
@@ -178,15 +178,15 @@ public class FlightResultActivity extends BaseActivity{
 							FlightInfo childInfo = new FlightInfo();
 							childInfo.Sdate = reInfo.Sdate;
 							childInfo.D = CommonUtil.getFormatDiscount(cabinInfo.D);
-							childInfo.P = "￥" + cabinInfo.P;
+							childInfo.P = cabinInfo.P;
 							childInfo.cabinType = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE).getString(cabinInfo.L, "");
 							childInfo.Change = cabinInfo.Change;
 							childInfo.Return = cabinInfo.Return;
 
 
 							childInfo.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
-							childInfo.oilPrice = "燃油￥" +reInfo.Fees;
-							childInfo.airPortBuildPrice = "民航基金￥" +reInfo.AirTax;
+							childInfo.oilPrice = reInfo.Fees;
+							childInfo.airPortBuildPrice = reInfo.AirTax;
 							childInfo.AirLine = sp_airLine.getString(reInfo.AirLine, "");
 							childInfo.Ecity = sp_airPort.getString(reInfo.Ecity,"")+airTerminal[1];
 							childInfo.Etime = reInfo.Etime;

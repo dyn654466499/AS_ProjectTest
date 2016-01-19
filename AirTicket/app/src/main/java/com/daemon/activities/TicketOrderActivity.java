@@ -93,6 +93,10 @@ public class TicketOrderActivity extends BaseActivity{
 	private ArrayList<PassengerInfo> passenger_infos;
 	
 	private TextView tv_order_total;
+	/**
+	 * 每个乘机人的单价总和
+	 */
+	private int ticket_unit_price = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -147,6 +151,17 @@ public class TicketOrderActivity extends BaseActivity{
 		lv_order_passengerInfo = (ListView)findViewById(R.id.lv_order_passengerInfo);
 		passengerAdapter = new OrderPassengerAdapter(this, passenger_infos, certType_positions);
 		lv_order_passengerInfo.setAdapter(passengerAdapter);
+		passengerAdapter.setSizeChangeCommand(new Commands() {
+			@Override
+			public void executeCommand(Message msg_params) {
+				int count = passenger_infos.size();
+				tv_order_total = (TextView)findViewById(R.id.tv_order_total);
+				tv_order_total.setText(String.format(
+						getString(R.string.order_peopleAndPrice),
+						String.valueOf(passenger_infos.size()),
+						String.valueOf(ticket_unit_price * count)));
+			}
+		});
 		lv_order_insure.requestFocus();
 		/**
 		 * --------------------------------乘机人列表end---------------------------------
@@ -157,15 +172,15 @@ public class TicketOrderActivity extends BaseActivity{
 		 */
 		ListView lv_order_ticketInfo = (ListView)findViewById(R.id.lv_order_ticketInfo);
 		ArrayList<FlightInfo> flightInfos = getIntent().getParcelableArrayListExtra(KEY_PARCELABLE);
-
-
+		for (FlightInfo info:flightInfos) {
+			ticket_unit_price +=Integer.valueOf(info.P)+Integer.valueOf(info.airPortBuildPrice)+Integer.valueOf(info.oilPrice);
+		}
 		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, flightInfos);
 		lv_order_ticketInfo.setAdapter(orderTicketAdapter);
 		/**
 		 * --------------------------------航班信息列表end---------------------------------
 		 */
-		
-		
+
 		btn_order_morePassenger = (Button) findViewById(R.id.btn_order_morePassenger);
 		btn_order_morePassenger.setOnClickListener(this);
 		
@@ -188,7 +203,7 @@ public class TicketOrderActivity extends BaseActivity{
 		tv_order_total.setText(String.format(
 				getString(R.string.order_peopleAndPrice),
 				String.valueOf(passenger_infos.size()),
-				"1350"));
+				String.valueOf(ticket_unit_price)));
 
 		handler.post(new Runnable() {
 
@@ -306,9 +321,7 @@ public class TicketOrderActivity extends BaseActivity{
 				String certType = data.getStringExtra(KEY_TYPE_CERT);
 				passenger_infos.get(view_position).certType = certType;
 				passenger_infos.get(view_position).cert_position = type_position;
-				/**
-				 * 在乘机人adapter刷新前，让空险列表（或其他列表）获取焦点，这样就导致乘机人的editText失去焦点，从而数据不改变。
-				 */
+
 				lv_order_insure.requestFocus();
 				passengerAdapter.notifyDataSetChanged();
 				break;

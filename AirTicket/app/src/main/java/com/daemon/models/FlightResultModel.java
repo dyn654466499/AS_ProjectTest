@@ -43,44 +43,6 @@ public class FlightResultModel extends BaseModel {
     public void changeModelState(Message changeStateMessage) {
         // TODO Auto-generated method stub
         switch (changeStateMessage.what) {
-            case Constants.MODEL_TICKET_BOOK:
-
-//				HashMap<String,String> params_map = (HashMap<String,String>)changeStateMessage.obj;
-//				//String url =  Constants.URL_FLIGHT_LIST_V1+VolleyUtil.formatGetParams(params_map);
-//                String url = "http://121.40.116.51:9000/FlightAPI/getFlightList?Username=zhangsan&Scity=CNH&Ecity=SHA&Date=2016-01-29";
-//				RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-//                XMLRequest request = new XMLRequest(url, new Response.Listener<XmlPullParser>() {
-//                    @Override
-//                    public void onResponse(XmlPullParser xmlPullParser) {
-//                        //Log.e(getTAG(),xmlPullParser.getText());
-//                        try {
-//                            int eventType = xmlPullParser.getEventType();
-//                            while (eventType != XmlPullParser.END_DOCUMENT) {
-//                                switch (eventType) {
-//                                    case XmlPullParser.START_TAG:
-//                                        if("string".equals(xmlPullParser.getName())){
-//                                            Log.e(getTAG(), ErrorCodeUtil.getErrorMessage(mContext, xmlPullParser.nextText()));
-//                                        }
-//
-//                                        break;
-//                                }
-//                                eventType = xmlPullParser.next();
-//                            }
-//                        } catch (XmlPullParserException e) {
-//                            e.printStackTrace();
-//                        } catch (IOException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                }, new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError volleyError) {
-//                        //Log.e(getTAG(),volleyError.getMessage());
-//                    }
-//                });
-//				requestQueue.add(request);
-                break;
-
             case Constants.MODEL_FLIGHT_SEARCH:
                 HashMap<String, String> params_map = (HashMap<String, String>) changeStateMessage.obj;
                 String url = Constants.URL_FLIGHT_LIST + VolleyUtil.formatGetParams(params_map);

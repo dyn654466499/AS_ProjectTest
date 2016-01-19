@@ -1,13 +1,5 @@
 package com.daemon.adapters;
 
-import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
-import static com.daemon.consts.Constants.KEY_TYPE_CERT;
-import static com.daemon.consts.Constants.KEY_TYPE;
-import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
-import static com.daemon.consts.Constants.KEY_TYPE_PASSENGER_CERT_POSITION;
-
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.text.Editable;
@@ -28,18 +20,30 @@ import android.widget.TextView;
 import com.daemon.activities.TypeSelectActivity;
 import com.daemon.airticket.R;
 import com.daemon.beans.PassengerInfo;
+import com.daemon.interfaces.Commands;
+
+import java.util.ArrayList;
+
+import static com.daemon.consts.Constants.KEY_TYPE;
+import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
+import static com.daemon.consts.Constants.KEY_TYPE_CERT;
+import static com.daemon.consts.Constants.KEY_TYPE_PASSENGER_CERT_POSITION;
+import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
 
 public class OrderPassengerAdapter extends BaseAdapter{
 
 	private Activity activity;
 	private ArrayList<PassengerInfo> infos;
-	
+	private Commands command;
 	public OrderPassengerAdapter(final Activity activity, ArrayList<PassengerInfo> infos,SparseIntArray type_positions) {
 		super();
 		this.activity = activity;
 		this.infos = infos;
 	}
 
+    public void setSizeChangeCommand(Commands command){
+		this.command = command;
+	}
 	@Override
 	public int getCount() {
 		return infos.size();
@@ -221,7 +225,10 @@ public class OrderPassengerAdapter extends BaseAdapter{
 		EditText et_order_passengers,et_order_certNum;
 		int position;
 	}
-	
-	
 
+	@Override
+	public void notifyDataSetChanged() {
+		super.notifyDataSetChanged();
+		if(command!=null)command.executeCommand(null);
+	}
 }
