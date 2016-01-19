@@ -248,7 +248,7 @@ public class FlightSearchActivity extends BaseActivity {
 				intent.putExtra(KEY_DATE_LEAVE, leave_date);
 				if (linearLayout_flight_search_arriveDate.getVisibility() == View.VISIBLE){
 					if(arrive_date >= leave_date ||
-							btn_flight_search_goAndBack.getText().toString().equals(CommonUtil.getFormatDateOnlyMonth(arrive_date))){
+							btn_flight_search_leaveDate.getText().toString().equals(CommonUtil.getFormatDateOnlyMonth(arrive_date))){
 						intent.putExtra(KEY_TITLE, btn_flight_search_goAndBack.getText().toString());
 						intent.putExtra(KEY_DATE_ARRIVE, arrive_date);
 					}else{
