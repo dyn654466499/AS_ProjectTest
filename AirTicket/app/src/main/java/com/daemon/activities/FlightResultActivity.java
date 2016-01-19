@@ -23,6 +23,7 @@ import com.daemon.interfaces.Commands;
 import com.daemon.models.FlightResultModel;
 import com.daemon.utils.AutoLoadingUtil;
 import com.daemon.utils.CommonUtil;
+import com.daemon.utils.SPUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,10 +35,7 @@ import static com.daemon.consts.Constants.KEY_CITY_LEAVE;
 import static com.daemon.consts.Constants.KEY_DATE_ARRIVE;
 import static com.daemon.consts.Constants.KEY_DATE_LEAVE;
 import static com.daemon.consts.Constants.KEY_PARCELABLE;
-import static com.daemon.consts.Constants.KEY_SP_AIR_LINE;
-import static com.daemon.consts.Constants.KEY_SP_AIR_PORT;
 import static com.daemon.consts.Constants.KEY_SP_CABIN;
-import static com.daemon.consts.Constants.KEY_SP_THREE_WORD;
 import static com.daemon.consts.Constants.KEY_TITLE;
 import static com.daemon.consts.Constants.KEY_TYPE_CABIN;
 import static com.daemon.consts.Constants.KEY_USERNAME;
@@ -73,8 +71,8 @@ public class FlightResultActivity extends BaseActivity{
 		setModelDelegate(new FlightResultModel(handler, this));
 		setViewChangeListener(this);
 
-		SharedPreferences sp_three_word = getSharedPreferences(KEY_SP_THREE_WORD, Context.MODE_PRIVATE);
-		SharedPreferences sp_cabin = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE);
+		SharedPreferences sp_three_word = SPUtil.getThreeWord(this);//getSharedPreferences(KEY_SP_THREE_WORD, Context.MODE_PRIVATE);
+		SharedPreferences sp_cabin = SPUtil.getCabin(this);//getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE);
 
 		if(getIntent().hasExtra(KEY_PARCELABLE))
 			flightInfo_goAndBack = getIntent().getParcelableExtra(KEY_PARCELABLE);
@@ -150,8 +148,8 @@ public class FlightResultActivity extends BaseActivity{
 						   .show();
 				}else {
 					FlightInfoContainer container = (FlightInfoContainer)msg.obj;
-					SharedPreferences sp_airLine = getSharedPreferences(KEY_SP_AIR_LINE,Context.MODE_PRIVATE);
-					SharedPreferences sp_airPort = getSharedPreferences(KEY_SP_AIR_PORT,Context.MODE_PRIVATE);
+					SharedPreferences sp_airLine = SPUtil.getAirLine(this);//getSharedPreferences(KEY_SP_AIR_LINE,Context.MODE_PRIVATE);
+					SharedPreferences sp_airPort = SPUtil.getAirPort(this);//getSharedPreferences(KEY_SP_AIR_PORT,Context.MODE_PRIVATE);
 
 					flightInfos_group = new ArrayList<FlightInfo>();
 					flightInfos_child = new ArrayList<List<FlightInfo>>();
