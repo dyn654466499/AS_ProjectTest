@@ -1,13 +1,5 @@
 package com.daemon.activities;
 
-import java.util.List;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-
-import com.daemon.interfaces.ViewChangeListener;
-import com.daemon.models.BaseModel;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningAppProcessInfo;
@@ -19,6 +11,14 @@ import android.text.TextUtils;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Toast;
+
+import com.daemon.interfaces.ViewChangeListener;
+import com.daemon.models.BaseModel;
+
+import java.util.List;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 该Activity作为controler的抽象类，负责向model转发view的业务逻辑计算请求，并通知view改变其状态。
@@ -45,6 +45,7 @@ public abstract class BaseActivity extends Activity implements OnClickListener,V
     private ThreadPoolExecutor executor;
     
     protected boolean isActive = false;
+	protected boolean isDestroyed = false;
     
     private Toast mToast;
     
@@ -183,7 +184,13 @@ public abstract class BaseActivity extends Activity implements OnClickListener,V
 		}
 	}
 
-    /**
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		isDestroyed = true;
+	}
+
+	/**
      * 程序是否在前台运行
      * 
      * @return

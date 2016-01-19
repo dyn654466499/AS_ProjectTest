@@ -147,98 +147,100 @@ public class FlightResultActivity extends BaseActivity{
 						   .create()
 						   .show();
 				}else {
-					FlightInfoContainer container = (FlightInfoContainer)msg.obj;
-					SharedPreferences sp_airLine = SPUtil.getAirLine(this);//getSharedPreferences(KEY_SP_AIR_LINE,Context.MODE_PRIVATE);
-					SharedPreferences sp_airPort = SPUtil.getAirPort(this);//getSharedPreferences(KEY_SP_AIR_PORT,Context.MODE_PRIVATE);
+					if(!isDestroyed) {
+						FlightInfoContainer container = (FlightInfoContainer) msg.obj;
+						SharedPreferences sp_airLine = SPUtil.getAirLine(this);//getSharedPreferences(KEY_SP_AIR_LINE,Context.MODE_PRIVATE);
+						SharedPreferences sp_airPort = SPUtil.getAirPort(this);//getSharedPreferences(KEY_SP_AIR_PORT,Context.MODE_PRIVATE);
 
-					flightInfos_group = new ArrayList<FlightInfo>();
-					flightInfos_child = new ArrayList<List<FlightInfo>>();
-					for (FlightResponseInfo reInfo : container.infos) {
-						ArrayList<FlightInfo> flightInfos_child_ = new ArrayList<FlightInfo>();
-						String[] airTerminal = reInfo.AirTerminal.split(",");
+						flightInfos_group = new ArrayList<FlightInfo>();
+						flightInfos_child = new ArrayList<List<FlightInfo>>();
+						for (FlightResponseInfo reInfo : container.infos) {
+							ArrayList<FlightInfo> flightInfos_child_ = new ArrayList<FlightInfo>();
+							String[] airTerminal = reInfo.AirTerminal.split(",");
 
-						FlightInfo info = new FlightInfo();
-						info.N = reInfo.cabinInfo.get(0).N;
-						info.D = CommonUtil.getFormatDiscount(reInfo.cabinInfo.get(0).D);
-						info.P = reInfo.cabinInfo.get(0).P;
+							FlightInfo info = new FlightInfo();
+							info.N = reInfo.cabinInfo.get(0).N;
+							info.D = CommonUtil.getFormatDiscount(reInfo.cabinInfo.get(0).D);
+							info.P = reInfo.cabinInfo.get(0).P;
 
-						info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
-						info.AirLine = sp_airLine.getString(reInfo.AirLine, "");
-						info.Ecity = sp_airPort.getString(reInfo.Ecity,"")+airTerminal[1];
-						info.Etime = reInfo.Etime;
-						info.Scity = sp_airPort.getString(reInfo.Scity,"")+airTerminal[0];
-						info.Stime = reInfo.Stime;
-						info.FlightNo = reInfo.FlightNo;
-						info.FlightType = reInfo.FlightType;
-						info.planeSize = "";
+							info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
+							info.AirLine = sp_airLine.getString(reInfo.AirLine, "");
+							info.Ecity = sp_airPort.getString(reInfo.Ecity, "") + airTerminal[1];
+							info.Etime = reInfo.Etime;
+							info.Scity = sp_airPort.getString(reInfo.Scity, "") + airTerminal[0];
+							info.Stime = reInfo.Stime;
+							info.FlightNo = reInfo.FlightNo;
+							info.FlightType = reInfo.FlightType;
+							info.planeSize = "";
 
-						for (CabinInfo cabinInfo : reInfo.cabinInfo) {
-							FlightInfo childInfo = new FlightInfo();
-							childInfo.Sdate = reInfo.Sdate;
-							childInfo.D = CommonUtil.getFormatDiscount(cabinInfo.D);
-							childInfo.P = cabinInfo.P;
-							childInfo.cabinType = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE).getString(cabinInfo.L, "");
-							childInfo.Change = cabinInfo.Change;
-							childInfo.Return = cabinInfo.Return;
-
-
-							childInfo.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
-							childInfo.oilPrice = reInfo.Fees;
-							childInfo.airPortBuildPrice = reInfo.AirTax;
-							childInfo.AirLine = sp_airLine.getString(reInfo.AirLine, "");
-							childInfo.Ecity = sp_airPort.getString(reInfo.Ecity,"")+airTerminal[1];
-							childInfo.Etime = reInfo.Etime;
-							childInfo.Scity = sp_airPort.getString(reInfo.Scity,"")+airTerminal[0];
-							childInfo.Stime = reInfo.Stime;
-							childInfo.FlightNo = reInfo.FlightNo;
-							flightInfos_child_.add(childInfo);
-						}
-
-						flightInfos_group.add(info);
-						flightInfos_child.add(flightInfos_child_);
-					}
+							for (CabinInfo cabinInfo : reInfo.cabinInfo) {
+								FlightInfo childInfo = new FlightInfo();
+								childInfo.Sdate = reInfo.Sdate;
+								childInfo.D = CommonUtil.getFormatDiscount(cabinInfo.D);
+								childInfo.P = cabinInfo.P;
+								childInfo.cabinType = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE).getString(cabinInfo.L, "");
+								childInfo.Change = cabinInfo.Change;
+								childInfo.Return = cabinInfo.Return;
 
 
-					elv_flight_result = (ExpandableListView)findViewById(R.id.elv_flight_result);
-					final FlightResultAdapter adapter = new FlightResultAdapter(this, flightInfos_group, flightInfos_child);
-					adapter.setExpandableListView(elv_flight_result);
-					elv_flight_result.setAdapter(adapter);
-
-					adapter.setTicketBookCommands(new Commands() {
-						@Override
-						public void executeCommand(Message msg_params) {
-							if(getIntent().hasExtra(KEY_DATE_ARRIVE)&&flightInfo_goAndBack==null){
-								/**
-								 * 如果是往返，再跳回查询结果界面
-								 */
-								Intent intent = new Intent(FlightResultActivity.this,FlightResultActivity.class);
-								ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>)msg_params.obj;
-								intent.putExtra(KEY_PARCELABLE,flightInfos.get(0));
-
-								intent.putExtra(KEY_CITY_LEAVE, getIntent().getStringExtra(KEY_CITY_ARRIVE));
-								intent.putExtra(KEY_CITY_ARRIVE, getIntent().getStringExtra(KEY_CITY_LEAVE));
-								intent.putExtra(KEY_DATE_LEAVE, getIntent().getLongExtra(KEY_DATE_ARRIVE, System.currentTimeMillis()));
-								intent.putExtra(KEY_TYPE_CABIN, getIntent().getStringExtra(KEY_TYPE_CABIN));
-								intent.putExtra(KEY_TITLE, getIntent().getStringExtra(KEY_TITLE));
-
-								startActivity(intent);
-							}else{
-								/**
-								 * 如果不是往返，直接跳到订单界面
-								 */
-								Intent intent = new Intent(FlightResultActivity.this,TicketOrderActivity.class);
-								ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>)msg_params.obj;
-								if(flightInfo_goAndBack!=null){
-									flightInfos.add(flightInfo_goAndBack);
-									Collections.reverse(flightInfos);
-								}
-								intent.putExtra(KEY_PARCELABLE,flightInfos);
-								startActivity(intent);
-								flightInfo_goAndBack = null;
+								childInfo.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
+								childInfo.oilPrice = reInfo.Fees;
+								childInfo.airPortBuildPrice = reInfo.AirTax;
+								childInfo.AirLine = sp_airLine.getString(reInfo.AirLine, "");
+								childInfo.Ecity = sp_airPort.getString(reInfo.Ecity, "") + airTerminal[1];
+								childInfo.Etime = reInfo.Etime;
+								childInfo.Scity = sp_airPort.getString(reInfo.Scity, "") + airTerminal[0];
+								childInfo.Stime = reInfo.Stime;
+								childInfo.FlightNo = reInfo.FlightNo;
+								flightInfos_child_.add(childInfo);
 							}
 
+							flightInfos_group.add(info);
+							flightInfos_child.add(flightInfos_child_);
 						}
-					});
+
+
+						elv_flight_result = (ExpandableListView) findViewById(R.id.elv_flight_result);
+						final FlightResultAdapter adapter = new FlightResultAdapter(this, flightInfos_group, flightInfos_child);
+						adapter.setExpandableListView(elv_flight_result);
+						elv_flight_result.setAdapter(adapter);
+
+						adapter.setTicketBookCommands(new Commands() {
+							@Override
+							public void executeCommand(Message msg_params) {
+								if (getIntent().hasExtra(KEY_DATE_ARRIVE) && flightInfo_goAndBack == null) {
+									/**
+									 * 如果是往返，再跳回查询结果界面
+									 */
+									Intent intent = new Intent(FlightResultActivity.this, FlightResultActivity.class);
+									ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>) msg_params.obj;
+									intent.putExtra(KEY_PARCELABLE, flightInfos.get(0));
+
+									intent.putExtra(KEY_CITY_LEAVE, getIntent().getStringExtra(KEY_CITY_ARRIVE));
+									intent.putExtra(KEY_CITY_ARRIVE, getIntent().getStringExtra(KEY_CITY_LEAVE));
+									intent.putExtra(KEY_DATE_LEAVE, getIntent().getLongExtra(KEY_DATE_ARRIVE, System.currentTimeMillis()));
+									intent.putExtra(KEY_TYPE_CABIN, getIntent().getStringExtra(KEY_TYPE_CABIN));
+									intent.putExtra(KEY_TITLE, getIntent().getStringExtra(KEY_TITLE));
+
+									startActivity(intent);
+								} else {
+									/**
+									 * 如果不是往返，直接跳到订单界面
+									 */
+									Intent intent = new Intent(FlightResultActivity.this, TicketOrderActivity.class);
+									ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>) msg_params.obj;
+									if (flightInfo_goAndBack != null) {
+										flightInfos.add(flightInfo_goAndBack);
+										Collections.reverse(flightInfos);
+									}
+									intent.putExtra(KEY_PARCELABLE, flightInfos);
+									startActivity(intent);
+									flightInfo_goAndBack = null;
+								}
+
+							}
+						});
+					}
 				}
 				break;
 
