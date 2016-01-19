@@ -31,6 +31,9 @@ public class Constants {
     public static final String KEY_CITY_ARRIVE = "Ecity";
 	public static final String KEY_USERNAME = "Username";
 
+	public static final String KEY_CHANGE = "Change";
+	public static final String KEY_RETURN = "Return";
+
 	public static final String KEY_INSURE_PRICE = "保险价格";
 	public static final String KEY_INSURE_NAME = "保险名称";
 	

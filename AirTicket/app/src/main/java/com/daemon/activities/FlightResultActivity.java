@@ -9,6 +9,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.daemon.adapters.FlightResultAdapter;
@@ -20,9 +21,11 @@ import com.daemon.beans.FlightResponseInfo;
 import com.daemon.consts.Constants;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.FlightResultModel;
+import com.daemon.utils.AutoLoadingUtil;
 import com.daemon.utils.CommonUtil;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -52,12 +55,18 @@ public class FlightResultActivity extends BaseActivity{
     private ExpandableListView elv_flight_result;
     private List<FlightInfo> flightInfos_group;
     private List<List<FlightInfo>> flightInfos_child;
-    
+	String Scity;
+	String Ecity;
+	String cabin;
+	String date_leave;
+	FlightInfo flightInfo_goAndBack;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flight_result);
+		LinearLayout linearLayout_flight_result = (LinearLayout) findViewById(R.id.linearLayout_flight_result);
+		AutoLoadingUtil.setAutoLoadingView(linearLayout_flight_result);
 		/**
 		 * 自定义的框架
 		 */
@@ -67,34 +76,38 @@ public class FlightResultActivity extends BaseActivity{
 		SharedPreferences sp_three_word = getSharedPreferences(KEY_SP_THREE_WORD, Context.MODE_PRIVATE);
 		SharedPreferences sp_cabin = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE);
 
-		String Scity = sp_three_word.getString(getIntent().getStringExtra(KEY_CITY_LEAVE), "");
-		String Ecity = sp_three_word.getString(getIntent().getStringExtra(KEY_CITY_ARRIVE), "");
-		String cabin = sp_cabin.getString(getIntent().getStringExtra(KEY_TYPE_CABIN), "");
-		String date_leave = CommonUtil.getFormatDate(getIntent().getLongExtra(KEY_DATE_LEAVE, System.currentTimeMillis()));
-		String date_arrive = CommonUtil.getFormatDate(getIntent().getLongExtra(KEY_DATE_ARRIVE, System.currentTimeMillis()));
+		if(getIntent().hasExtra(KEY_PARCELABLE))
+			flightInfo_goAndBack = getIntent().getParcelableExtra(KEY_PARCELABLE);
 
-		TextView tv_title = (TextView)findViewById(R.id.tv_title);
-		tv_title.setText(String.format(getString(R.string.title_flight_result),
-				getIntent().getStringExtra(KEY_CITY_LEAVE),
-				getIntent().getStringExtra(KEY_CITY_ARRIVE),
-				getIntent().getStringExtra(KEY_TITLE)
-		));
+		TextView tv_ticket_result_leaveDate = (TextView)findViewById(R.id.tv_ticket_result_leaveDate);
+
+
+		   Scity = sp_three_word.getString(getIntent().getStringExtra(KEY_CITY_LEAVE), "");
+		    Ecity = sp_three_word.getString(getIntent().getStringExtra(KEY_CITY_ARRIVE), "");
+		    cabin = sp_cabin.getString(getIntent().getStringExtra(KEY_TYPE_CABIN), "");
+		    date_leave = CommonUtil.getFormatDate(getIntent().getLongExtra(KEY_DATE_LEAVE, System.currentTimeMillis()));
+			TextView tv_title = (TextView)findViewById(R.id.tv_title);
+			tv_title.setText(String.format(getString(R.string.title_flight_result),
+					getIntent().getStringExtra(KEY_CITY_LEAVE),
+					getIntent().getStringExtra(KEY_CITY_ARRIVE),
+					getIntent().getStringExtra(KEY_TITLE)
+			));
+			tv_ticket_result_leaveDate.setText(CommonUtil.getFormatDateOnlyYear(getIntent().getLongExtra(KEY_DATE_LEAVE, System.currentTimeMillis())));
 
 		Button btn_title_back = (Button)findViewById(R.id.btn_title_back);
 		btn_title_back.setOnClickListener(this);
 
-		TextView tv_ticket_result_leaveDate = (TextView)findViewById(R.id.tv_ticket_result_leaveDate);
-		tv_ticket_result_leaveDate.setText(CommonUtil.getFormatDateOnlyYear(getIntent().getLongExtra(KEY_DATE_LEAVE, System.currentTimeMillis())));
+
 
 		/**
 		 * 封装请求参数传给model
 		 */
 		HashMap<String, String> map = new HashMap<>();
-		map.put(KEY_CITY_LEAVE, Scity);
+		map.put(KEY_CITY_LEAVE, Scity);//三字码
 		map.put(KEY_CITY_ARRIVE, Ecity);
 		map.put(KEY_USERNAME, "wangjunyi");
-		map.put(KEY_DATE_LEAVE, date_leave);
-		map.put(KEY_TYPE_CABIN, cabin);
+		map.put(KEY_DATE_LEAVE, date_leave);//yyyy-mm-dd
+		map.put(KEY_TYPE_CABIN, cabin);//字母
 
 		notifyModelChange(Message.obtain(handler, MODEL_FLIGHT_SEARCH, map));
 
@@ -127,9 +140,11 @@ public class FlightResultActivity extends BaseActivity{
 		// TODO Auto-generated method stub
 		switch (msg.what){
 			case VIEW_FLIGHT_SEARCH:
+				AutoLoadingUtil.cancelAutoLoadingView();
 				if(msg.obj instanceof  String){
+					if(isActive)
                    new AlertDialog.Builder(FlightResultActivity.this)
-						   .setTitle(getString(R.string.title_flight_result))
+						   .setTitle("哎呀，出错了！")
 						   .setMessage((String)msg.obj)
 						   .create()
 						   .show();
@@ -157,7 +172,7 @@ public class FlightResultActivity extends BaseActivity{
 						info.Stime = reInfo.Stime;
 						info.FlightNo = reInfo.FlightNo;
 						info.FlightType = reInfo.FlightType;
-						info.planeSize = "(中)";
+						info.planeSize = "";
 
 						for (CabinInfo cabinInfo : reInfo.cabinInfo) {
 							FlightInfo childInfo = new FlightInfo();
@@ -165,7 +180,11 @@ public class FlightResultActivity extends BaseActivity{
 							childInfo.D = CommonUtil.getFormatDiscount(cabinInfo.D);
 							childInfo.P = "￥" + cabinInfo.P;
 							childInfo.cabinType = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE).getString(cabinInfo.L, "");
-							info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
+							childInfo.Change = cabinInfo.Change;
+							childInfo.Return = cabinInfo.Return;
+
+
+							childInfo.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
 							childInfo.oilPrice = "燃油￥" +reInfo.Fees;
 							childInfo.airPortBuildPrice = "民航基金￥" +reInfo.AirTax;
 							childInfo.AirLine = sp_airLine.getString(reInfo.AirLine, "");
@@ -182,7 +201,7 @@ public class FlightResultActivity extends BaseActivity{
 					}
 
 
-					elv_flight_result = (ExpandableListView) findViewById(R.id.elv_flight_result);
+					elv_flight_result = (ExpandableListView)findViewById(R.id.elv_flight_result);
 					final FlightResultAdapter adapter = new FlightResultAdapter(this, flightInfos_group, flightInfos_child);
 					adapter.setExpandableListView(elv_flight_result);
 					elv_flight_result.setAdapter(adapter);
@@ -190,10 +209,36 @@ public class FlightResultActivity extends BaseActivity{
 					adapter.setTicketBookCommands(new Commands() {
 						@Override
 						public void executeCommand(Message msg_params) {
-							Intent intent = new Intent(FlightResultActivity.this,TicketOrderActivity.class);
-							ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>)msg_params.obj;
-							intent.putExtra(KEY_PARCELABLE,flightInfos);
-							startActivity(intent);
+							if(getIntent().hasExtra(KEY_DATE_ARRIVE)&&flightInfo_goAndBack==null){
+								/**
+								 * 如果是往返，再跳回查询结果界面
+								 */
+								Intent intent = new Intent(FlightResultActivity.this,FlightResultActivity.class);
+								ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>)msg_params.obj;
+								intent.putExtra(KEY_PARCELABLE,flightInfos.get(0));
+
+								intent.putExtra(KEY_CITY_LEAVE, getIntent().getStringExtra(KEY_CITY_ARRIVE));
+								intent.putExtra(KEY_CITY_ARRIVE, getIntent().getStringExtra(KEY_CITY_LEAVE));
+								intent.putExtra(KEY_DATE_LEAVE, getIntent().getLongExtra(KEY_DATE_ARRIVE, System.currentTimeMillis()));
+								intent.putExtra(KEY_TYPE_CABIN, getIntent().getStringExtra(KEY_TYPE_CABIN));
+								intent.putExtra(KEY_TITLE, getIntent().getStringExtra(KEY_TITLE));
+
+								startActivity(intent);
+							}else{
+								/**
+								 * 如果不是往返，直接跳到订单界面
+								 */
+								Intent intent = new Intent(FlightResultActivity.this,TicketOrderActivity.class);
+								ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>)msg_params.obj;
+								if(flightInfo_goAndBack!=null){
+									flightInfos.add(flightInfo_goAndBack);
+									Collections.reverse(flightInfos);
+								}
+								intent.putExtra(KEY_PARCELABLE,flightInfos);
+								startActivity(intent);
+								flightInfo_goAndBack = null;
+							}
+
 						}
 					});
 				}

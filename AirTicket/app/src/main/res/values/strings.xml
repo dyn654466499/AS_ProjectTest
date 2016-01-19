@@ -123,9 +123,9 @@
         <!-- 热门城市 -->
 
     <string-array name="hot_city">
-        <item>北京</item>
-        <item>广州</item>
-        <item>上海</item>
+        <item>北京市</item>
+        <item>广州市</item>
+        <item>上海市</item>
     </string-array>
     
     <string-array name="CityNames">

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -15,6 +14,8 @@ import com.daemon.airticket.R;
 import com.daemon.beans.FlightInfo;
 
 import java.util.List;
+
+import static  com.daemon.consts.Constants.*;
 
 public class OrderTicketAdapter extends BaseAdapter {
 	private Context mContext;
@@ -82,19 +83,21 @@ public class OrderTicketAdapter extends BaseAdapter {
 			holder.tv_order_ticket_airLine = (TextView) convertView
 					.findViewById(R.id.tv_order_ticket_airLine);
 
-            holder.btn_order_endorse.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					// TODO Auto-generated method stub
-					mContext.startActivity(new Intent(mContext,EndorseActivity.class));
-				}
-			});
-
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
+		holder.btn_order_endorse.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(mContext,EndorseActivity.class);
+				intent.putExtra(KEY_CHANGE,infos.get(position).Change);
+				intent.putExtra(KEY_RETURN,infos.get(position).Return);
+				mContext.startActivity(intent);
+			}
+		});
 		 holder.tv_order_ticket_takeOffDate.setText(infos.get(position).Sdate);
 		 holder.tv_order_ticket_takeOffTime.setText(infos.get(position).Stime);
 		 holder.tv_order_ticket_landingTime.setText(infos.get(position).Etime);

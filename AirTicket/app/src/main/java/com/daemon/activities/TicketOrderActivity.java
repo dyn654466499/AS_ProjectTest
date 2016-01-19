@@ -102,9 +102,9 @@ public class TicketOrderActivity extends BaseActivity{
 		/**
 		 * 自定义的框架
 		 */
-		setModelDelegate(new TicketOrderModel(handler,this));
+		setModelDelegate(new TicketOrderModel(handler, this));
 		setViewChangeListener(this);
-		
+
 		/**
 		 * --------------------------------空险列表start---------------------------------
 		 */
@@ -153,16 +153,16 @@ public class TicketOrderActivity extends BaseActivity{
 		 */
 		
 		/**
-		 * --------------------------------机票信息列表start---------------------------------
+		 * --------------------------------航班信息列表start---------------------------------
 		 */
 		ListView lv_order_ticketInfo = (ListView)findViewById(R.id.lv_order_ticketInfo);
 		ArrayList<FlightInfo> flightInfos = getIntent().getParcelableArrayListExtra(KEY_PARCELABLE);
-		if(flightInfos == null)flightInfos = new ArrayList<>();
+
 
 		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, flightInfos);
 		lv_order_ticketInfo.setAdapter(orderTicketAdapter);
 		/**
-		 * --------------------------------机票信息列表end---------------------------------
+		 * --------------------------------航班信息列表end---------------------------------
 		 */
 		
 		
@@ -189,6 +189,19 @@ public class TicketOrderActivity extends BaseActivity{
 				getString(R.string.order_peopleAndPrice),
 				String.valueOf(passenger_infos.size()),
 				"1350"));
+
+		handler.post(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				/**
+				 * 使scrollView向顶部滑动
+				 */
+				ScrollView sv_order = (ScrollView) findViewById(R.id.sv_order);
+				sv_order.fullScroll(ScrollView.FOCUS_UP);
+			}
+		});
 	}
 
 	@Override

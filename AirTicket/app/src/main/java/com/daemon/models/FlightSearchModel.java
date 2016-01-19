@@ -3,26 +3,6 @@ package com.daemon.models;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
-import android.util.Log;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.daemon.beans.FlightInfoContainer;
-import com.daemon.consts.Constants;
-import com.daemon.utils.ErrorCodeUtil;
-import com.daemon.utils.VolleyUtil;
-import com.stanfy.gsonxml.GsonXml;
-import com.stanfy.gsonxml.GsonXmlBuilder;
-import com.stanfy.gsonxml.XmlParserCreator;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import java.util.HashMap;
 
 public class FlightSearchModel extends BaseModel{
     private Context mContext;
@@ -41,67 +21,6 @@ public class FlightSearchModel extends BaseModel{
 	@Override
 	public void changeModelState(Message changeStateMessage) {
 		// TODO Auto-generated method stub
-		switch (changeStateMessage.what){
-			case Constants.MODEL_FLIGHT_SEARCH:
-				HashMap<String,String> params_map = (HashMap<String,String>)changeStateMessage.obj;
-				String url =  Constants.URL_FLIGHT_LIST+ VolleyUtil.formatGetParams(params_map);
-				RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-                StringRequest request = new StringRequest(url, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String s) {
-                       if(!TextUtils.isEmpty(s)){
-                           XmlParserCreator parserCreator = new XmlParserCreator() {
-                               @Override
-                               public XmlPullParser createParser() {
-                                   try {
-                                       return XmlPullParserFactory.newInstance().newPullParser();
-                                   } catch (Exception e) {
-                                       throw new RuntimeException(e);
-                                   }
-                               }
-                           };
 
-                           GsonXml gsonXml = new GsonXmlBuilder()
-                                   .setXmlParserCreator(parserCreator)
-                                   .setSameNameLists(true)
-                                   .create();
-
-                           String header = "<string xmlns=\"http://policy.jinri.cn/\"><?xml version=\"1.0\" encoding=\"gb2312\"?>";
-                           String footer = "</string>";
-//                           String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-//                                   "<string xmlns=\"http://policy.jinri.cn/\"><?xml version=\"1.0\" encoding=\"gb2312\"?><JIT-Flight-Response>" +
-//                                   "<Response Sdate=\"2016-03-29\" Scity=\"CKG\" Ecity=\"NNG\" FlightNo=\"CZ8151\" AirLine=\"CZ\" FlightType=\"320\" Stime=\"08:10\" Etime=\"09:35\" Stop=\"0\" EPiao=\"E\" Tax=\"50\" AirTax=\"50\" Fees=\"0\" AirTerminal=\"2A,--\"><Cabin C=\"Y\" N=\"A\" D=\"100\" P=\"950\" T=\"0\" L=\"Y\" K=\"0.50\" RID=\"JVajWCSASPygSHYA+znrjw==\" ID=\"N9BdXJELpXQ=\" XF=\"0\" PI=\"0\" RT=\"0\" RM=\"\" OfficeNum=\"\" Change=\"\" Return=\"\" /><Cabin C=\"W\" N=\"A\" D=\"100\" P=\"950\" T=\"0\" L=\"Y\" K=\"0.50\" RID=\"JVajWCSASPygSHYA+znrjw==\" ID=\"N9BdXJELpXQ=\" XF=\"0\" PI=\"0\" RT=\"0\" RM=\"\" OfficeNum=\"\" Change=\"\" Return=\"\" /><Cabin C=\"J\" N=\"A\" D=\"231\" P=\"2190\" T=\"0\" L=\"C\" K=\"0.50\" RID=\"JVajWCSASPygSHYA+znrjw==\" ID=\"N9BdXJELpXQ=\" XF=\"0\" PI=\"0\" RT=\"0\" RM=\"\" OfficeNum=\"\" Change=\"\" Return=\"\" /></Response>"+
-//                                   "</JIT-Flight-Response></string>";
-                           String xml = s;
-                           try{
-                           if(xml.contains("<JIT-Flight-Response>")){
-                               xml = xml.replace(header,"");
-                               xml = xml.replace(footer,"");
-                               Log.e("sdfsdf",xml);
-                               FlightInfoContainer model = gsonXml.fromXml(xml, FlightInfoContainer.class);
-                               Message.obtain(handler,Constants.VIEW_FLIGHT_SEARCH,model).sendToTarget();
-                               Log.e("sdfsdf",model.infos.get(model.infos.size()-1).cabinInfo.get(model.infos.get(model.infos.size()-1).cabinInfo.size()-1).Return+"");
-                           }else{
-                               String message = ErrorCodeUtil.getErrorMessage(mContext, s);
-                               Message.obtain(handler,Constants.VIEW_FLIGHT_SEARCH,message).sendToTarget();
-                           }
-                           }catch (Exception e){
-                               e.printStackTrace();
-                               String message = "解析xml出错";
-                               Message.obtain(handler,Constants.VIEW_FLIGHT_SEARCH,message).sendToTarget();
-                           }
-                       }
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        String message = "网络请求出错";
-                        Log.e(getTAG(),volleyError.getMessage());
-                        Message.obtain(handler,Constants.VIEW_FLIGHT_SEARCH,message).sendToTarget();
-                    }
-                });
-				requestQueue.add(request);
-				break;
 		}
-	}
 }

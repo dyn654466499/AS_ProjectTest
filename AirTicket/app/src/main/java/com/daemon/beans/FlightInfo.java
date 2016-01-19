@@ -67,6 +67,14 @@ public class FlightInfo implements Parcelable {
 	 */
 	public String airPortBuildPrice;
 	/**
+	 * 改签规定
+	 */
+	public String Change;
+	/**
+	 * 退票规定
+	 */
+	public String Return;
+	/**
 	 * 航空公司logo
 	 */
 	public Drawable ariLinesIcon;
@@ -90,6 +98,9 @@ public class FlightInfo implements Parcelable {
 		planeSize = in.readString();
 		FlightType = in.readString();
 		oilPrice = in.readString();
+		Change = in.readString();
+		Return = in.readString();
+
 		airPortBuildPrice = in.readString();
 		isExpanded = in.readByte() != 0;
 	}
@@ -131,6 +142,8 @@ public class FlightInfo implements Parcelable {
 		dest.writeString(planeSize);
 		dest.writeString(FlightType);
 		dest.writeString(oilPrice);
+		dest.writeString(Change);
+		dest.writeString(Return);
 		dest.writeString(airPortBuildPrice);
 		dest.writeByte((byte) (isExpanded ? 1 : 0));
 	}
