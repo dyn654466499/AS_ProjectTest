@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:2:1-111:12
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:2:1-116:12
 	package
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml
@@ -198,7 +198,7 @@ ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xm
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:57:19-67
 application
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:59:5-102:19
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:59:5-107:19
 	android:label
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:63:9-41
 	android:allowBackup
@@ -267,15 +267,21 @@ ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xm
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:100:13-49
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:99:13-70
+activity#com.daemon.pay.unionpay.BaseActivity
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:103:9-106:20
+	android:screenOrientation
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:105:13-49
+	android:name
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:104:13-64
 supports-screens
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:104:5-109:39
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:109:5-114:39
 	android:largeScreens
-		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:106:9-36
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:111:9-36
 	android:smallScreens
-		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:109:9-36
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:114:9-36
 	android:normalScreens
-		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:107:9-37
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:112:9-37
 	android:resizeable
-		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:108:9-34
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:113:9-34
 	android:anyDensity
-		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:105:9-34
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:110:9-34

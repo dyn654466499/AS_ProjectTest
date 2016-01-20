@@ -155,13 +155,7 @@ public class FlightSearchActivity extends BaseActivity {
 
 		btn_flight_search_oneWay.callOnClick();
 
-//		new Thread(){
-//			@Override
-//			public void run() {
-//				super.run();
-//				payurl.payTest();
-//			}
-//		}.start();
+        //startActivity(new Intent(this, com.daemon.pay.unionpay.BaseActivity.class));
 
 	}
 

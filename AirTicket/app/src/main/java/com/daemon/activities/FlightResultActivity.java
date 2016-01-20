@@ -119,7 +119,6 @@ public class FlightResultActivity extends BaseActivity{
 
 	}
 
-
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
@@ -235,7 +234,7 @@ public class FlightResultActivity extends BaseActivity{
 									}
 									intent.putExtra(KEY_PARCELABLE, flightInfos);
 									startActivity(intent);
-									flightInfo_goAndBack = null;
+									//flightInfo_goAndBack = null;
 								}
 
 							}

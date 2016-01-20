@@ -134,9 +134,10 @@ public abstract class BaseActivity extends Activity implements OnClickListener,V
 				// TODO Auto-generated method stub
 				modelDelegate.changeModelState(changeStateMessage);
 			}
-			
 		});
 	}
+
+
 	/**
 	 * 需设置model代理后，才能给model转发请求
 	 * @param changeState

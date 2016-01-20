@@ -105,6 +105,10 @@
             android:name="com.daemon.activities.FlightResultActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.daemon.pay.unionpay.BaseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>
