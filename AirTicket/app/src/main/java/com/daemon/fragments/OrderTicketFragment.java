@@ -4,10 +4,12 @@ import android.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.ScrollView;
 
 import com.daemon.adapters.ConsumeTicketAdapter;
 import com.daemon.airticket.R;
@@ -65,13 +67,14 @@ public class OrderTicketFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootLayout = inflater.inflate(R.layout.fragment_order_ticket, container, false);
+        final View rootLayout = inflater.inflate(R.layout.fragment_order_ticket, container, false);
         ListView lv_my_consume_order_ticket = (ListView)rootLayout.findViewById(R.id.lv_my_consume_order_ticket);
         List<FlightInfo> list = new LinkedList<FlightInfo>();
         for(int i = 0;i<5;i++){
@@ -80,6 +83,13 @@ public class OrderTicketFragment extends Fragment {
         }
         ConsumeTicketAdapter adapter = new ConsumeTicketAdapter(getActivity(),list);
         lv_my_consume_order_ticket.setAdapter(adapter);
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                ScrollView sv = (ScrollView)rootLayout.findViewById(R.id.sv_my_consume_ticket);
+                sv.smoothScrollTo(0,0);
+            }
+        });
         return rootLayout;
     }
 

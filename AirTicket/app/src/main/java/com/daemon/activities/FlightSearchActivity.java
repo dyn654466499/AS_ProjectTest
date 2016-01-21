@@ -15,7 +15,6 @@ import android.widget.TextView;
 import com.daemon.airticket.R;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.FlightSearchModel;
-import com.daemon.pay.icbcpay.ICBCPay;
 import com.daemon.utils.CommonUtil;
 import com.daemon.utils.DialogUtil;
 
@@ -160,13 +159,13 @@ public class FlightSearchActivity extends BaseActivity {
 		btn_flight_search_test.setOnClickListener(this);
 
         //startActivity(new Intent(this, com.daemon.pay.unionpay.BaseActivity.class));
-        new Thread(){
-			@Override
-			public void run() {
-				super.run();
-				ICBCPay.startPostForPay();
-			}
-		}.start();
+//        new Thread(){
+//			@Override
+//			public void run() {
+//				super.run();
+//				ICBCPay.startPostForPay();
+//			}
+//		}.start();
 	}
 
 	@Override

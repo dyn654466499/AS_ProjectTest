@@ -12,10 +12,10 @@ import java.util.List;
  */
 public class FlightInfoContainer implements Parcelable {
     @SerializedName("Response")
-    public List<FlightResponseInfo> infos;
+    public List<FlightRespInfo> infos;
 
     protected FlightInfoContainer(Parcel in) {
-        infos = in.createTypedArrayList(FlightResponseInfo.CREATOR);
+        infos = in.createTypedArrayList(FlightRespInfo.CREATOR);
     }
 
     public static final Creator<FlightInfoContainer> CREATOR = new Creator<FlightInfoContainer>() {

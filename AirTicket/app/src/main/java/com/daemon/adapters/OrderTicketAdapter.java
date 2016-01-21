@@ -2,6 +2,7 @@ package com.daemon.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import com.daemon.activities.EndorseActivity;
 import com.daemon.airticket.R;
 import com.daemon.beans.FlightInfo;
+import com.daemon.utils.SPUtil;
 
 import java.util.List;
 
@@ -20,11 +22,14 @@ import static  com.daemon.consts.Constants.*;
 public class OrderTicketAdapter extends BaseAdapter {
 	private Context mContext;
 	private List<FlightInfo> infos;
-	
+	private SharedPreferences sp_cabin,sp_airLine,sp_airPort;
 	public OrderTicketAdapter(Context mContext, List<FlightInfo> infos) {
 		super();
 		this.mContext = mContext;
 		this.infos = infos;
+		sp_cabin = SPUtil.getCabin(mContext);
+		sp_airLine = SPUtil.getAirLine(mContext);
+		sp_airPort = SPUtil.getAirPort(mContext);
 	}
 
 	@Override
@@ -92,20 +97,22 @@ public class OrderTicketAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(mContext,EndorseActivity.class);
-				intent.putExtra(KEY_CHANGE,infos.get(position).Change);
-				intent.putExtra(KEY_RETURN,infos.get(position).Return);
+				Intent intent = new Intent(mContext, EndorseActivity.class);
+				intent.putExtra(KEY_CHANGE, infos.get(position).Change);
+				intent.putExtra(KEY_RETURN, infos.get(position).Return);
 				mContext.startActivity(intent);
 			}
 		});
+		 String[] airTerminal = infos.get(position).AirTerminal.split(",");
+
 		 holder.tv_order_ticket_takeOffDate.setText(infos.get(position).Sdate);
 		 holder.tv_order_ticket_takeOffTime.setText(infos.get(position).Stime);
 		 holder.tv_order_ticket_landingTime.setText(infos.get(position).Etime);
-		 holder.tv_order_ticket_spacePrice.setText(infos.get(position).cabinType+ "￥" +infos.get(position).P);
-		 holder.tv_order_ticket_takeOffPort.setText(infos.get(position).Scity);
-		 holder.tv_order_ticket_landingPort.setText(infos.get(position).Ecity);
+		 holder.tv_order_ticket_spacePrice.setText(sp_cabin.getString(infos.get(position).cabinType,"")+ "￥" +infos.get(position).P);
+		 holder.tv_order_ticket_takeOffPort.setText(sp_airPort.getString(infos.get(position).Scity, "") + airTerminal[0]);
+		 holder.tv_order_ticket_landingPort.setText(sp_airPort.getString(infos.get(position).Ecity, "") + airTerminal[1]);
 		 holder.tv_order_ticket_airPortBuildPrice.setText("民航基金￥" +infos.get(position).airPortBuildPrice);
-		 holder.tv_order_ticket_airLine.setText(infos.get(position).AirLine+infos.get(position).FlightNo);
+		 holder.tv_order_ticket_airLine.setText(sp_airLine.getString(infos.get(position).AirLine, "")+infos.get(position).FlightNo);
 		 holder.tv_order_ticket_oilPrice.setText("燃油￥" +infos.get(position).oilPrice);
 		 
 		return convertView;

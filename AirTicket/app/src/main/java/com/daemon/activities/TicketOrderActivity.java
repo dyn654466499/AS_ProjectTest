@@ -40,6 +40,7 @@ import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
 import static com.daemon.consts.Constants.KEY_TYPE_CERT;
 import static com.daemon.consts.Constants.KEY_TYPE_PASSENGER_CERT_POSITION;
 import static com.daemon.consts.Constants.KEY_TYPE_TICKET_DISTRIBUTE;
+import static com.daemon.consts.Constants.MODEL_TICKET_ORDER_COMMIT;
 import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
 import static com.daemon.consts.Constants.REQUEST_CODE_CITY;
 import static com.daemon.consts.Constants.REQUEST_CODE_DISTRIBUTE;
@@ -97,6 +98,8 @@ public class TicketOrderActivity extends BaseActivity{
 	 * 每个乘机人的单价总和
 	 */
 	private int ticket_unit_price = 0;
+
+	private ArrayList<FlightInfo> flightInfos;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -171,7 +174,7 @@ public class TicketOrderActivity extends BaseActivity{
 		 * --------------------------------航班信息列表start---------------------------------
 		 */
 		ListView lv_order_ticketInfo = (ListView)findViewById(R.id.lv_order_ticketInfo);
-		ArrayList<FlightInfo> flightInfos = getIntent().getParcelableArrayListExtra(KEY_PARCELABLE);
+		flightInfos = getIntent().getParcelableArrayListExtra(KEY_PARCELABLE);
 		for (FlightInfo info:flightInfos) {
 			ticket_unit_price +=Integer.valueOf(info.P)+Integer.valueOf(info.airPortBuildPrice)+Integer.valueOf(info.oilPrice);
 		}
@@ -278,6 +281,32 @@ public class TicketOrderActivity extends BaseActivity{
 			    		 ",cert_num ="+et_order_certNum.getText().toString()+
 			    		 ",certType="+tv_order_certType.getText());
 			}
+            if(flightInfos.size()==1){
+				HashMap<String,String> params_map = new HashMap<String,String>();
+				params_map.put("RateId",flightInfos.get(0).ID);
+				params_map.put("PolicyId",flightInfos.get(0).RID);
+				params_map.put("Name","邓耀宁");
+				params_map.put("UserName","wang87654321");
+				params_map.put("IDCard","NI452122199001140014");
+				params_map.put("Cabins",flightInfos.get(0).cabinType);
+				params_map.put("dotNum",flightInfos.get(0).K);
+				params_map.put("sCity",flightInfos.get(0).Scity);
+				params_map.put("eCity",flightInfos.get(0).Ecity);
+				params_map.put("sDate",flightInfos.get(0).Sdate);
+				params_map.put("AirChangedContact","15277104415");
+				params_map.put("AutoPay","F");
+				params_map.put("Rateway","0");
+				params_map.put("Airline",flightInfos.get(0).AirLine);
+				notifyModelChange(Message.obtain(handler, MODEL_TICKET_ORDER_COMMIT, params_map));
+			}else{
+				DialogUtil.showDialog(TicketOrderActivity.this, getString(R.string.title_order_edit), "暂时不支持往返创建订单！", new Commands() {
+					@Override
+					public void executeCommand(Message msg_params) {
+
+					}
+				});
+			}
+
 			break;
 		
 		default:

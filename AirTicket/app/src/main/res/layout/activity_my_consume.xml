@@ -11,7 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/ticket_title_color"
-        android:padding="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="10dp"
         >
 
         <LinearLayout
@@ -27,6 +30,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/title_shopping"
+                android:textSize="15sp"
                 android:background="@drawable/btn_oneway_selector"
                 />
 
@@ -36,6 +40,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/title_localCity"
+                android:textSize="15sp"
                 android:background="@drawable/btn_goandback_selector"
                 />
 
@@ -45,6 +50,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/title_catering"
+                android:textSize="15sp"
                 android:background="@drawable/btn_goandback_selector"
                 />
 
@@ -54,6 +60,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/title_hotel"
+                android:textSize="15sp"
                 android:background="@drawable/btn_goandback_selector"
                 />
             <Button
@@ -62,6 +69,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/title_ticket"
+                android:textSize="15sp"
                 android:background="@drawable/btn_goandback_selector"
                 />
         </LinearLayout>

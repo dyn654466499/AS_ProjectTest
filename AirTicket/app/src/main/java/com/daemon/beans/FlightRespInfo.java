@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class FlightResponseInfo implements Parcelable {
+public class FlightRespInfo implements Parcelable {
 	/**
 	 * 起飞日期
 	 */
@@ -86,7 +86,7 @@ public class FlightResponseInfo implements Parcelable {
 	public List<CabinInfo> cabinInfo;
 
 
-	protected FlightResponseInfo(Parcel in) {
+	protected FlightRespInfo(Parcel in) {
 		Sdate = in.readString();
 		Stime = in.readString();
 		Etime = in.readString();
@@ -104,15 +104,15 @@ public class FlightResponseInfo implements Parcelable {
 		cabinInfo = in.createTypedArrayList(CabinInfo.CREATOR);
 	}
 
-	public static final Creator<FlightResponseInfo> CREATOR = new Creator<FlightResponseInfo>() {
+	public static final Creator<FlightRespInfo> CREATOR = new Creator<FlightRespInfo>() {
 		@Override
-		public FlightResponseInfo createFromParcel(Parcel in) {
-			return new FlightResponseInfo(in);
+		public FlightRespInfo createFromParcel(Parcel in) {
+			return new FlightRespInfo(in);
 		}
 
 		@Override
-		public FlightResponseInfo[] newArray(int size) {
-			return new FlightResponseInfo[size];
+		public FlightRespInfo[] newArray(int size) {
+			return new FlightRespInfo[size];
 		}
 	};
 

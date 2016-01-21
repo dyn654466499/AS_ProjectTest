@@ -1,8 +1,8 @@
 package com.daemon.pay.icbcpay;
+import android.util.Base64;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import Decoder.BASE64Decoder;
 
 
 public class ICBCPay {
@@ -34,9 +34,12 @@ public class ICBCPay {
 	 * -----------------------------------------------------
 	 */
 	public static String QrySerialNo="";//要查询的交易数据
-	public static String QryfSeqno="";//要查询的交易数据
+	public static String QryfSeqno="W2016012104024160509";//要查询的交易数据
 	//XML DATA
-	public static String QEPAYSUB="<?xml version='1.0' encoding='GBK'?><CMS><eb><pub><TransCode>QEPAYSUB</TransCode><CIS>"+CISs+"</CIS><BankCode>"+BankCodes+"</BankCode><ID>"+IDs+"</ID><TranDate>"+TranDates+"</TranDate><TranTime>"+TranTimes+"</TranTime><fSeqno>"+fSeqnos+"</fSeqno></pub><in><QrySerialNo>"+QrySerialNo+"</QrySerialNo><QryfSeqno>"+QryfSeqno+"</QryfSeqno></in></eb></CMS>";
+	//public static String QEPAYSUB="<?xml version='1.0' encoding='GBK'?><CMS><eb><pub><TransCode>QEPAYSUB</TransCode><CIS>"+CISs+"</CIS><BankCode>"+BankCodes+"</BankCode><ID>"+IDs+"</ID><TranDate>"+TranDates+"</TranDate><TranTime>"+TranTimes+"</TranTime><fSeqno>"+fSeqnos+"</fSeqno></pub><in><QrySerialNo>"+QrySerialNo+"</QrySerialNo><QryfSeqno>"+QryfSeqno+"</QryfSeqno></in></eb></CMS>";
+	public static String QEPAYSUB="<?xml version='1.0' encoding='GBK'?><CMS><eb><pub><TransCode>QEPAYSUB</TransCode><CIS>"+CISs+"</CIS><BankCode>"+BankCodes+"</BankCode><ID>"+IDs+"</ID><TranDate>"+TranDates+"</TranDate><TranTime>"+TranTimes+"</TranTime><fSeqno>"+fSeqnos+"</fSeqno></pub><in><OrderNo>W2016012104024160509</OrderNo></in></eb></CMS>";
+
+
 	/*
 	 * -------------------------------------------------------
 	 */
@@ -68,11 +71,13 @@ public class ICBCPay {
 
 		if (s == null)
 			return null;
-		BASE64Decoder decoder = new BASE64Decoder();
+		//BASE64Decoder decoder = new BASE64Decoder();
+
 		try
 		{
-			byte[] b = decoder.decodeBuffer(s1);
-			return new String(b);
+			//byte[] b = decoder.decodeBuffer(s1);
+			byte[] b = Base64.decode(s1,Base64.DEFAULT);
+			return new String(b,"gb2312");
 		} catch (Exception e)
 		{
 			return null;

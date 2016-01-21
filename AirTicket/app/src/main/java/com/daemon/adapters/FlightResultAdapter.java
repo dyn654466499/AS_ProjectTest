@@ -1,6 +1,7 @@
 package com.daemon.adapters;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -21,6 +22,7 @@ import com.daemon.airticket.R;
 import com.daemon.beans.FlightInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.utils.ImageUtil;
+import com.daemon.utils.SPUtil;
 import com.daemon.utils.VolleyUtil;
 
 import java.util.ArrayList;
@@ -36,6 +38,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 	 * 命令接口
 	 */
 	private Commands commands;
+	private SharedPreferences sp_cabin,sp_airLine,sp_airPort;
 
 	public FlightResultAdapter(Context mContext, List<FlightInfo> flightInfos_group,
 							   List<List<FlightInfo>> flightInfos_child) {
@@ -47,6 +50,10 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 				R.drawable.ic_xiangxia);
 		bitmap = ImageUtil.rotateBitmap(bitmap, 180);
 		ic_xiangshang = new BitmapDrawable(mContext.getResources(), bitmap);
+
+		sp_cabin = SPUtil.getCabin(mContext);
+		sp_airLine = SPUtil.getAirLine(mContext);
+		sp_airPort = SPUtil.getAirPort(mContext);
 	}
 
 	public void setTicketBookCommands(Commands commands) {
@@ -210,8 +217,8 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 					@Override
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
-						Log.e("btn_ticket_result_book", "groupPosition="+groupPosition+",childPosition="+childPosition);
-					    if(commands!=null){
+						Log.e("btn_ticket_result_book", "groupPosition=" + groupPosition + ",childPosition=" + childPosition);
+						if (commands != null) {
 							Message msg = new Message();
 							ArrayList<FlightInfo> flightInfos = new ArrayList<FlightInfo>();
 							flightInfos.add(flightInfos_child.get(groupPosition).get(childPosition));
@@ -221,8 +228,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 
 					}
 				});
-
-		 child.tv_flight_result_details_cabinType.setText(flightInfos_child.get(groupPosition).get(childPosition).cabinType);
+		 child.tv_flight_result_details_cabinType.setText(sp_cabin.getString(flightInfos_child.get(groupPosition).get(childPosition).cabinType, ""));
 		 child.tv_flight_result_details_discount.setText(flightInfos_child.get(groupPosition).get(childPosition).D);
 		 child.tv_flight_result_details_cabinPrice.setText("￥" +flightInfos_child.get(groupPosition).get(childPosition).P);
 		return convertView;

@@ -1,7 +1,6 @@
 package com.daemon.activities;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,7 +16,7 @@ import com.daemon.airticket.R;
 import com.daemon.beans.CabinInfo;
 import com.daemon.beans.FlightInfo;
 import com.daemon.beans.FlightInfoContainer;
-import com.daemon.beans.FlightResponseInfo;
+import com.daemon.beans.FlightRespInfo;
 import com.daemon.consts.Constants;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.FlightResultModel;
@@ -35,7 +34,6 @@ import static com.daemon.consts.Constants.KEY_CITY_LEAVE;
 import static com.daemon.consts.Constants.KEY_DATE_ARRIVE;
 import static com.daemon.consts.Constants.KEY_DATE_LEAVE;
 import static com.daemon.consts.Constants.KEY_PARCELABLE;
-import static com.daemon.consts.Constants.KEY_SP_CABIN;
 import static com.daemon.consts.Constants.KEY_TITLE;
 import static com.daemon.consts.Constants.KEY_TYPE_CABIN;
 import static com.daemon.consts.Constants.KEY_USERNAME;
@@ -153,7 +151,7 @@ public class FlightResultActivity extends BaseActivity{
 
 						flightInfos_group = new ArrayList<FlightInfo>();
 						flightInfos_child = new ArrayList<List<FlightInfo>>();
-						for (FlightResponseInfo reInfo : container.infos) {
+						for (FlightRespInfo reInfo : container.infos) {
 							ArrayList<FlightInfo> flightInfos_child_ = new ArrayList<FlightInfo>();
 							String[] airTerminal = reInfo.AirTerminal.split(",");
 
@@ -177,20 +175,23 @@ public class FlightResultActivity extends BaseActivity{
 								childInfo.Sdate = reInfo.Sdate;
 								childInfo.D = CommonUtil.getFormatDiscount(cabinInfo.D);
 								childInfo.P = cabinInfo.P;
-								childInfo.cabinType = getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE).getString(cabinInfo.L, "");
+								childInfo.cabinType = cabinInfo.L;
 								childInfo.Change = cabinInfo.Change;
 								childInfo.Return = cabinInfo.Return;
-
+								childInfo.RID = cabinInfo.RID;
+								childInfo.ID = cabinInfo.ID;
+								childInfo.K = cabinInfo.K;
 
 								childInfo.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
 								childInfo.oilPrice = reInfo.Fees;
 								childInfo.airPortBuildPrice = reInfo.AirTax;
-								childInfo.AirLine = sp_airLine.getString(reInfo.AirLine, "");
-								childInfo.Ecity = sp_airPort.getString(reInfo.Ecity, "") + airTerminal[1];
+								childInfo.AirLine = reInfo.AirLine;//sp_airLine.getString(reInfo.AirLine, "");
+								childInfo.Ecity = reInfo.Ecity;//sp_airPort.getString(reInfo.Ecity, "") + airTerminal[1];
 								childInfo.Etime = reInfo.Etime;
-								childInfo.Scity = sp_airPort.getString(reInfo.Scity, "") + airTerminal[0];
+								childInfo.Scity = reInfo.Scity;//sp_airPort.getString(reInfo.Scity, "") + airTerminal[0];
 								childInfo.Stime = reInfo.Stime;
 								childInfo.FlightNo = reInfo.FlightNo;
+								childInfo.AirTerminal = reInfo.AirTerminal;
 								flightInfos_child_.add(childInfo);
 							}
 

@@ -83,6 +83,21 @@ public class FlightInfo implements Parcelable {
 	 */
 	public boolean isExpanded;
 
+	/**
+	 * 政策ID
+	 */
+	public String RID;
+	/**
+	 * 供应商ID
+	 */
+	public String ID;
+	/**
+	 *  采购返点
+	 */
+	public String K;
+
+	public String AirTerminal;
+
 	public FlightInfo(Parcel in) {
 		Sdate = in.readString();
 		Stime = in.readString();
@@ -103,6 +118,11 @@ public class FlightInfo implements Parcelable {
 
 		airPortBuildPrice = in.readString();
 		isExpanded = in.readByte() != 0;
+
+		RID = in.readString();
+		ID = in.readString();
+		K = in.readString();
+		AirTerminal = in.readString();
 	}
 
 	public static final Creator<FlightInfo> CREATOR = new Creator<FlightInfo>() {
@@ -146,5 +166,10 @@ public class FlightInfo implements Parcelable {
 		dest.writeString(Return);
 		dest.writeString(airPortBuildPrice);
 		dest.writeByte((byte) (isExpanded ? 1 : 0));
+
+		dest.writeString(RID);
+		dest.writeString(ID);
+		dest.writeString(K);
+		dest.writeString(AirTerminal);
 	}
 }
