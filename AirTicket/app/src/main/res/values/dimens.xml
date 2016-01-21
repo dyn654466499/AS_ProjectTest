@@ -6,8 +6,9 @@
 
     <dimen name="edittext_corner">5dp</dimen>
     <dimen name="title_corner">5dp</dimen>
-    
-    
+
+
     <dimen name="button_textSize">16sp</dimen>
     <dimen name="layout_title">20sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

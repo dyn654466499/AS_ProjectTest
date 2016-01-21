@@ -9,8 +9,8 @@
     <string name="button_search">开始搜索</string>
     <string name="sure">确定</string>
     <string name="cancel">取消</string>
-    
-       <string name="string_back">返回</string>
+
+    <string name="string_back">返回</string>
     <string name="string_search_hit">搜索中文/城市简拼</string>
     <string name="string_hot_city">热门城市</string>
 
@@ -27,9 +27,16 @@
     <string name="title_date_back">选择返回日期</string>
     <string name="title_order_edit">订单填写</string>
     <string name="title_flight_result">%1$s - %2$s (%3$s) </string>
+    <string name="title_my_consume">我的消费</string>
+
+    <!-- 我的消费 -->
+    <string name="title_ticket">机票 </string>
+    <string name="title_shopping">购物 </string>
+    <string name="title_localCity">同城 </string>
+    <string name="title_hotel">酒店 </string>
+    <string name="title_catering">餐饮 </string>
 
 
-    
     <!-- 舱位类型 -->
     <string-array name="TypeCabin">
         <item>所有舱位</item>
@@ -54,14 +61,14 @@
         <item>不需要报销凭证</item>
         <item>快递</item>
     </string-array>
-    
+
     <!-- 空险类型 -->
     <string-array name="TypeInsure">
         <item>@string/order_insure_casualty</item>
         <item>@string/order_insure_delay</item>
         <item>@string/order_insure_combination</item>
     </string-array>
-    
+
     <!-- 机票订单 -->
     <string name="order_peopleAndPrice">共%1$s人，总计￥%2$s</string>
     <string name="order_name">姓名</string>
@@ -73,8 +80,8 @@
     <string name="order_insure_casualty">航空意外险</string>
     <string name="order_insure_delay">延误取消险</string>
     <string name="order_insure_combination">航空组合险</string>
-    
-    
+
+
     <!-- 城市列表 -->
     <string name="hint_citylist_search">搜索中文/全拼</string>
 
@@ -85,7 +92,7 @@
     <string name="endorse_change_desc" formatted="false">起飞前2小时之前的改期手续费按产品价收取30%，起飞前2小时（含）以内及起飞后的收取50%；改期费与升舱费同时发生，需同时收取。</string>
     <string name="title_endorse">签转条件</string>
     <string name="endorse_desc">不得签转</string>
-    
+
     <!-- 提示 -->
     <string name="tips_exitOrder">您正在填写订单，是否要退出？</string>
 
@@ -119,15 +126,15 @@
         <item>Y</item>
         <item>Z</item>
     </string-array>
-    
-        <!-- 热门城市 -->
+
+    <!-- 热门城市 -->
 
     <string-array name="hot_city">
         <item>北京市</item>
         <item>广州市</item>
         <item>上海市</item>
     </string-array>
-    
+
     <string-array name="CityNames">
         <item>北京首都</item>
         <item>上海虹桥</item>
@@ -298,4 +305,8 @@
         <item>遵义</item>
         <item>郑州</item>
     </string-array>
+    <string name="title_activity_my_consume">MyConsumeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

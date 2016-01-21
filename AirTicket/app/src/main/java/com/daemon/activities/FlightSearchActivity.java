@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.daemon.airticket.R;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.FlightSearchModel;
+import com.daemon.pay.icbcpay.ICBCPay;
 import com.daemon.utils.CommonUtil;
 import com.daemon.utils.DialogUtil;
 
@@ -155,8 +156,17 @@ public class FlightSearchActivity extends BaseActivity {
 
 		btn_flight_search_oneWay.callOnClick();
 
-        //startActivity(new Intent(this, com.daemon.pay.unionpay.BaseActivity.class));
+		Button btn_flight_search_test = (Button) findViewById(R.id.btn_flight_search_test);
+		btn_flight_search_test.setOnClickListener(this);
 
+        //startActivity(new Intent(this, com.daemon.pay.unionpay.BaseActivity.class));
+        new Thread(){
+			@Override
+			public void run() {
+				super.run();
+				ICBCPay.startPostForPay();
+			}
+		}.start();
 	}
 
 	@Override
@@ -164,6 +174,11 @@ public class FlightSearchActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		Intent intent = null;
 		switch (v.getId()) {
+			case R.id.btn_flight_search_test:
+				intent = new Intent(FlightSearchActivity.this,MyConsumeActivity.class);
+				startActivity(intent);
+				break;
+
 			/**
 			 *  单程选择（为了先实现效果，先动态设置selector，后续再改进）
 			 */

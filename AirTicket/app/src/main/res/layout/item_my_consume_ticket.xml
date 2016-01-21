@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ticket_white"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jp_list"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="@string/title_ticket"
+            android:textColor="@color/ticket_black"
+            android:textSize="14sp"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:background="@color/ticket_black"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_my_consume_ticketState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="已出票"
+            android:textSize="14sp"
+            android:textColor="@color/ticket_black"
+            />
+
+        <TextView
+            android:id="@+id/tv_my_consume_ticketPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center_vertical|right"
+            android:textSize="15sp"
+            android:text="2350"
+            android:textColor="@color/ticket_title_color"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@color/ticket_bg_gray"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_my_consume_Scity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="宁波"
+            android:textColor="@color/ticket_black"
+            android:textSize="20sp"
+            />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:background="@color/ticket_black"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_my_consume_Ecity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="北京"
+            android:textSize="20sp"
+            android:textColor="@color/ticket_black"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_my_consume_Sdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="01-07"
+            android:textColor="@color/ticket_font_gray"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_my_consume_flightTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="11:30至12:50"
+            android:textSize="14sp"
+            android:textColor="@color/ticket_font_gray"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_my_consume_flightType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="JQ967"
+            android:textSize="14sp"
+            android:textColor="@color/ticket_font_gray"
+            />
+
+    </LinearLayout>
+</LinearLayout>
