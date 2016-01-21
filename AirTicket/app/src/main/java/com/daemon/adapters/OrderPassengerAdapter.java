@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import com.daemon.activities.TypeSelectActivity;
 import com.daemon.airticket.R;
-import com.daemon.beans.PassengerInfo;
+import com.daemon.beans.Resq_PassengerInfo;
 import com.daemon.interfaces.Commands;
 
 import java.util.ArrayList;
@@ -33,9 +33,9 @@ import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
 public class OrderPassengerAdapter extends BaseAdapter{
 
 	private Activity activity;
-	private ArrayList<PassengerInfo> infos;
+	private ArrayList<Resq_PassengerInfo> infos;
 	private Commands command;
-	public OrderPassengerAdapter(final Activity activity, ArrayList<PassengerInfo> infos,SparseIntArray type_positions) {
+	public OrderPassengerAdapter(final Activity activity, ArrayList<Resq_PassengerInfo> infos,SparseIntArray type_positions) {
 		super();
 		this.activity = activity;
 		this.infos = infos;
@@ -50,7 +50,7 @@ public class OrderPassengerAdapter extends BaseAdapter{
 	}
 
 	@Override
-	public PassengerInfo getItem(int position) {
+	public Resq_PassengerInfo getItem(int position) {
 		// TODO Auto-generated method stub
 		return infos.get(position);
 	}

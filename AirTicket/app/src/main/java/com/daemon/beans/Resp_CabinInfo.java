@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by Administrator on 2016/1/17 0017.
  */
-public class CabinInfo implements Parcelable{
+public class Resp_CabinInfo implements Parcelable{
     @SerializedName("@C")
     public String C;
     @SerializedName("@N")
@@ -43,7 +43,7 @@ public class CabinInfo implements Parcelable{
     @SerializedName("@Return")
     public String Return;
 
-    protected CabinInfo(Parcel in) {
+    protected Resp_CabinInfo(Parcel in) {
         C = in.readString();
         N = in.readString();
         D = in.readString();
@@ -62,15 +62,15 @@ public class CabinInfo implements Parcelable{
         Return = in.readString();
     }
 
-    public static final Creator<CabinInfo> CREATOR = new Creator<CabinInfo>() {
+    public static final Creator<Resp_CabinInfo> CREATOR = new Creator<Resp_CabinInfo>() {
         @Override
-        public CabinInfo createFromParcel(Parcel in) {
-            return new CabinInfo(in);
+        public Resp_CabinInfo createFromParcel(Parcel in) {
+            return new Resp_CabinInfo(in);
         }
 
         @Override
-        public CabinInfo[] newArray(int size) {
-            return new CabinInfo[size];
+        public Resp_CabinInfo[] newArray(int size) {
+            return new Resp_CabinInfo[size];
         }
     };
 

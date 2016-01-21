@@ -3,7 +3,7 @@ package com.daemon.beans;
 /**
  * Created by Administrator on 2016/1/16 0016.
  */
-public class FlightSearchInfo {
+public class Resq_FlightSearchInfo {
 
     /**
      * 起飞日期

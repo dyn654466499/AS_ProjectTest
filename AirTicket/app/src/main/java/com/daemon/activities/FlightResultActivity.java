@@ -13,10 +13,10 @@ import android.widget.TextView;
 
 import com.daemon.adapters.FlightResultAdapter;
 import com.daemon.airticket.R;
-import com.daemon.beans.CabinInfo;
-import com.daemon.beans.FlightInfo;
-import com.daemon.beans.FlightInfoContainer;
-import com.daemon.beans.FlightRespInfo;
+import com.daemon.beans.Resp_CabinInfo;
+import com.daemon.beans.Resq_FlightInfo;
+import com.daemon.beans.Resp_FlightContainerInfo;
+import com.daemon.beans.Resp_FlightInfo;
 import com.daemon.consts.Constants;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.FlightResultModel;
@@ -49,13 +49,13 @@ public class FlightResultActivity extends BaseActivity{
 	 * 航班的可展开列表
 	 */
     private ExpandableListView elv_flight_result;
-    private List<FlightInfo> flightInfos_group;
-    private List<List<FlightInfo>> flightInfos_child;
+    private List<Resq_FlightInfo> resqFlightInfos_group;
+    private List<List<Resq_FlightInfo>> flightInfos_child;
 	String Scity;
 	String Ecity;
 	String cabin;
 	String date_leave;
-	FlightInfo flightInfo_goAndBack;
+	Resq_FlightInfo resqFlightInfo_goAndBack;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -73,7 +73,7 @@ public class FlightResultActivity extends BaseActivity{
 		SharedPreferences sp_cabin = SPUtil.getCabin(this);//getSharedPreferences(KEY_SP_CABIN, Context.MODE_PRIVATE);
 
 		if(getIntent().hasExtra(KEY_PARCELABLE))
-			flightInfo_goAndBack = getIntent().getParcelableExtra(KEY_PARCELABLE);
+			resqFlightInfo_goAndBack = getIntent().getParcelableExtra(KEY_PARCELABLE);
 
 		TextView tv_ticket_result_leaveDate = (TextView)findViewById(R.id.tv_ticket_result_leaveDate);
 
@@ -145,20 +145,20 @@ public class FlightResultActivity extends BaseActivity{
 						   .show();
 				}else {
 					if(!isDestroyed) {
-						FlightInfoContainer container = (FlightInfoContainer) msg.obj;
+						Resp_FlightContainerInfo container = (Resp_FlightContainerInfo) msg.obj;
 						SharedPreferences sp_airLine = SPUtil.getAirLine(this);//getSharedPreferences(KEY_SP_AIR_LINE,Context.MODE_PRIVATE);
 						SharedPreferences sp_airPort = SPUtil.getAirPort(this);//getSharedPreferences(KEY_SP_AIR_PORT,Context.MODE_PRIVATE);
 
-						flightInfos_group = new ArrayList<FlightInfo>();
-						flightInfos_child = new ArrayList<List<FlightInfo>>();
-						for (FlightRespInfo reInfo : container.infos) {
-							ArrayList<FlightInfo> flightInfos_child_ = new ArrayList<FlightInfo>();
+						resqFlightInfos_group = new ArrayList<Resq_FlightInfo>();
+						flightInfos_child = new ArrayList<List<Resq_FlightInfo>>();
+						for (Resp_FlightInfo reInfo : container.infos) {
+							ArrayList<Resq_FlightInfo> resqFlightInfos_child_ = new ArrayList<Resq_FlightInfo>();
 							String[] airTerminal = reInfo.AirTerminal.split(",");
 
-							FlightInfo info = new FlightInfo();
-							info.N = reInfo.cabinInfo.get(0).N;
-							info.D = CommonUtil.getFormatDiscount(reInfo.cabinInfo.get(0).D);
-							info.P = reInfo.cabinInfo.get(0).P;
+							Resq_FlightInfo info = new Resq_FlightInfo();
+							info.N = reInfo.respCabinInfo.get(0).N;
+							info.D = CommonUtil.getFormatDiscount(reInfo.respCabinInfo.get(0).D);
+							info.P = reInfo.respCabinInfo.get(0).P;
 
 							info.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
 							info.AirLine = sp_airLine.getString(reInfo.AirLine, "");
@@ -170,17 +170,17 @@ public class FlightResultActivity extends BaseActivity{
 							info.FlightType = reInfo.FlightType;
 							info.planeSize = "";
 
-							for (CabinInfo cabinInfo : reInfo.cabinInfo) {
-								FlightInfo childInfo = new FlightInfo();
+							for (Resp_CabinInfo respCabinInfo : reInfo.respCabinInfo) {
+								Resq_FlightInfo childInfo = new Resq_FlightInfo();
 								childInfo.Sdate = reInfo.Sdate;
-								childInfo.D = CommonUtil.getFormatDiscount(cabinInfo.D);
-								childInfo.P = cabinInfo.P;
-								childInfo.cabinType = cabinInfo.L;
-								childInfo.Change = cabinInfo.Change;
-								childInfo.Return = cabinInfo.Return;
-								childInfo.RID = cabinInfo.RID;
-								childInfo.ID = cabinInfo.ID;
-								childInfo.K = cabinInfo.K;
+								childInfo.D = CommonUtil.getFormatDiscount(respCabinInfo.D);
+								childInfo.P = respCabinInfo.P;
+								childInfo.cabinType = respCabinInfo.L;
+								childInfo.Change = respCabinInfo.Change;
+								childInfo.Return = respCabinInfo.Return;
+								childInfo.RID = respCabinInfo.RID;
+								childInfo.ID = respCabinInfo.ID;
+								childInfo.K = respCabinInfo.K;
 
 								childInfo.ariLinesIcon = getResources().getDrawable(R.drawable.submit_edit_clear_normal);
 								childInfo.oilPrice = reInfo.Fees;
@@ -192,29 +192,29 @@ public class FlightResultActivity extends BaseActivity{
 								childInfo.Stime = reInfo.Stime;
 								childInfo.FlightNo = reInfo.FlightNo;
 								childInfo.AirTerminal = reInfo.AirTerminal;
-								flightInfos_child_.add(childInfo);
+								resqFlightInfos_child_.add(childInfo);
 							}
 
-							flightInfos_group.add(info);
-							flightInfos_child.add(flightInfos_child_);
+							resqFlightInfos_group.add(info);
+							flightInfos_child.add(resqFlightInfos_child_);
 						}
 
 
 						elv_flight_result = (ExpandableListView) findViewById(R.id.elv_flight_result);
-						final FlightResultAdapter adapter = new FlightResultAdapter(this, flightInfos_group, flightInfos_child);
+						final FlightResultAdapter adapter = new FlightResultAdapter(this, resqFlightInfos_group, flightInfos_child);
 						adapter.setExpandableListView(elv_flight_result);
 						elv_flight_result.setAdapter(adapter);
 
 						adapter.setTicketBookCommands(new Commands() {
 							@Override
 							public void executeCommand(Message msg_params) {
-								if (getIntent().hasExtra(KEY_DATE_ARRIVE) && flightInfo_goAndBack == null) {
+								if (getIntent().hasExtra(KEY_DATE_ARRIVE) && resqFlightInfo_goAndBack == null) {
 									/**
 									 * 如果是往返，再跳回查询结果界面
 									 */
 									Intent intent = new Intent(FlightResultActivity.this, FlightResultActivity.class);
-									ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>) msg_params.obj;
-									intent.putExtra(KEY_PARCELABLE, flightInfos.get(0));
+									ArrayList<Resq_FlightInfo> resqFlightInfos = (ArrayList<Resq_FlightInfo>) msg_params.obj;
+									intent.putExtra(KEY_PARCELABLE, resqFlightInfos.get(0));
 
 									intent.putExtra(KEY_CITY_LEAVE, getIntent().getStringExtra(KEY_CITY_ARRIVE));
 									intent.putExtra(KEY_CITY_ARRIVE, getIntent().getStringExtra(KEY_CITY_LEAVE));
@@ -227,15 +227,15 @@ public class FlightResultActivity extends BaseActivity{
 									/**
 									 * 如果不是往返，直接跳到订单界面
 									 */
-									Intent intent = new Intent(FlightResultActivity.this, TicketOrderActivity.class);
-									ArrayList<FlightInfo> flightInfos = (ArrayList<FlightInfo>) msg_params.obj;
-									if (flightInfo_goAndBack != null) {
-										flightInfos.add(flightInfo_goAndBack);
-										Collections.reverse(flightInfos);
+									Intent intent = new Intent(FlightResultActivity.this, OrderTicketActivity.class);
+									ArrayList<Resq_FlightInfo> resqFlightInfos = (ArrayList<Resq_FlightInfo>) msg_params.obj;
+									if (resqFlightInfo_goAndBack != null) {
+										resqFlightInfos.add(resqFlightInfo_goAndBack);
+										Collections.reverse(resqFlightInfos);
 									}
-									intent.putExtra(KEY_PARCELABLE, flightInfos);
+									intent.putExtra(KEY_PARCELABLE, resqFlightInfos);
 									startActivity(intent);
-									//flightInfo_goAndBack = null;
+									//resqFlightInfo_goAndBack = null;
 								}
 
 							}

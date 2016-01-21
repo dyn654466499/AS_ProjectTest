@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by Administrator on 2016/1/17 0017.
  */
-public class CabinV1Info {
+public class Resp_CabinV1Info {
     @SerializedName("@C")
     public String C;
     @SerializedName("@N")

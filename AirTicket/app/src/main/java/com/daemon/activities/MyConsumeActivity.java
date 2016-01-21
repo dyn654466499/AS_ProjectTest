@@ -6,13 +6,21 @@ import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.daemon.airticket.R;
+import com.daemon.beans.Resp_OrderTicketQueryInfo;
 import com.daemon.fragments.OrderTicketFragment;
+import com.daemon.models.TicketOrderModel;
+import com.daemon.utils.AutoLoadingUtil;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+
+import static com.daemon.consts.Constants.MODEL_ORDER_TICKET_QUERY;
+import static com.daemon.consts.Constants.VIEW_ORDER_TICKET_QUERY;
 
 public class MyConsumeActivity extends BaseActivity {
 
@@ -26,6 +34,9 @@ public class MyConsumeActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_consume);
+        setModelDelegate(new TicketOrderModel(handler, this));
+        setViewChangeListener(this);
+
         TextView tv_title = (TextView)findViewById(R.id.tv_title);
         tv_title.setText(getString(R.string.title_my_consume));
 
@@ -54,11 +65,7 @@ public class MyConsumeActivity extends BaseActivity {
         buttonList.add(btn_my_consume_hotel);
         buttonList.add(btn_my_consume_airTicket);
 
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        OrderTicketFragment order_ticket = new OrderTicketFragment();
-        transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
-        transaction.commit();
+        btn_my_consume_airTicket.callOnClick();
 
     }
 
@@ -86,13 +93,35 @@ public class MyConsumeActivity extends BaseActivity {
                 break;
 
             case R.id.btn_my_consume_airTicket:
-
+                RelativeLayout layout = (RelativeLayout)findViewById(R.id.relativeLayout_fragment_content);
+                AutoLoadingUtil.setAutoLoadingView(layout);
+                HashMap<String,String> params_map = new HashMap<String,String>();
+                params_map.put("UserName","wang87654321");
+				params_map.put("orderno","W2016012104024160509");
+                notifyModelChange(Message.obtain(handler, MODEL_ORDER_TICKET_QUERY,params_map));
                 break;
         }
     }
 
     @Override
     public void onViewChange(Message msg) {
+        switch (msg.what){
+            case VIEW_ORDER_TICKET_QUERY:
+                AutoLoadingUtil.cancelAutoLoadingView();
+                if(msg.obj instanceof String){
 
+                }else {
+                    if(!isDestroyed) {
+                        Resp_OrderTicketQueryInfo info = (Resp_OrderTicketQueryInfo) msg.obj;
+                        List<Resp_OrderTicketQueryInfo> infos = new LinkedList<>();
+                        infos.add(info);
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction transaction = fm.beginTransaction();
+                        OrderTicketFragment order_ticket = new OrderTicketFragment(infos);
+                        transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
+                        transaction.commit();
+                    }
+                }break;
+        }
     }
 }

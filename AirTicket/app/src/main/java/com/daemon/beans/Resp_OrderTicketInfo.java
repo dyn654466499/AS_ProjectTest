@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by Administrator on 2016/1/21.
  */
-public class OrderTicketRespInfo {
+public class Resp_OrderTicketInfo {
     /**
      * 订单号
      */

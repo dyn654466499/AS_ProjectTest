@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class FlightRespInfo implements Parcelable {
+public class Resp_FlightInfo implements Parcelable {
 	/**
 	 * 起飞日期
 	 */
@@ -83,10 +83,10 @@ public class FlightRespInfo implements Parcelable {
 	 *  Cabin千万别用@
 	 */
 	@SerializedName("Cabin")
-	public List<CabinInfo> cabinInfo;
+	public List<Resp_CabinInfo> respCabinInfo;
 
 
-	protected FlightRespInfo(Parcel in) {
+	protected Resp_FlightInfo(Parcel in) {
 		Sdate = in.readString();
 		Stime = in.readString();
 		Etime = in.readString();
@@ -101,18 +101,18 @@ public class FlightRespInfo implements Parcelable {
 		Fees = in.readString();
 		FlightType = in.readString();
 		AirTerminal = in.readString();
-		cabinInfo = in.createTypedArrayList(CabinInfo.CREATOR);
+		respCabinInfo = in.createTypedArrayList(Resp_CabinInfo.CREATOR);
 	}
 
-	public static final Creator<FlightRespInfo> CREATOR = new Creator<FlightRespInfo>() {
+	public static final Creator<Resp_FlightInfo> CREATOR = new Creator<Resp_FlightInfo>() {
 		@Override
-		public FlightRespInfo createFromParcel(Parcel in) {
-			return new FlightRespInfo(in);
+		public Resp_FlightInfo createFromParcel(Parcel in) {
+			return new Resp_FlightInfo(in);
 		}
 
 		@Override
-		public FlightRespInfo[] newArray(int size) {
-			return new FlightRespInfo[size];
+		public Resp_FlightInfo[] newArray(int size) {
+			return new Resp_FlightInfo[size];
 		}
 	};
 
@@ -137,6 +137,6 @@ public class FlightRespInfo implements Parcelable {
 		dest.writeString(Fees);
 		dest.writeString(FlightType);
 		dest.writeString(AirTerminal);
-		dest.writeTypedList(cabinInfo);
+		dest.writeTypedList(respCabinInfo);
 	}
 }

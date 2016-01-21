@@ -218,7 +218,7 @@ containing a value of this type.
         public static final int tv_my_consume_flightTime=0x7f0b004d;
         public static final int tv_my_consume_flightType=0x7f0b004e;
         public static final int tv_my_consume_ticketPrice=0x7f0b0049;
-        public static final int tv_my_consume_ticketState=0x7f0b0048;
+        public static final int tv_my_consume_ticketStatus=0x7f0b0048;
         public static final int tv_order_certType=0x7f0b0055;
         public static final int tv_order_insure=0x7f0b004f;
         public static final int tv_order_insure_item=0x7f0b0052;
@@ -245,7 +245,7 @@ containing a value of this type.
         public static final int activity_flight_result=0x7f030002;
         public static final int activity_flight_search=0x7f030003;
         public static final int activity_my_consume=0x7f030004;
-        public static final int activity_ticket_order=0x7f030005;
+        public static final int activity_order_ticket =0x7f030005;
         public static final int activity_type_select=0x7f030006;
         public static final int autoloading=0x7f030007;
         public static final int fragment_order_ticket=0x7f030008;

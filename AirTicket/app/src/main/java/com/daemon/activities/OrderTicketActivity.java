@@ -20,8 +20,8 @@ import com.daemon.adapters.OrderInsureAdapter;
 import com.daemon.adapters.OrderPassengerAdapter;
 import com.daemon.adapters.OrderTicketAdapter;
 import com.daemon.airticket.R;
-import com.daemon.beans.FlightInfo;
-import com.daemon.beans.PassengerInfo;
+import com.daemon.beans.Resq_FlightInfo;
+import com.daemon.beans.Resq_PassengerInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.TicketOrderModel;
 import com.daemon.utils.DialogUtil;
@@ -51,7 +51,7 @@ import static com.daemon.consts.Constants.VIEW_TICKET_ORDER_COMMIT;
  * @author 邓耀宁
  *
  */
-public class TicketOrderActivity extends BaseActivity{
+public class OrderTicketActivity extends BaseActivity{
 	/**
 	 * 增加乘机人
 	 */
@@ -91,7 +91,7 @@ public class TicketOrderActivity extends BaseActivity{
 	/**
 	 * 乘机人信息链表
 	 */
-	private ArrayList<PassengerInfo> passenger_infos;
+	private ArrayList<Resq_PassengerInfo> passenger_infos;
 	
 	private TextView tv_order_total;
 	/**
@@ -99,13 +99,13 @@ public class TicketOrderActivity extends BaseActivity{
 	 */
 	private int ticket_unit_price = 0;
 
-	private ArrayList<FlightInfo> flightInfos;
+	private ArrayList<Resq_FlightInfo> resqFlightInfos;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_ticket_order);
+		setContentView(R.layout.activity_order_ticket);
 		/**
 		 * 自定义的框架
 		 */
@@ -143,9 +143,9 @@ public class TicketOrderActivity extends BaseActivity{
 		/**
 		 * --------------------------------乘机人列表start---------------------------------
 		 */
-		passenger_infos = new ArrayList<PassengerInfo>();
+		passenger_infos = new ArrayList<Resq_PassengerInfo>();
 		for (int i = 0; i < 1; i++) {
-			PassengerInfo info = new PassengerInfo();
+			Resq_PassengerInfo info = new Resq_PassengerInfo();
 			info.certNum="";
 			info.certType="身份证";
 			info.name="";
@@ -174,11 +174,11 @@ public class TicketOrderActivity extends BaseActivity{
 		 * --------------------------------航班信息列表start---------------------------------
 		 */
 		ListView lv_order_ticketInfo = (ListView)findViewById(R.id.lv_order_ticketInfo);
-		flightInfos = getIntent().getParcelableArrayListExtra(KEY_PARCELABLE);
-		for (FlightInfo info:flightInfos) {
+		resqFlightInfos = getIntent().getParcelableArrayListExtra(KEY_PARCELABLE);
+		for (Resq_FlightInfo info: resqFlightInfos) {
 			ticket_unit_price +=Integer.valueOf(info.P)+Integer.valueOf(info.airPortBuildPrice)+Integer.valueOf(info.oilPrice);
 		}
-		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, flightInfos);
+		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, resqFlightInfos);
 		lv_order_ticketInfo.setAdapter(orderTicketAdapter);
 		/**
 		 * --------------------------------航班信息列表end---------------------------------
@@ -231,14 +231,14 @@ public class TicketOrderActivity extends BaseActivity{
 		 * 增加乘客人
 		 */
 		case R.id.btn_order_morePassenger:
-			passenger_infos.add(new PassengerInfo());
+			passenger_infos.add(new Resq_PassengerInfo());
 			passengerAdapter.notifyDataSetChanged();
 			break;
 		/**	
 		  * 返回
 		  */
 		case R.id.btn_title_back:
-			DialogUtil.showDialog(TicketOrderActivity.this, getString(R.string.title_order_edit), getString(R.string.tips_exitOrder), new Commands() {
+			DialogUtil.showDialog(OrderTicketActivity.this, getString(R.string.title_order_edit), getString(R.string.tips_exitOrder), new Commands() {
 				
 				@Override
 				public void executeCommand(Message msg_params) {
@@ -251,7 +251,7 @@ public class TicketOrderActivity extends BaseActivity{
 		 * 选择配送方式
 		 */
 		case R.id.btn_order_destribute:
-			intent = new Intent(TicketOrderActivity.this, TypeSelectActivity.class);
+			intent = new Intent(OrderTicketActivity.this, TypeSelectActivity.class);
 			intent.putExtra(KEY_TYPE, KEY_TYPE_TICKET_DISTRIBUTE);
 			intent.putExtra(KEY_TYPE_CABIN_POSITION, position_destribute);
 			startActivityForResult(intent,REQUEST_CODE_DISTRIBUTE);
@@ -262,7 +262,7 @@ public class TicketOrderActivity extends BaseActivity{
 		 */
 		case R.id.btn_order_city:
 			intent = new Intent();
-			intent.setClass(TicketOrderActivity.this, CitySearchActivity.class);
+			intent.setClass(OrderTicketActivity.this, CitySearchActivity.class);
 			startActivityForResult(intent, REQUEST_CODE_CITY);
 			break;
 		/**
@@ -281,25 +281,34 @@ public class TicketOrderActivity extends BaseActivity{
 			    		 ",cert_num ="+et_order_certNum.getText().toString()+
 			    		 ",certType="+tv_order_certType.getText());
 			}
-            if(flightInfos.size()==1){
+            if(resqFlightInfos.size()==1){
 				HashMap<String,String> params_map = new HashMap<String,String>();
-				params_map.put("RateId",flightInfos.get(0).ID);
-				params_map.put("PolicyId",flightInfos.get(0).RID);
+				params_map.put("RateId", resqFlightInfos.get(0).ID);
+				params_map.put("PolicyId", resqFlightInfos.get(0).RID);
 				params_map.put("Name","邓耀宁");
 				params_map.put("UserName","wang87654321");
 				params_map.put("IDCard","NI452122199001140014");
-				params_map.put("Cabins",flightInfos.get(0).cabinType);
-				params_map.put("dotNum",flightInfos.get(0).K);
-				params_map.put("sCity",flightInfos.get(0).Scity);
-				params_map.put("eCity",flightInfos.get(0).Ecity);
-				params_map.put("sDate",flightInfos.get(0).Sdate);
+				params_map.put("Cabins", resqFlightInfos.get(0).cabinType);
+				params_map.put("dotNum", resqFlightInfos.get(0).K);
+				params_map.put("sCity", resqFlightInfos.get(0).Scity);
+				params_map.put("eCity", resqFlightInfos.get(0).Ecity);
+				params_map.put("sDate", resqFlightInfos.get(0).Sdate);
 				params_map.put("AirChangedContact","15277104415");
 				params_map.put("AutoPay","F");
 				params_map.put("Rateway","0");
-				params_map.put("Airline",flightInfos.get(0).AirLine);
+				params_map.put("Airline", resqFlightInfos.get(0).AirLine);
+
+				Log.e(getTAG(),",ID="+ resqFlightInfos.get(0).ID+",RID="+
+						resqFlightInfos.get(0).RID+",cabinType="+
+						resqFlightInfos.get(0).cabinType+",K="+
+						resqFlightInfos.get(0).K+",Scity="+
+						resqFlightInfos.get(0).Scity+",Ecity="+
+						resqFlightInfos.get(0).Ecity+",Sdate="+
+						resqFlightInfos.get(0).Sdate+",AirLine="+
+						resqFlightInfos.get(0).AirLine);
 				notifyModelChange(Message.obtain(handler, MODEL_TICKET_ORDER_COMMIT, params_map));
 			}else{
-				DialogUtil.showDialog(TicketOrderActivity.this, getString(R.string.title_order_edit), "暂时不支持往返创建订单！", new Commands() {
+				DialogUtil.showDialog(OrderTicketActivity.this, getString(R.string.title_order_edit), "暂时不支持往返创建订单！", new Commands() {
 					@Override
 					public void executeCommand(Message msg_params) {
 
@@ -319,7 +328,7 @@ public class TicketOrderActivity extends BaseActivity{
 		// TODO Auto-generated method stub
 		switch (keyCode) {
 		case KeyEvent.KEYCODE_BACK:
-            DialogUtil.showDialog(TicketOrderActivity.this, getString(R.string.title_order_edit), getString(R.string.tips_exitOrder), new Commands() {
+            DialogUtil.showDialog(OrderTicketActivity.this, getString(R.string.title_order_edit), getString(R.string.tips_exitOrder), new Commands() {
 				
 				@Override
 				public void executeCommand(Message msg_params) {

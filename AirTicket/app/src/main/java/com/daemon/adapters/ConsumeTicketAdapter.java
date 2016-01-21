@@ -1,24 +1,26 @@
 package com.daemon.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.daemon.activities.EndorseActivity;
 import com.daemon.airticket.R;
-import com.daemon.beans.FlightInfo;
+import com.daemon.beans.Resp_OrderTicketQueryInfo;
 
 import java.util.List;
 
-public class ConsumeTicketAdapter extends BaseAdapter {
-	private List<FlightInfo> infos;
+import  static com.daemon.consts.Constants.*;
+public class ConsumeTicketAdapter extends MyBaseAdapter {
+	private List<Resp_OrderTicketQueryInfo> infos;
 	private Context mContext;
 
-	public ConsumeTicketAdapter(Context context, List<FlightInfo> objects) {
-		super();
+	public ConsumeTicketAdapter(Context context, List<Resp_OrderTicketQueryInfo> objects) {
+		super(context);
        mContext = context;
 		infos = objects;
 	}
@@ -29,7 +31,7 @@ public class ConsumeTicketAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public FlightInfo getItem(int position) {
+	public Resp_OrderTicketQueryInfo getItem(int position) {
 		return infos.get(position);
 	}
 
@@ -46,8 +48,8 @@ public class ConsumeTicketAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			convertView = LayoutInflater.from(mContext).inflate(R.layout.item_my_consume_ticket, parent, false);
 
-			holder.tv_my_consume_ticketState = (TextView) convertView
-					.findViewById(R.id.tv_my_consume_ticketState);
+			holder.tv_my_consume_ticketStatus = (TextView) convertView
+					.findViewById(R.id.tv_my_consume_ticketStatus);
 			
 			holder.tv_my_consume_Scity = (TextView) convertView
 					.findViewById(R.id.tv_my_consume_Scity);
@@ -71,32 +73,33 @@ public class ConsumeTicketAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-//		holder.btn_order_endorse.setOnClickListener(new View.OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				// TODO Auto-generated method stub
-////				Intent intent = new Intent(getContext(), EndorseActivity.class);
-////				intent.putExtra(KEY_CHANGE, infos.get(position).Change);
-////				intent.putExtra(KEY_RETURN, infos.get(position).Return);
-////				getContext().startActivity(intent);
-//			}
-//		});
-//		holder.tv_my_consume_ticketState.setText(getItem(position).Sdate);
-//		 holder.tv_my_consume_Scity.setText(getItem(position).Scity);
-//		 holder.tv_my_consume_ticketPrice.setText("￥" +getItem(position).P);
-//
-//		 holder.tv_my_consume_Sdate.setText(getItem(position).Sdate);
-//		 holder.tv_my_consume_flightTime.setText(getItem(position).Stime+"至"+getItem(position).Etime);
-//		 holder.tv_my_consume_flightType.setText(getItem(position).FlightType);
-//		holder.tv_my_consume_Ecity.setText(getItem(position).Ecity);
+		convertView.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(mContext, EndorseActivity.class);
+				intent.putExtra(KEY_PARCELABLE, getItem(position));
+				mContext.startActivity(intent);
+			}
+		});
+		holder.tv_my_consume_ticketStatus.setText(getItem(position).Status);
+		 holder.tv_my_consume_Scity.setText(sp_airPort.getString(getItem(position).Scity,""));
+		 holder.tv_my_consume_ticketPrice.setText("￥" +getItem(position).Price);
+
+		 holder.tv_my_consume_Sdate.setText(getItem(position).Date);
+		 holder.tv_my_consume_flightTime.setText(
+				 getItem(position).Stime.trim().replace(getItem(position).Date,"")+
+						 "至"+
+				 getItem(position).Etime.trim().replace(getItem(position).Date,""));
+		 holder.tv_my_consume_flightType.setText(getItem(position).Flight);
+		holder.tv_my_consume_Ecity.setText(sp_airPort.getString(getItem(position).Ecity,""));
 
 		return convertView;
 	}
 
 	static class ViewHolder {
 		Button btn_order_endorse;
-		TextView tv_my_consume_ticketState, tv_my_consume_Scity,
+		TextView tv_my_consume_ticketStatus, tv_my_consume_Scity,
 				tv_my_consume_Ecity, tv_my_consume_Sdate,
 				tv_my_consume_flightTime, tv_my_consume_flightType,
 				tv_my_consume_ticketPrice;

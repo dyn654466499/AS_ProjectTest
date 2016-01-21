@@ -3,6 +3,7 @@ package com.daemon.models;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.volley.Request;
@@ -11,9 +12,18 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.daemon.beans.Resp_OrderTicketQueryInfo;
 import com.daemon.consts.Constants;
+import com.daemon.utils.ErrorCodeUtil;
 import com.daemon.utils.VolleyUtil;
+import com.stanfy.gsonxml.GsonXml;
+import com.stanfy.gsonxml.GsonXmlBuilder;
+import com.stanfy.gsonxml.XmlParserCreator;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.StringReader;
 import java.util.HashMap;
 
 public class TicketOrderModel extends BaseModel{
@@ -33,9 +43,13 @@ public class TicketOrderModel extends BaseModel{
 	@Override
 	public void changeModelState(Message changeStateMessage) {
 		// TODO Auto-generated method stub
+		HashMap<String,String> params_map = null;
+		RequestQueue requestQueue;
+		String url;
+		StringRequest request;
 		switch (changeStateMessage.what){
 			case Constants.MODEL_TICKET_ORDER_COMMIT:
-				HashMap<String,String> params_map = (HashMap<String,String>)changeStateMessage.obj;
+				params_map = (HashMap<String,String>)changeStateMessage.obj;
 //				HashMap<String,String> params_map = new HashMap<String,String>();
 //				params_map.put("RateId","uK6eamCoRWc=");
 //				params_map.put("PolicyId","4GO9GqZUMs5JjaGavAfxuQ==");
@@ -59,9 +73,9 @@ public class TicketOrderModel extends BaseModel{
 						"sCity=\"PEK\" eCity=\"DLC\"dotNum=\"6.4\" IsallowPnr=\"0\" Jounery=\"0\" IsFront=\"0\" Voyagetype=\"0\"\n" +
 						"Rateway=\"0\" AutoPay=\"F\" AirChangedContact=”1347528xx14|”/>\n" +
 						"</JIT-CreateOrder>";
-                String url = "http://121.40.116.51:9000/OrderAPI/createOrder"+ VolleyUtil.formatGetParams(params_map);
-                RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-                StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+				url = "http://121.40.116.51:9000/OrderAPI/createOrder"+ VolleyUtil.formatGetParams(params_map);
+				requestQueue = Volley.newRequestQueue(mContext);
+				request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
                     @Override
                     public void onResponse(String s) {
@@ -74,6 +88,74 @@ public class TicketOrderModel extends BaseModel{
 					}
                 });
                  requestQueue.add(request);
+				break;
+
+
+			case Constants.MODEL_ORDER_TICKET_QUERY:
+				params_map = (HashMap<String,String>)changeStateMessage.obj;
+				url = "http://121.40.116.51:9000/OrderAPI/getOrderInfo"+ VolleyUtil.formatGetParams(params_map);
+				requestQueue = Volley.newRequestQueue(mContext);
+				request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+					@Override
+					public void onResponse(String s) {
+						{
+							if (!TextUtils.isEmpty(s)) {
+								XmlParserCreator parserCreator = new XmlParserCreator() {
+									@Override
+									public XmlPullParser createParser() {
+										try {
+											return XmlPullParserFactory.newInstance().newPullParser();
+										} catch (Exception e) {
+											throw new RuntimeException(e);
+										}
+									}
+								};
+								GsonXml gsonXml = new GsonXmlBuilder()
+										.setXmlParserCreator(parserCreator)
+										.create();
+
+								String header = "<string xmlns=\"http://policy.jinri.cn/\"><?xml version=\"1.0\" encoding=\"gb2312\"?>";
+								String footer = "</string>";
+								String xml = s;
+								try {
+									if (xml.contains("<JIT-Order-Response>")) {
+										xml = xml.replace(header, "").replace("<JIT-Order-Response>","");
+										xml = xml.replace(footer, "").replace("</JIT-Order-Response>","");
+										//Log.e("sdfsdf",xml);
+										Resp_OrderTicketQueryInfo model = gsonXml.fromXml(xml, Resp_OrderTicketQueryInfo.class);
+										Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, model).sendToTarget();
+										//Log.e("sdfsdf", model.OrderNo + "");
+									} else {
+										XmlPullParser xmlPullParser = parserCreator.createParser();
+										xmlPullParser.setInput(new StringReader(xml));
+										int eventType = xmlPullParser.getEventType();
+										while (eventType != XmlPullParser.END_DOCUMENT) {
+											switch (eventType) {
+												case XmlPullParser.START_TAG:
+													if ("string".equals(xmlPullParser.getName())) {
+														String message = ErrorCodeUtil.getErrorMessage(mContext, xmlPullParser.nextText());
+														Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, message).sendToTarget();
+													}
+													break;
+											}
+											eventType = xmlPullParser.next();
+										}
+									}
+								} catch (Exception e) {
+									e.printStackTrace();
+									String message = "解析xml出错";
+									Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, message).sendToTarget();
+								}
+							}
+						}
+					}
+				}, new Response.ErrorListener() {
+					@Override
+					public void onErrorResponse(VolleyError volleyError) {
+						Log.e("sdfsdfsdfsd","onErrorResponse="+volleyError.getMessage());
+					}
+				});
+				requestQueue.add(request);
 				break;
 		}
 	}

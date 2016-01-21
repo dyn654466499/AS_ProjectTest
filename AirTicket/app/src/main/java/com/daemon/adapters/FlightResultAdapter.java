@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.daemon.airticket.R;
-import com.daemon.beans.FlightInfo;
+import com.daemon.beans.Resq_FlightInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.utils.ImageUtil;
 import com.daemon.utils.SPUtil;
@@ -32,19 +32,19 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 	private Context mContext;
 	private ExpandableListView elv;
 	private Drawable ic_xiangshang;
-	private List<FlightInfo> flightInfos_group;
-	private List<List<FlightInfo>> flightInfos_child;
+	private List<Resq_FlightInfo> resqFlightInfos_group;
+	private List<List<Resq_FlightInfo>> flightInfos_child;
 	/**
 	 * 命令接口
 	 */
 	private Commands commands;
 	private SharedPreferences sp_cabin,sp_airLine,sp_airPort;
 
-	public FlightResultAdapter(Context mContext, List<FlightInfo> flightInfos_group,
-							   List<List<FlightInfo>> flightInfos_child) {
+	public FlightResultAdapter(Context mContext, List<Resq_FlightInfo> resqFlightInfos_group,
+							   List<List<Resq_FlightInfo>> flightInfos_child) {
 		super();
 		this.mContext = mContext;
-		this.flightInfos_group = flightInfos_group;
+		this.resqFlightInfos_group = resqFlightInfos_group;
 		this.flightInfos_child = flightInfos_child;
 		Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(),
 				R.drawable.ic_xiangxia);
@@ -65,13 +65,13 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 	}
 
 	@Override
-	public FlightInfo getGroup(int groupPosition) {
-		return flightInfos_group.get(groupPosition);
+	public Resq_FlightInfo getGroup(int groupPosition) {
+		return resqFlightInfos_group.get(groupPosition);
 	}
 
 	@Override
 	public int getGroupCount() {
-		return flightInfos_group.size();
+		return resqFlightInfos_group.size();
 	}
 
 	@Override
@@ -125,7 +125,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 		}
 		
 		
-		if(!flightInfos_group.get(groupPosition).isExpanded){
+		if(!resqFlightInfos_group.get(groupPosition).isExpanded){
 			group.btn_flight_result_unfold
 			.setCompoundDrawablesWithIntrinsicBounds(
 					null,
@@ -142,17 +142,17 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 					null);
 			
 		}
-		 group.tv_flight_result_takeOffTime.setText(flightInfos_group.get(groupPosition).Stime);
-		 group.tv_flight_result_landingTime.setText(flightInfos_group.get(groupPosition).Etime);
-		 group.tv_flight_result_cabinPrice.setText("￥" + flightInfos_group.get(groupPosition).P);
-		 group.tv_flight_result_takeOffPort.setText(flightInfos_group.get(groupPosition).Scity);
-		 group.tv_flight_result_landingPort.setText(flightInfos_group.get(groupPosition).Ecity);
-		 group.tv_flight_result_discount.setText(flightInfos_group.get(groupPosition).D);
-		 group.tv_flight_result_airLines.setText(flightInfos_group.get(groupPosition).AirLine);
-		 group.tv_flight_result_amount.setText(flightInfos_group.get(groupPosition).N);
-		 group.tv_flight_result_flightNum.setText(flightInfos_group.get(groupPosition).FlightNo);
-		 group.tv_flight_result_planeModel.setText(flightInfos_group.get(groupPosition).FlightType);
-		 group.tv_flight_result_planeSize.setText(flightInfos_group.get(groupPosition).planeSize);
+		 group.tv_flight_result_takeOffTime.setText(resqFlightInfos_group.get(groupPosition).Stime);
+		 group.tv_flight_result_landingTime.setText(resqFlightInfos_group.get(groupPosition).Etime);
+		 group.tv_flight_result_cabinPrice.setText("￥" + resqFlightInfos_group.get(groupPosition).P);
+		 group.tv_flight_result_takeOffPort.setText(resqFlightInfos_group.get(groupPosition).Scity);
+		 group.tv_flight_result_landingPort.setText(resqFlightInfos_group.get(groupPosition).Ecity);
+		 group.tv_flight_result_discount.setText(resqFlightInfos_group.get(groupPosition).D);
+		 group.tv_flight_result_airLines.setText(resqFlightInfos_group.get(groupPosition).AirLine);
+		 group.tv_flight_result_amount.setText(resqFlightInfos_group.get(groupPosition).N);
+		 group.tv_flight_result_flightNum.setText(resqFlightInfos_group.get(groupPosition).FlightNo);
+		 group.tv_flight_result_planeModel.setText(resqFlightInfos_group.get(groupPosition).FlightType);
+		 group.tv_flight_result_planeSize.setText(resqFlightInfos_group.get(groupPosition).planeSize);
 
 
 		 group.btn_flight_result_unfold.setOnClickListener(new OnClickListener() {
@@ -161,12 +161,12 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 			 public void onClick(View v) {
 				 // TODO Auto-generated method stub
 				 //Log.e("groupPosition", "groupPosition="+groupPosition);
-				 if (flightInfos_group.get(groupPosition).isExpanded) {
+				 if (resqFlightInfos_group.get(groupPosition).isExpanded) {
 					 elv.collapseGroup(groupPosition);
-					 flightInfos_group.get(groupPosition).isExpanded = false;
+					 resqFlightInfos_group.get(groupPosition).isExpanded = false;
 				 } else {
 					 elv.expandGroup(groupPosition);
-					 flightInfos_group.get(groupPosition).isExpanded = true;
+					 resqFlightInfos_group.get(groupPosition).isExpanded = true;
 				 }
 				 notifyDataSetChanged();
 			 }
@@ -175,7 +175,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 	}
 
 	@Override
-	public FlightInfo getChild(int groupPosition, int childPosition) {
+	public Resq_FlightInfo getChild(int groupPosition, int childPosition) {
 		return flightInfos_child.get(groupPosition).get(childPosition);
 	}
 
@@ -220,9 +220,9 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 						Log.e("btn_ticket_result_book", "groupPosition=" + groupPosition + ",childPosition=" + childPosition);
 						if (commands != null) {
 							Message msg = new Message();
-							ArrayList<FlightInfo> flightInfos = new ArrayList<FlightInfo>();
-							flightInfos.add(flightInfos_child.get(groupPosition).get(childPosition));
-							msg.obj = flightInfos;
+							ArrayList<Resq_FlightInfo> resqFlightInfos = new ArrayList<Resq_FlightInfo>();
+							resqFlightInfos.add(flightInfos_child.get(groupPosition).get(childPosition));
+							msg.obj = resqFlightInfos;
 							commands.executeCommand(msg);
 						}
 

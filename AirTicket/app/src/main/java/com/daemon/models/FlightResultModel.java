@@ -10,7 +10,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.daemon.beans.FlightInfoContainer;
+import com.daemon.beans.Resp_FlightContainerInfo;
 import com.daemon.consts.Constants;
 import com.daemon.utils.ErrorCodeUtil;
 import com.daemon.utils.VolleyUtil;
@@ -79,9 +79,9 @@ public class FlightResultModel extends BaseModel {
                                     xml = xml.replace(header, "");
                                     xml = xml.replace(footer, "");
                                     //Log.e("sdfsdf", xml);
-                                    FlightInfoContainer model = gsonXml.fromXml(xml, FlightInfoContainer.class);
+                                    Resp_FlightContainerInfo model = gsonXml.fromXml(xml, Resp_FlightContainerInfo.class);
                                     Message.obtain(handler, Constants.VIEW_FLIGHT_SEARCH, model).sendToTarget();
-                                    //Log.e("sdfsdf",model.infos.get(0).cabinInfo.size()+"");
+                                    //Log.e("sdfsdf", model.infos.get(0).respCabinInfo.size() + "");
                                 } else {
                                     XmlPullParser xmlPullParser = parserCreator.createParser();
                                     xmlPullParser.setInput(new StringReader(xml));
