@@ -23,7 +23,7 @@ import com.daemon.airticket.R;
 import com.daemon.beans.Resq_FlightInfo;
 import com.daemon.beans.Resq_PassengerInfo;
 import com.daemon.interfaces.Commands;
-import com.daemon.models.TicketOrderModel;
+import com.daemon.models.OrderTicketModel;
 import com.daemon.utils.DialogUtil;
 
 import java.util.ArrayList;
@@ -109,7 +109,7 @@ public class OrderTicketActivity extends BaseActivity{
 		/**
 		 * 自定义的框架
 		 */
-		setModelDelegate(new TicketOrderModel(handler, this));
+		setModelDelegate(new OrderTicketModel(handler, this));
 		setViewChangeListener(this);
 
 		/**

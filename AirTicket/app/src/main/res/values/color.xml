@@ -8,6 +8,7 @@
     <color name="ticket_black">#333333</color>
     <color name="activitytransparent">#a000</color>
     <color name="ticket_button_click">#00a8ff</color>
+    <color name="ticket_green">#08a65c</color>
     
     <color name="calendar_color_green">#60c677</color>
     <color name="calendar_color_orange">#fc6c00</color>

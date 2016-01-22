@@ -46,7 +46,7 @@ public class AutoLoadingUtil {
 			@Override
 			public void onChildViewRemoved(View parent, View child) {
 				// TODO Auto-generated method stub
-				saveView.add(child);
+				if(saveView!=null)saveView.add(child);
 			}
 			
 			@Override

@@ -5,16 +5,15 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.daemon.activities.EndorseActivity;
+import com.daemon.activities.OrderTicketDetailActivity;
 import com.daemon.airticket.R;
 import com.daemon.beans.Resp_OrderTicketQueryInfo;
 
 import java.util.List;
 
-import  static com.daemon.consts.Constants.*;
+import static com.daemon.consts.Constants.KEY_PARCELABLE;
 public class ConsumeTicketAdapter extends MyBaseAdapter {
 	private List<Resp_OrderTicketQueryInfo> infos;
 	private Context mContext;
@@ -77,28 +76,28 @@ public class ConsumeTicketAdapter extends MyBaseAdapter {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(mContext, EndorseActivity.class);
+				Intent intent = new Intent(mContext, OrderTicketDetailActivity.class);
 				intent.putExtra(KEY_PARCELABLE, getItem(position));
 				mContext.startActivity(intent);
 			}
 		});
-		holder.tv_my_consume_ticketStatus.setText(getItem(position).Status);
-		 holder.tv_my_consume_Scity.setText(sp_airPort.getString(getItem(position).Scity,""));
+		holder.tv_my_consume_ticketStatus.setText(sp_orderStatus.getString(getItem(position).Status,""));
+		 holder.tv_my_consume_Scity.setText(sp_city.getString(getItem(position).Scity,""));
 		 holder.tv_my_consume_ticketPrice.setText("￥" +getItem(position).Price);
 
 		 holder.tv_my_consume_Sdate.setText(getItem(position).Date);
 		 holder.tv_my_consume_flightTime.setText(
 				 getItem(position).Stime.trim().replace(getItem(position).Date,"")+
 						 "至"+
-				 getItem(position).Etime.trim().replace(getItem(position).Date,""));
+				 getItem(position).Etime.trim().replace(getItem(position).Date,"")
+		 );
 		 holder.tv_my_consume_flightType.setText(getItem(position).Flight);
-		holder.tv_my_consume_Ecity.setText(sp_airPort.getString(getItem(position).Ecity,""));
+		holder.tv_my_consume_Ecity.setText(sp_city.getString(getItem(position).Ecity,""));
 
 		return convertView;
 	}
 
 	static class ViewHolder {
-		Button btn_order_endorse;
 		TextView tv_my_consume_ticketStatus, tv_my_consume_Scity,
 				tv_my_consume_Ecity, tv_my_consume_Sdate,
 				tv_my_consume_flightTime, tv_my_consume_flightType,

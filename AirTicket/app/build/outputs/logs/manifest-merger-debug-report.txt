@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:2:1-110:12
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:2:1-113:12
 	package
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml
@@ -213,7 +213,7 @@ ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xm
 	android:anyDensity
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:60:9-34
 application
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:66:5-108:19
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:66:5-111:19
 MERGED from [com.android.support:support-v4:23.1.1] D:\Git_ForAS\AS_ProjectTest\AirTicket\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] D:\Git_ForAS\AS_ProjectTest\AirTicket\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
@@ -243,13 +243,13 @@ ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xm
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:78:27-74
 activity#com.daemon.activities.CitySearchActivity
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:81:9-83:61
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:81:9-83:52
 	android:screenOrientation
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:83:13-49
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:82:13-68
-activity#com.daemon.activities.TicketOrderActivity
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:84:9-87:64
+activity#com.daemon.activities.OrderTicketActivity
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:84:9-87:55
 	android:screenOrientation
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:86:13-49
 	android:windowSoftInputMode
@@ -257,13 +257,13 @@ ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xm
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:85:13-69
 activity#com.daemon.activities.DatePickActivity
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:88:9-90:61
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:88:9-90:52
 	android:screenOrientation
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:90:13-49
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:89:13-66
 activity#com.daemon.activities.TypeSelectActivity
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:91:9-94:67
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:91:9-94:58
 	android:screenOrientation
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:93:13-49
 	android:theme
@@ -271,7 +271,7 @@ ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xm
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:92:13-68
 activity#com.daemon.activities.EndorseActivity
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:95:9-98:67
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:95:9-98:58
 	android:screenOrientation
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:97:13-49
 	android:theme
@@ -279,20 +279,26 @@ ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xm
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:96:13-65
 activity#com.daemon.activities.FlightResultActivity
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:99:9-101:61
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:99:9-101:52
 	android:screenOrientation
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:101:13-49
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:100:13-70
 activity#com.daemon.pay.unionpay.BaseActivity
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:102:9-104:61
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:102:9-104:52
 	android:screenOrientation
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:104:13-49
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:103:13-64
 activity#com.daemon.activities.MyConsumeActivity
-ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:105:9-107:74
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:105:9-107:65
 	android:label
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:107:13-62
 	android:name
 		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:106:13-67
+activity#com.daemon.activities.OrderTicketDetailActivity
+ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:108:9-110:83
+	android:label
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:110:13-71
+	android:name
+		ADDED from D:\Git_ForAS\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:109:13-75

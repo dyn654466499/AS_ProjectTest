@@ -26,6 +26,7 @@
     <string name="title_date_leave">选择出发日期</string>
     <string name="title_date_back">选择返回日期</string>
     <string name="title_order_edit">订单填写</string>
+    <string name="title_order_detail">订单详情</string>
     <string name="title_flight_result">%1$s - %2$s (%3$s) </string>
     <string name="title_my_consume">我的消费</string>
 
@@ -61,6 +62,24 @@
         <item>不需要报销凭证</item>
         <item>快递</item>
     </string-array>
+
+    <!-- 订单状态-->
+    <string-array name="OrderStatus">
+        <item>等待确认</item>
+        <item>等待支付</item>
+        <item>支付成功</item>
+        <item>出票成功</item>
+        <item>申请废票</item>
+        <item>申请退票</item>
+        <item>退款中</item>
+        <item>取消订单</item>
+        <item>暂不能出票</item>
+        <item>暂不能废票</item>
+        <item>暂不能退票</item>
+        <item>航班延误</item>
+        <item>退款成功</item>
+    </string-array>
+
 
     <!-- 空险类型 -->
     <string-array name="TypeInsure">

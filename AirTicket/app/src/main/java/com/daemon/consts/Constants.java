@@ -7,9 +7,11 @@ public class Constants {
 	 * 城市三字码的SharePreference key
 	 */
 	public static final String KEY_SP_THREE_WORD = "three_word";
+	public static final String KEY_SP_CITY = "city";
 	public static final String KEY_SP_AIR_PORT = "airPort";
 	public static final String KEY_SP_AIR_LINE = "airLine";
 	public static final String KEY_SP_CABIN = "cabin";
+	public static final String KEY_SP_ORDER_STATUS = "order_status";
 
 	public static final String KEY_TYPE = "类型";
 	public static final String KEY_TYPE_CABIN = "Cabin";

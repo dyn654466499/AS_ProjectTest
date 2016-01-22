@@ -199,6 +199,21 @@
         <item>Y</item>
         <item>Z</item>
     </string-array>
+    <string-array name="OrderStatus">
+        <item>等待确认</item>
+        <item>等待支付</item>
+        <item>支付成功</item>
+        <item>出票成功</item>
+        <item>申请废票</item>
+        <item>申请退票</item>
+        <item>退款中</item>
+        <item>取消订单</item>
+        <item>暂不能出票</item>
+        <item>暂不能废票</item>
+        <item>暂不能退票</item>
+        <item>航班延误</item>
+        <item>退款成功</item>
+    </string-array>
     <string-array name="TypeCabin">
         <item>所有舱位</item>
         <item>全价舱</item>
@@ -240,6 +255,7 @@
     <color name="ticket_button_click">#00a8ff</color>
     <color name="ticket_font_deep_gray">#545454</color>
     <color name="ticket_font_gray">#999999</color>
+    <color name="ticket_green">#08a65c</color>
     <color name="ticket_title_color">#0080ff</color>
     <color name="ticket_white">#ffffff</color>
     <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
@@ -278,6 +294,7 @@
     <string name="sure">确定</string>
     <string name="tips_exitOrder">您正在填写订单，是否要退出？</string>
     <string name="title_activity_my_consume">MyConsumeActivity</string>
+    <string name="title_activity_order_ticket_detail">OrderTicketDetailActivity</string>
     <string name="title_catering">餐饮 </string>
     <string name="title_date_back">选择返回日期</string>
     <string name="title_date_leave">选择出发日期</string>
@@ -293,6 +310,7 @@
     <string name="title_localCity">同城 </string>
     <string name="title_my_consume">我的消费</string>
     <string name="title_oneWay">单程</string>
+    <string name="title_order_detail">订单详情</string>
     <string name="title_order_edit">订单填写</string>
     <string name="title_select_cabin">选择舱位</string>
     <string name="title_select_cert">选择证件</string>
