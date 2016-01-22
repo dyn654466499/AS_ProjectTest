@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Resq_FlightInfo implements Parcelable {
+public class Req_FlightInfo implements Parcelable {
 	
 	/**
 	 * 起飞日期
@@ -98,7 +98,7 @@ public class Resq_FlightInfo implements Parcelable {
 
 	public String AirTerminal;
 
-	public Resq_FlightInfo(Parcel in) {
+	public Req_FlightInfo(Parcel in) {
 		Sdate = in.readString();
 		Stime = in.readString();
 		Etime = in.readString();
@@ -125,19 +125,19 @@ public class Resq_FlightInfo implements Parcelable {
 		AirTerminal = in.readString();
 	}
 
-	public static final Creator<Resq_FlightInfo> CREATOR = new Creator<Resq_FlightInfo>() {
+	public static final Creator<Req_FlightInfo> CREATOR = new Creator<Req_FlightInfo>() {
 		@Override
-		public Resq_FlightInfo createFromParcel(Parcel in) {
-			return new Resq_FlightInfo(in);
+		public Req_FlightInfo createFromParcel(Parcel in) {
+			return new Req_FlightInfo(in);
 		}
 
 		@Override
-		public Resq_FlightInfo[] newArray(int size) {
-			return new Resq_FlightInfo[size];
+		public Req_FlightInfo[] newArray(int size) {
+			return new Req_FlightInfo[size];
 		}
 	};
 
-	public Resq_FlightInfo() {
+	public Req_FlightInfo() {
 
 	}
 

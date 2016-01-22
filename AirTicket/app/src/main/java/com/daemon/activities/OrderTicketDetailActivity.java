@@ -113,9 +113,13 @@ public class OrderTicketDetailActivity extends BaseActivity {
             tv_order_ticket_detail_flight_Sport.setText(SPUtil.getAirPort(this).getString(info.Scity,""));
 
             TextView tv_order_ticket_detail_flight_Eport = (TextView)findViewById(R.id.tv_order_ticket_detail_flight_Eport);
-            tv_order_ticket_detail_flight_Eport.setText(SPUtil.getAirPort(this).getString(info.Ecity,""));
+            tv_order_ticket_detail_flight_Eport.setText(SPUtil.getAirPort(this).getString(info.Ecity, ""));
 
+            TextView tv_order_ticket_detail_flight_airLine = (TextView)findViewById(R.id.tv_order_ticket_detail_flight_airLine);
+            tv_order_ticket_detail_flight_airLine.setText(SPUtil.getAirLine(this).getString(info.Flight.substring(0,2),""));
 
+            TextView tv_order_ticket_detail_flight_flightNo = (TextView)findViewById(R.id.tv_order_ticket_detail_flight_flightNo);
+            tv_order_ticket_detail_flight_flightNo.setText(info.Flight);
         }
     }
 

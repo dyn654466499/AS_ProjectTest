@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.daemon.activities.EndorseActivity;
 import com.daemon.airticket.R;
-import com.daemon.beans.Resq_FlightInfo;
+import com.daemon.beans.Req_FlightInfo;
 import com.daemon.utils.SPUtil;
 
 import java.util.List;
@@ -21,9 +21,9 @@ import static  com.daemon.consts.Constants.*;
 
 public class OrderTicketAdapter extends BaseAdapter {
 	private Context mContext;
-	private List<Resq_FlightInfo> infos;
+	private List<Req_FlightInfo> infos;
 	private SharedPreferences sp_cabin,sp_airLine,sp_airPort;
-	public OrderTicketAdapter(Context mContext, List<Resq_FlightInfo> infos) {
+	public OrderTicketAdapter(Context mContext, List<Req_FlightInfo> infos) {
 		super();
 		this.mContext = mContext;
 		this.infos = infos;
@@ -39,7 +39,7 @@ public class OrderTicketAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public Resq_FlightInfo getItem(int position) {
+	public Req_FlightInfo getItem(int position) {
 		// TODO Auto-generated method stub
 		return infos.get(position);
 	}

@@ -1,6 +1,6 @@
 package com.daemon.beans;
 
-public class Resq_PassengerInfo {
+public class Req_PassengerInfo {
 	public String name;
 	public String certType = "身份证";
 	public String certNum;

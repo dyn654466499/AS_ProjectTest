@@ -238,7 +238,7 @@
                            android:layout_gravity="center_horizontal"
                            android:gravity="center_horizontal"
                            android:text="11:20"
-                           android:textSize="18sp"
+                           android:textSize="20sp"
                            android:textColor="#000000"
                            />
 
@@ -262,7 +262,7 @@
                            android:layout_gravity="center_horizontal"
                            android:gravity="center_horizontal|bottom"
                            android:text="13:10"
-                           android:textSize="18sp"
+                           android:textSize="20sp"
                            android:textColor="#000000"
                            />
                    </LinearLayout>
@@ -271,6 +271,7 @@
                        android:layout_width="wrap_content"
                        android:layout_height="match_parent"
                        android:layout_margin="10dp"
+                       android:src="@drawable/jpdd_dq"
                        />
 
                    <LinearLayout

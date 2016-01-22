@@ -20,8 +20,8 @@ import com.daemon.adapters.OrderInsureAdapter;
 import com.daemon.adapters.OrderPassengerAdapter;
 import com.daemon.adapters.OrderTicketAdapter;
 import com.daemon.airticket.R;
-import com.daemon.beans.Resq_FlightInfo;
-import com.daemon.beans.Resq_PassengerInfo;
+import com.daemon.beans.Req_FlightInfo;
+import com.daemon.beans.Req_PassengerInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.OrderTicketModel;
 import com.daemon.utils.DialogUtil;
@@ -91,7 +91,7 @@ public class OrderTicketActivity extends BaseActivity{
 	/**
 	 * 乘机人信息链表
 	 */
-	private ArrayList<Resq_PassengerInfo> passenger_infos;
+	private ArrayList<Req_PassengerInfo> passenger_infos;
 	
 	private TextView tv_order_total;
 	/**
@@ -99,7 +99,7 @@ public class OrderTicketActivity extends BaseActivity{
 	 */
 	private int ticket_unit_price = 0;
 
-	private ArrayList<Resq_FlightInfo> resqFlightInfos;
+	private ArrayList<Req_FlightInfo> resqFlightInfos;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -143,9 +143,9 @@ public class OrderTicketActivity extends BaseActivity{
 		/**
 		 * --------------------------------乘机人列表start---------------------------------
 		 */
-		passenger_infos = new ArrayList<Resq_PassengerInfo>();
+		passenger_infos = new ArrayList<Req_PassengerInfo>();
 		for (int i = 0; i < 1; i++) {
-			Resq_PassengerInfo info = new Resq_PassengerInfo();
+			Req_PassengerInfo info = new Req_PassengerInfo();
 			info.certNum="";
 			info.certType="身份证";
 			info.name="";
@@ -175,7 +175,7 @@ public class OrderTicketActivity extends BaseActivity{
 		 */
 		ListView lv_order_ticketInfo = (ListView)findViewById(R.id.lv_order_ticketInfo);
 		resqFlightInfos = getIntent().getParcelableArrayListExtra(KEY_PARCELABLE);
-		for (Resq_FlightInfo info: resqFlightInfos) {
+		for (Req_FlightInfo info: resqFlightInfos) {
 			ticket_unit_price +=Integer.valueOf(info.P)+Integer.valueOf(info.airPortBuildPrice)+Integer.valueOf(info.oilPrice);
 		}
 		OrderTicketAdapter orderTicketAdapter = new OrderTicketAdapter(this, resqFlightInfos);
@@ -231,7 +231,7 @@ public class OrderTicketActivity extends BaseActivity{
 		 * 增加乘客人
 		 */
 		case R.id.btn_order_morePassenger:
-			passenger_infos.add(new Resq_PassengerInfo());
+			passenger_infos.add(new Req_PassengerInfo());
 			passengerAdapter.notifyDataSetChanged();
 			break;
 		/**	

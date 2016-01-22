@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.daemon.airticket.R;
-import com.daemon.beans.Resq_FlightInfo;
+import com.daemon.beans.Req_FlightInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.utils.ImageUtil;
 import com.daemon.utils.SPUtil;
@@ -32,16 +32,16 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 	private Context mContext;
 	private ExpandableListView elv;
 	private Drawable ic_xiangshang;
-	private List<Resq_FlightInfo> resqFlightInfos_group;
-	private List<List<Resq_FlightInfo>> flightInfos_child;
+	private List<Req_FlightInfo> resqFlightInfos_group;
+	private List<List<Req_FlightInfo>> flightInfos_child;
 	/**
 	 * 命令接口
 	 */
 	private Commands commands;
 	private SharedPreferences sp_cabin,sp_airLine,sp_airPort;
 
-	public FlightResultAdapter(Context mContext, List<Resq_FlightInfo> resqFlightInfos_group,
-							   List<List<Resq_FlightInfo>> flightInfos_child) {
+	public FlightResultAdapter(Context mContext, List<Req_FlightInfo> resqFlightInfos_group,
+							   List<List<Req_FlightInfo>> flightInfos_child) {
 		super();
 		this.mContext = mContext;
 		this.resqFlightInfos_group = resqFlightInfos_group;
@@ -65,7 +65,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 	}
 
 	@Override
-	public Resq_FlightInfo getGroup(int groupPosition) {
+	public Req_FlightInfo getGroup(int groupPosition) {
 		return resqFlightInfos_group.get(groupPosition);
 	}
 
@@ -175,7 +175,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 	}
 
 	@Override
-	public Resq_FlightInfo getChild(int groupPosition, int childPosition) {
+	public Req_FlightInfo getChild(int groupPosition, int childPosition) {
 		return flightInfos_child.get(groupPosition).get(childPosition);
 	}
 
@@ -220,7 +220,7 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 						Log.e("btn_ticket_result_book", "groupPosition=" + groupPosition + ",childPosition=" + childPosition);
 						if (commands != null) {
 							Message msg = new Message();
-							ArrayList<Resq_FlightInfo> resqFlightInfos = new ArrayList<Resq_FlightInfo>();
+							ArrayList<Req_FlightInfo> resqFlightInfos = new ArrayList<Req_FlightInfo>();
 							resqFlightInfos.add(flightInfos_child.get(groupPosition).get(childPosition));
 							msg.obj = resqFlightInfos;
 							commands.executeCommand(msg);

@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.daemon.adapters.FlightResultAdapter;
 import com.daemon.airticket.R;
 import com.daemon.beans.Resp_CabinInfo;
-import com.daemon.beans.Resq_FlightInfo;
+import com.daemon.beans.Req_FlightInfo;
 import com.daemon.beans.Resp_FlightContainerInfo;
 import com.daemon.beans.Resp_FlightInfo;
 import com.daemon.consts.Constants;
@@ -49,13 +49,13 @@ public class FlightResultActivity extends BaseActivity{
 	 * 航班的可展开列表
 	 */
     private ExpandableListView elv_flight_result;
-    private List<Resq_FlightInfo> resqFlightInfos_group;
-    private List<List<Resq_FlightInfo>> flightInfos_child;
+    private List<Req_FlightInfo> resqFlightInfos_group;
+    private List<List<Req_FlightInfo>> flightInfos_child;
 	String Scity;
 	String Ecity;
 	String cabin;
 	String date_leave;
-	Resq_FlightInfo resqFlightInfo_goAndBack;
+	Req_FlightInfo resqFlightInfo_goAndBack;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -149,13 +149,13 @@ public class FlightResultActivity extends BaseActivity{
 						SharedPreferences sp_airLine = SPUtil.getAirLine(this);//getSharedPreferences(KEY_SP_AIR_LINE,Context.MODE_PRIVATE);
 						SharedPreferences sp_airPort = SPUtil.getAirPort(this);//getSharedPreferences(KEY_SP_AIR_PORT,Context.MODE_PRIVATE);
 
-						resqFlightInfos_group = new ArrayList<Resq_FlightInfo>();
-						flightInfos_child = new ArrayList<List<Resq_FlightInfo>>();
+						resqFlightInfos_group = new ArrayList<Req_FlightInfo>();
+						flightInfos_child = new ArrayList<List<Req_FlightInfo>>();
 						for (Resp_FlightInfo reInfo : container.infos) {
-							ArrayList<Resq_FlightInfo> resqFlightInfos_child_ = new ArrayList<Resq_FlightInfo>();
+							ArrayList<Req_FlightInfo> resqFlightInfos_child_ = new ArrayList<Req_FlightInfo>();
 							String[] airTerminal = reInfo.AirTerminal.split(",");
 
-							Resq_FlightInfo info = new Resq_FlightInfo();
+							Req_FlightInfo info = new Req_FlightInfo();
 							info.N = reInfo.respCabinInfo.get(0).N;
 							info.D = CommonUtil.getFormatDiscount(reInfo.respCabinInfo.get(0).D);
 							info.P = reInfo.respCabinInfo.get(0).P;
@@ -171,7 +171,7 @@ public class FlightResultActivity extends BaseActivity{
 							info.planeSize = "";
 
 							for (Resp_CabinInfo respCabinInfo : reInfo.respCabinInfo) {
-								Resq_FlightInfo childInfo = new Resq_FlightInfo();
+								Req_FlightInfo childInfo = new Req_FlightInfo();
 								childInfo.Sdate = reInfo.Sdate;
 								childInfo.D = CommonUtil.getFormatDiscount(respCabinInfo.D);
 								childInfo.P = respCabinInfo.P;
@@ -213,7 +213,7 @@ public class FlightResultActivity extends BaseActivity{
 									 * 如果是往返，再跳回查询结果界面
 									 */
 									Intent intent = new Intent(FlightResultActivity.this, FlightResultActivity.class);
-									ArrayList<Resq_FlightInfo> resqFlightInfos = (ArrayList<Resq_FlightInfo>) msg_params.obj;
+									ArrayList<Req_FlightInfo> resqFlightInfos = (ArrayList<Req_FlightInfo>) msg_params.obj;
 									intent.putExtra(KEY_PARCELABLE, resqFlightInfos.get(0));
 
 									intent.putExtra(KEY_CITY_LEAVE, getIntent().getStringExtra(KEY_CITY_ARRIVE));
@@ -228,7 +228,7 @@ public class FlightResultActivity extends BaseActivity{
 									 * 如果不是往返，直接跳到订单界面
 									 */
 									Intent intent = new Intent(FlightResultActivity.this, OrderTicketActivity.class);
-									ArrayList<Resq_FlightInfo> resqFlightInfos = (ArrayList<Resq_FlightInfo>) msg_params.obj;
+									ArrayList<Req_FlightInfo> resqFlightInfos = (ArrayList<Req_FlightInfo>) msg_params.obj;
 									if (resqFlightInfo_goAndBack != null) {
 										resqFlightInfos.add(resqFlightInfo_goAndBack);
 										Collections.reverse(resqFlightInfos);

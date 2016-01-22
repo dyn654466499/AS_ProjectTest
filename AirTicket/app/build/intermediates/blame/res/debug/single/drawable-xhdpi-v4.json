@@ -36,6 +36,10 @@
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-xhdpi\\submit_edit_clear_normal.png"
     },
     {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jpdd_dq.png",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-xhdpi\\jpdd_dq.png"
+    },
+    {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\line.png",
         "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-xhdpi\\line.png"
     },
