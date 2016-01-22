@@ -40,11 +40,11 @@ import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
 import static com.daemon.consts.Constants.KEY_TYPE_CERT;
 import static com.daemon.consts.Constants.KEY_TYPE_PASSENGER_CERT_POSITION;
 import static com.daemon.consts.Constants.KEY_TYPE_TICKET_DISTRIBUTE;
-import static com.daemon.consts.Constants.MODEL_TICKET_ORDER_COMMIT;
+import static com.daemon.consts.Constants.MODEL_ORDER_TICKET_COMMIT;
 import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
 import static com.daemon.consts.Constants.REQUEST_CODE_CITY;
 import static com.daemon.consts.Constants.REQUEST_CODE_DISTRIBUTE;
-import static com.daemon.consts.Constants.VIEW_TICKET_ORDER_COMMIT;
+import static com.daemon.consts.Constants.VIEW_ORDER_TICKET_COMMIT;
 
 /**
  * 机票订单界面
@@ -269,31 +269,34 @@ public class OrderTicketActivity extends BaseActivity{
 		 * 提交订单	
 		 */
 		case R.id.btn_order_commit:
-			/**
-			 * 获取每个editText
-			 */
-			for (int i = 0; i < lv_order_passengerInfo.getChildCount(); i++) {
-			     LinearLayout layout = (LinearLayout)lv_order_passengerInfo.getChildAt(i);// 获得子item的layout
-			     EditText et_order_passengers = (EditText) layout.findViewById(R.id.et_order_passengers);// 从layout中获得控件,根据其id
-			     EditText et_order_certNum = (EditText) layout.findViewById(R.id.et_order_certNum);//或者根据位置,在这我假设TextView在前，EditText在后
-			     TextView tv_order_certType = (TextView) layout.findViewById(R.id.tv_order_certType);
-			     Log.e(getTAG(), "name="+et_order_passengers.getText().toString()+
-			    		 ",cert_num ="+et_order_certNum.getText().toString()+
-			    		 ",certType="+tv_order_certType.getText());
-			}
             if(resqFlightInfos.size()==1){
+				String Name = "",IDCard = "";
+				/**
+				 * 获取每个editText
+				 */
+				for (int i = 0; i < lv_order_passengerInfo.getChildCount(); i++) {
+					LinearLayout layout = (LinearLayout)lv_order_passengerInfo.getChildAt(i);// 获得子item的layout
+					EditText et_order_passengers = (EditText) layout.findViewById(R.id.et_order_passengers);// 从layout中获得控件,根据其id
+					EditText et_order_certNum = (EditText) layout.findViewById(R.id.et_order_certNum);//或者根据位置,在这我假设TextView在前，EditText在后
+					TextView tv_order_certType = (TextView) layout.findViewById(R.id.tv_order_certType);
+					Name += et_order_passengers.getText().toString()+"|";
+					IDCard += "NI"+et_order_certNum.getText().toString()+"|";
+					Log.e(getTAG(), "name="+Name+
+							",cert_num ="+IDCard+
+							",certType="+tv_order_certType.getText());
+				}
 				HashMap<String,String> params_map = new HashMap<String,String>();
 				params_map.put("RateId", resqFlightInfos.get(0).ID);
 				params_map.put("PolicyId", resqFlightInfos.get(0).RID);
-				params_map.put("Name","邓耀宁");
+				params_map.put("Name",Name);
 				params_map.put("UserName","wang87654321");
-				params_map.put("IDCard","NI452122199001140014");
+				params_map.put("IDCard",IDCard);
 				params_map.put("Cabins", resqFlightInfos.get(0).cabinType);
 				params_map.put("dotNum", resqFlightInfos.get(0).K);
 				params_map.put("sCity", resqFlightInfos.get(0).Scity);
 				params_map.put("eCity", resqFlightInfos.get(0).Ecity);
 				params_map.put("sDate", resqFlightInfos.get(0).Sdate);
-				params_map.put("AirChangedContact","15277104415");
+				params_map.put("AirChangedContact",((EditText)findViewById(R.id.et_order_phoneNum)).getText().toString());
 				params_map.put("AutoPay","F");
 				params_map.put("Rateway","0");
 				params_map.put("Airline", resqFlightInfos.get(0).AirLine);
@@ -306,7 +309,7 @@ public class OrderTicketActivity extends BaseActivity{
 						resqFlightInfos.get(0).Ecity+",Sdate="+
 						resqFlightInfos.get(0).Sdate+",AirLine="+
 						resqFlightInfos.get(0).AirLine);
-				notifyModelChange(Message.obtain(handler, MODEL_TICKET_ORDER_COMMIT, params_map));
+				notifyModelChange(Message.obtain(handler, MODEL_ORDER_TICKET_COMMIT, params_map));
 			}else{
 				DialogUtil.showDialog(OrderTicketActivity.this, getString(R.string.title_order_edit), "暂时不支持往返创建订单！", new Commands() {
 					@Override
@@ -409,8 +412,17 @@ public class OrderTicketActivity extends BaseActivity{
 	public void onViewChange(Message msg) {
 		// TODO Auto-generated method stub
 		switch (msg.what){
-			case  VIEW_TICKET_ORDER_COMMIT:
+			case VIEW_ORDER_TICKET_COMMIT:
+                if(msg.obj instanceof String){
+					DialogUtil.showDialog(OrderTicketActivity.this, getString(R.string.title_order_edit), (String)msg.obj, new Commands() {
+						@Override
+						public void executeCommand(Message msg_params) {
 
+						}
+					});
+				}else{
+
+				}
 				break;
 		}
 	}

@@ -386,7 +386,7 @@
   <Error ErrorCode="300210" ErrorType="3" ErrorInfo="订单状态不允许改签"/>
   <Error ErrorCode="300211" ErrorType="3" ErrorInfo="升舱的乘客姓名在订单乘客中不存在"/>
   <Error ErrorCode="300212" ErrorType="3" ErrorInfo="升舱舱位有误"/>
-  <Error ErrorCode="300213" ErrorType="3" ErrorInfo="身份证件号格式有误！(开头必须是NI)"/>
+  <Error ErrorCode="300213" ErrorType="3" ErrorInfo="身份证件号格式有误！"/><!--(开头必须是NI)-->
   <Error ErrorCode="300214" ErrorType="3" ErrorInfo="获取行程单信息失败，请检查行程单编号或采购商用户名是否正确"/>
   <Error ErrorCode="300215" ErrorType="3" ErrorInfo="升舱时间小于当前时间"/>
   <Error ErrorCode="300216" ErrorType="3" ErrorInfo="出发时间小于当前时间"/>

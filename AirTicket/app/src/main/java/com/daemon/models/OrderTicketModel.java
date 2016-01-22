@@ -49,7 +49,7 @@ public class OrderTicketModel extends BaseModel {
         String url;
         StringRequest request;
         switch (changeStateMessage.what) {
-            case Constants.MODEL_TICKET_ORDER_COMMIT:
+            case Constants.MODEL_ORDER_TICKET_COMMIT:
                 params_map = (HashMap<String, String>) changeStateMessage.obj;
 //				HashMap<String,String> params_map = new HashMap<String,String>();
 //				params_map.put("RateId","uK6eamCoRWc=");
@@ -73,17 +73,63 @@ public class OrderTicketModel extends BaseModel {
 
                     @Override
                     public void onResponse(String s) {
-                        Log.e("sdfsdfsdfsd", "onResponse=" + s);
+                        if (!TextUtils.isEmpty(s)) {
+                            XmlParserCreator parserCreator = new XmlParserCreator() {
+                                @Override
+                                public XmlPullParser createParser() {
+                                    try {
+                                        return XmlPullParserFactory.newInstance().newPullParser();
+                                    } catch (Exception e) {
+                                        throw new RuntimeException(e);
+                                    }
+                                }
+                            };
+                            GsonXml gsonXml = new GsonXmlBuilder()
+                                    .setXmlParserCreator(parserCreator)
+                                    .create();
+
+                            String header = "<string xmlns=\"http://policy.jinri.cn/\"><?xml version=\"1.0\" encoding=\"gb2312\"?>";
+                            String footer = "</string>";
+                            String xml = s;
+                            try {
+                                if (xml.contains("<JIT-Order-Response>")) {
+                                    xml = xml.replace(header, "").replace("<JIT-Order-Response>", "");
+                                    xml = xml.replace(footer, "").replace("</JIT-Order-Response>", "");
+                                    //Log.e("sdfsdf",xml);
+                                    //Resp_OrderTicketQueryInfo model = gsonXml.fromXml(xml, Resp_OrderTicketQueryInfo.class);
+                                    //Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, model).sendToTarget();
+                                    //Log.e("sdfsdf", model.OrderNo + "");
+                                } else {
+                                    XmlPullParser xmlPullParser = parserCreator.createParser();
+                                    xmlPullParser.setInput(new StringReader(xml));
+                                    int eventType = xmlPullParser.getEventType();
+                                    while (eventType != XmlPullParser.END_DOCUMENT) {
+                                        switch (eventType) {
+                                            case XmlPullParser.START_TAG:
+                                                if ("string".equals(xmlPullParser.getName())) {
+                                                    String message = ErrorCodeUtil.getErrorMessage(mContext, xmlPullParser.nextText());
+                                                    Message.obtain(handler, Constants.VIEW_ORDER_TICKET_COMMIT, message).sendToTarget();
+                                                }
+                                                break;
+                                        }
+                                        eventType = xmlPullParser.next();
+                                    }
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                                String message = "解析xml出错";
+                                Message.obtain(handler, Constants.VIEW_ORDER_TICKET_COMMIT, message).sendToTarget();
+                            }
+                        }
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.e("sdfsdfsdfsd", "onErrorResponse=" + volleyError.getMessage());
+                        String message = "网络出错";
+                        Message.obtain(handler, Constants.VIEW_ORDER_TICKET_COMMIT, message).sendToTarget();
+                        Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
                     }
                 });
-//                request.setRetryPolicy(new DefaultRetryPolicy(15000,
-//                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-//                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
 

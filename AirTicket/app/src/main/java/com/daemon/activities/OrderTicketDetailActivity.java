@@ -49,7 +49,7 @@ public class OrderTicketDetailActivity extends BaseActivity {
             tv_order_ticket_detail_status.setText(SPUtil.getOrderStatus(this).getString(info.Status,""));
 
             TextView tv_order_ticket_detail_price = (TextView)findViewById(R.id.tv_order_ticket_detail_price);
-            tv_order_ticket_detail_price.setText("￥"+info.Price);
+            tv_order_ticket_detail_price.setText("￥"+info.PayMoney);
 
             /**
              *  --------------------------------------     乘机人信息列表 start         -------------------------------------------

@@ -83,7 +83,7 @@ public class ConsumeTicketAdapter extends MyBaseAdapter {
 		});
 		holder.tv_my_consume_ticketStatus.setText(sp_orderStatus.getString(getItem(position).Status,""));
 		 holder.tv_my_consume_Scity.setText(sp_city.getString(getItem(position).Scity,""));
-		 holder.tv_my_consume_ticketPrice.setText("￥" +getItem(position).Price);
+		 holder.tv_my_consume_ticketPrice.setText("￥" +getItem(position).PayMoney);
 
 		 holder.tv_my_consume_Sdate.setText(getItem(position).Date);
 		 holder.tv_my_consume_flightTime.setText(
