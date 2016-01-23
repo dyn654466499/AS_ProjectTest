@@ -104,6 +104,18 @@ public class Resp_OrderTicketQueryInfo implements Parcelable{
      */
   //  @SerializedName("@CardNo")
     public String CardNo;
+    /**
+     * 改签说明
+     */
+    public String ZhuanQianStr;
+    /**
+     * 支付方式
+     */
+    public String PayWay;
+    /**
+     * 退废票说明
+     */
+    public String RInfo;
 
     protected Resp_OrderTicketQueryInfo(Parcel in) {
         OrderNo = in.readString();
@@ -125,6 +137,9 @@ public class Resp_OrderTicketQueryInfo implements Parcelable{
         PCount = in.readString();
         PName = in.readString();
         CardNo = in.readString();
+        ZhuanQianStr = in.readString();
+        PayWay = in.readString();
+        RInfo = in.readString();
     }
 
     public static final Creator<Resp_OrderTicketQueryInfo> CREATOR = new Creator<Resp_OrderTicketQueryInfo>() {
@@ -165,6 +180,9 @@ public class Resp_OrderTicketQueryInfo implements Parcelable{
         dest.writeString(PCount);
         dest.writeString(PName);
         dest.writeString(CardNo);
+        dest.writeString(ZhuanQianStr);
+        dest.writeString(PayWay);
+        dest.writeString(RInfo);
     }
 //    /**
 //     *

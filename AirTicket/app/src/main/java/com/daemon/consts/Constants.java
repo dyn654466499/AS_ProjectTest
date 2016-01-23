@@ -60,7 +60,11 @@ public class Constants {
     public static final int MODEL_ORDER_TICKET_COMMIT = 202;
 
 	public static final int MODEL_ORDER_TICKET_QUERY = 203;
-
+	//退废票
+	public static final int MODEL_ORDER_TICKET_RETURN = 204;
+	//改签
+	public static final int MODEL_ORDER_TICKET_ENDORSE = 205;
+	public static final int MODEL_ORDER_TICKET_ADD = 206;
     /**
      *  view状态改变参数
      */
@@ -68,8 +72,11 @@ public class Constants {
     public static final int VIEW_TICKET_BOOK = 301;
     public static final int VIEW_ORDER_TICKET_COMMIT = 302;
 	public static final int VIEW_ORDER_TICKET_QUERY = 303;
-
-
+	//退废票
+	public static final int VIEW_ORDER_TICKET_RETURN = 304;
+	//改签
+	public static final int VIEW_ORDER_TICKET_ENDORSE =305;
+	public static final int VIEW_ORDER_TICKET_ADD =306;
     /**
      * 请求URL
      */

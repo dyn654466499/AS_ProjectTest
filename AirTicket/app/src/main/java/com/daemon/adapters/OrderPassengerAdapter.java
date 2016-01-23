@@ -3,7 +3,6 @@ package com.daemon.adapters;
 import android.app.Activity;
 import android.content.Intent;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.util.SparseIntArray;
@@ -99,16 +98,15 @@ public class OrderPassengerAdapter extends BaseAdapter{
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
 				// TODO Auto-generated method stub
-				
 			}
 			
 			@Override
 			public void afterTextChanged(Editable s) {
 				// TODO Auto-generated method stub
-				if(!TextUtils.isEmpty(s)){
+				//if(!TextUtils.isEmpty(s)){
 				int position = holder.position;
 				infos.get(position).name = s.toString();
-				}
+				//}
 			}
 		});
         holder.et_order_certNum.addTextChangedListener(new TextWatcher() {
@@ -116,17 +114,16 @@ public class OrderPassengerAdapter extends BaseAdapter{
 			@Override
 			public void afterTextChanged(Editable s) {
 				// TODO Auto-generated method stub
-				if(!TextUtils.isEmpty(s)){
+				//if(!TextUtils.isEmpty(s)){
 				int position = holder.position;
 				infos.get(position).certNum = s.toString();
-				}
+				//}
 			}
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
 				// TODO Auto-generated method stub
-				
 			}
 
 			@Override

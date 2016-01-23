@@ -10,8 +10,10 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.daemon.beans.Resp_OrderTicketInfo;
 import com.daemon.beans.Resp_OrderTicketQueryInfo;
 import com.daemon.consts.Constants;
 import com.daemon.utils.ErrorCodeUtil;
@@ -20,6 +22,8 @@ import com.stanfy.gsonxml.GsonXml;
 import com.stanfy.gsonxml.GsonXmlBuilder;
 import com.stanfy.gsonxml.XmlParserCreator;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
@@ -49,6 +53,9 @@ public class OrderTicketModel extends BaseModel {
         String url;
         StringRequest request;
         switch (changeStateMessage.what) {
+            /**
+             * 提交订单
+             */
             case Constants.MODEL_ORDER_TICKET_COMMIT:
                 params_map = (HashMap<String, String>) changeStateMessage.obj;
 //				HashMap<String,String> params_map = new HashMap<String,String>();
@@ -95,10 +102,10 @@ public class OrderTicketModel extends BaseModel {
                                 if (xml.contains("<JIT-Order-Response>")) {
                                     xml = xml.replace(header, "").replace("<JIT-Order-Response>", "");
                                     xml = xml.replace(footer, "").replace("</JIT-Order-Response>", "");
-                                    //Log.e("sdfsdf",xml);
-                                    //Resp_OrderTicketQueryInfo model = gsonXml.fromXml(xml, Resp_OrderTicketQueryInfo.class);
-                                    //Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, model).sendToTarget();
-                                    //Log.e("sdfsdf", model.OrderNo + "");
+                                    Log.e("sdfsdf", xml);
+                                    Resp_OrderTicketInfo model = gsonXml.fromXml(xml, Resp_OrderTicketInfo.class);
+                                    Message.obtain(handler, Constants.VIEW_ORDER_TICKET_COMMIT, model).sendToTarget();
+                                    Log.e("sdfsdf", model.OrderNo + "");
                                 } else {
                                     XmlPullParser xmlPullParser = parserCreator.createParser();
                                     xmlPullParser.setInput(new StringReader(xml));
@@ -133,7 +140,9 @@ public class OrderTicketModel extends BaseModel {
                 requestQueue.add(request);
                 break;
 
-
+            /**
+             * 查询订单详情
+             */
             case Constants.MODEL_ORDER_TICKET_QUERY:
                 params_map = (HashMap<String, String>) changeStateMessage.obj;
                 url = "http://121.40.116.51:9000/OrderAPI/getOrderInfo" + VolleyUtil.formatGetParams(params_map);
@@ -204,7 +213,46 @@ public class OrderTicketModel extends BaseModel {
                 });
                 requestQueue.add(request);
                 break;
+            /**
+             * 添加订单到后台数据库
+             */
+            case Constants.MODEL_ORDER_TICKET_ADD:
+                params_map = (HashMap<String, String>) changeStateMessage.obj;
+                url = "http://www.icityto.com/X_UserLogic/yesicity2015/ticket_Add" + VolleyUtil.formatGetParams(params_map);
+                requestQueue = Volley.newRequestQueue(mContext);
+                JsonObjectRequest jRequest = new JsonObjectRequest(Request.Method.GET,url,null,new Response.Listener<JSONObject>(){
+
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        String errorCode = "";
+                        String message= "";
+                        try {
+                            errorCode = jsonObject.getString("errorCode");
+                            if("0".equals(errorCode)){
+                                Message.obtain(handler, Constants.VIEW_ORDER_TICKET_ADD, errorCode).sendToTarget();
+                            }else{
+                                message = jsonObject.getString("message");
+                                Message.obtain(handler, Constants.VIEW_ORDER_TICKET_ADD, message).sendToTarget();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                        Log.e(getTAG(), "onResponse =" + message);
+                    }
+                },new Response.ErrorListener(){
+
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                                                String message = "网络出错";
+                Message.obtain(handler, Constants.VIEW_ORDER_TICKET_ADD, message).sendToTarget();
+                Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
+                    }
+                });
+
+                requestQueue.add(jRequest);
+                break;
         }
     }
-
 }

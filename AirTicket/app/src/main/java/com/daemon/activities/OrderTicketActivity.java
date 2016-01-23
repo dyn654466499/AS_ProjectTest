@@ -22,6 +22,7 @@ import com.daemon.adapters.OrderTicketAdapter;
 import com.daemon.airticket.R;
 import com.daemon.beans.Req_FlightInfo;
 import com.daemon.beans.Req_PassengerInfo;
+import com.daemon.beans.Resp_OrderTicketInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.OrderTicketModel;
 import com.daemon.utils.DialogUtil;
@@ -31,20 +32,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.daemon.consts.Constants.KEY_CITY;
-import static com.daemon.consts.Constants.KEY_INSURE_NAME;
-import static com.daemon.consts.Constants.KEY_INSURE_PRICE;
-import static com.daemon.consts.Constants.KEY_PARCELABLE;
-import static com.daemon.consts.Constants.KEY_TYPE;
-import static com.daemon.consts.Constants.KEY_TYPE_CABIN_POSITION;
-import static com.daemon.consts.Constants.KEY_TYPE_CERT;
-import static com.daemon.consts.Constants.KEY_TYPE_PASSENGER_CERT_POSITION;
-import static com.daemon.consts.Constants.KEY_TYPE_TICKET_DISTRIBUTE;
-import static com.daemon.consts.Constants.MODEL_ORDER_TICKET_COMMIT;
-import static com.daemon.consts.Constants.REQUEST_CODE_CERTIFICATE;
-import static com.daemon.consts.Constants.REQUEST_CODE_CITY;
-import static com.daemon.consts.Constants.REQUEST_CODE_DISTRIBUTE;
-import static com.daemon.consts.Constants.VIEW_ORDER_TICKET_COMMIT;
+import static com.daemon.consts.Constants.*;
 
 /**
  * 机票订单界面
@@ -363,7 +351,7 @@ public class OrderTicketActivity extends BaseActivity{
 				passenger_infos.get(view_position).certType = certType;
 				passenger_infos.get(view_position).cert_position = type_position;
 
-				lv_order_insure.requestFocus();
+				//lv_order_insure.requestFocus();
 				passengerAdapter.notifyDataSetChanged();
 				break;
 			/**
@@ -421,8 +409,28 @@ public class OrderTicketActivity extends BaseActivity{
 						}
 					});
 				}else{
-
+					/**
+					 * 将订单号添加到后台数据库
+					 */
+					Resp_OrderTicketInfo info = (Resp_OrderTicketInfo)msg.obj;
+					HashMap<String,String> params_map = new HashMap<String,String>();
+					params_map.put("OrderId", info.OrderNo);
+					params_map.put("Field_YHID", "1");
+					params_map.put("Yesicity","1");
+					notifyModelChange(Message.obtain(handler,MODEL_ORDER_TICKET_ADD,params_map));
 				}
+				break;
+
+			case VIEW_ORDER_TICKET_ADD:
+						if(!"0".equals((String) msg.obj)){
+							String message = (String)msg.obj;
+							DialogUtil.showDialog(OrderTicketActivity.this, "提示", message, new Commands() {
+								@Override
+								public void executeCommand(Message msg_params) {
+
+								}
+							});
+						}
 				break;
 		}
 	}

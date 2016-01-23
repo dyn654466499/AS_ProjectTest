@@ -294,6 +294,7 @@
     <string name="sure">确定</string>
     <string name="tips_exitOrder">您正在填写订单，是否要退出？</string>
     <string name="title_activity_my_consume">MyConsumeActivity</string>
+    <string name="title_activity_order_return_info">OrderReturnInfoActivity</string>
     <string name="title_activity_order_ticket_detail">OrderTicketDetailActivity</string>
     <string name="title_catering">餐饮 </string>
     <string name="title_date_back">选择返回日期</string>

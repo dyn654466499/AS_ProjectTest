@@ -1,7 +1,5 @@
 package com.daemon.beans;
 
-import com.google.gson.annotations.SerializedName;
-
 /**
  * Created by Administrator on 2016/1/21.
  */
@@ -9,108 +7,108 @@ public class Resp_OrderTicketInfo {
     /**
      * 订单号
      */
-    @SerializedName("@OrderNo")
+    //@SerializedName("@OrderNo")
     public String OrderNo;
     /**
      * pnr
      */
-    @SerializedName("@PNR")
+    //@SerializedName("@PNR")
     public String PNR;
     /**
      *
      */
-    @SerializedName("@StayDiscount")
+   // @SerializedName("@StayDiscount")
     public String StayDiscount;
 
     /**
      * 给客户的优惠点
      */
-    @SerializedName("@GrowDiscount")
+    //@SerializedName("@GrowDiscount")
     public String GrowDiscount;
     /**
      *
      */
-    @SerializedName("@PayMoney")
+    //@SerializedName("@PayMoney")
     public String PayMoney;
     /**
      * 经销商利润
      */
-    @SerializedName("@Profit")
+    //@SerializedName("@Profit")
     public String Profit;
     /**
      *
      */
-    @SerializedName("@Status")
+   // @SerializedName("@Status")
     public String Status;
     /**
      *
      */
-    @SerializedName("@Date")
+    //@SerializedName("@Date")
     public String Date;
 
     /**
      * 起飞机场三字码
      */
-    @SerializedName("@Scity")
+    //@SerializedName("@Scity")
     public String Scity;
     /**
      * 降落机场三字码
      */
-    @SerializedName("@Ecity")
+    //@SerializedName("@Ecity")
     public String Ecity;
     /**
      * 起飞时间
      */
-    @SerializedName("@Flight")
+   // @SerializedName("@Flight")
     public String Flight;
     /**
      * 起飞时间
      */
-    @SerializedName("@Stime")
+    //@SerializedName("@Stime")
     public String Stime;
     /**
      * 降落时间
      */
-    @SerializedName("@Etime")
+    //@SerializedName("@Etime")
     public String Etime;
     /**
      * 舱位类型
      */
-    @SerializedName("@Cabin")
+   // @SerializedName("@Cabin")
     public String Cabin;
     /**
      *
      */
-    @SerializedName("@Price")
+    //@SerializedName("@Price")
     public String Price;
     /**
      *
      */
-    @SerializedName("@Tax")
+    //@SerializedName("@Tax")
     public String Tax;
     /**
      * 乘机人数
      */
-    @SerializedName("@PCount")
+   // @SerializedName("@PCount")
     public String PCount;
     /**
      * 乘客姓名 用|隔开
      */
-    @SerializedName("@PName")
+    //@SerializedName("@PName")
     public String PName;
     /**
      * 证件号码
      */
-    @SerializedName("@PCard")
+   // @SerializedName("@PCard")
     public String PCard;
     /**
      *
      */
-    @SerializedName("@JouneryInfo")
+    //@SerializedName("@JouneryInfo")
     public String JouneryInfo;
     /**
      *  是否购买空险
      */
-    @SerializedName("@IsBuyInsurance")
+    //@SerializedName("@IsBuyInsurance")
     public String IsBuyInsurance;
 }

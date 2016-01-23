@@ -230,5 +230,9 @@
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\submit_edit_clear_normal.png",
         "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-hdpi\\submit_edit_clear_normal.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\jpdd_dq.png",
+        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-hdpi\\jpdd_dq.png"
     }
 ]

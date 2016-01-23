@@ -72,6 +72,10 @@
         "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_city_search.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_order_ticket_detail.xml",
+        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_order_ticket_detail.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_btn_back.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\layout\\layout_btn_back.xml"
     },
@@ -252,12 +256,24 @@
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\layout\\layout_endorse.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_order_ticket.xml",
+        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_order_ticket.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_passenger_info.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\layout\\item_order_passenger_info.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_ticket_detail_passenger_info.xml",
+        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_order_ticket_detail_passenger_info.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_insure.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\layout\\item_order_insure.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_order_return_info.xml",
+        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_order_return_info.xml"
     },
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_endorse.xml",

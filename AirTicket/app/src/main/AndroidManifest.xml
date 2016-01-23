@@ -104,10 +104,20 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.daemon.activities.MyConsumeActivity"
-            android:label="@string/title_activity_my_consume" />
+            android:label="@string/title_activity_my_consume"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.daemon.activities.OrderTicketDetailActivity"
-            android:label="@string/title_activity_order_ticket_detail"></activity>
+            android:label="@string/title_activity_order_ticket_detail"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.daemon.activities.OrderReturnInfoActivity"
+            android:label="@string/title_activity_order_return_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTransparent"
+            >
+
+        </activity>
     </application>
 
 </manifest>
