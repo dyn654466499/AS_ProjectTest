@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ticket_bg_gray"
+    android:orientation="vertical"
+    tools:context="com.daemon.activities.EditPersonInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ticket_title_color"
+        >
+
+        <include
+            android:id="@+id/btn_title_back"
+            layout="@layout/layout_btn_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:maxWidth="230dp"
+            android:singleLine="true"
+            android:textSize="@dimen/layout_title"
+            />
+
+        <Button
+            android:id="@+id/btn_person_info_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="保存"
+            android:textColor="@color/ticket_white"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:background="@color/ticket_white"
+        android:showDividers="middle"
+        android:divider="@drawable/line"
+        >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:paddingTop="10dp"
+           android:paddingBottom="10dp"
+           >
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="修改头像"
+               android:layout_gravity="center_vertical"
+               android:gravity="center_vertical|right"
+               android:textColor="@color/ticket_black"
+               android:textSize="16sp"
+               />
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="3"
+               android:layout_marginLeft="30dp"
+               >
+
+               <com.daemon.customview.CircleImageView
+                   android:id="@+id/imageView_person_info_head"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:visibility="gone"
+                   android:layout_marginRight="10dp"
+                   app:border_color="@color/ticket_bg_gray"
+                   app:border_width="1dp"
+                   />
+
+               <Button
+                   android:id="@+id/btn_person_info_head"
+                   android:layout_width="45dp"
+                   android:layout_height="45dp"
+                   android:textSize="14sp"
+                   android:background="@color/ticket_bg_gray"
+                   android:textColor="@color/ticket_font_gray"
+                   android:paddingLeft="5dp"
+                   android:paddingTop="3dp"
+                   android:paddingRight="5dp"
+                   android:paddingBottom="5dp"
+                   android:text="头像设置"
+                   />
+           </LinearLayout>
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="昵称"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_nickname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="用户昵称"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="姓名"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="请输入姓名"
+                />
+        </LinearLayout>
+
+        <!-- 电子邮箱-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="电子邮箱"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="请输入电子邮箱"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="手机号码"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="请输入手机号码"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:background="@color/ticket_white"
+        android:showDividers="middle"
+        android:divider="@drawable/line"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="所在城市"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="请输入所在城市"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="公司"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="请输入公司名称"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="毕业学校"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_university"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="请输入学校名称"
+                />
+        </LinearLayout>
+
+        <!-- 个性签名-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="个性签名"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_sign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="个性签名"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="个人爱好"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/ticket_black"
+                android:textSize="16sp"
+
+                />
+
+            <com.daemon.customview.CustomEditText
+                android:id="@+id/et_person_info_hobby"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:drawableRight="@drawable/submit_edit_clear_normal"
+                android:paddingRight="15dp"
+                android:hint="个人爱好"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

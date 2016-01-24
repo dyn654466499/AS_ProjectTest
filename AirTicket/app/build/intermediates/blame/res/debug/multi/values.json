@@ -3708,35 +3708,11 @@
             },
             {
                 "to": {
-                    "startLine": 261,
-                    "startColumn": 4,
-                    "startOffset": 7176,
-                    "endColumn": 57,
-                    "endOffset": 7229
-                },
-                "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 262,
-                    "startColumn": 4,
-                    "startOffset": 7234,
-                    "endColumn": 55,
-                    "endOffset": 7285
-                },
-                "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
-                }
-            },
-            {
-                "to": {
                     "startLine": 263,
                     "startColumn": 4,
-                    "startOffset": 7290,
-                    "endColumn": 46,
-                    "endOffset": 7332
+                    "startOffset": 7557,
+                    "endColumn": 57,
+                    "endOffset": 7610
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
@@ -3746,9 +3722,9 @@
                 "to": {
                     "startLine": 264,
                     "startColumn": 4,
-                    "startOffset": 7337,
-                    "endColumn": 45,
-                    "endOffset": 7378
+                    "startOffset": 7615,
+                    "endColumn": 55,
+                    "endOffset": 7666
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
@@ -3758,21 +3734,21 @@
                 "to": {
                     "startLine": 265,
                     "startColumn": 4,
-                    "startOffset": 7383,
-                    "endColumn": 74,
-                    "endOffset": 7453
+                    "startOffset": 7671,
+                    "endColumn": 46,
+                    "endOffset": 7713
                 },
                 "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\23.1.1\\res\\values\\values.xml"
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 266,
                     "startColumn": 4,
-                    "startOffset": 7458,
-                    "endColumn": 43,
-                    "endOffset": 7497
+                    "startOffset": 7718,
+                    "endColumn": 45,
+                    "endOffset": 7759
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
@@ -3782,21 +3758,21 @@
                 "to": {
                     "startLine": 267,
                     "startColumn": 4,
-                    "startOffset": 7502,
-                    "endColumn": 42,
-                    "endOffset": 7540
+                    "startOffset": 7764,
+                    "endColumn": 74,
+                    "endOffset": 7834
                 },
                 "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\23.1.1\\res\\values\\values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 268,
                     "startColumn": 4,
-                    "startOffset": 7545,
-                    "endColumn": 42,
-                    "endOffset": 7583
+                    "startOffset": 7839,
+                    "endColumn": 43,
+                    "endOffset": 7878
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
@@ -3806,9 +3782,33 @@
                 "to": {
                     "startLine": 269,
                     "startColumn": 4,
-                    "startOffset": 7588,
+                    "startOffset": 7883,
+                    "endColumn": 42,
+                    "endOffset": 7921
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 270,
+                    "startColumn": 4,
+                    "startOffset": 7926,
+                    "endColumn": 42,
+                    "endOffset": 7964
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 271,
+                    "startColumn": 4,
+                    "startOffset": 7969,
                     "endColumn": 65,
-                    "endOffset": 7649
+                    "endOffset": 8030
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\exploded-aar\\com.android.support\\recyclerview-v7\\23.1.1\\res\\values\\values.xml"
@@ -3816,35 +3816,11 @@
             },
             {
                 "to": {
-                    "startLine": 270,
-                    "startColumn": 4,
-                    "startOffset": 7654,
-                    "endColumn": 52,
-                    "endOffset": 7702
-                },
-                "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 271,
-                    "startColumn": 4,
-                    "startOffset": 7707,
-                    "endColumn": 46,
-                    "endOffset": 7749
-                },
-                "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
-                }
-            },
-            {
-                "to": {
                     "startLine": 272,
                     "startColumn": 4,
-                    "startOffset": 7754,
-                    "endColumn": 42,
-                    "endOffset": 7792
+                    "startOffset": 8035,
+                    "endColumn": 52,
+                    "endOffset": 8083
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3854,9 +3830,9 @@
                 "to": {
                     "startLine": 273,
                     "startColumn": 4,
-                    "startOffset": 7797,
+                    "startOffset": 8088,
                     "endColumn": 46,
-                    "endOffset": 7839
+                    "endOffset": 8130
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3866,9 +3842,9 @@
                 "to": {
                     "startLine": 274,
                     "startColumn": 4,
-                    "startOffset": 7844,
-                    "endColumn": 37,
-                    "endOffset": 7877
+                    "startOffset": 8135,
+                    "endColumn": 42,
+                    "endOffset": 8173
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3878,9 +3854,9 @@
                 "to": {
                     "startLine": 275,
                     "startColumn": 4,
-                    "startOffset": 7882,
-                    "endColumn": 130,
-                    "endOffset": 8008
+                    "startOffset": 8178,
+                    "endColumn": 46,
+                    "endOffset": 8220
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3890,9 +3866,9 @@
                 "to": {
                     "startLine": 276,
                     "startColumn": 4,
-                    "startOffset": 8013,
-                    "endColumn": 45,
-                    "endOffset": 8054
+                    "startOffset": 8225,
+                    "endColumn": 37,
+                    "endOffset": 8258
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3902,9 +3878,9 @@
                 "to": {
                     "startLine": 277,
                     "startColumn": 4,
-                    "startOffset": 8059,
-                    "endColumn": 115,
-                    "endOffset": 8170
+                    "startOffset": 8263,
+                    "endColumn": 130,
+                    "endOffset": 8389
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3914,9 +3890,9 @@
                 "to": {
                     "startLine": 278,
                     "startColumn": 4,
-                    "startOffset": 8175,
-                    "endColumn": 69,
-                    "endOffset": 8240
+                    "startOffset": 8394,
+                    "endColumn": 45,
+                    "endOffset": 8435
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3926,9 +3902,9 @@
                 "to": {
                     "startLine": 279,
                     "startColumn": 4,
-                    "startOffset": 8245,
-                    "endColumn": 56,
-                    "endOffset": 8297
+                    "startOffset": 8440,
+                    "endColumn": 115,
+                    "endOffset": 8551
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3938,9 +3914,9 @@
                 "to": {
                     "startLine": 280,
                     "startColumn": 4,
-                    "startOffset": 8302,
-                    "endColumn": 56,
-                    "endOffset": 8354
+                    "startOffset": 8556,
+                    "endColumn": 69,
+                    "endOffset": 8621
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3950,9 +3926,9 @@
                 "to": {
                     "startLine": 281,
                     "startColumn": 4,
-                    "startOffset": 8359,
-                    "endColumn": 42,
-                    "endOffset": 8397
+                    "startOffset": 8626,
+                    "endColumn": 56,
+                    "endOffset": 8678
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3962,9 +3938,9 @@
                 "to": {
                     "startLine": 282,
                     "startColumn": 4,
-                    "startOffset": 8402,
-                    "endColumn": 47,
-                    "endOffset": 8445
+                    "startOffset": 8683,
+                    "endColumn": 56,
+                    "endOffset": 8735
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3974,9 +3950,9 @@
                 "to": {
                     "startLine": 283,
                     "startColumn": 4,
-                    "startOffset": 8450,
-                    "endColumn": 45,
-                    "endOffset": 8491
+                    "startOffset": 8740,
+                    "endColumn": 42,
+                    "endOffset": 8778
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3986,9 +3962,9 @@
                 "to": {
                     "startLine": 284,
                     "startColumn": 4,
-                    "startOffset": 8496,
-                    "endColumn": 55,
-                    "endOffset": 8547
+                    "startOffset": 8783,
+                    "endColumn": 47,
+                    "endOffset": 8826
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -3998,9 +3974,9 @@
                 "to": {
                     "startLine": 285,
                     "startColumn": 4,
-                    "startOffset": 8552,
-                    "endColumn": 58,
-                    "endOffset": 8606
+                    "startOffset": 8831,
+                    "endColumn": 45,
+                    "endOffset": 8872
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4010,9 +3986,9 @@
                 "to": {
                     "startLine": 286,
                     "startColumn": 4,
-                    "startOffset": 8611,
-                    "endColumn": 52,
-                    "endOffset": 8659
+                    "startOffset": 8877,
+                    "endColumn": 55,
+                    "endOffset": 8928
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4022,9 +3998,9 @@
                 "to": {
                     "startLine": 287,
                     "startColumn": 4,
-                    "startOffset": 8664,
-                    "endColumn": 41,
-                    "endOffset": 8701
+                    "startOffset": 8933,
+                    "endColumn": 58,
+                    "endOffset": 8987
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4034,9 +4010,9 @@
                 "to": {
                     "startLine": 288,
                     "startColumn": 4,
-                    "startOffset": 8706,
-                    "endColumn": 50,
-                    "endOffset": 8752
+                    "startOffset": 8992,
+                    "endColumn": 52,
+                    "endOffset": 9040
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4046,9 +4022,9 @@
                 "to": {
                     "startLine": 289,
                     "startColumn": 4,
-                    "startOffset": 8757,
-                    "endColumn": 63,
-                    "endOffset": 8816
+                    "startOffset": 9045,
+                    "endColumn": 41,
+                    "endOffset": 9082
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4058,9 +4034,9 @@
                 "to": {
                     "startLine": 290,
                     "startColumn": 4,
-                    "startOffset": 8821,
-                    "endColumn": 42,
-                    "endOffset": 8859
+                    "startOffset": 9087,
+                    "endColumn": 50,
+                    "endOffset": 9133
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4070,9 +4046,9 @@
                 "to": {
                     "startLine": 291,
                     "startColumn": 4,
-                    "startOffset": 8864,
-                    "endColumn": 48,
-                    "endOffset": 8908
+                    "startOffset": 9138,
+                    "endColumn": 63,
+                    "endOffset": 9197
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4082,9 +4058,9 @@
                 "to": {
                     "startLine": 292,
                     "startColumn": 4,
-                    "startOffset": 8913,
-                    "endColumn": 55,
-                    "endOffset": 8964
+                    "startOffset": 9202,
+                    "endColumn": 42,
+                    "endOffset": 9240
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4094,9 +4070,9 @@
                 "to": {
                     "startLine": 293,
                     "startColumn": 4,
-                    "startOffset": 8969,
-                    "endColumn": 35,
-                    "endOffset": 9000
+                    "startOffset": 9245,
+                    "endColumn": 48,
+                    "endOffset": 9289
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4106,9 +4082,9 @@
                 "to": {
                     "startLine": 294,
                     "startColumn": 4,
-                    "startOffset": 9005,
-                    "endColumn": 57,
-                    "endOffset": 9058
+                    "startOffset": 9294,
+                    "endColumn": 55,
+                    "endOffset": 9345
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4118,9 +4094,9 @@
                 "to": {
                     "startLine": 295,
                     "startColumn": 4,
-                    "startOffset": 9063,
-                    "endColumn": 71,
-                    "endOffset": 9130
+                    "startOffset": 9350,
+                    "endColumn": 35,
+                    "endOffset": 9381
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4130,28 +4106,21 @@
                 "to": {
                     "startLine": 296,
                     "startColumn": 4,
-                    "startOffset": 9135,
-                    "endColumn": 84,
-                    "endOffset": 9215
+                    "startOffset": 9386,
+                    "endColumn": 57,
+                    "endOffset": 9439
                 },
                 "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 331,
-                        "startColumn": 4,
-                        "startOffset": 9455,
-                        "endColumn": 84,
-                        "endOffset": 9535
-                    }
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 297,
                     "startColumn": 4,
-                    "startOffset": 9220,
-                    "endColumn": 88,
-                    "endOffset": 9304
+                    "startOffset": 9444,
+                    "endColumn": 82,
+                    "endOffset": 9522
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4161,21 +4130,28 @@
                 "to": {
                     "startLine": 298,
                     "startColumn": 4,
-                    "startOffset": 9309,
-                    "endColumn": 46,
-                    "endOffset": 9351
+                    "startOffset": 9527,
+                    "endColumn": 75,
+                    "endOffset": 9598
                 },
                 "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 333,
+                        "startColumn": 4,
+                        "startOffset": 9625,
+                        "endColumn": 75,
+                        "endOffset": 9696
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 299,
                     "startColumn": 4,
-                    "startOffset": 9356,
-                    "endColumn": 50,
-                    "endOffset": 9402
+                    "startOffset": 9603,
+                    "endColumn": 71,
+                    "endOffset": 9670
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4185,9 +4161,9 @@
                 "to": {
                     "startLine": 300,
                     "startColumn": 4,
-                    "startOffset": 9407,
-                    "endColumn": 51,
-                    "endOffset": 9454
+                    "startOffset": 9675,
+                    "endColumn": 84,
+                    "endOffset": 9755
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4197,9 +4173,9 @@
                 "to": {
                     "startLine": 301,
                     "startColumn": 4,
-                    "startOffset": 9459,
-                    "endColumn": 46,
-                    "endOffset": 9501
+                    "startOffset": 9760,
+                    "endColumn": 88,
+                    "endOffset": 9844
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4209,9 +4185,9 @@
                 "to": {
                     "startLine": 302,
                     "startColumn": 4,
-                    "startOffset": 9506,
-                    "endColumn": 57,
-                    "endOffset": 9559
+                    "startOffset": 9849,
+                    "endColumn": 46,
+                    "endOffset": 9891
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4221,9 +4197,9 @@
                 "to": {
                     "startLine": 303,
                     "startColumn": 4,
-                    "startOffset": 9564,
-                    "endColumn": 53,
-                    "endOffset": 9613
+                    "startOffset": 9896,
+                    "endColumn": 50,
+                    "endOffset": 9942
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4233,9 +4209,9 @@
                 "to": {
                     "startLine": 304,
                     "startColumn": 4,
-                    "startOffset": 9618,
-                    "endColumn": 53,
-                    "endOffset": 9667
+                    "startOffset": 9947,
+                    "endColumn": 51,
+                    "endOffset": 9994
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4245,9 +4221,9 @@
                 "to": {
                     "startLine": 305,
                     "startColumn": 4,
-                    "startOffset": 9672,
-                    "endColumn": 67,
-                    "endOffset": 9735
+                    "startOffset": 9999,
+                    "endColumn": 46,
+                    "endOffset": 10041
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4257,9 +4233,9 @@
                 "to": {
                     "startLine": 306,
                     "startColumn": 4,
-                    "startOffset": 9740,
-                    "endColumn": 52,
-                    "endOffset": 9788
+                    "startOffset": 10046,
+                    "endColumn": 57,
+                    "endOffset": 10099
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4269,9 +4245,9 @@
                 "to": {
                     "startLine": 307,
                     "startColumn": 4,
-                    "startOffset": 9793,
-                    "endColumn": 46,
-                    "endOffset": 9835
+                    "startOffset": 10104,
+                    "endColumn": 53,
+                    "endOffset": 10153
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4281,9 +4257,9 @@
                 "to": {
                     "startLine": 308,
                     "startColumn": 4,
-                    "startOffset": 9840,
-                    "endColumn": 43,
-                    "endOffset": 9879
+                    "startOffset": 10158,
+                    "endColumn": 53,
+                    "endOffset": 10207
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4293,9 +4269,9 @@
                 "to": {
                     "startLine": 309,
                     "startColumn": 4,
-                    "startOffset": 9884,
-                    "endColumn": 50,
-                    "endOffset": 9930
+                    "startOffset": 10212,
+                    "endColumn": 67,
+                    "endOffset": 10275
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4305,9 +4281,9 @@
                 "to": {
                     "startLine": 310,
                     "startColumn": 4,
-                    "startOffset": 9935,
-                    "endColumn": 47,
-                    "endOffset": 9978
+                    "startOffset": 10280,
+                    "endColumn": 52,
+                    "endOffset": 10328
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4317,9 +4293,9 @@
                 "to": {
                     "startLine": 311,
                     "startColumn": 4,
-                    "startOffset": 9983,
-                    "endColumn": 49,
-                    "endOffset": 10028
+                    "startOffset": 10333,
+                    "endColumn": 46,
+                    "endOffset": 10375
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4329,9 +4305,9 @@
                 "to": {
                     "startLine": 312,
                     "startColumn": 4,
-                    "startOffset": 10033,
+                    "startOffset": 10380,
                     "endColumn": 43,
-                    "endOffset": 10072
+                    "endOffset": 10419
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4341,9 +4317,9 @@
                 "to": {
                     "startLine": 313,
                     "startColumn": 4,
-                    "startOffset": 10077,
-                    "endColumn": 51,
-                    "endOffset": 10124
+                    "startOffset": 10424,
+                    "endColumn": 50,
+                    "endOffset": 10470
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4353,9 +4329,9 @@
                 "to": {
                     "startLine": 314,
                     "startColumn": 4,
-                    "startOffset": 10129,
-                    "endColumn": 49,
-                    "endOffset": 10174
+                    "startOffset": 10475,
+                    "endColumn": 47,
+                    "endOffset": 10518
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4365,9 +4341,9 @@
                 "to": {
                     "startLine": 315,
                     "startColumn": 4,
-                    "startOffset": 10179,
-                    "endColumn": 51,
-                    "endOffset": 10226
+                    "startOffset": 10523,
+                    "endColumn": 49,
+                    "endOffset": 10568
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4377,9 +4353,9 @@
                 "to": {
                     "startLine": 316,
                     "startColumn": 4,
-                    "startOffset": 10231,
-                    "endColumn": 50,
-                    "endOffset": 10277
+                    "startOffset": 10573,
+                    "endColumn": 43,
+                    "endOffset": 10612
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4389,9 +4365,9 @@
                 "to": {
                     "startLine": 317,
                     "startColumn": 4,
-                    "startOffset": 10282,
-                    "endColumn": 65,
-                    "endOffset": 10343
+                    "startOffset": 10617,
+                    "endColumn": 51,
+                    "endOffset": 10664
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4401,9 +4377,9 @@
                 "to": {
                     "startLine": 318,
                     "startColumn": 4,
-                    "startOffset": 10348,
-                    "endColumn": 46,
-                    "endOffset": 10390
+                    "startOffset": 10669,
+                    "endColumn": 49,
+                    "endOffset": 10714
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4413,9 +4389,9 @@
                 "to": {
                     "startLine": 319,
                     "startColumn": 4,
-                    "startOffset": 10395,
-                    "endColumn": 44,
-                    "endOffset": 10435
+                    "startOffset": 10719,
+                    "endColumn": 51,
+                    "endOffset": 10766
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
@@ -4425,23 +4401,71 @@
                 "to": {
                     "startLine": 320,
                     "startColumn": 4,
-                    "startOffset": 10440,
-                    "endLine": 323,
-                    "endColumn": 12,
-                    "endOffset": 10628
+                    "startOffset": 10771,
+                    "endColumn": 50,
+                    "endOffset": 10817
                 },
                 "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 321,
+                    "startColumn": 4,
+                    "startOffset": 10822,
+                    "endColumn": 65,
+                    "endOffset": 10883
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 322,
+                    "startColumn": 4,
+                    "startOffset": 10888,
+                    "endColumn": 46,
+                    "endOffset": 10930
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 323,
+                    "startColumn": 4,
+                    "startOffset": 10935,
+                    "endColumn": 44,
+                    "endOffset": 10975
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 324,
                     "startColumn": 4,
-                    "startOffset": 10633,
-                    "endLine": 330,
+                    "startOffset": 10980,
+                    "endLine": 327,
                     "endColumn": 12,
-                    "endOffset": 10919
+                    "endOffset": 11168
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 328,
+                    "startColumn": 4,
+                    "startOffset": 11173,
+                    "endLine": 334,
+                    "endColumn": 12,
+                    "endOffset": 11459
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\styles.xml"
@@ -4449,12 +4473,12 @@
             },
             {
                 "to": {
-                    "startLine": 331,
+                    "startLine": 335,
                     "startColumn": 4,
-                    "startOffset": 10924,
-                    "endLine": 333,
+                    "startOffset": 11464,
+                    "endLine": 337,
                     "endColumn": 12,
-                    "endOffset": 11079
+                    "endOffset": 11619
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\styles.xml"
@@ -4462,12 +4486,12 @@
             },
             {
                 "to": {
-                    "startLine": 334,
+                    "startLine": 338,
                     "startColumn": 4,
-                    "startOffset": 11084,
-                    "endLine": 343,
+                    "startOffset": 11624,
+                    "endLine": 347,
                     "endColumn": 12,
-                    "endOffset": 11560
+                    "endOffset": 12100
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"
@@ -4475,12 +4499,12 @@
             },
             {
                 "to": {
-                    "startLine": 344,
+                    "startLine": 348,
                     "startColumn": 4,
-                    "startOffset": 11565,
-                    "endLine": 349,
+                    "startOffset": 12105,
+                    "endLine": 353,
                     "endColumn": 12,
-                    "endOffset": 11818
+                    "endOffset": 12358
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"
@@ -4488,12 +4512,12 @@
             },
             {
                 "to": {
-                    "startLine": 350,
+                    "startLine": 354,
                     "startColumn": 4,
-                    "startOffset": 11823,
-                    "endLine": 354,
+                    "startOffset": 12363,
+                    "endLine": 358,
                     "endColumn": 12,
-                    "endOffset": 12026
+                    "endOffset": 12566
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"
@@ -4501,25 +4525,12 @@
             },
             {
                 "to": {
-                    "startLine": 355,
+                    "startLine": 359,
                     "startColumn": 4,
-                    "startOffset": 12031,
-                    "endLine": 368,
-                    "endColumn": 12,
-                    "endOffset": 12874
-                },
-                "from": {
-                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 369,
-                    "startColumn": 4,
-                    "startOffset": 12879,
+                    "startOffset": 12571,
                     "endLine": 372,
                     "endColumn": 12,
-                    "endOffset": 13077
+                    "endOffset": 13414
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"
@@ -4529,10 +4540,23 @@
                 "to": {
                     "startLine": 373,
                     "startColumn": 4,
-                    "startOffset": 13082,
-                    "endLine": 375,
+                    "startOffset": 13419,
+                    "endLine": 376,
                     "endColumn": 12,
-                    "endOffset": 13185
+                    "endOffset": 13617
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 377,
+                    "startColumn": 4,
+                    "startOffset": 13622,
+                    "endLine": 379,
+                    "endColumn": 12,
+                    "endOffset": 13725
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\values\\style.xml"

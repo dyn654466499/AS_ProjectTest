@@ -1,5 +1,7 @@
 package com.daemon.utils;
 
+import android.content.Context;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -53,5 +55,21 @@ public class CommonUtil {
             discount = String.valueOf(d)+"折";
         }
         return discount;
+    }
+
+    /**
+     * 密度转换像素
+     **/
+    public static int Dp2Px(Context context, float dp) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dp * scale + 0.5f);
+    }
+
+    /**
+     * 像素转换密度
+     **/
+    public static int Px2Dp(Context context, float px) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (px / scale + 0.5f);
     }
 }

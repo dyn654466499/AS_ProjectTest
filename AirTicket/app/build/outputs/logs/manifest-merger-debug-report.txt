@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:2:1-123:12
+ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:2:1-131:12
 	package
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml
@@ -213,7 +213,7 @@ ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\Androi
 	android:anyDensity
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:60:9-34
 application
-ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:66:5-121:19
+ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:66:5-129:19
 MERGED from [com.android.support:support-v4:23.1.1] D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
@@ -291,7 +291,7 @@ ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\Androi
 	android:name
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:103:13-64
 activity#com.daemon.activities.MyConsumeActivity
-ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:105:9-108:51
+ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:105:9-108:52
 	android:screenOrientation
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:108:13-49
 	android:label
@@ -299,7 +299,7 @@ ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\Androi
 	android:name
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:106:13-67
 activity#com.daemon.activities.OrderTicketDetailActivity
-ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:109:9-112:51
+ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:109:9-112:52
 	android:screenOrientation
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:112:13-49
 	android:label
@@ -307,7 +307,7 @@ ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\Androi
 	android:name
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:110:13-75
 activity#com.daemon.activities.OrderReturnInfoActivity
-ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:113:9-120:20
+ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:113:9-117:58
 	android:screenOrientation
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:116:13-49
 	android:label
@@ -316,3 +316,21 @@ ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\Androi
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:117:13-55
 	android:name
 		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:114:13-73
+activity#com.daemon.activities.EditPersonInfoActivity
+ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:118:9-122:15
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:121:13-49
+	android:label
+		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:120:13-68
+	android:name
+		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:119:13-72
+activity#com.daemon.activities.ImageSelectActivity
+ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:123:9-128:15
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:126:13-49
+	android:label
+		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:125:13-64
+	android:theme
+		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:127:13-55
+	android:name
+		ADDED from D:\AndroidStudioProjects\AS_ProjectTest\AirTicket\app\src\main\AndroidManifest.xml:124:13-69

@@ -258,6 +258,8 @@
     <color name="ticket_green">#08a65c</color>
     <color name="ticket_title_color">#0080ff</color>
     <color name="ticket_white">#ffffff</color>
+    <declare-styleable name="CircleImageView"><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/></declare-styleable>
+    <declare-styleable name="HorizontalListView"><attr format="dimension" name="dividerWidth"/><attr name="android:divider"/><attr name="android:requiresFadingEdge"/><attr name="android:fadingEdgeLength"/></declare-styleable>
     <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -293,6 +295,8 @@
     <string name="string_search_hit">搜索中文/城市简拼</string>
     <string name="sure">确定</string>
     <string name="tips_exitOrder">您正在填写订单，是否要退出？</string>
+    <string name="title_activity_edit_person_info">EditPersonInfoActivity</string>
+    <string name="title_activity_image_select">ImageSelectActivity</string>
     <string name="title_activity_my_consume">MyConsumeActivity</string>
     <string name="title_activity_order_return_info">OrderReturnInfoActivity</string>
     <string name="title_activity_order_ticket_detail">OrderTicketDetailActivity</string>

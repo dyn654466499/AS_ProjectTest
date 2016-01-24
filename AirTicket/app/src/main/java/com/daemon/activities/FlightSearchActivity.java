@@ -159,6 +159,9 @@ public class FlightSearchActivity extends BaseActivity {
 		Button btn_flight_search_test = (Button) findViewById(R.id.btn_flight_search_test);
 		btn_flight_search_test.setOnClickListener(this);
 
+		Button btn_flight_search_testPersonInfo = (Button) findViewById(R.id.btn_flight_search_testPersonInfo);
+		btn_flight_search_testPersonInfo.setOnClickListener(this);
+
         //startActivity(new Intent(this, com.daemon.pay.unionpay.BaseActivity.class));
         new Thread(){
 			@Override
@@ -176,6 +179,11 @@ public class FlightSearchActivity extends BaseActivity {
 		switch (v.getId()) {
 			case R.id.btn_flight_search_test:
 				intent = new Intent(FlightSearchActivity.this,MyConsumeActivity.class);
+				startActivity(intent);
+				break;
+
+			case R.id.btn_flight_search_testPersonInfo:
+				intent = new Intent(FlightSearchActivity.this,EditPersonInfoActivity.class);
 				startActivity(intent);
 				break;
 

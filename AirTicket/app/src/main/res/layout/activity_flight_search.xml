@@ -259,7 +259,6 @@
         android:textColor="#ffffff"
         android:textSize="@dimen/button_textSize" />
 
-    <!-- 搜索 -->
     <Button
         android:id="@+id/btn_flight_search_test"
         android:layout_width="330dp"
@@ -268,6 +267,17 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/ticket_btn_selector"
         android:text="测试订单"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/button_textSize" />
+
+    <Button
+        android:id="@+id/btn_flight_search_testPersonInfo"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ticket_btn_selector"
+        android:text="测试编辑资料"
         android:textColor="#ffffff"
         android:textSize="@dimen/button_textSize" />
 

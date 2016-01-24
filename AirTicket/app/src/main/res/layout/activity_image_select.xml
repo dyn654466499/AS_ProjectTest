@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:background="@null"
+    tools:context="com.daemon.activities.ImageSelectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@null"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@null"
+        >
+
+<Button
+    android:id="@+id/btn_image_select_capture"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="拍照"
+    android:gravity="center"
+    android:background="@color/ticket_white"
+    android:textColor="@color/ticket_title_color"
+    android:textSize="16sp"
+    />
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/ticket_bg_gray"
+           />
+
+
+        <Button
+            android:id="@+id/btn_image_select_photoAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="从相册中选择"
+            android:gravity="center"
+            android:background="@color/ticket_white"
+            android:textColor="@color/ticket_title_color"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/btn_image_select_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="取消"
+            android:gravity="center"
+            android:background="@color/ticket_white"
+            android:textColor="@color/ticket_title_color"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+</LinearLayout>

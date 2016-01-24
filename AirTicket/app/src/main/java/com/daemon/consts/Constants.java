@@ -51,7 +51,12 @@ public class Constants {
 	public static final int REQUEST_CODE_CITY_LEAVE = 105;
 	public static final int REQUEST_CODE_CITY_ARRIVE = 106;
 	public static final int REQUEST_CODE_CITY = 107;
+	public static final int REQUEST_CODE_SET_HEAD = 108;
 
+	/* 请求识别码 */
+	public static final int REQUEST_CODE_GALLERY = 109;
+	public static final int REQUEST_CODE_CAMERA = 110;
+	public static final int REQUEST_CODE_RESULT = 111;
     /**
      * model请求参数
      */
