@@ -72,6 +72,53 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int reverseLayout=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sc_border_width=0x7f010008;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sc_checked_text_color=0x7f01000b;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sc_corner_radius=0x7f010007;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sc_tint_color=0x7f010009;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sc_unchecked_tint_color=0x7f01000a;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -97,14 +144,18 @@ containing a value of this type.
         public static final int calendar_color_month_title=0x7f0a0004;
         public static final int calendar_color_orange=0x7f0a0005;
         public static final int calendar_color_white=0x7f0a0006;
-        public static final int ticket_bg_gray=0x7f0a0007;
-        public static final int ticket_black=0x7f0a0008;
-        public static final int ticket_button_click=0x7f0a0009;
-        public static final int ticket_font_deep_gray=0x7f0a000a;
-        public static final int ticket_font_gray=0x7f0a000b;
-        public static final int ticket_green=0x7f0a000c;
-        public static final int ticket_title_color=0x7f0a000d;
-        public static final int ticket_white=0x7f0a000e;
+        public static final int segment_button_selected_color=0x7f0a0007;
+        public static final int segment_button_selected_text_color=0x7f0a0008;
+        public static final int segment_button_unselected_color=0x7f0a0009;
+        public static final int segment_button_unselected_text_color=0x7f0a000a;
+        public static final int ticket_bg_gray=0x7f0a000b;
+        public static final int ticket_black=0x7f0a000c;
+        public static final int ticket_button_click=0x7f0a000d;
+        public static final int ticket_font_deep_gray=0x7f0a000e;
+        public static final int ticket_font_gray=0x7f0a000f;
+        public static final int ticket_green=0x7f0a0010;
+        public static final int ticket_title_color=0x7f0a0011;
+        public static final int ticket_white=0x7f0a0012;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f080000;
@@ -113,51 +164,59 @@ containing a value of this type.
         public static final int edittext_corner=0x7f080003;
         public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f080004;
         public static final int layout_title=0x7f080005;
-        public static final int text_margin=0x7f080006;
-        public static final int title_corner=0x7f080007;
+        public static final int radio_button_conner_radius=0x7f080006;
+        public static final int radio_button_stroke_border=0x7f080007;
+        public static final int text_margin=0x7f080008;
+        public static final int title_corner=0x7f080009;
     }
     public static final class drawable {
         public static final int autoloading=0x7f020000;
         public static final int bg_calendar_seleced=0x7f020001;
         public static final int bg_selector=0x7f020002;
         public static final int bg_selector_frame=0x7f020003;
-        public static final int btn_goandback_press=0x7f020004;
-        public static final int btn_goandback_selector=0x7f020005;
-        public static final int btn_goandback_unpress=0x7f020006;
-        public static final int btn_oneway_press=0x7f020007;
-        public static final int btn_oneway_selector=0x7f020008;
-        public static final int btn_oneway_unpress=0x7f020009;
-        public static final int btn_press_frame=0x7f02000a;
-        public static final int btn_unpress_frame=0x7f02000b;
-        public static final int dancheng=0x7f02000c;
-        public static final int dancheng_da=0x7f02000d;
-        public static final int editext_corner=0x7f02000e;
-        public static final int ic_duigou_lan=0x7f02000f;
-        public static final int ic_fanxiang=0x7f020010;
-        public static final int ic_launcher=0x7f020011;
-        public static final int ic_xiangxia=0x7f020012;
-        public static final int ic_xiangyou=0x7f020013;
-        public static final int jp_list=0x7f020014;
-        public static final int jpdd_dq=0x7f020015;
-        public static final int kongxian=0x7f020016;
-        public static final int layout_frame_nomal=0x7f020017;
-        public static final int line=0x7f020018;
-        public static final int select_city_bg=0x7f020019;
-        public static final int submit_edit_clear_normal=0x7f02001a;
-        public static final int ticket_btn_corner_click=0x7f02001b;
-        public static final int ticket_btn_corner_selector=0x7f02001c;
-        public static final int ticket_btn_selector=0x7f02001d;
-        public static final int ticket_button_corner=0x7f02001e;
-        public static final int ticket_title_corner=0x7f02001f;
-        public static final int tip_loading1=0x7f020020;
-        public static final int tip_loading2=0x7f020021;
-        public static final int tip_loading3=0x7f020022;
-        public static final int tip_loading4=0x7f020023;
-        public static final int tip_loading5=0x7f020024;
-        public static final int tip_loading6=0x7f020025;
-        public static final int tip_loading7=0x7f020026;
-        public static final int tip_loading8=0x7f020027;
-        public static final int tip_loading9=0x7f020028;
+        public static final int btn_conner_left_press=0x7f020004;
+        public static final int btn_conner_left_unpress=0x7f020005;
+        public static final int btn_conner_right_press=0x7f020006;
+        public static final int btn_conner_right_unpress=0x7f020007;
+        public static final int btn_goandback_press=0x7f020008;
+        public static final int btn_goandback_selector=0x7f020009;
+        public static final int btn_goandback_unpress=0x7f02000a;
+        public static final int btn_oneway_press=0x7f02000b;
+        public static final int btn_oneway_selector=0x7f02000c;
+        public static final int btn_oneway_unpress=0x7f02000d;
+        public static final int btn_press_frame=0x7f02000e;
+        public static final int btn_unpress_frame=0x7f02000f;
+        public static final int dancheng=0x7f020010;
+        public static final int dancheng_da=0x7f020011;
+        public static final int editext_corner=0x7f020012;
+        public static final int ic_duigou_lan=0x7f020013;
+        public static final int ic_fanxiang=0x7f020014;
+        public static final int ic_launcher=0x7f020015;
+        public static final int ic_xiangxia=0x7f020016;
+        public static final int ic_xiangyou=0x7f020017;
+        public static final int jp_list=0x7f020018;
+        public static final int jpdd_dq=0x7f020019;
+        public static final int kongxian=0x7f02001a;
+        public static final int layout_frame_nomal=0x7f02001b;
+        public static final int line=0x7f02001c;
+        public static final int radio_checked=0x7f02001d;
+        public static final int radio_unchecked=0x7f02001e;
+        public static final int select_city_bg=0x7f02001f;
+        public static final int submit_edit_clear_normal=0x7f020020;
+        public static final int ticket_btn_corner_click=0x7f020021;
+        public static final int ticket_btn_corner_selector=0x7f020022;
+        public static final int ticket_btn_selector=0x7f020023;
+        public static final int ticket_button_corner=0x7f020024;
+        public static final int ticket_title_corner=0x7f020025;
+        public static final int tip_loading1=0x7f020026;
+        public static final int tip_loading2=0x7f020027;
+        public static final int tip_loading3=0x7f020028;
+        public static final int tip_loading4=0x7f020029;
+        public static final int tip_loading5=0x7f02002a;
+        public static final int tip_loading6=0x7f02002b;
+        public static final int tip_loading7=0x7f02002c;
+        public static final int tip_loading8=0x7f02002d;
+        public static final int tip_loading9=0x7f02002e;
     }
     public static final class id {
         public static final int action_settings=0x7f0b0096;
@@ -612,5 +671,104 @@ containing a value of this type.
           @attr name com.daemon.airticket:stackFromEnd
         */
         public static final int RecyclerView_stackFromEnd = 4;
+        /** Attributes that can be used with a SegmentedGroup.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SegmentedGroup_sc_border_width com.daemon.airticket:sc_border_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #SegmentedGroup_sc_checked_text_color com.daemon.airticket:sc_checked_text_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #SegmentedGroup_sc_corner_radius com.daemon.airticket:sc_corner_radius}</code></td><td></td></tr>
+           <tr><td><code>{@link #SegmentedGroup_sc_tint_color com.daemon.airticket:sc_tint_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #SegmentedGroup_sc_unchecked_tint_color com.daemon.airticket:sc_unchecked_tint_color}</code></td><td></td></tr>
+           </table>
+           @see #SegmentedGroup_sc_border_width
+           @see #SegmentedGroup_sc_checked_text_color
+           @see #SegmentedGroup_sc_corner_radius
+           @see #SegmentedGroup_sc_tint_color
+           @see #SegmentedGroup_sc_unchecked_tint_color
+         */
+        public static final int[] SegmentedGroup = {
+            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a,
+            0x7f01000b
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.daemon.airticket.R.attr#sc_border_width}
+          attribute's value can be found in the {@link #SegmentedGroup} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.daemon.airticket:sc_border_width
+        */
+        public static final int SegmentedGroup_sc_border_width = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.daemon.airticket.R.attr#sc_checked_text_color}
+          attribute's value can be found in the {@link #SegmentedGroup} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.daemon.airticket:sc_checked_text_color
+        */
+        public static final int SegmentedGroup_sc_checked_text_color = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.daemon.airticket.R.attr#sc_corner_radius}
+          attribute's value can be found in the {@link #SegmentedGroup} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.daemon.airticket:sc_corner_radius
+        */
+        public static final int SegmentedGroup_sc_corner_radius = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.daemon.airticket.R.attr#sc_tint_color}
+          attribute's value can be found in the {@link #SegmentedGroup} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.daemon.airticket:sc_tint_color
+        */
+        public static final int SegmentedGroup_sc_tint_color = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.daemon.airticket.R.attr#sc_unchecked_tint_color}
+          attribute's value can be found in the {@link #SegmentedGroup} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.daemon.airticket:sc_unchecked_tint_color
+        */
+        public static final int SegmentedGroup_sc_unchecked_tint_color = 3;
     };
 }

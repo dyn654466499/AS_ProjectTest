@@ -16,5 +16,11 @@
     <color name="calendar_color_gray">#cccccc</color>
     <color name="calendar_color_month_title">#526276</color>
     <color name="calendar_color_white">#ffffff</color>
-    
+
+    <!-- segment radio button -->
+    <color name="segment_button_selected_color">@color/ticket_white</color>
+    <color name="segment_button_unselected_color">@color/ticket_title_color</color>
+
+    <color name="segment_button_selected_text_color">@color/ticket_title_color</color>
+    <color name="segment_button_unselected_text_color">@color/ticket_white</color>
 </resources>

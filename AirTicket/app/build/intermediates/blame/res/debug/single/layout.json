@@ -8,20 +8,20 @@
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_type_select.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_my_consume_ticket.xml",
-        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\layout\\item_my_consume_ticket.xml"
-    },
-    {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_person_info.xml",
         "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_edit_person_info.xml"
     },
     {
-        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_ticket_detail_passenger_info.xml",
-        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_order_ticket_detail_passenger_info.xml"
+        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_my_consume_ticket.xml",
+        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\layout\\item_my_consume_ticket.xml"
     },
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_order_ticket.xml",
         "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\activity_order_ticket.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_order_ticket_detail_passenger_info.xml",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\layout\\item_order_ticket_detail_passenger_info.xml"
     },
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_flight_result.xml",

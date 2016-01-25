@@ -43,6 +43,20 @@
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="D:/yunchengke">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="https://121.40.116.51/svn/yunchengk/android/yunchengke" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">

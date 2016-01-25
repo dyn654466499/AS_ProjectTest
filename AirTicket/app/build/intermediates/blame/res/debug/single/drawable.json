@@ -8,6 +8,10 @@
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_btn_corner_click.xml"
     },
     {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_conner_left_press.xml",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\btn_conner_left_press.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ticket_btn_corner_selector.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_btn_corner_selector.xml"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ticket_btn_corner_click.xml",
         "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_btn_corner_click.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radio_checked.xml",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\radio_checked.xml"
     },
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_oneway_selector.xml",
@@ -136,6 +144,10 @@
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\drawable\\bg_selector.xml"
     },
     {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_conner_right_unpress.xml",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\btn_conner_right_unpress.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\layout_frame_nomal.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\drawable\\layout_frame_nomal.xml"
     },
@@ -162,6 +174,10 @@
     {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ticket_title_corner.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_title_corner.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_conner_right_press.xml",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\btn_conner_right_press.xml"
     },
     {
         "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_selector.xml",
@@ -204,6 +220,10 @@
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\drawable\\ticket_btn_selector.xml"
     },
     {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_conner_left_unpress.xml",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\btn_conner_left_unpress.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_oneway_selector.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\drawable\\btn_oneway_selector.xml"
     },
@@ -214,6 +234,10 @@
     {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_press_frame.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\drawable\\btn_press_frame.xml"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radio_unchecked.xml",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable\\radio_unchecked.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\select_city_bg.xml",

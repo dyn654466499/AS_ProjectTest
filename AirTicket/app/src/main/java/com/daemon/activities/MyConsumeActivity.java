@@ -78,28 +78,30 @@ public class MyConsumeActivity extends BaseActivity {
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()){
             case R.id.btn_title_back:
                 finish();
                 break;
 
             case R.id.btn_my_consume_shopping:
-
+                setButtonClick(v.getId());
                 break;
 
             case R.id.btn_my_consume_catering:
-
+                setButtonClick(v.getId());
                 break;
 
             case R.id.btn_my_consume_localCity:
-
+                setButtonClick(v.getId());
                 break;
 
             case R.id.btn_my_consume_hotel:
-
+                setButtonClick(v.getId());
                 break;
 
             case R.id.btn_my_consume_airTicket:
+                setButtonClick(v.getId());
                 /**
                  * 如果为null，则请求网络数据；否则直接显示列表
                  */
@@ -123,6 +125,31 @@ public class MyConsumeActivity extends BaseActivity {
                 break;
         }
     }
+
+    private void setButtonClick(int resId){
+        for (Button button:buttonList) {
+            if(button.getId()==resId){
+                if(button.getId() == R.id.btn_my_consume_shopping){
+                    button.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_conner_left_press));
+                }else if(button.getId() == R.id.btn_my_consume_airTicket){
+                    button.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_conner_right_press));
+                }else{
+                    button.setBackgroundColor(getResources().getColor(R.color.ticket_white));
+                }
+                button.setTextColor(getResources().getColor(R.color.ticket_title_color));
+            }else{
+                if(button.getId() == R.id.btn_my_consume_shopping){
+                    button.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_conner_left_unpress));
+                }else if(button.getId() == R.id.btn_my_consume_airTicket){
+                    button.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_conner_right_unpress));
+                }else{
+                    button.setBackgroundColor(getResources().getColor(R.color.ticket_title_color));
+                }
+                button.setTextColor(getResources().getColor(R.color.ticket_white));
+            }
+        }
+    }
+
 
     @Override
     public void onViewChange(Message msg) {

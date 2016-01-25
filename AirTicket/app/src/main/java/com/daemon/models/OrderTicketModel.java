@@ -217,6 +217,9 @@ public class OrderTicketModel extends BaseModel {
                                                 eventType = xmlPullParser.next();
                                             }
                                         }
+                                        /**
+                                         * 等到请求全部完成，更新列表
+                                         */
                                         if(requests.size()==order_info.rows.size()){
                                             Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, infos).sendToTarget();
                                         }
