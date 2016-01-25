@@ -41,6 +41,7 @@ public class OrderTicketFragment extends Fragment {
 
     public OrderTicketFragment(List<Resp_OrderTicketQueryInfo> infos) {
         this.infos = infos;
+
     }
 
 //    /**

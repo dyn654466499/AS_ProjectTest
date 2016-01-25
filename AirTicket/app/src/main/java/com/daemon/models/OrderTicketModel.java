@@ -6,6 +6,7 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -13,11 +14,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.daemon.beans.Resp_OrderInfo;
 import com.daemon.beans.Resp_OrderTicketInfo;
 import com.daemon.beans.Resp_OrderTicketQueryInfo;
 import com.daemon.consts.Constants;
 import com.daemon.utils.ErrorCodeUtil;
 import com.daemon.utils.VolleyUtil;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.stanfy.gsonxml.GsonXml;
 import com.stanfy.gsonxml.GsonXmlBuilder;
 import com.stanfy.gsonxml.XmlParserCreator;
@@ -29,6 +33,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.StringReader;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class OrderTicketModel extends BaseModel {
     private Context mContext;
@@ -52,6 +58,7 @@ public class OrderTicketModel extends BaseModel {
         RequestQueue requestQueue;
         String url;
         StringRequest request;
+        JsonObjectRequest jRequest;
         switch (changeStateMessage.what) {
             /**
              * 提交订单
@@ -135,8 +142,10 @@ public class OrderTicketModel extends BaseModel {
                         String message = "网络出错";
                         Message.obtain(handler, Constants.VIEW_ORDER_TICKET_COMMIT, message).sendToTarget();
                         Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
+
                     }
                 });
+                request.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
 
@@ -144,74 +153,96 @@ public class OrderTicketModel extends BaseModel {
              * 查询订单详情
              */
             case Constants.MODEL_ORDER_TICKET_QUERY:
-                params_map = (HashMap<String, String>) changeStateMessage.obj;
-                url = "http://121.40.116.51:9000/OrderAPI/getOrderInfo" + VolleyUtil.formatGetParams(params_map);
-
+                final Resp_OrderInfo order_info= (Resp_OrderInfo) changeStateMessage.obj;
                 requestQueue = Volley.newRequestQueue(mContext);
+                final List<Resp_OrderTicketQueryInfo> infos = new LinkedList<>();
+                /**
+                 *  每次请求响应，该list的size+1，当与订单列表总数相等时，更新UI。
+                 */
+                final List<String> requests = new LinkedList<>();
 
-                request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String s) {
-                        {
+                for (Resp_OrderInfo.Rows row:order_info.rows) {
+                    params_map = new HashMap<String, String>();
+                    /**
+                     * UserName 到时候要改
+                     */
+                    params_map.put("UserName", "wang87654321");
+                    params_map.put("orderno", row.Field_OrderId);
+                    url = "http://121.40.116.51:9000/OrderAPI/getOrderInfo" + VolleyUtil.formatGetParams(params_map);
+                    final StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String s) {
+                            requests.add("");
+                            //Log.e("onResponse","requests.size()="+requests.size());
                             if (!TextUtils.isEmpty(s)) {
-                                XmlParserCreator parserCreator = new XmlParserCreator() {
-                                    @Override
-                                    public XmlPullParser createParser() {
-                                        try {
-                                            return XmlPullParserFactory.newInstance().newPullParser();
-                                        } catch (Exception e) {
-                                            throw new RuntimeException(e);
-                                        }
-                                    }
-                                };
-                                GsonXml gsonXml = new GsonXmlBuilder()
-                                        .setXmlParserCreator(parserCreator)
-                                        .create();
-
-                                String header = "<string xmlns=\"http://policy.jinri.cn/\"><?xml version=\"1.0\" encoding=\"gb2312\"?>";
-                                String footer = "</string>";
-                                String xml = s;
-                                try {
-                                    if (xml.contains("<JIT-Order-Response>")) {
-                                        xml = xml.replace(header, "").replace("<JIT-Order-Response>", "");
-                                        xml = xml.replace(footer, "").replace("</JIT-Order-Response>", "");
-                                        //Log.e("sdfsdf",xml);
-                                        Resp_OrderTicketQueryInfo model = gsonXml.fromXml(xml, Resp_OrderTicketQueryInfo.class);
-                                        Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, model).sendToTarget();
-                                        //Log.e("sdfsdf", model.OrderNo + "");
-                                    } else {
-                                        XmlPullParser xmlPullParser = parserCreator.createParser();
-                                        xmlPullParser.setInput(new StringReader(xml));
-                                        int eventType = xmlPullParser.getEventType();
-                                        while (eventType != XmlPullParser.END_DOCUMENT) {
-                                            switch (eventType) {
-                                                case XmlPullParser.START_TAG:
-                                                    if ("string".equals(xmlPullParser.getName())) {
-                                                        String message = ErrorCodeUtil.getErrorMessage(mContext, xmlPullParser.nextText());
-                                                        Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, message).sendToTarget();
-                                                    }
-                                                    break;
+                                    XmlParserCreator parserCreator = new XmlParserCreator() {
+                                        @Override
+                                        public XmlPullParser createParser() {
+                                            try {
+                                                return XmlPullParserFactory.newInstance().newPullParser();
+                                            } catch (Exception e) {
+                                                throw new RuntimeException(e);
                                             }
-                                            eventType = xmlPullParser.next();
                                         }
+                                    };
+                                    GsonXml gsonXml = new GsonXmlBuilder()
+                                            .setXmlParserCreator(parserCreator)
+                                            .create();
+
+                                    String header = "<string xmlns=\"http://policy.jinri.cn/\"><?xml version=\"1.0\" encoding=\"gb2312\"?>";
+                                    String footer = "</string>";
+                                    String xml = s;
+                                    try {
+                                        if (xml.contains("<JIT-Order-Response>")) {
+                                            xml = xml.replace(header, "").replace("<JIT-Order-Response>", "");
+                                            xml = xml.replace(footer, "").replace("</JIT-Order-Response>", "");
+                                            //Log.e("sdfsdf",xml);
+                                            Resp_OrderTicketQueryInfo model = gsonXml.fromXml(xml, Resp_OrderTicketQueryInfo.class);
+                                            infos.add(model);
+                                            //Log.e("sdfsdf", model.OrderNo + "");
+                                        } else {
+                                            XmlPullParser xmlPullParser = parserCreator.createParser();
+                                            xmlPullParser.setInput(new StringReader(xml));
+                                            int eventType = xmlPullParser.getEventType();
+                                            while (eventType != XmlPullParser.END_DOCUMENT) {
+                                                switch (eventType) {
+                                                    case XmlPullParser.START_TAG:
+                                                        if ("string".equals(xmlPullParser.getName())) {
+                                                            String message = ErrorCodeUtil.getErrorMessage(mContext, xmlPullParser.nextText());
+                                                            Log.e(getTAG(), "查询订单详情返回错误信息:" +message);
+                                                            Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, message).sendToTarget();
+                                                        }
+                                                        break;
+                                                }
+                                                eventType = xmlPullParser.next();
+                                            }
+                                        }
+                                        if(requests.size()==order_info.rows.size()){
+                                            Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, infos).sendToTarget();
+                                        }
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                        String message = "解析xml出错";
+                                        Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, message).sendToTarget();
                                     }
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                    String message = "解析xml出错";
-                                    Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, message).sendToTarget();
                                 }
-                            }
                         }
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        String message = "网络出错";
-                        Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, message).sendToTarget();
-                        Log.e("sdfsdfsdfsd", "onErrorResponse=" + volleyError.getMessage());
-                    }
-                });
-                requestQueue.add(request);
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError volleyError) {
+                            requests.add("");
+                            Log.e("onErrorResponse", "requests.size()=" + requests.size());
+                            String message = "网络出错";
+                            Message.obtain(handler, Constants.VIEW_ORDER_TICKET_QUERY, message).sendToTarget();
+                            Log.e(getTAG(), "查询订单详情"+message+",onErrorResponse=" + volleyError.getMessage());
+
+                        }
+                    });
+
+                    stringRequest.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                    requestQueue.add(stringRequest);
+                }
+
                 break;
             /**
              * 添加订单到后台数据库
@@ -220,7 +251,7 @@ public class OrderTicketModel extends BaseModel {
                 params_map = (HashMap<String, String>) changeStateMessage.obj;
                 url = "http://www.icityto.com/X_UserLogic/yesicity2015/ticket_Add" + VolleyUtil.formatGetParams(params_map);
                 requestQueue = Volley.newRequestQueue(mContext);
-                JsonObjectRequest jRequest = new JsonObjectRequest(Request.Method.GET,url,null,new Response.Listener<JSONObject>(){
+                jRequest = new JsonObjectRequest(Request.Method.GET,url,null,new Response.Listener<JSONObject>(){
 
                     @Override
                     public void onResponse(JSONObject jsonObject) {
@@ -229,6 +260,7 @@ public class OrderTicketModel extends BaseModel {
                         try {
                             errorCode = jsonObject.getString("errorCode");
                             if("0".equals(errorCode)){
+                                message = "保存成功";
                                 Message.obtain(handler, Constants.VIEW_ORDER_TICKET_ADD, errorCode).sendToTarget();
                             }else{
                                 message = jsonObject.getString("message");
@@ -239,7 +271,7 @@ public class OrderTicketModel extends BaseModel {
                             e.printStackTrace();
                         }
 
-                        Log.e(getTAG(), "onResponse =" + message);
+                        Log.e(getTAG(), "onResponse:messgage=" + message);
                     }
                 },new Response.ErrorListener(){
 
@@ -252,6 +284,38 @@ public class OrderTicketModel extends BaseModel {
                 });
 
                 requestQueue.add(jRequest);
+                break;
+
+            /**
+             * 查询订单号列表
+             */
+            case Constants.MODEL_ORDER_TICKET_ORDER_NO_QUERY:
+                params_map = (HashMap<String, String>) changeStateMessage.obj;
+                url = "http://www.icityto.com/X_UserLogic/yesicity2015/ticket_Page/" + VolleyUtil.formatGetParams(params_map);
+                requestQueue = Volley.newRequestQueue(mContext);
+                request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String s) {
+                        try {
+                            Gson gson = new Gson();
+                            java.lang.reflect.Type type = new TypeToken<Resp_OrderInfo>() {}.getType();
+                            Resp_OrderInfo info = gson.fromJson(s, type);
+                            Message.obtain(handler, Constants.VIEW_ORDER_TICKET_ORDER_NO_QUERY, info).sendToTarget();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            Message.obtain(handler, Constants.VIEW_ORDER_TICKET_ORDER_NO_QUERY, "解析订单号列表json出错").sendToTarget();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        String message = "网络出错";
+                        Message.obtain(handler, Constants.VIEW_ORDER_TICKET_ORDER_NO_QUERY, message).sendToTarget();
+                        Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
+                    }
+                });
+                requestQueue.add(request);
                 break;
         }
     }

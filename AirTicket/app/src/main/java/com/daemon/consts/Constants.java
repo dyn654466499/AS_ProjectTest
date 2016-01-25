@@ -70,6 +70,8 @@ public class Constants {
 	//改签
 	public static final int MODEL_ORDER_TICKET_ENDORSE = 205;
 	public static final int MODEL_ORDER_TICKET_ADD = 206;
+
+	public static final int MODEL_ORDER_TICKET_ORDER_NO_QUERY = 207;
     /**
      *  view状态改变参数
      */
@@ -82,6 +84,7 @@ public class Constants {
 	//改签
 	public static final int VIEW_ORDER_TICKET_ENDORSE =305;
 	public static final int VIEW_ORDER_TICKET_ADD =306;
+	public static final int VIEW_ORDER_TICKET_ORDER_NO_QUERY = 307;
     /**
      * 请求URL
      */

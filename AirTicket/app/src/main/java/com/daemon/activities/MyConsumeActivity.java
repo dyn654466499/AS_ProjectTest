@@ -4,16 +4,21 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.daemon.airticket.R;
+import com.daemon.beans.Resp_OrderInfo;
 import com.daemon.beans.Resp_OrderTicketQueryInfo;
+import com.daemon.consts.Constants;
 import com.daemon.fragments.OrderTicketFragment;
+import com.daemon.interfaces.Commands;
 import com.daemon.models.OrderTicketModel;
 import com.daemon.utils.AutoLoadingUtil;
+import com.daemon.utils.DialogUtil;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -30,7 +35,7 @@ public class MyConsumeActivity extends BaseActivity {
 
     List<Button> buttonList;
 
-    Resp_OrderTicketQueryInfo info;
+    List<Resp_OrderTicketQueryInfo> OrderTicketQueryInfos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,23 +100,26 @@ public class MyConsumeActivity extends BaseActivity {
                 break;
 
             case R.id.btn_my_consume_airTicket:
-                if(info == null) {
+                /**
+                 * 如果为null，则请求网络数据；否则直接显示列表
+                 */
+                if(OrderTicketQueryInfos == null) {
                     RelativeLayout layout = (RelativeLayout) findViewById(R.id.relativeLayout_fragment_content);
                     AutoLoadingUtil.setAutoLoadingView(layout);
                     HashMap<String, String> params_map = new HashMap<String, String>();
-                    params_map.put("UserName", "wang87654321");
-                    params_map.put("orderno", "W2016012104024160509");
-                    notifyModelChange(Message.obtain(handler, MODEL_ORDER_TICKET_QUERY, params_map));
+                    params_map.put("UId", "yesicity2015");
+                    params_map.put("Field_YHID", "1");
+                    params_map.put("Yesicity", "1");
+                    params_map.put("page", "1");
+                    notifyModelChange(Message.obtain(handler, Constants.MODEL_ORDER_TICKET_ORDER_NO_QUERY, params_map));
                 }else{
-                    List<Resp_OrderTicketQueryInfo> infos;
-                    infos = new LinkedList<>();
-                    infos.add(info);
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction transaction = fm.beginTransaction();
-                    OrderTicketFragment order_ticket = new OrderTicketFragment(infos);
+                    OrderTicketFragment order_ticket = new OrderTicketFragment(OrderTicketQueryInfos);
                     transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
                     transaction.commit();
                 }
+
                 break;
         }
     }
@@ -119,21 +127,42 @@ public class MyConsumeActivity extends BaseActivity {
     @Override
     public void onViewChange(Message msg) {
         switch (msg.what){
+            /**
+             * 返回后台数据库的订单列表（主要是订单号），接下来去访问第三方的后台查询订单详情
+             */
+            case Constants.VIEW_ORDER_TICKET_ORDER_NO_QUERY:
+                if(msg.obj instanceof String){
+                    AutoLoadingUtil.cancelAutoLoadingView();
+                    DialogUtil.showDialog(MyConsumeActivity.this, getString(R.string.title_my_consume), (String)msg.obj, new Commands() {
+                        @Override
+                        public void executeCommand(Message msg_params) {
+
+                        }
+                    });
+                }else {
+                    Resp_OrderInfo order_info = (Resp_OrderInfo)msg.obj;
+                    notifyModelChange(Message.obtain(handler, MODEL_ORDER_TICKET_QUERY, order_info));
+                }
+                break;
+
             case VIEW_ORDER_TICKET_QUERY:
                 AutoLoadingUtil.cancelAutoLoadingView();
                 if(msg.obj instanceof String){
-
+//                        DialogUtil.showDialog(MyConsumeActivity.this, getString(R.string.title_my_consume), (String)msg.obj, new Commands() {
+//                            @Override
+//                            public void executeCommand(Message msg_params) {
+//
+//                            }
+//                        });
                 }else {
                     if(!isDestroyed) {
-                        info = (Resp_OrderTicketQueryInfo) msg.obj;
-                        List<Resp_OrderTicketQueryInfo> infos;
-                        infos = new LinkedList<>();
-                        infos.add(info);
-                        FragmentManager fm = getFragmentManager();
-                        FragmentTransaction transaction = fm.beginTransaction();
-                        OrderTicketFragment order_ticket = new OrderTicketFragment(infos);
-                        transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
-                        transaction.commit();
+                        Log.e("sdlkfjs dlk f","执行执行");
+                            OrderTicketQueryInfos = (List<Resp_OrderTicketQueryInfo>) msg.obj;
+                            FragmentManager fm = getFragmentManager();
+                            FragmentTransaction transaction = fm.beginTransaction();
+                            OrderTicketFragment order_ticket = new OrderTicketFragment(OrderTicketQueryInfos);
+                            transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
+                            transaction.commit();
                     }
                 }
                 break;

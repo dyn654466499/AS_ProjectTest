@@ -415,6 +415,7 @@ public class OrderTicketActivity extends BaseActivity{
 					Resp_OrderTicketInfo info = (Resp_OrderTicketInfo)msg.obj;
 					HashMap<String,String> params_map = new HashMap<String,String>();
 					params_map.put("OrderId", info.OrderNo);
+					params_map.put("UId", "yesicity2015");
 					params_map.put("Field_YHID", "1");
 					params_map.put("Yesicity","1");
 					notifyModelChange(Message.obtain(handler,MODEL_ORDER_TICKET_ADD,params_map));
