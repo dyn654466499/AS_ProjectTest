@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ticket_white"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="分类："
+            android:textColor="@color/ticket_font_gray"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_my_consume_cateringType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="订餐"
+            android:textSize="14sp"
+            android:textColor="@color/ticket_font_gray"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center_vertical|right"
+            android:textSize="15sp"
+            android:text="总价："
+            android:textColor="@color/ticket_black"
+            />
+        <TextView
+            android:id="@+id/tv_my_consume_cateringPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:text="$2350"
+            android:textColor="@color/ticket_title_color"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@color/ticket_bg_gray"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+
+     <ImageView
+         android:id="@+id/imageView_my_consume_cateringIcon"
+         android:layout_width="60dp"
+         android:layout_height="60dp"
+         android:src="@drawable/jp_list"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_my_consume_cateringName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="粗菜馆"
+            android:textColor="@color/ticket_black"
+            android:textSize="14sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单编号："
+                android:textColor="@color/ticket_font_gray"
+                android:textSize="12sp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_my_consume_cateringId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="w122234451334"
+                android:textSize="12sp"
+                android:textColor="@color/ticket_font_gray"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_my_consume_cateringTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-1-25 22:59:30"
+            android:textSize="12sp"
+            android:textColor="@color/ticket_font_gray"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

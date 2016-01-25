@@ -1,14 +1,6 @@
 [
     {
-        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\menu\\main.xml"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\menu\\main.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\menu\\main.xml"
     }
 ]

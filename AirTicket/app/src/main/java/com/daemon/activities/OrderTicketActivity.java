@@ -24,7 +24,7 @@ import com.daemon.beans.Req_FlightInfo;
 import com.daemon.beans.Req_PassengerInfo;
 import com.daemon.beans.Resp_OrderTicketInfo;
 import com.daemon.interfaces.Commands;
-import com.daemon.models.OrderTicketModel;
+import com.daemon.models.OrderModel;
 import com.daemon.utils.DialogUtil;
 
 import java.util.ArrayList;
@@ -97,7 +97,7 @@ public class OrderTicketActivity extends BaseActivity{
 		/**
 		 * 自定义的框架
 		 */
-		setModelDelegate(new OrderTicketModel(handler, this));
+		setModelDelegate(new OrderModel(handler, this));
 		setViewChangeListener(this);
 
 		/**

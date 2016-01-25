@@ -72,6 +72,11 @@ public class Constants {
 	public static final int MODEL_ORDER_TICKET_ADD = 206;
 
 	public static final int MODEL_ORDER_TICKET_ORDER_NO_QUERY = 207;
+
+	public static final int MODEL_ORDER_CATERING_QUERY = 208;
+
+	public static final int MODEL_ORDER_CATERING_DETAIL_QUERY = 209;
+	public static final int MODEL_ORDER_CATERING_GOODS_DETAIL_QUERY = 210;
     /**
      *  view状态改变参数
      */
@@ -85,6 +90,9 @@ public class Constants {
 	public static final int VIEW_ORDER_TICKET_ENDORSE =305;
 	public static final int VIEW_ORDER_TICKET_ADD =306;
 	public static final int VIEW_ORDER_TICKET_ORDER_NO_QUERY = 307;
+	public static final int VIEW_ORDER_CATERING_QUERY = 308;
+	public static final int VIEW_ORDER_CATERING_DETAIL_QUERY = 309;
+	public static final int VIEW_ORDER_CATERING_GOODS_DETAIL_QUERY = 310;
     /**
      * 请求URL
      */

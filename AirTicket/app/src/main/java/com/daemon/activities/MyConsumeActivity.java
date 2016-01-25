@@ -4,19 +4,20 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.daemon.airticket.R;
-import com.daemon.beans.Resp_OrderInfo;
+import com.daemon.beans.Resp_OrderCateringList;
+import com.daemon.beans.Resp_OrderTicketList;
 import com.daemon.beans.Resp_OrderTicketQueryInfo;
 import com.daemon.consts.Constants;
+import com.daemon.fragments.OrderCateringFragment;
 import com.daemon.fragments.OrderTicketFragment;
 import com.daemon.interfaces.Commands;
-import com.daemon.models.OrderTicketModel;
+import com.daemon.models.OrderModel;
 import com.daemon.utils.AutoLoadingUtil;
 import com.daemon.utils.DialogUtil;
 
@@ -25,6 +26,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import static com.daemon.consts.Constants.MODEL_ORDER_TICKET_QUERY;
+import static com.daemon.consts.Constants.VIEW_ORDER_CATERING_QUERY;
 import static com.daemon.consts.Constants.VIEW_ORDER_TICKET_QUERY;
 
 public class MyConsumeActivity extends BaseActivity {
@@ -36,12 +38,13 @@ public class MyConsumeActivity extends BaseActivity {
     List<Button> buttonList;
 
     List<Resp_OrderTicketQueryInfo> OrderTicketQueryInfos;
+    Resp_OrderCateringList resp_orderCateringList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_consume);
-        setModelDelegate(new OrderTicketModel(handler, this));
+        setModelDelegate(new OrderModel(handler, this));
         setViewChangeListener(this);
 
         TextView tv_title = (TextView)findViewById(R.id.tv_title);
@@ -87,9 +90,27 @@ public class MyConsumeActivity extends BaseActivity {
             case R.id.btn_my_consume_shopping:
                 setButtonClick(v.getId());
                 break;
-
+            /**
+             * 餐饮列表查询
+             */
             case R.id.btn_my_consume_catering:
                 setButtonClick(v.getId());
+                if(resp_orderCateringList==null){
+                    RelativeLayout layout = (RelativeLayout) findViewById(R.id.relativeLayout_fragment_content);
+                    AutoLoadingUtil.setAutoLoadingView(layout);
+                    HashMap<String, String> params_map = new HashMap<String, String>();
+                    params_map.put("UId", "yesicity2015");
+                    params_map.put("Field_YHID", "1");
+                    params_map.put("Yesicity", "1");
+                    params_map.put("page", "1");
+                    notifyModelChange(Message.obtain(handler, Constants.MODEL_ORDER_CATERING_QUERY, params_map));
+                }else{
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction transaction = fm.beginTransaction();
+                    OrderCateringFragment order_catering = new OrderCateringFragment(resp_orderCateringList);
+                    transaction.replace(R.id.relativeLayout_fragment_content, order_catering);
+                    transaction.commit();
+                }
                 break;
 
             case R.id.btn_my_consume_localCity:
@@ -99,7 +120,9 @@ public class MyConsumeActivity extends BaseActivity {
             case R.id.btn_my_consume_hotel:
                 setButtonClick(v.getId());
                 break;
-
+            /**
+             * 机票列表查询
+             */
             case R.id.btn_my_consume_airTicket:
                 setButtonClick(v.getId());
                 /**
@@ -155,7 +178,7 @@ public class MyConsumeActivity extends BaseActivity {
     public void onViewChange(Message msg) {
         switch (msg.what){
             /**
-             * 返回后台数据库的订单列表（主要是订单号），接下来去访问第三方的后台查询订单详情
+             * 返回后台数据库的机票订单列表（主要是订单号），接下来去访问第三方的后台查询订单详情
              */
             case Constants.VIEW_ORDER_TICKET_ORDER_NO_QUERY:
                 if(msg.obj instanceof String){
@@ -167,7 +190,7 @@ public class MyConsumeActivity extends BaseActivity {
                         }
                     });
                 }else {
-                    Resp_OrderInfo order_info = (Resp_OrderInfo)msg.obj;
+                    Resp_OrderTicketList order_info = (Resp_OrderTicketList)msg.obj;
                     notifyModelChange(Message.obtain(handler, MODEL_ORDER_TICKET_QUERY, order_info));
                 }
                 break;
@@ -183,13 +206,35 @@ public class MyConsumeActivity extends BaseActivity {
 //                        });
                 }else {
                     if(!isDestroyed) {
-                        Log.e("sdlkfjs dlk f","执行执行");
                             OrderTicketQueryInfos = (List<Resp_OrderTicketQueryInfo>) msg.obj;
                             FragmentManager fm = getFragmentManager();
                             FragmentTransaction transaction = fm.beginTransaction();
                             OrderTicketFragment order_ticket = new OrderTicketFragment(OrderTicketQueryInfos);
                             transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
                             transaction.commit();
+                    }
+                }
+                break;
+            /**
+             * 通知餐饮界面
+             */
+            case VIEW_ORDER_CATERING_QUERY:
+                AutoLoadingUtil.cancelAutoLoadingView();
+                if(msg.obj instanceof String){
+                        DialogUtil.showDialog(MyConsumeActivity.this, getString(R.string.title_my_consume), (String)msg.obj, new Commands() {
+                            @Override
+                            public void executeCommand(Message msg_params) {
+
+                            }
+                        });
+                }else {
+                    if(!isDestroyed) {
+                        resp_orderCateringList = (Resp_OrderCateringList) msg.obj;
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction transaction = fm.beginTransaction();
+                        OrderCateringFragment order_catering = new OrderCateringFragment(resp_orderCateringList);
+                        transaction.replace(R.id.relativeLayout_fragment_content, order_catering);
+                        transaction.commit();
                     }
                 }
                 break;

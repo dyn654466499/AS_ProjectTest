@@ -4,35 +4,11 @@
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\raw\\three_word.xls"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\raw\\china_city",
-        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\raw\\china_city"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\raw\\air_line.xls",
-        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\raw\\air_line.xls"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\raw\\air_line.xls",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\raw\\air_line.xls"
     },
     {
-        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\raw\\china_city",
-        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\raw\\china_city"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\raw\\three_word.xls",
-        "source": "D:\\AndroidStudioProjects\\AS_ProjectTest-master\\AirTicket\\app\\src\\main\\res\\raw\\three_word.xls"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\raw\\china_city",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\raw\\china_city"
-    },
-    {
-        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\raw\\air_line.xls",
-        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\raw\\air_line.xls"
-    },
-    {
-        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\raw\\three_word.xls",
-        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\raw\\three_word.xls"
     }
 ]
