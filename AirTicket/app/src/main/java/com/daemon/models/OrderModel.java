@@ -6,7 +6,6 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -15,9 +14,10 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.daemon.beans.Resp_OrderCateringDetail;
+import com.daemon.beans.Resp_OrderCateringDishesDetail;
 import com.daemon.beans.Resp_OrderCateringList;
-import com.daemon.beans.Resp_OrderTicketList;
 import com.daemon.beans.Resp_OrderTicketInfo;
+import com.daemon.beans.Resp_OrderTicketList;
 import com.daemon.beans.Resp_OrderTicketQueryInfo;
 import com.daemon.consts.Constants;
 import com.daemon.utils.ErrorCodeUtil;
@@ -131,7 +131,7 @@ public class OrderModel extends BaseModel {
 
                     }
                 });
-                request.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
 
@@ -227,8 +227,7 @@ public class OrderModel extends BaseModel {
 
                         }
                     });
-
-                    stringRequest.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                    //stringRequest.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                     requestQueue.add(stringRequest);
                 }
 
@@ -304,7 +303,7 @@ public class OrderModel extends BaseModel {
                         Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
                     }
                 });
-                request.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
 
@@ -312,6 +311,7 @@ public class OrderModel extends BaseModel {
                 params_map = (HashMap<String, String>) changeStateMessage.obj;
                 url = "http://www.icityto.com/X_UserLogic/yesicity2015/MyCater_Page/?" + VolleyUtil.formatGetParams(params_map);
                 requestQueue = Volley.newRequestQueue(mContext);
+
                 request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
@@ -334,7 +334,7 @@ public class OrderModel extends BaseModel {
                         Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
                     }
                 });
-                request.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
             /**
@@ -366,8 +366,36 @@ public class OrderModel extends BaseModel {
                         Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
                     }
                 });
-                request.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
+
+                /**
+                 *  ------------------------------    同步请求      ---------------------------
+                 */
+//                RequestFuture<String> future = RequestFuture.newFuture();
+//                request = new StringRequest(url, future, future);
+//                requestQueue.add(request);
+//                try {
+//                    String result = future.get();
+//                    if(!TextUtils.isEmpty(result)){
+//                        try {
+//                            Gson gson = new Gson();
+//                            java.lang.reflect.Type type = new TypeToken<Resp_OrderCateringDetail>() {}.getType();
+//                            Resp_OrderCateringDetail info = gson.fromJson(s, type);
+//                            Message.obtain(handler, Constants.VIEW_ORDER_CATERING_DETAIL_QUERY, info).sendToTarget();
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                            Message.obtain(handler, Constants.VIEW_ORDER_CATERING_DETAIL_QUERY, "解析餐饮订单详情json出错").sendToTarget();
+//                        }
+//                    }else{
+//
+//                    }
+//
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                } catch (ExecutionException e) {
+//                    e.printStackTrace();
+//                }
                 break;
             /**
              * 餐饮菜品详情
@@ -381,8 +409,8 @@ public class OrderModel extends BaseModel {
                     public void onResponse(String s) {
                         try {
                             Gson gson = new Gson();
-                            java.lang.reflect.Type type = new TypeToken<Resp_OrderCateringDetail>() {}.getType();
-                            Resp_OrderCateringDetail info = gson.fromJson(s, type);
+                            java.lang.reflect.Type type = new TypeToken<Resp_OrderCateringDishesDetail>() {}.getType();
+                            Resp_OrderCateringDishesDetail info = gson.fromJson(s, type);
                             Message.obtain(handler, Constants.VIEW_ORDER_CATERING_GOODS_DETAIL_QUERY, info).sendToTarget();
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -398,9 +426,10 @@ public class OrderModel extends BaseModel {
                         Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
                     }
                 });
-                request.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
+
         }
     }
 }

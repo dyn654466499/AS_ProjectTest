@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.daemon.adapters.OrderCateringDishesAdapter;
 import com.daemon.airticket.R;
 import com.daemon.beans.Resp_OrderCateringDetail;
+import com.daemon.beans.Resp_OrderCateringDishesDetail;
 import com.daemon.beans.Resp_OrderCateringList;
 import com.daemon.consts.Constants;
 import com.daemon.interfaces.Commands;
@@ -22,9 +25,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 import static com.daemon.consts.Constants.KEY_PARCELABLE;
-import static com.daemon.consts.Constants.KEY_TYPE;
-import static com.daemon.consts.Constants.MODEL_ORDER_TICKET_ENDORSE;
-import static com.daemon.consts.Constants.MODEL_ORDER_TICKET_RETURN;
+import static com.daemon.consts.Constants.MODEL_ORDER_CATERING_GOODS_DETAIL_QUERY;
 
 /**
  * 餐饮订单详情
@@ -53,7 +54,10 @@ public class OrderCateringDetailActivity extends BaseActivity {
             params_map.put("Yesicity", "1");
             params_map.put("type", row.Field_Type);
             params_map.put("Id", row.X6_Product_Id);
+
             notifyModelChange(Message.obtain(handler, Constants.MODEL_ORDER_CATERING_DETAIL_QUERY, params_map));
+
+            notifyModelChange(Message.obtain(handler, MODEL_ORDER_CATERING_GOODS_DETAIL_QUERY,params_map));
         }
     }
 
@@ -65,21 +69,6 @@ public class OrderCateringDetailActivity extends BaseActivity {
          finish();
          break;
 
-         case R.id.btn_order_ticket_detail_endorse:
-             intent = new Intent(OrderCateringDetailActivity.this,OrderReturnInfoActivity.class);
-             intent.putExtra(KEY_PARCELABLE, row);
-             intent.putExtra(KEY_TYPE,MODEL_ORDER_TICKET_ENDORSE);
-             startActivity(intent);
-             overridePendingTransition(0,0);
-             break;
-
-         case R.id.btn_order_ticket_detail_return:
-             intent = new Intent(OrderCateringDetailActivity.this,OrderReturnInfoActivity.class);
-             intent.putExtra(KEY_PARCELABLE, row);
-             intent.putExtra(KEY_TYPE,MODEL_ORDER_TICKET_RETURN);
-             startActivity(intent);
-             overridePendingTransition(0,0);
-             break;
      }
     }
 
@@ -111,39 +100,41 @@ public class OrderCateringDetailActivity extends BaseActivity {
 
                         TextView tv_order_catering_beizhu = (TextView)findViewById(R.id.tv_order_catering_beizhu);
                         tv_order_catering_beizhu.setText(resp_orderCateringDetail.rows.get(0).Field_DWBZ);
+
+                        TextView tv_order_catering_storeName = (TextView)findViewById(R.id.tv_order_catering_storeName);
+                        tv_order_catering_storeName.setText(resp_orderCateringDetail.rows.get(0).Field_DPMC);
+
+                        TextView tv_order_catering_totalPrice = (TextView)findViewById(R.id.tv_order_catering_totalPrice);
+                        tv_order_catering_totalPrice.setText("￥" + resp_orderCateringDetail.rows.get(0).Field_CYDDJE);
+
+
                     }
                 }
-
-//                /**
-//                 *  --------------------------------------     乘机人信息列表 start         -------------------------------------------
-//                 */
-//                ListView lv_order_ticket_detail_passengerInfo = (ListView)findViewById(R.id.lv_order_ticket_detail_passengerInfo);
-//                String[] from = new String[]{"name","certType","certNo"};
-//                int[] to = new int[]{R.id.tv_order_ticket_detail_passengerInfo_name,
-//                        R.id.tv_order_ticket_detail_passengerInfo_certType,
-//                        R.id.tv_order_ticket_detail_passengerInfo_certNo,
-//                };
-//                String[] names = row.PName.split("\\|");
-//                String[] certNos = row.CardNo.split("\\|");
-//
-//                List<Map<String,Object>> data = new LinkedList<>();
-//                for (int i = 0; i< names.length;i++){
-//                    Map<String,Object> map = new HashMap<String,Object>();
-//                    map.put("name",names[i]);
-//                    map.put("certType","身份证");
-//                    map.put("certNo",certNos[i]);
-//                    data.add(map);
-//                }
-//                SimpleAdapter adapter = new SimpleAdapter(this,data,R.layout.item_order_ticket_detail_passenger_info,from,to);
-//                lv_order_ticket_detail_passengerInfo.setAdapter(adapter);
-//
-//                /**
-//                 *  --------------------------------------     乘机人信息列表  end        -------------------------------------------
-//                 */
                 break;
 
             case Constants.VIEW_ORDER_CATERING_GOODS_DETAIL_QUERY:
+                if(msg.obj instanceof String){
+                    DialogUtil.showDialog(OrderCateringDetailActivity.this, getString(R.string.title_order_detail), (String) msg.obj, new Commands() {
+                        @Override
+                        public void executeCommand(Message msg_params) {
 
+                        }
+                    });
+                }else {
+                    if(!isDestroyed) {
+                        Resp_OrderCateringDishesDetail resp_orderCateringDishesDetail = (Resp_OrderCateringDishesDetail) msg.obj;
+                        /**
+                         *  --------------------------------------     菜品列表 start         -------------------------------------------
+                         */
+                        ListView lv_order_catering_dishes_detail = (ListView)findViewById(R.id.lv_order_catering_dishes_detail);
+                        OrderCateringDishesAdapter adapter = new OrderCateringDishesAdapter(this,resp_orderCateringDishesDetail);
+                        lv_order_catering_dishes_detail.setAdapter(adapter);
+                        /**
+                         *  --------------------------------------     菜品列表  end        -------------------------------------------
+                         */
+
+                    }
+                }
                 break;
         }
     }

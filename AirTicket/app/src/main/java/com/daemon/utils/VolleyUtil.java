@@ -1,29 +1,26 @@
 package com.daemon.utils;
 
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.LruCache;
 import android.widget.ImageView;
 
-import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.ImageLoader.ImageCache;
+import com.android.volley.toolbox.ImageLoader.ImageListener;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
-import com.android.volley.toolbox.ImageLoader.ImageCache;
-import com.android.volley.toolbox.ImageLoader.ImageListener;
 import com.daemon.airticket.R;
-import com.daemon.consts.Constants;
 import com.daemon.volley.GsonRequest;
-import com.google.gson.Gson;
+
+import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -41,7 +38,7 @@ public class VolleyUtil {
 			String imageUrl) {
 		RequestQueue requestQueue = Volley.newRequestQueue(mContext);
 		final LruCache<String, Bitmap> lruCache = new LruCache<String, Bitmap>(
-				20);
+				4 * 1024 * 1024);
 		ImageCache imageCache = new ImageCache() {
 			@Override
 			public void putBitmap(String key, Bitmap value) {
@@ -64,10 +61,9 @@ public class VolleyUtil {
 	 */
 	public static void showImageByNetworkImageView(Context mContext,
 			NetworkImageView mNetworkImageView, String imageUrl) {
-		// String imageUrl="http://avatar.csdn.net/6/6/D/1_lfdfhl.jpg";
 		RequestQueue requestQueue = Volley.newRequestQueue(mContext);
 		final LruCache<String, Bitmap> lruCache = new LruCache<String, Bitmap>(
-				20);
+				4 * 1024 * 1024);
 		ImageCache imageCache = new ImageCache() {
 			@Override
 			public void putBitmap(String key, Bitmap value) {
@@ -80,6 +76,8 @@ public class VolleyUtil {
 			}
 		};
 		ImageLoader imageLoader = new ImageLoader(requestQueue, imageCache);
+		mNetworkImageView.setErrorImageResId(R.drawable.submit_edit_clear_normal);
+		mNetworkImageView.setDefaultImageResId(R.drawable.ic_duigou_lan);
 		mNetworkImageView.setTag("url");
 		mNetworkImageView.setImageUrl(imageUrl, imageLoader);
 	}

@@ -69,10 +69,6 @@ public class FlightResultModel extends BaseModel {
 
                             String header = "<string xmlns=\"http://policy.jinri.cn/\"><?xml version=\"1.0\" encoding=\"gb2312\"?>";
                             String footer = "</string>";
-//                           String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-//                                   "<string xmlns=\"http://policy.jinri.cn/\"><?xml version=\"1.0\" encoding=\"gb2312\"?><JIT-Flight-Response>" +
-//                                   "<Response Sdate=\"2016-03-29\" Scity=\"CKG\" Ecity=\"NNG\" FlightNo=\"CZ8151\" AirLine=\"CZ\" FlightType=\"320\" Stime=\"08:10\" Etime=\"09:35\" Stop=\"0\" EPiao=\"E\" Tax=\"50\" AirTax=\"50\" Fees=\"0\" AirTerminal=\"2A,--\"><Cabin C=\"Y\" N=\"A\" D=\"100\" P=\"950\" T=\"0\" L=\"Y\" K=\"0.50\" RID=\"JVajWCSASPygSHYA+znrjw==\" ID=\"N9BdXJELpXQ=\" XF=\"0\" PI=\"0\" RT=\"0\" RM=\"\" OfficeNum=\"\" Change=\"\" Return=\"\" /><Cabin C=\"W\" N=\"A\" D=\"100\" P=\"950\" T=\"0\" L=\"Y\" K=\"0.50\" RID=\"JVajWCSASPygSHYA+znrjw==\" ID=\"N9BdXJELpXQ=\" XF=\"0\" PI=\"0\" RT=\"0\" RM=\"\" OfficeNum=\"\" Change=\"\" Return=\"\" /><Cabin C=\"J\" N=\"A\" D=\"231\" P=\"2190\" T=\"0\" L=\"C\" K=\"0.50\" RID=\"JVajWCSASPygSHYA+znrjw==\" ID=\"N9BdXJELpXQ=\" XF=\"0\" PI=\"0\" RT=\"0\" RM=\"\" OfficeNum=\"\" Change=\"\" Return=\"\" /></Response>"+
-//                                   "</JIT-Flight-Response></string>";
                             String xml = s;
                             try {
                                 if (xml.contains("<JIT-Flight-Response>")) {
@@ -113,6 +109,7 @@ public class FlightResultModel extends BaseModel {
                         //Log.e(getTAG(), TextUtils.isEmpty(volleyError.getMessage()) ? "" : volleyError.getMessage());
                     }
                 });
+                //request.setRetryPolicy(new DefaultRetryPolicy(Constants.VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
         }

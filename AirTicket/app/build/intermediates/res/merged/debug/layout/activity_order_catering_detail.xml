@@ -61,7 +61,7 @@
                         android:textSize="16sp"
                         android:background="@null"
                         android:singleLine="true"
-                        android:text="邓耀宁"
+                        android:text=""
                         />
                 </LinearLayout>
 
@@ -94,7 +94,7 @@
                         android:textSize="16sp"
                         android:background="@null"
                         android:singleLine="true"
-                        android:text="15277104415"
+                        android:text=""
                         />
                 </LinearLayout>
 
@@ -127,7 +127,7 @@
                         android:textSize="16sp"
                         android:background="@null"
                         android:singleLine="true"
-                        android:text="2"
+                        android:text=""
                         />
                 </LinearLayout>
 
@@ -160,7 +160,7 @@
                         android:textSize="16sp"
                         android:background="@null"
                         android:singleLine="true"
-                        android:text="1月27日晚上7:20"
+                        android:text=""
                         />
                 </LinearLayout>
 
@@ -194,7 +194,7 @@
                         android:textSize="16sp"
                         android:background="@null"
                         android:singleLine="true"
-                        android:text="不要香菜"
+                        android:text=""
                         />
                 </LinearLayout>
             </LinearLayout>
@@ -206,6 +206,8 @@
     android:orientation="vertical"
     android:background="@color/ticket_white"
     android:layout_marginTop="15dp"
+    android:showDividers="middle"
+    android:divider="@drawable/line"
     >
 
     <LinearLayout
@@ -222,12 +224,49 @@
             android:textSize="16sp"
             android:background="@null"
             android:singleLine="true"
-            android:text="粗香菜"
+            android:text=""
             />
     </LinearLayout>
 
+    <com.daemon.customview.ListViewForScrollView
+        android:id="@+id/lv_order_catering_dishes_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/line"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="16sp"
+            android:background="@null"
+            android:singleLine="true"
+            android:text="总计"
+            />
+
+        <TextView
+            android:id="@+id/tv_order_catering_totalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical|right"
+            android:textSize="16sp"
+            android:background="@null"
+            android:singleLine="true"
+            android:text=""
+            />
+    </LinearLayout>
 
 </LinearLayout>
+
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

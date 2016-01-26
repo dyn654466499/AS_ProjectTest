@@ -4,7 +4,15 @@
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\jp_list.png",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-mdpi\\jp_list.png"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\jp_list.png",
         "source": "D:\\AndroidStudioProjects\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-mdpi\\jp_list.png"
+    },
+    {
+        "merged": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\Git_ForAS\\AS_ProjectTest\\AirTicket\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     }
 ]

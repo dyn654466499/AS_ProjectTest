@@ -8,16 +8,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.daemon.activities.OrderCateringDetailActivity;
 import com.daemon.airticket.R;
 import com.daemon.beans.Resp_OrderCateringList;
 import com.daemon.consts.Constants;
-import com.daemon.utils.VolleyUtil;
 
 public class ConsumeCateringAdapter extends MyBaseAdapter {
 	private Resp_OrderCateringList info;
 	private Context mContext;
-
 	public ConsumeCateringAdapter(Context context, Resp_OrderCateringList object) {
 		super(context);
         mContext = context;
@@ -63,11 +62,11 @@ public class ConsumeCateringAdapter extends MyBaseAdapter {
 					.findViewById(R.id.tv_my_consume_cateringId);
 
 			holder.imageView_my_consume_cateringIcon = (ImageView)convertView.findViewById(R.id.imageView_my_consume_cateringIcon);
-			VolleyUtil.loadImage(mContext,
-					holder.imageView_my_consume_cateringIcon,
-					"http://www.icityto.com" + getItem(position).X6_Product_Pic
-			);
+
 			convertView.setTag(holder);
+			Glide.with(mContext)
+					.load("http://www.icityto.com" + getItem(position).X6_Product_Pic)
+					.into(holder.imageView_my_consume_cateringIcon);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}

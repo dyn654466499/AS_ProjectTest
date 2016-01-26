@@ -3,6 +3,8 @@ package com.daemon.consts;
 import java.util.HashMap;
 
 public class Constants {
+	public static final int VOLLEY_TIME_OUT = 15000;
+
 	/**
 	 * 城市三字码的SharePreference key
 	 */

@@ -18,12 +18,12 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.daemon.airticket.R;
 import com.daemon.beans.Req_FlightInfo;
 import com.daemon.interfaces.Commands;
 import com.daemon.utils.ImageUtil;
 import com.daemon.utils.SPUtil;
-import com.daemon.utils.VolleyUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -115,10 +115,9 @@ public class FlightResultAdapter extends BaseExpandableListAdapter {
 
 			group.imageView_flight_result_airLines = (ImageView) convertView
 					.findViewById(R.id.imageView_flight_result_airLines);
-			VolleyUtil.loadImage(mContext,
-					group.imageView_flight_result_airLines,
-					"http://avatar.csdn.net/6/6/D/1_lfdfhl.jpg"
-					);
+			Glide.with(mContext)
+					.load("http://avatar.csdn.net/6/6/D/1_lfdfhl.jpg")
+					.into(group.imageView_flight_result_airLines);
 			convertView.setTag(group);
 		} else {
 			group = (ViewHolderGroup) convertView.getTag();

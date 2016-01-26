@@ -75,7 +75,7 @@ public class MyConsumeActivity extends BaseActivity {
         buttonList.add(btn_my_consume_hotel);
         buttonList.add(btn_my_consume_airTicket);
 
-        btn_my_consume_airTicket.callOnClick();
+        btn_my_consume_catering.callOnClick();
 
     }
 
@@ -194,7 +194,9 @@ public class MyConsumeActivity extends BaseActivity {
                     notifyModelChange(Message.obtain(handler, MODEL_ORDER_TICKET_QUERY, order_info));
                 }
                 break;
-
+            /**
+             * 通知机票界面
+             */
             case VIEW_ORDER_TICKET_QUERY:
                 AutoLoadingUtil.cancelAutoLoadingView();
                 if(msg.obj instanceof String){

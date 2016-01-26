@@ -78,7 +78,7 @@
          android:id="@+id/imageView_my_consume_cateringIcon"
          android:layout_width="60dp"
          android:layout_height="60dp"
-         android:src="@drawable/jp_list"
+         android:src="@drawable/submit_edit_clear_normal"
          />
 
     <LinearLayout
