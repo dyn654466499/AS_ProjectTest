@@ -16,6 +16,8 @@ import com.android.volley.toolbox.Volley;
 import com.daemon.beans.Resp_OrderCateringDetail;
 import com.daemon.beans.Resp_OrderCateringDishesDetail;
 import com.daemon.beans.Resp_OrderCateringList;
+import com.daemon.beans.Resp_OrderLocalCityDetail;
+import com.daemon.beans.Resp_OrderLocalCityList;
 import com.daemon.beans.Resp_OrderTicketInfo;
 import com.daemon.beans.Resp_OrderTicketList;
 import com.daemon.beans.Resp_OrderTicketQueryInfo;
@@ -306,10 +308,12 @@ public class OrderModel extends BaseModel {
                 //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
-
+/**
+ *  餐饮列表
+ */
             case Constants.MODEL_ORDER_CATERING_QUERY:
                 params_map = (HashMap<String, String>) changeStateMessage.obj;
-                url = "http://www.icityto.com/X_UserLogic/yesicity2015/MyCater_Page/?" + VolleyUtil.formatGetParams(params_map);
+                url = "http://www.icityto.com/X_UserLogic/yesicity2015/MyCater_Page/" + VolleyUtil.formatGetParams(params_map);
                 requestQueue = Volley.newRequestQueue(mContext);
 
                 request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
@@ -342,7 +346,7 @@ public class OrderModel extends BaseModel {
              */
             case Constants.MODEL_ORDER_CATERING_DETAIL_QUERY:
                 params_map = (HashMap<String, String>) changeStateMessage.obj;
-                url = "http://a.ezhanyun.com/X_UserLogic/yesicity2015/dishes_Page/?" + VolleyUtil.formatGetParams(params_map);
+                url = "http://a.ezhanyun.com/X_UserLogic/yesicity2015/dishes_Page/" + VolleyUtil.formatGetParams(params_map);
                 requestQueue = Volley.newRequestQueue(mContext);
                 request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
@@ -402,7 +406,7 @@ public class OrderModel extends BaseModel {
              */
             case Constants.MODEL_ORDER_CATERING_GOODS_DETAIL_QUERY:
                 params_map = (HashMap<String, String>) changeStateMessage.obj;
-                url = "http://www.icityto.com/X_UserLogic/yesicity2015/dishesdata_Page/?" + VolleyUtil.formatGetParams(params_map);
+                url = "http://www.icityto.com/X_UserLogic/yesicity2015/dishesdata_Page/" + VolleyUtil.formatGetParams(params_map);
                 requestQueue = Volley.newRequestQueue(mContext);
                 request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
@@ -429,7 +433,71 @@ public class OrderModel extends BaseModel {
                 //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(request);
                 break;
+/**
+ *  同城订单列表
+ */
+            case Constants.MODEL_ORDER_LOCAL_CITY_QUERY:
+                params_map = (HashMap<String, String>) changeStateMessage.obj;
+                url = "http://www.icityto.com/X_UserLogic/yesicity2015/MyActive_Page/" + VolleyUtil.formatGetParams(params_map);
+                requestQueue = Volley.newRequestQueue(mContext);
+                request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String s) {
+                        try {
+                            Gson gson = new Gson();
+                            java.lang.reflect.Type type = new TypeToken<Resp_OrderLocalCityList>() {}.getType();
+                            Resp_OrderLocalCityList info = gson.fromJson(s, type);
+                            Message.obtain(handler, Constants.VIEW_ORDER_LOCAL_CITY_QUERY,info).sendToTarget();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            Message.obtain(handler, Constants.VIEW_ORDER_LOCAL_CITY_QUERY, "解析同城列表json出错").sendToTarget();
+                        }
+                    }
+                }, new Response.ErrorListener() {
 
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        String message = "网络出错";
+                        Message.obtain(handler, Constants.VIEW_ORDER_LOCAL_CITY_QUERY, message).sendToTarget();
+                        Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
+                    }
+                });
+                //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                requestQueue.add(request);
+                break;
+
+            /**
+             *  同城订单详情
+             */
+            case Constants.MODEL_ORDER_LOCAL_CITY_DETAIL_QUERY:
+                params_map = (HashMap<String, String>) changeStateMessage.obj;
+                url = "http://www.icityto.com/X_UserLogic/yesicity2015/MyActiveinfo_Page/" + VolleyUtil.formatGetParams(params_map);
+                requestQueue = Volley.newRequestQueue(mContext);
+                request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String s) {
+                        try {
+                            Gson gson = new Gson();
+                            java.lang.reflect.Type type = new TypeToken<Resp_OrderLocalCityDetail>() {}.getType();
+                            Resp_OrderLocalCityDetail info = gson.fromJson(s, type);
+                            Message.obtain(handler, Constants.VIEW_ORDER_LOCAL_CITY_DETAIL_QUERY, info).sendToTarget();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            Message.obtain(handler, Constants.VIEW_ORDER_LOCAL_CITY_DETAIL_QUERY, "解析同城订单详情json出错").sendToTarget();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        String message = "网络出错";
+                        Message.obtain(handler, Constants.VIEW_ORDER_LOCAL_CITY_DETAIL_QUERY, message).sendToTarget();
+                        Log.e(getTAG(), "onErrorResponse=" + volleyError.getMessage());
+                    }
+                });
+                //request.setRetryPolicy(new DefaultRetryPolicy(VOLLEY_TIME_OUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                requestQueue.add(request);
+                break;
         }
     }
 }

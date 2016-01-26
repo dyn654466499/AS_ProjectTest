@@ -49,12 +49,13 @@
                 />
 
             <EditText
+                android:id="@+id/et_order_ticket_return_beizhu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textSize="14sp"
                 android:background="@null"
-                android:hint="请输入改签内容"
+                android:hint="请输入备注内容"
                 android:textColor="@color/ticket_font_gray"
                 />
         </LinearLayout>

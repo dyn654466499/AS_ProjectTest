@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -101,8 +102,8 @@ public class OrderCateringDetailActivity extends BaseActivity {
                         TextView tv_order_catering_beizhu = (TextView)findViewById(R.id.tv_order_catering_beizhu);
                         tv_order_catering_beizhu.setText(resp_orderCateringDetail.rows.get(0).Field_DWBZ);
 
-                        TextView tv_order_catering_storeName = (TextView)findViewById(R.id.tv_order_catering_storeName);
-                        tv_order_catering_storeName.setText(resp_orderCateringDetail.rows.get(0).Field_DPMC);
+                        EditText et_order_catering_storeName = (EditText)findViewById(R.id.et_order_catering_storeName);
+                        et_order_catering_storeName.setText(resp_orderCateringDetail.rows.get(0).Field_DPMC);
 
                         TextView tv_order_catering_totalPrice = (TextView)findViewById(R.id.tv_order_catering_totalPrice);
                         tv_order_catering_totalPrice.setText("￥" + resp_orderCateringDetail.rows.get(0).Field_CYDDJE);

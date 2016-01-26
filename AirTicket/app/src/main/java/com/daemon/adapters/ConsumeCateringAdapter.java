@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,14 +53,14 @@ public class ConsumeCateringAdapter extends MyBaseAdapter {
 			holder.tv_my_consume_cateringPrice = (TextView) convertView
 					.findViewById(R.id.tv_my_consume_cateringPrice);
 			
-			holder.tv_my_consume_cateringName = (TextView) convertView
-					.findViewById(R.id.tv_my_consume_cateringName);
+			holder.et_my_consume_cateringName = (EditText) convertView
+					.findViewById(R.id.et_my_consume_cateringName);
 			
 			holder.tv_my_consume_cateringTime = (TextView) convertView
 					.findViewById(R.id.tv_my_consume_cateringTime);
 			
-			holder.tv_my_consume_cateringId = (TextView) convertView
-					.findViewById(R.id.tv_my_consume_cateringId);
+			holder.et_my_consume_cateringId = (EditText) convertView
+					.findViewById(R.id.et_my_consume_cateringId);
 
 			holder.imageView_my_consume_cateringIcon = (ImageView)convertView.findViewById(R.id.imageView_my_consume_cateringIcon);
 
@@ -81,18 +82,19 @@ public class ConsumeCateringAdapter extends MyBaseAdapter {
 		});
 
 		holder.tv_my_consume_cateringType.setText(getItem(position).Field_Type);
-		 holder.tv_my_consume_cateringPrice.setText("￥"+getItem(position).Field_CYDDJE);
-		 holder.tv_my_consume_cateringTime.setText(getItem(position).X6_Product_Time);
-		 holder.tv_my_consume_cateringId.setText(getItem(position).Field_CYDDBH);
-		holder.tv_my_consume_cateringName.setText(getItem(position).Field_DPMC);
+		holder.tv_my_consume_cateringPrice.setText("￥"+getItem(position).Field_CYDDJE);
+		holder.tv_my_consume_cateringTime.setText(getItem(position).X6_Product_Time);
+
+		holder.et_my_consume_cateringId.setText(getItem(position).Field_CYDDBH);
+		holder.et_my_consume_cateringName.setText(getItem(position).Field_DPMC);
 
 		return convertView;
 	}
 
 	static class ViewHolder {
 		TextView tv_my_consume_cateringType, tv_my_consume_cateringPrice,
-				tv_my_consume_cateringName, tv_my_consume_cateringId,
 				tv_my_consume_cateringTime;
+		EditText et_my_consume_cateringName,et_my_consume_cateringId;
 		ImageView imageView_my_consume_cateringIcon;
 	}
 }

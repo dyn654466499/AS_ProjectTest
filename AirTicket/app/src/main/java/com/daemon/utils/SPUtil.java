@@ -180,7 +180,7 @@ public class SPUtil {
         SharedPreferences sp_orderStatus = context.getSharedPreferences(KEY_SP_ORDER_STATUS, Context.MODE_PRIVATE);
         if (!sp_orderStatus.getBoolean("hasEdited", false)) {
             SharedPreferences.Editor editor_orderStatus = sp_orderStatus.edit();
-            String[] orderStatus = context.getResources().getStringArray(R.array.OrderStatus);
+            String[] orderStatus = context.getResources().getStringArray(R.array.OrderTicketStatus);
             editor_orderStatus.putString("-1", orderStatus[0]);
             editor_orderStatus.putString("0",orderStatus[1]);
 
@@ -205,5 +205,27 @@ public class SPUtil {
             editor_orderStatus.commit();
         }
         return sp_orderStatus;
+    }
+
+    /**
+     * 支付状态
+     * @param context
+     * @return
+     */
+    public static SharedPreferences getPayStatus(Context context) {
+        SharedPreferences sp_payStatus = context.getSharedPreferences(KEY_SP_PAY_STATUS, Context.MODE_PRIVATE);
+        if (!sp_payStatus.getBoolean("hasEdited", false)) {
+            SharedPreferences.Editor editor_payStatus = sp_payStatus.edit();
+            String[] orderStatus = context.getResources().getStringArray(R.array.PayStatus);
+            editor_payStatus.putString(",1,", orderStatus[0]);
+            editor_payStatus.putString(",2,", orderStatus[1]);
+
+            editor_payStatus.putString(",3,", orderStatus[2]);
+            editor_payStatus.putString(",4,", orderStatus[3]);
+
+            editor_payStatus.putBoolean("hasEdited", true);
+            editor_payStatus.commit();
+        }
+        return sp_payStatus;
     }
 }

@@ -11,10 +11,12 @@ import android.widget.TextView;
 
 import com.daemon.airticket.R;
 import com.daemon.beans.Resp_OrderCateringList;
+import com.daemon.beans.Resp_OrderLocalCityList;
 import com.daemon.beans.Resp_OrderTicketList;
 import com.daemon.beans.Resp_OrderTicketQueryInfo;
 import com.daemon.consts.Constants;
 import com.daemon.fragments.OrderCateringFragment;
+import com.daemon.fragments.OrderLocalCityFragment;
 import com.daemon.fragments.OrderTicketFragment;
 import com.daemon.interfaces.Commands;
 import com.daemon.models.OrderModel;
@@ -27,19 +29,24 @@ import java.util.List;
 
 import static com.daemon.consts.Constants.MODEL_ORDER_TICKET_QUERY;
 import static com.daemon.consts.Constants.VIEW_ORDER_CATERING_QUERY;
+import static com.daemon.consts.Constants.VIEW_ORDER_LOCAL_CITY_QUERY;
 import static com.daemon.consts.Constants.VIEW_ORDER_TICKET_QUERY;
 
 public class MyConsumeActivity extends BaseActivity {
 
-    Button btn_my_consume_shopping,btn_my_consume_catering,
+    private Button btn_my_consume_shopping,btn_my_consume_catering,
             btn_my_consume_localCity,btn_my_consume_hotel,
             btn_my_consume_airTicket;
 
-    List<Button> buttonList;
+    private List<Button> buttonList;
 
-    List<Resp_OrderTicketQueryInfo> OrderTicketQueryInfos;
-    Resp_OrderCateringList resp_orderCateringList;
+    private List<Resp_OrderTicketQueryInfo> OrderTicketQueryInfos;
+    private Resp_OrderCateringList resp_orderCateringList;
+    private Resp_OrderLocalCityList resp_orderLocalCityList;
 
+    private OrderTicketFragment order_ticket;
+    private OrderCateringFragment order_catering;
+    private OrderLocalCityFragment order_localCity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,6 +103,7 @@ public class MyConsumeActivity extends BaseActivity {
             case R.id.btn_my_consume_catering:
                 setButtonClick(v.getId());
                 if(resp_orderCateringList==null){
+                    setButtonClickDisable();
                     RelativeLayout layout = (RelativeLayout) findViewById(R.id.relativeLayout_fragment_content);
                     AutoLoadingUtil.setAutoLoadingView(layout);
                     HashMap<String, String> params_map = new HashMap<String, String>();
@@ -107,14 +115,31 @@ public class MyConsumeActivity extends BaseActivity {
                 }else{
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction transaction = fm.beginTransaction();
-                    OrderCateringFragment order_catering = new OrderCateringFragment(resp_orderCateringList);
                     transaction.replace(R.id.relativeLayout_fragment_content, order_catering);
-                    transaction.commit();
+                    transaction.commitAllowingStateLoss();
                 }
                 break;
-
+            /**
+             * 同城列表查询
+             */
             case R.id.btn_my_consume_localCity:
                 setButtonClick(v.getId());
+                if(resp_orderLocalCityList==null){
+                    setButtonClickDisable();
+                    RelativeLayout layout = (RelativeLayout) findViewById(R.id.relativeLayout_fragment_content);
+                    AutoLoadingUtil.setAutoLoadingView(layout);
+                    HashMap<String, String> params_map = new HashMap<String, String>();
+                    params_map.put("UId", "yesicity2015");
+                    params_map.put("Field_YHID", "1");
+                    params_map.put("Yesicity", "1");
+                    params_map.put("page", "1");
+                    notifyModelChange(Message.obtain(handler, Constants.MODEL_ORDER_LOCAL_CITY_QUERY, params_map));
+                }else{
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction transaction = fm.beginTransaction();
+                    transaction.replace(R.id.relativeLayout_fragment_content, order_localCity);
+                    transaction.commitAllowingStateLoss();
+                }
                 break;
 
             case R.id.btn_my_consume_hotel:
@@ -129,6 +154,7 @@ public class MyConsumeActivity extends BaseActivity {
                  * 如果为null，则请求网络数据；否则直接显示列表
                  */
                 if(OrderTicketQueryInfos == null) {
+                    setButtonClickDisable();
                     RelativeLayout layout = (RelativeLayout) findViewById(R.id.relativeLayout_fragment_content);
                     AutoLoadingUtil.setAutoLoadingView(layout);
                     HashMap<String, String> params_map = new HashMap<String, String>();
@@ -140,9 +166,8 @@ public class MyConsumeActivity extends BaseActivity {
                 }else{
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction transaction = fm.beginTransaction();
-                    OrderTicketFragment order_ticket = new OrderTicketFragment(OrderTicketQueryInfos);
                     transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
-                    transaction.commit();
+                    transaction.commitAllowingStateLoss();
                 }
 
                 break;
@@ -173,9 +198,21 @@ public class MyConsumeActivity extends BaseActivity {
         }
     }
 
+    private void setButtonClickDisable(){
+        for (Button button:buttonList) {
+                button.setClickable(false);
+        }
+    }
+
+    private void setButtonClickEnable(){
+        for (Button button:buttonList) {
+            button.setClickable(true);
+        }
+    }
 
     @Override
     public void onViewChange(Message msg) {
+
         switch (msg.what){
             /**
              * 返回后台数据库的机票订单列表（主要是订单号），接下来去访问第三方的后台查询订单详情
@@ -209,13 +246,15 @@ public class MyConsumeActivity extends BaseActivity {
                 }else {
                     if(!isDestroyed) {
                             OrderTicketQueryInfos = (List<Resp_OrderTicketQueryInfo>) msg.obj;
-                            FragmentManager fm = getFragmentManager();
-                            FragmentTransaction transaction = fm.beginTransaction();
-                            OrderTicketFragment order_ticket = new OrderTicketFragment(OrderTicketQueryInfos);
-                            transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
-                            transaction.commit();
+                            order_ticket = new OrderTicketFragment(OrderTicketQueryInfos);
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction transaction = fm.beginTransaction();
+
+                        transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
+                            transaction.commitAllowingStateLoss();
                     }
                 }
+                setButtonClickEnable();
                 break;
             /**
              * 通知餐饮界面
@@ -232,13 +271,38 @@ public class MyConsumeActivity extends BaseActivity {
                 }else {
                     if(!isDestroyed) {
                         resp_orderCateringList = (Resp_OrderCateringList) msg.obj;
+                        order_catering = new OrderCateringFragment(resp_orderCateringList);
                         FragmentManager fm = getFragmentManager();
                         FragmentTransaction transaction = fm.beginTransaction();
-                        OrderCateringFragment order_catering = new OrderCateringFragment(resp_orderCateringList);
                         transaction.replace(R.id.relativeLayout_fragment_content, order_catering);
-                        transaction.commit();
+                        transaction.commitAllowingStateLoss();
                     }
                 }
+                setButtonClickEnable();
+                break;
+            /**
+             * 通知同城界面
+             */
+            case VIEW_ORDER_LOCAL_CITY_QUERY:
+                AutoLoadingUtil.cancelAutoLoadingView();
+                if(msg.obj instanceof String){
+                    DialogUtil.showDialog(MyConsumeActivity.this, getString(R.string.title_my_consume), (String)msg.obj, new Commands() {
+                        @Override
+                        public void executeCommand(Message msg_params) {
+
+                        }
+                    });
+                }else {
+                    if(!isDestroyed) {
+                        resp_orderLocalCityList = (Resp_OrderLocalCityList) msg.obj;
+                        order_localCity = OrderLocalCityFragment.newInstance(resp_orderLocalCityList);
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction transaction = fm.beginTransaction();
+                        transaction.replace(R.id.relativeLayout_fragment_content, order_localCity);
+                        transaction.commitAllowingStateLoss();
+                    }
+                }
+                setButtonClickEnable();
                 break;
         }
     }

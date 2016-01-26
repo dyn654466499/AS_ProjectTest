@@ -14,6 +14,7 @@ public class Constants {
 	public static final String KEY_SP_AIR_LINE = "airLine";
 	public static final String KEY_SP_CABIN = "cabin";
 	public static final String KEY_SP_ORDER_STATUS = "order_status";
+	public static final String KEY_SP_PAY_STATUS = "pay_status";
 
 	public static final String KEY_TYPE = "类型";
 	public static final String KEY_TYPE_CABIN = "Cabin";
@@ -79,6 +80,9 @@ public class Constants {
 
 	public static final int MODEL_ORDER_CATERING_DETAIL_QUERY = 209;
 	public static final int MODEL_ORDER_CATERING_GOODS_DETAIL_QUERY = 210;
+
+	public static final int MODEL_ORDER_LOCAL_CITY_QUERY = 211;
+	public static final int MODEL_ORDER_LOCAL_CITY_DETAIL_QUERY = 212;
     /**
      *  view状态改变参数
      */
@@ -95,6 +99,9 @@ public class Constants {
 	public static final int VIEW_ORDER_CATERING_QUERY = 308;
 	public static final int VIEW_ORDER_CATERING_DETAIL_QUERY = 309;
 	public static final int VIEW_ORDER_CATERING_GOODS_DETAIL_QUERY = 310;
+
+	public static final int VIEW_ORDER_LOCAL_CITY_QUERY = 311;
+	public static final int VIEW_ORDER_LOCAL_CITY_DETAIL_QUERY = 312;
     /**
      * 请求URL
      */

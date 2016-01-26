@@ -9,6 +9,7 @@ import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.daemon.airticket.R;
@@ -28,6 +29,7 @@ import static com.daemon.consts.Constants.VIEW_ORDER_TICKET_RETURN;
 
 public class OrderReturnInfoActivity extends BaseActivity {
     private Resp_OrderTicketQueryInfo resp_orderTicketQueryInfo;
+    private EditText et_order_ticket_return_beizhu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,8 @@ public class OrderReturnInfoActivity extends BaseActivity {
 
             Button btn_order_ticket_detail_cancelApply = (Button) findViewById(R.id.btn_order_ticket_detail_cancelApply);
             btn_order_ticket_detail_cancelApply.setOnClickListener(this);
+
+            et_order_ticket_return_beizhu = (EditText)findViewById(R.id.et_order_ticket_return_beizhu);
 
 
             String temp = "";
@@ -70,16 +74,29 @@ public class OrderReturnInfoActivity extends BaseActivity {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            /**
+             * 提交申请
+             */
             case R.id.btn_order_ticket_detail_commitApply:
+                /**
+                 * 改签暂时被停用
+                 */
                 if(MODEL_ORDER_TICKET_ENDORSE == getIntent().getIntExtra(KEY_TYPE,0)){
 
                 }else if(MODEL_ORDER_TICKET_RETURN == getIntent().getIntExtra(KEY_TYPE,0)){
                     HashMap<String, String> params_map = new HashMap<String, String>();
                     params_map.put("UserName", "wang87654321");
-                    params_map.put("OrderNo", "W2016012104024160509");
-                    params_map.put("PNR", resp_orderTicketQueryInfo.PNR);
-                    params_map.put("PayType", resp_orderTicketQueryInfo.PayWay);
-                    params_map.put("CanBeizhu", "测试用的");
+                    params_map.put("OrderNo", resp_orderTicketQueryInfo.OrderNo);
+                    params_map.put("Repeal", "");//0：不变  1：废票  2：退票 与乘客对应，多个以|隔开
+                    params_map.put("PersonName", resp_orderTicketQueryInfo.PName);
+                    params_map.put("Remarks", et_order_ticket_return_beizhu.getText().toString());
+                    params_map.put("Type", "B");//A：废票   B：退票
+                    params_map.put("Rnum", "B");//退票人数
+                    params_map.put("Cause", "");//退票原因
+                    params_map.put("TicketNo", "");//退废票号，|隔开
+                    params_map.put("Ramount", resp_orderTicketQueryInfo.PayMoney);
+                    params_map.put("IsCancelSeat", "是");
+
                     notifyModelChange(Message.obtain(handler, MODEL_ORDER_TICKET_RETURN,params_map));
                 }
 

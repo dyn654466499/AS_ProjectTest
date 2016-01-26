@@ -64,7 +64,7 @@
     </string-array>
 
     <!-- 订单状态-->
-    <string-array name="OrderStatus">
+    <string-array name="OrderTicketStatus">
         <item>等待确认</item>
         <item>等待支付</item>
         <item>支付成功</item>
@@ -78,6 +78,14 @@
         <item>暂不能退票</item>
         <item>航班延误</item>
         <item>退款成功</item>
+    </string-array>
+
+    <!-- 支付状态状态-->
+    <string-array name="PayStatus">
+        <item>待付款</item>
+        <item>已付款待确认</item>
+        <item>已完成</item>
+        <item>已作废</item>
     </string-array>
 
 

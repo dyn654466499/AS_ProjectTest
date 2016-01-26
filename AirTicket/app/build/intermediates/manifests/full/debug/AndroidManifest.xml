@@ -122,6 +122,9 @@
         <activity
             android:name="com.daemon.activities.OrderCateringDetailActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.daemon.activities.OrderLocalCityDetailActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
