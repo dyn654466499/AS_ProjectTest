@@ -14,6 +14,7 @@ import android.widget.ScrollView;
 import com.daemon.adapters.ConsumeCateringAdapter;
 import com.daemon.airticket.R;
 import com.daemon.beans.Resp_OrderCateringList;
+import com.daemon.interfaces.FragmentListener;
 
 ///**
 // * A simple {@link Fragment} subclass.
@@ -35,7 +36,7 @@ public class OrderCateringFragment extends Fragment {
 
     Resp_OrderCateringList info;
 
-    private OnFragmentInteractionListener mListener;
+    private FragmentListener mListener;
 
     public OrderCateringFragment(Resp_OrderCateringList info) {
         this.info = info;
@@ -85,24 +86,23 @@ public class OrderCateringFragment extends Fragment {
                 sv.smoothScrollTo(0,0);
             }
         });
+        //mListener.onCreateView(this);
         return rootLayout;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+
         }
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+        if (context instanceof FragmentListener) {
+            mListener = (FragmentListener) context;
+            mListener.onAttach(this);
         }
     }
 

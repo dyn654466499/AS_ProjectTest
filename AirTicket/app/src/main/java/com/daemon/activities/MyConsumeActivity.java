@@ -1,5 +1,6 @@
 package com.daemon.activities;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daemon.airticket.R;
 import com.daemon.beans.Resp_OrderCateringList;
@@ -19,6 +21,7 @@ import com.daemon.fragments.OrderCateringFragment;
 import com.daemon.fragments.OrderLocalCityFragment;
 import com.daemon.fragments.OrderTicketFragment;
 import com.daemon.interfaces.Commands;
+import com.daemon.interfaces.FragmentListener;
 import com.daemon.models.OrderModel;
 import com.daemon.utils.AutoLoadingUtil;
 import com.daemon.utils.DialogUtil;
@@ -32,7 +35,7 @@ import static com.daemon.consts.Constants.VIEW_ORDER_CATERING_QUERY;
 import static com.daemon.consts.Constants.VIEW_ORDER_LOCAL_CITY_QUERY;
 import static com.daemon.consts.Constants.VIEW_ORDER_TICKET_QUERY;
 
-public class MyConsumeActivity extends BaseActivity {
+public class MyConsumeActivity extends BaseActivity implements FragmentListener {
 
     private Button btn_my_consume_shopping,btn_my_consume_catering,
             btn_my_consume_localCity,btn_my_consume_hotel,
@@ -113,10 +116,12 @@ public class MyConsumeActivity extends BaseActivity {
                     params_map.put("page", "1");
                     notifyModelChange(Message.obtain(handler, Constants.MODEL_ORDER_CATERING_QUERY, params_map));
                 }else{
-                    FragmentManager fm = getFragmentManager();
-                    FragmentTransaction transaction = fm.beginTransaction();
-                    transaction.replace(R.id.relativeLayout_fragment_content, order_catering);
-                    transaction.commitAllowingStateLoss();
+                    if(!order_catering.isAdded()) {
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction transaction = fm.beginTransaction();
+                        transaction.replace(R.id.relativeLayout_fragment_content, order_catering);
+                        transaction.commitAllowingStateLoss();
+                    }
                 }
                 break;
             /**
@@ -135,10 +140,12 @@ public class MyConsumeActivity extends BaseActivity {
                     params_map.put("page", "1");
                     notifyModelChange(Message.obtain(handler, Constants.MODEL_ORDER_LOCAL_CITY_QUERY, params_map));
                 }else{
-                    FragmentManager fm = getFragmentManager();
-                    FragmentTransaction transaction = fm.beginTransaction();
-                    transaction.replace(R.id.relativeLayout_fragment_content, order_localCity);
-                    transaction.commitAllowingStateLoss();
+                    if(!order_localCity.isAdded()) {
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction transaction = fm.beginTransaction();
+                        transaction.replace(R.id.relativeLayout_fragment_content, order_localCity);
+                        transaction.commitAllowingStateLoss();
+                    }
                 }
                 break;
 
@@ -164,10 +171,12 @@ public class MyConsumeActivity extends BaseActivity {
                     params_map.put("page", "1");
                     notifyModelChange(Message.obtain(handler, Constants.MODEL_ORDER_TICKET_ORDER_NO_QUERY, params_map));
                 }else{
-                    FragmentManager fm = getFragmentManager();
-                    FragmentTransaction transaction = fm.beginTransaction();
-                    transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
-                    transaction.commitAllowingStateLoss();
+                    if(!order_ticket.isAdded()) {
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction transaction = fm.beginTransaction();
+                        transaction.replace(R.id.relativeLayout_fragment_content, order_ticket);
+                        transaction.commitAllowingStateLoss();
+                    }
                 }
 
                 break;
@@ -305,5 +314,34 @@ public class MyConsumeActivity extends BaseActivity {
                 setButtonClickEnable();
                 break;
         }
+    }
+
+    @Override
+    public void onAttach(Fragment fragment) {
+//        if(fragment instanceof OrderCateringFragment){
+//            setButtonClick(R.id.btn_my_consume_catering);
+//        }else if(fragment instanceof OrderTicketFragment){
+//            setButtonClick(R.id.btn_my_consume_airTicket);
+//        }else if(fragment instanceof OrderLocalCityFragment){
+//            setButtonClick(R.id.btn_my_consume_localCity);
+//        }
+//        else if(fragment instanceof OrderCateringFragment){
+//
+//        }else{
+//
+//        }
+       // Toast.makeText(MyConsumeActivity.this,"sdfsdfsd",Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onCreateView(Fragment fragment) {
+//        if(fragment instanceof OrderCateringFragment){
+//            setButtonClick(R.id.btn_my_consume_catering);
+//        }else if(fragment instanceof OrderTicketFragment){
+//            setButtonClick(R.id.btn_my_consume_airTicket);
+//        }else if(fragment instanceof OrderLocalCityFragment){
+//            setButtonClick(R.id.btn_my_consume_localCity);
+//        }
+        //Toast.makeText(MyConsumeActivity.this,"sdfsdfsd",Toast.LENGTH_LONG).show();
     }
 }
